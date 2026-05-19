@@ -9,6 +9,9 @@ export type DashboardSource = { src: string; url: string };
 
 export type DashboardPayload = {
   id: number;
+  dedupe_key: string;
+  status: string;
+  first_seen: string;
   score: number;
   address: string;
   price: number;
@@ -38,6 +41,7 @@ export type DashboardData = {
   sourceLabels: Record<string, string>;
   total: number;
   unique: number;
+  generatedAt: string;
 };
 
 function esc(s: string): string {
@@ -49,7 +53,7 @@ function esc(s: string): string {
 
 export function renderDashboard(d: DashboardData): string {
   const template = readFileSync(TEMPLATE_PATH, "utf-8");
-  const lastUpdated = new Date().toISOString().slice(0, 16).replace("T", " ");
+  const lastUpdated = d.generatedAt.slice(0, 16).replace("T", " ");
   const sourceChips = Object.entries(d.sourceLabels)
     .map(([k, v]) =>
       `<div class="stat"><div class="num">${d.bySource[k] ?? 0}</div>` +
@@ -58,6 +62,7 @@ export function renderDashboard(d: DashboardData): string {
     .join("");
   return template
     .replace("{{LAST_UPDATED}}", esc(lastUpdated))
+    .replace("{{GENERATED_AT}}", esc(d.generatedAt))
     .replace(/\{\{UNIQUE\}\}/g, String(d.unique))
     .replace("{{TOTAL}}", String(d.total))
     .replace("{{SOURCE_CHIPS}}", sourceChips)

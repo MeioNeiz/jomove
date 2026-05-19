@@ -4,254 +4,640 @@
 <meta charset="utf-8">
 <title>Jomove — Southampton Rentals</title>
 <style>
-  :root{--bg:#fafafa;--fg:#1a1a1a;--muted:#666;--border:#e3e3e3;--accent:#0066cc;
-        --good:#0a7e3a;--warn:#b56500;--bad:#c92a2a;--row:#fff;--row-hover:#f3f6fb;}
+  :root {
+    --bg:        #f5f6f8;
+    --surface:   #ffffff;
+    --surface-2: #fafbfc;
+    --fg:        #1a1d22;
+    --muted:     #6b7280;
+    --border:    #e2e5ea;
+    --border-2:  #d4d8de;
+    --accent:    #2563eb;
+    --accent-2:  #1d4ed8;
+    --good:      #047857;
+    --good-bg:   #d1fae5;
+    --warn:      #b45309;
+    --warn-bg:   #fef3c7;
+    --bad:       #b91c1c;
+    --bad-bg:    #fee2e2;
+    --new-bg:    #fde68a;
+    --new-fg:    #92400e;
+    --fav:       #f59e0b;
+    --sweet-bg:  #dbeafe;
+    --sweet-fg:  #1e40af;
+    --ok-bg:     #e5e7eb;
+    --ok-fg:     #374151;
+    --penalty-bg:#fde2e2;
+    --penalty-fg:#7f1d1d;
+    --epc-A:#047857; --epc-B:#10b981; --epc-C:#84cc16;
+    --epc-D:#eab308; --epc-E:#f97316; --epc-F:#ef4444; --epc-G:#b91c1c;
+  }
   *{box-sizing:border-box}
-  body{font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
-       background:var(--bg);color:var(--fg);margin:0 auto;padding:20px;max-width:1500px}
-  h1{margin:0 0 4px;font-size:24px;font-weight:700;letter-spacing:-.5px}
+  html,body{margin:0;padding:0}
+  body{
+    font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    background:var(--bg);color:var(--fg);
+  }
+  .wrap{max-width:1500px;margin:0 auto;padding:18px 20px 60px}
+
+  /* ---------- header ---------- */
+  header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:6px}
+  h1{margin:0;font-size:24px;font-weight:700;letter-spacing:-.5px}
   h1 .by{color:var(--muted);font-weight:400;font-size:14px;margin-left:8px}
-  .subtitle{color:var(--muted);margin-bottom:18px;font-size:13px}
-  .summary{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
-  .stat{background:white;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-width:84px}
-  .stat .num{font-size:18px;font-weight:600;line-height:1}
-  .stat .label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-top:3px}
-  .filters{background:white;border:1px solid var(--border);border-radius:6px;
-           padding:12px 14px;margin-bottom:14px;display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
-  .filters label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;
-                 display:block;margin-bottom:3px}
-  .filters input[type=number],.filters select{font:inherit;padding:5px 8px;
-            border:1px solid var(--border);border-radius:4px;background:white;min-width:90px}
-  .filters .check{display:flex;align-items:center;gap:6px}
-  .filters .check label{margin:0;text-transform:none;font-size:13px;color:var(--fg);letter-spacing:0}
-  .filters button{font:inherit;padding:5px 12px;border:1px solid var(--border);
-                  background:white;border-radius:4px;cursor:pointer}
-  .filters button:hover{background:#eee}
-  table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--border);
-        border-radius:6px;overflow:hidden}
-  th,td{padding:8px 10px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top;font-size:13px}
-  th{background:#f5f5f5;font-size:11px;text-transform:uppercase;letter-spacing:.5px;
-     color:var(--muted);cursor:pointer;user-select:none;font-weight:600}
-  th.sortable::after{content:" ⇅";opacity:.3}
-  th.sort-asc::after {content:" ↑";opacity:1;color:var(--accent)}
-  th.sort-desc::after{content:" ↓";opacity:1;color:var(--accent)}
-  tr.row{cursor:pointer}
-  tr.row:hover{background:var(--row-hover)}
-  tr.row:last-child td,tr.detail:last-child td{border-bottom:none}
-  tr.detail td{background:#fafbfc;padding:14px 18px;font-size:13px;border-top:none}
-  tr.detail .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-  tr.detail .grid .k{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px}
-  .price{font-weight:600;font-variant-numeric:tabular-nums}
-  .score{font-variant-numeric:tabular-nums;font-weight:600;color:var(--accent)}
-  .badge{display:inline-block;padding:1px 7px;border-radius:3px;font-size:11px;
-         font-weight:500;line-height:18px;white-space:nowrap}
-  .badge.good{background:#e3f7ec;color:var(--good)}
-  .badge.warn{background:#fff3e0;color:var(--warn)}
-  .badge.bad {background:#fde7e7;color:var(--bad)}
-  .badge.neutral{background:#eef;color:#445}
-  .epc{display:inline-block;padding:1px 7px;border-radius:3px;font-size:11px;
-       font-weight:600;line-height:18px;color:white}
-  .epc-A,.epc-B{background:#0a7e3a}
-  .epc-C{background:#7eb53a}
-  .epc-D{background:#fbc02d;color:#222}
-  .epc-E,.epc-F,.epc-G{background:#c92a2a}
+  .updated{color:var(--muted);font-size:12px}
+
+  /* ---------- summary chips ---------- */
+  .summary{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+  .stat{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:6px 10px;min-width:74px}
+  .stat .num{font-size:16px;font-weight:600;line-height:1}
+  .stat .label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-top:2px}
+
+  /* ---------- filter bar (sticky) ---------- */
+  .filters{
+    position:sticky;top:0;z-index:30;
+    margin:0 -20px 14px;padding:10px 20px;
+    background:rgba(245,246,248,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:8px 12px;align-items:center;
+  }
+  .filters-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .filters input[type=number],
+  .filters input[type=search],
+  .filters select{
+    font:inherit;padding:5px 9px;
+    border:1px solid var(--border-2);border-radius:5px;background:var(--surface);
+  }
+  .filters input[type=search]{min-width:220px}
+  .filters input[type=number]{width:90px}
+  .filters .check{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--fg);user-select:none;cursor:pointer}
+  .filters .check input{cursor:pointer}
+  .filters button{
+    font:inherit;font-size:13px;padding:5px 11px;
+    border:1px solid var(--border-2);background:var(--surface);
+    border-radius:5px;cursor:pointer;
+  }
+  .filters button:hover{background:#eef0f2}
+  .filters button.primary{background:var(--accent);color:white;border-color:var(--accent)}
+  .filters button.primary:hover{background:var(--accent-2)}
+  .filters button:disabled{opacity:.5;cursor:not-allowed}
+
+  /* ---------- cards grid ---------- */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
+  .card{
+    background:var(--surface);border:1px solid var(--border);border-radius:8px;
+    padding:12px 14px 10px;display:flex;flex-direction:column;gap:8px;
+    transition:border-color .12s, box-shadow .12s;
+  }
+  .card:hover{border-color:var(--border-2);box-shadow:0 1px 6px rgba(0,0,0,.04)}
+  .card.fav{border-color:var(--fav)}
+  .card.let-agreed{opacity:.55}
+  .card.compare-selected{outline:2px solid var(--accent);outline-offset:-1px}
+
+  .card-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .card-top .price{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
+  .card-top .beds{font-size:12px;color:var(--muted)}
+  .card-top .spacer{flex:1}
+  .card-top .score{font-size:13px;font-variant-numeric:tabular-nums;font-weight:600;color:var(--accent);padding:1px 7px;background:var(--sweet-bg);border-radius:11px}
+
+  .icons{display:flex;gap:4px;margin-left:auto}
+  .icons button{
+    width:26px;height:26px;border:1px solid var(--border-2);background:var(--surface);
+    border-radius:5px;cursor:pointer;font-size:14px;line-height:1;padding:0;color:var(--muted);
+    display:inline-flex;align-items:center;justify-content:center;
+  }
+  .icons button:hover{background:#f2f4f7}
+  .icons button.on{color:var(--fav);border-color:var(--fav);background:#fff8eb}
+  .icons button.viewed-on{color:var(--good);border-color:var(--good);background:#ecfdf5}
+  .icons button.cmp-on{color:var(--accent);border-color:var(--accent);background:var(--sweet-bg)}
+
+  .badges{display:flex;gap:4px;flex-wrap:wrap}
+  .badge{
+    display:inline-block;padding:1px 7px;border-radius:11px;
+    font-size:11px;font-weight:500;line-height:18px;white-space:nowrap;
+  }
+  .badge.good{background:var(--good-bg);color:var(--good)}
+  .badge.warn{background:var(--warn-bg);color:var(--warn)}
+  .badge.bad {background:var(--bad-bg); color:var(--bad)}
+  .badge.muted{background:var(--ok-bg);color:var(--ok-fg)}
+  .badge.new{background:var(--new-bg);color:var(--new-fg);font-weight:600}
+  .badge.let-agreed{background:var(--bad-bg);color:var(--bad);font-weight:600}
+  .badge.pc{background:var(--ok-bg);color:var(--ok-fg);font-variant-numeric:tabular-nums}
+  .badge.sweet{background:var(--sweet-bg);color:var(--sweet-fg);font-weight:600}
+  .badge.penalty{background:var(--penalty-bg);color:var(--penalty-fg)}
+
+  .address{font-size:14px;font-weight:600;line-height:1.3;margin:0}
+
+  .facets{display:flex;gap:5px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+  .facets li{display:inline-block}
+
+  .epc{display:inline-block;padding:1px 7px;border-radius:11px;font-size:11px;font-weight:600;line-height:18px;color:white}
+  .epc-A{background:var(--epc-A)} .epc-B{background:var(--epc-B)}
+  .epc-C{background:var(--epc-C);color:#1a1d22}
+  .epc-D{background:var(--epc-D);color:#1a1d22}
+  .epc-E{background:var(--epc-E)} .epc-F{background:var(--epc-F)} .epc-G{background:var(--epc-G)}
   .epc-unknown{background:#bbb;color:white}
-  .sources a{color:var(--accent);text-decoration:none;font-size:11px;margin-right:6px;white-space:nowrap}
-  .sources a:hover{text-decoration:underline}
-  .hidden{display:none !important}
-  .empty{padding:30px;text-align:center;color:var(--muted)}
-  footer{color:var(--muted);font-size:11px;margin-top:14px;text-align:center}
+
+  .rating{display:flex;gap:1px}
+  .rating button{
+    background:none;border:none;cursor:pointer;font-size:18px;line-height:1;
+    color:#d1d5db;padding:0 1px;
+  }
+  .rating button.lit{color:var(--fav)}
+  .rating button:hover{transform:scale(1.1)}
+
+  .comment{
+    width:100%;border:1px solid var(--border);border-radius:5px;padding:5px 8px;
+    font:inherit;font-size:12px;resize:vertical;min-height:34px;background:var(--surface-2);
+  }
+  .comment:focus{outline:1px solid var(--accent);border-color:var(--accent)}
+
+  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:6px}
+  .sources{display:flex;gap:5px;flex-wrap:wrap}
+  .sources a{
+    color:var(--accent);text-decoration:none;font-size:11px;font-weight:600;
+    padding:2px 7px;border:1px solid var(--accent);border-radius:11px;
+  }
+  .sources a:hover{background:var(--accent);color:white}
+  .expand-btn{
+    font:inherit;font-size:11px;background:none;border:none;cursor:pointer;
+    color:var(--muted);padding:2px 4px;
+  }
+  .expand-btn:hover{color:var(--fg)}
+
+  .detail{display:none;border-top:1px dashed var(--border);padding-top:8px;margin-top:4px;font-size:12px}
+  .detail.open{display:block}
+  .detail .row{margin-bottom:6px}
+  .detail .row:last-child{margin-bottom:0}
+  .detail .k{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:1px}
+
+  .empty{padding:50px 20px;text-align:center;color:var(--muted);background:var(--surface);border:1px dashed var(--border);border-radius:8px}
+
+  /* ---------- compare dialog ---------- */
+  dialog#compare{
+    border:none;border-radius:10px;padding:0;
+    max-width:1100px;width:90vw;max-height:90vh;
+    background:var(--surface);box-shadow:0 20px 60px rgba(0,0,0,.25);
+  }
+  dialog#compare::backdrop{background:rgba(0,0,0,.4)}
+  .cmp-head{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 18px;border-bottom:1px solid var(--border);
+  }
+  .cmp-head h2{margin:0;font-size:16px}
+  .cmp-head button{
+    font:inherit;background:none;border:none;font-size:22px;cursor:pointer;color:var(--muted);
+  }
+  .cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:auto;max-height:calc(90vh - 60px)}
+  .cmp-col{padding:16px 18px;border-left:1px solid var(--border)}
+  .cmp-col:first-child{border-left:none}
+  .cmp-col h3{margin:0 0 8px;font-size:15px;line-height:1.3}
+  .cmp-col .price{font-size:22px;font-weight:700;color:var(--accent)}
+  .cmp-col dl{margin:10px 0 0;display:grid;grid-template-columns:140px 1fr;gap:5px 12px;font-size:13px}
+  .cmp-col dt{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px;align-self:start;padding-top:3px}
+  .cmp-col dd{margin:0}
+
+  footer{color:var(--muted);font-size:11px;margin:30px 0 0;text-align:center;line-height:1.6}
 </style>
 </head>
 <body>
-<h1>Jomove<span class="by">· Southampton rental tracker</span></h1>
-<div class="subtitle">Last updated {{LAST_UPDATED}}</div>
+<div class="wrap">
 
-<div class="summary">
-  <div class="stat"><div class="num" id="visible-count">{{UNIQUE}}</div><div class="label">Showing</div></div>
-  <div class="stat"><div class="num">{{UNIQUE}}</div><div class="label">Unique</div></div>
-  <div class="stat"><div class="num">{{TOTAL}}</div><div class="label">Raw</div></div>
-  {{SOURCE_CHIPS}}
+  <header>
+    <div>
+      <h1>Jomove<span class="by">· Southampton rental tracker</span></h1>
+      <div class="updated">Last updated {{LAST_UPDATED}}</div>
+    </div>
+  </header>
+
+  <div class="summary">
+    <div class="stat"><div class="num" id="visible-count">{{UNIQUE}}</div><div class="label">Showing</div></div>
+    <div class="stat"><div class="num">{{UNIQUE}}</div><div class="label">Unique</div></div>
+    <div class="stat"><div class="num">{{TOTAL}}</div><div class="label">Active raw</div></div>
+    <div class="stat"><div class="num" id="fav-count">0</div><div class="label">Favourites</div></div>
+    <div class="stat"><div class="num" id="new-count">0</div><div class="label">New</div></div>
+    {{SOURCE_CHIPS}}
+  </div>
+
+  <div class="filters">
+    <div class="filters-row">
+      <input id="f-search" type="search" placeholder="Search address, area, postcode…" autocomplete="off">
+      <select id="f-pc">
+        <option value="">Any postcode</option>
+        <option>SO14</option><option>SO15</option><option>SO17</option><option>SO18</option>
+      </select>
+      <select id="f-beds">
+        <option value="">Any beds</option><option value="1">1 bed</option><option value="2">2 bed</option>
+      </select>
+      <input id="f-price" type="number" min="0" step="50" placeholder="Max £/mo">
+      <label class="check"><input id="f-furn" type="checkbox"> Furnished</label>
+      <label class="check"><input id="f-park" type="checkbox"> Parking</label>
+      <label class="check"><input id="f-rail" type="checkbox"> Direct rail</label>
+      <label class="check"><input id="f-favs" type="checkbox"> Favourites</label>
+      <label class="check"><input id="f-new"  type="checkbox"> New only</label>
+      <label class="check"><input id="f-hide-viewed"  type="checkbox"> Hide viewed</label>
+      <label class="check"><input id="f-incl-let-agreed" type="checkbox"> Show let-agreed</label>
+      <select id="f-sort">
+        <option value="score">Sort: Score</option>
+        <option value="price-asc">Price low → high</option>
+        <option value="price-desc">Price high → low</option>
+        <option value="first_seen-desc">Newest first</option>
+        <option value="rating-desc">Your rating</option>
+        <option value="address">Address A–Z</option>
+      </select>
+    </div>
+    <div class="filters-row">
+      <button id="btn-compare" class="primary" disabled>Compare (0/2)</button>
+      <button id="btn-mark-seen" title="Clear all NEW badges">Mark all seen</button>
+      <button id="btn-reset">Reset filters</button>
+    </div>
+  </div>
+
+  <div id="grid" class="grid"></div>
+  <div id="empty" class="empty" hidden>No listings match the current filters.</div>
+
+  <footer>
+    Generated by <code>bun run report</code> · scoring weights:
+    postcode 20 · price 20 · furnished 15 · parking 10 · direct rail 10 ·
+    Common 10 · EPC 8 (max ~103) ·
+    Your ratings &amp; notes live in localStorage on this device.
+  </footer>
 </div>
 
-<div class="filters">
-  <div><label for="f-pc">Postcode</label>
-    <select id="f-pc"><option value="">Any</option>
-      <option>SO14</option><option>SO15</option><option>SO17</option><option>SO18</option>
-    </select></div>
-  <div><label for="f-beds">Beds</label>
-    <select id="f-beds"><option value="">Any</option><option>1</option><option>2</option></select></div>
-  <div><label for="f-price">Max £/mo</label>
-    <input id="f-price" type="number" min="0" step="50" placeholder="1100"></div>
-  <div class="check"><input type="checkbox" id="f-furn">
-    <label for="f-furn">Furnished or optional</label></div>
-  <div class="check"><input type="checkbox" id="f-park">
-    <label for="f-park">Real parking</label></div>
-  <div class="check"><input type="checkbox" id="f-rail">
-    <label for="f-rail">Direct rail line</label></div>
-  <div class="check"><input type="checkbox" id="f-deadline">
-    <label for="f-deadline">Available by 29 June 2026</label></div>
-  <button id="f-reset" type="button">Reset</button>
-</div>
-
-<table id="listings">
-  <thead><tr>
-    <th class="sortable sort-desc" data-key="score">Score</th>
-    <th class="sortable" data-key="address">Address</th>
-    <th class="sortable" data-key="price">£/mo</th>
-    <th class="sortable" data-key="beds">Beds</th>
-    <th class="sortable" data-key="parking">Parking</th>
-    <th class="sortable" data-key="furnished">Furn</th>
-    <th class="sortable" data-key="epc">EPC</th>
-    <th class="sortable" data-key="available">Available</th>
-    <th class="sortable" data-key="pc">PC</th>
-    <th class="sortable" data-key="direct">Rail</th>
-    <th>Sources</th>
-  </tr></thead>
-  <tbody id="rows"></tbody>
-</table>
-<div class="empty hidden" id="empty">No listings match the current filters.</div>
-
-<footer>Generated by <code>bun run report</code> · weights: rail 30 / parking 20 / price 20 / furn 15 / green 15 / EPC 10</footer>
+<dialog id="compare">
+  <div class="cmp-head">
+    <h2>Compare</h2>
+    <button id="cmp-close" aria-label="Close">×</button>
+  </div>
+  <div class="cmp-grid" id="cmp-body"></div>
+</dialog>
 
 <script>
+//---------- payload + meta ----------
 const DATA = {{DATA_JSON}};
-const PARK_RANK = {allocated:5,driveway:5,"off-street":5,permit:3,"on-street":3,unclear:1,none:0,"":0};
-const FURN_RANK = {yes:3,optional:2,part:2,unclear:1,no:0,"":0};
-const EPC_RANK  = {A:7,B:6,C:5,D:4,E:3,F:2,G:1,"":0};
-const SRC_ABBR  = {openrent:"OR",rightmove:"RM",zoopla:"Z",onthemarket:"OTM",gumtree:"GT"};
-const DEADLINE  = "2026-06-29";
+const GENERATED_AT = "{{GENERATED_AT}}";
 
-let state = { sortKey:"score", sortDir:"desc", expanded:new Set() };
+const STATE_KEY = "jomove:state:v1";
+const META_KEY  = "jomove:meta:v1";
 
-function badge(parking) {
-  const cls = (parking==="allocated"||parking==="driveway"||parking==="off-street") ? "good"
-            : (parking==="permit"||parking==="on-street") ? "warn"
-            : (parking==="none") ? "bad" : "neutral";
-  return `<span class="badge ${cls}">${parking||"?"}</span>`;
+function loadState() {
+  try { return JSON.parse(localStorage.getItem(STATE_KEY) || "{}"); }
+  catch { return {}; }
 }
-function furnBadge(f) {
-  const cls = f==="yes"?"good" : (f==="optional"||f==="part")?"warn" : (f==="no")?"bad":"neutral";
-  return `<span class="badge ${cls}">${f||"?"}</span>`;
+function saveState() { localStorage.setItem(STATE_KEY, JSON.stringify(STATE)); }
+function loadMeta() {
+  try { return JSON.parse(localStorage.getItem(META_KEY) || "{}"); }
+  catch { return {}; }
 }
-function epcBadge(e) { return `<span class="epc ${e?"epc-"+e:"epc-unknown"}">${e||"?"}</span>`; }
-function railBadge(d) { return d ? '<span class="badge good">direct</span>' : '<span class="badge warn">change</span>'; }
-function fmtAvail(iso, raw) { if (!iso) return raw||"?"; return iso; }
+function saveMeta() { localStorage.setItem(META_KEY, JSON.stringify(META)); }
 
-function sortRows(rows) {
-  const k = state.sortKey, dir = state.sortDir === "desc" ? -1 : 1;
-  const v = (r) => {
-    if (k==="parking")   return PARK_RANK[r.parking] ?? 0;
-    if (k==="furnished") return FURN_RANK[r.furnished] ?? 0;
-    if (k==="epc")       return EPC_RANK[r.epc] ?? 0;
-    if (k==="direct")    return r.direct ? 1 : 0;
-    if (k==="available") return r.available || "9999-99-99";
-    return r[k] ?? "";
-  };
-  return rows.slice().sort((a,b) => {
-    const va = v(a), vb = v(b);
-    if (va === vb) return 0;
-    if (va == null) return 1;
-    if (vb == null) return -1;
-    return (va < vb ? -1 : 1) * dir;
-  });
+const STATE = loadState();  // { [dedupe_key]: { viewed, favourite, rating, comment } }
+const META  = loadMeta();   // { lastVisitAt }
+// On very first visit, suppress NEW badges (no baseline).
+if (!META.lastVisitAt) { META.lastVisitAt = GENERATED_AT; saveMeta(); }
+
+function stateOf(k) {
+  if (!STATE[k]) STATE[k] = {};
+  return STATE[k];
 }
-function filterRows() {
-  const pc    = document.getElementById("f-pc").value;
-  const beds  = document.getElementById("f-beds").value;
-  const price = parseInt(document.getElementById("f-price").value, 10);
-  const furn  = document.getElementById("f-furn").checked;
-  const park  = document.getElementById("f-park").checked;
-  const rail  = document.getElementById("f-rail").checked;
-  const dl    = document.getElementById("f-deadline").checked;
-  return DATA.filter(r => {
-    if (pc && r.pc !== pc) return false;
-    if (beds && String(r.beds) !== beds) return false;
-    if (!Number.isNaN(price) && r.price > price) return false;
-    if (furn && !["yes","optional","part"].includes(r.furnished)) return false;
-    if (park && !["allocated","driveway","off-street"].includes(r.parking)) return false;
-    if (rail && !r.direct) return false;
-    if (dl && r.available && r.available > DEADLINE) return false;
+function patchState(k, patch) {
+  STATE[k] = { ...stateOf(k), ...patch };
+  saveState();
+}
+
+//---------- helpers ----------
+const SRC_LABEL = { openrent:"OR", rightmove:"RM", zoopla:"Z", onthemarket:"OTM", gumtree:"GT" };
+const PARK_RANK = { allocated:5, driveway:5, "off-street":5, permit:3, "on-street":3, unclear:1, none:0, "":0 };
+
+function esc(s) {
+  return String(s ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function fmtPrice(n) { return "£" + n.toLocaleString(); }
+function fmtDate(iso, raw) { if (iso) return iso; return raw || "?"; }
+
+function postcodeBand(pcFull, pcArea) {
+  const pc = pcFull || "";
+  if (/^SO17 /.test(pc) || (!pc && pcArea === "SO17")) return "sweet";
+  if (/^SO15 [12]/.test(pc) || /^SO14 [067]/.test(pc)) return "ok";
+  if (/^SO15 [3578]/.test(pc) || /^SO14 [12355]/.test(pc) || /^SO18/.test(pc) ||
+      (!pc && pcArea === "SO18")) return "penalty";
+  return "neutral";
+}
+function isNew(item) {
+  if (!META.lastVisitAt) return false;
+  return item.first_seen > META.lastVisitAt && !stateOf(item.dedupe_key).viewed;
+}
+
+//---------- filtering + sorting ----------
+const filters = {
+  search: "", pc: "", beds: "", maxPrice: NaN,
+  furn:false, park:false, rail:false,
+  favs:false, newOnly:false, hideViewed:false, inclLetAgreed:false,
+  sort: "score",
+};
+
+function applyFilters(items) {
+  return items.filter(r => {
+    if (filters.search) {
+      const hay = (r.address + " " + r.pc_full + " " + r.green).toLowerCase();
+      if (!hay.includes(filters.search)) return false;
+    }
+    if (filters.pc && r.pc !== filters.pc) return false;
+    if (filters.beds && String(r.beds) !== filters.beds) return false;
+    if (!Number.isNaN(filters.maxPrice) && r.price > filters.maxPrice) return false;
+    if (filters.furn && !["yes","optional","part"].includes(r.furnished)) return false;
+    if (filters.park && r.parking === "none") return false;
+    if (filters.rail && !r.direct) return false;
+
+    const s = stateOf(r.dedupe_key);
+    if (filters.favs && !s.favourite) return false;
+    if (filters.newOnly && !isNew(r)) return false;
+    if (filters.hideViewed && s.viewed) return false;
+    if (!filters.inclLetAgreed && r.status === "let_agreed") return false;
     return true;
   });
 }
-function detailRow(r) {
-  const item = (k,v) => v ? `<div><div class="k">${k}</div><div>${v}</div></div>` : "";
-  const links = r.sources.map(s =>
-    `<a href="${s.url}" target="_blank" rel="noopener">${SRC_ABBR[s.src]||s.src} ↗</a>`).join(" ");
-  return `<tr class="detail" data-id="${r.id}"><td colspan="11">
-    <div class="grid">
-      ${item("Why worth a look", r.why)}
-      ${item("Caveats / verify", r.caveats)}
-      ${item("Rail access", r.rail)}
-      ${item("Near green space", r.green)}
-      ${item("Furnished (raw)", r.furnished_raw)}
-      ${item("Parking (raw)", r.parking_raw)}
-      ${item("Deposit", r.deposit ? "£"+r.deposit : "")}
-      ${item("Postcode", r.pc_full)}
-      ${item("Available (raw)", r.available_raw)}
-      ${item("All sources", links)}
-    </div>
-  </td></tr>`;
+function applySort(items) {
+  const [key, dirRaw] = filters.sort.split("-");
+  const dir = dirRaw === "desc" ? -1 : 1;
+  const v = (r) => {
+    if (key === "score")      return r.score;
+    if (key === "price")      return r.price;
+    if (key === "first_seen") return r.first_seen;
+    if (key === "address")    return r.address.toLowerCase();
+    if (key === "rating")     return stateOf(r.dedupe_key).rating || 0;
+    return 0;
+  };
+  return items.slice().sort((a, b) => {
+    const va = v(a), vb = v(b);
+    if (va === vb) {
+      // tiebreak: score desc
+      return (b.score - a.score) || (a.price - b.price);
+    }
+    // default direction depends on key
+    if (key === "score" || key === "rating" || key === "first_seen") {
+      return dir === 1 ? (vb < va ? -1 : 1) : (va < vb ? -1 : 1);
+    }
+    return (va < vb ? -1 : 1) * dir;
+  });
 }
+
+//---------- compare ----------
+const compareSet = new Set();
+function refreshCompareBtn() {
+  const btn = document.getElementById("btn-compare");
+  btn.textContent = `Compare (${compareSet.size}/2)`;
+  btn.disabled = compareSet.size !== 2;
+}
+function openCompare() {
+  const keys = [...compareSet];
+  const items = keys.map(k => DATA.find(r => r.dedupe_key === k)).filter(Boolean);
+  if (items.length !== 2) return;
+  const body = document.getElementById("cmp-body");
+  body.innerHTML = items.map(r => `
+    <div class="cmp-col">
+      <h3>${esc(r.address)}</h3>
+      <div class="price">${fmtPrice(r.price)} <span style="font-size:13px;color:var(--muted);font-weight:400">${r.beds ?? "?"} bed</span></div>
+      <dl>
+        <dt>Score</dt><dd><strong>${r.score}</strong></dd>
+        <dt>Postcode</dt><dd>${esc(r.pc_full || r.pc || "?")}</dd>
+        <dt>Furnished</dt><dd>${esc(r.furnished_raw || r.furnished || "?")}</dd>
+        <dt>Parking</dt><dd>${esc(r.parking_raw || r.parking || "?")}</dd>
+        <dt>EPC</dt><dd>${r.epc ? `<span class="epc epc-${r.epc}">EPC ${r.epc}</span>` : "?"}</dd>
+        <dt>Rail</dt><dd>${esc(r.rail || "?")}</dd>
+        <dt>Green</dt><dd>${esc(r.green || "?")}</dd>
+        <dt>Available</dt><dd>${esc(fmtDate(r.available, r.available_raw))}</dd>
+        <dt>Deposit</dt><dd>${r.deposit ? "£" + r.deposit : "?"}</dd>
+        <dt>Why</dt><dd>${esc(r.why || "")}</dd>
+        <dt>Caveats</dt><dd>${esc(r.caveats || "")}</dd>
+        <dt>Sources</dt><dd>${r.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${SRC_LABEL[s.src] || s.src} ↗</a>`).join(" ")}</dd>
+      </dl>
+    </div>
+  `).join("");
+  document.getElementById("compare").showModal();
+}
+
+//---------- rendering ----------
+function cardHtml(r) {
+  const st = stateOf(r.dedupe_key);
+  const newBadge = isNew(r) ? `<span class="badge new">NEW</span>` : "";
+  const letAgreed = r.status === "let_agreed" ? `<span class="badge let-agreed">LET AGREED</span>` : "";
+  const band = postcodeBand(r.pc_full, r.pc);
+  const pcBadge = band === "sweet"   ? `<span class="badge sweet">sweet spot</span>` :
+                  band === "penalty" ? `<span class="badge penalty">remote/west</span>` : "";
+  const parkingBadge = r.parking === "none" ? `<span class="badge bad">no parking</span>` :
+                       r.parking === "unclear" ? `<span class="badge muted">parking ?</span>` :
+                       `<span class="badge good">${esc(r.parking)}</span>`;
+  const furnBadge = r.furnished === "no" ? `<span class="badge bad">unfurn</span>` :
+                    r.furnished === "unclear" ? `<span class="badge muted">furn ?</span>` :
+                    `<span class="badge good">${esc(r.furnished)}</span>`;
+  const epcBadge = r.epc ? `<span class="epc epc-${r.epc}">EPC ${r.epc}</span>` :
+                           `<span class="epc epc-unknown">EPC ?</span>`;
+  const railBadge = r.direct ? `<span class="badge good">direct</span>` : `<span class="badge muted">change</span>`;
+  const greenBadge = r.green && /common/i.test(r.green) ? `<span class="badge good">Common</span>` : "";
+
+  const rating = st.rating || 0;
+  const ratingHtml = [1,2,3,4,5].map(n =>
+    `<button data-r="${n}" class="${n <= rating ? "lit" : ""}" aria-label="${n} star${n>1?"s":""}">★</button>`
+  ).join("");
+
+  const sourcesHtml = r.sources.map(s =>
+    `<a href="${esc(s.url)}" target="_blank" rel="noopener" data-stop>${SRC_LABEL[s.src] || s.src}</a>`
+  ).join("");
+
+  const classes = [
+    "card",
+    st.favourite ? "fav" : "",
+    r.status === "let_agreed" ? "let-agreed" : "",
+    compareSet.has(r.dedupe_key) ? "compare-selected" : "",
+  ].filter(Boolean).join(" ");
+
+  return `
+    <article class="${classes}" data-key="${esc(r.dedupe_key)}">
+      <div class="card-top">
+        <span class="price">${fmtPrice(r.price)}</span>
+        <span class="beds">${r.beds ?? "?"} bed</span>
+        <span class="spacer"></span>
+        <span class="score" title="Score (max ~103)">${r.score}</span>
+        <span class="icons">
+          <button class="btn-fav ${st.favourite ? "on" : ""}" title="Favourite">★</button>
+          <button class="btn-viewed ${st.viewed ? "viewed-on" : ""}" title="Viewed">✓</button>
+          <button class="btn-cmp ${compareSet.has(r.dedupe_key) ? "cmp-on" : ""}" title="Add to compare">⇄</button>
+        </span>
+      </div>
+      <div class="badges">
+        ${newBadge}
+        ${letAgreed}
+        ${pcBadge}
+        ${r.pc_full ? `<span class="badge pc">${esc(r.pc_full)}</span>` : (r.pc ? `<span class="badge pc">${esc(r.pc)}</span>` : "")}
+      </div>
+      <h3 class="address">${esc(r.address)}</h3>
+      <ul class="facets">
+        <li>${parkingBadge}</li>
+        <li>${furnBadge}</li>
+        <li>${epcBadge}</li>
+        <li>${railBadge}</li>
+        ${greenBadge ? `<li>${greenBadge}</li>` : ""}
+        <li><span class="badge muted">${esc(fmtDate(r.available, r.available_raw))}</span></li>
+      </ul>
+      <div class="rating" data-key="${esc(r.dedupe_key)}">${ratingHtml}</div>
+      <textarea class="comment" data-key="${esc(r.dedupe_key)}" placeholder="Your notes…">${esc(st.comment || "")}</textarea>
+      <div class="card-foot">
+        <div class="sources">${sourcesHtml}</div>
+        <button class="expand-btn">More ↓</button>
+      </div>
+      <div class="detail">
+        <div class="row"><div class="k">Why</div>${esc(r.why || "(none)")}</div>
+        <div class="row"><div class="k">Caveats / verify</div>${esc(r.caveats || "(none)")}</div>
+        <div class="row"><div class="k">Rail</div>${esc(r.rail || "(none)")}</div>
+        <div class="row"><div class="k">Green</div>${esc(r.green || "(none)")}</div>
+        ${r.deposit ? `<div class="row"><div class="k">Deposit</div>£${r.deposit}</div>` : ""}
+      </div>
+    </article>
+  `;
+}
+
 function render() {
-  const filtered = sortRows(filterRows());
-  const tbody = document.getElementById("rows");
+  const filtered = applySort(applyFilters(DATA));
+  const grid = document.getElementById("grid");
+  const empty = document.getElementById("empty");
   if (filtered.length === 0) {
-    tbody.innerHTML = "";
-    document.getElementById("empty").classList.remove("hidden");
+    grid.innerHTML = "";
+    empty.hidden = false;
   } else {
-    document.getElementById("empty").classList.add("hidden");
-    tbody.innerHTML = filtered.map(r => {
-      const sourceLinks = r.sources.map(s =>
-        `<a href="${s.url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${SRC_ABBR[s.src]||s.src}</a>`).join(" ");
-      const main = `<tr class="row" data-id="${r.id}">
-        <td><span class="score">${r.score}</span></td>
-        <td>${r.address}</td>
-        <td class="price">£${r.price.toLocaleString()}</td>
-        <td>${r.beds ?? "?"}</td>
-        <td>${badge(r.parking)}</td>
-        <td>${furnBadge(r.furnished)}</td>
-        <td>${epcBadge(r.epc)}</td>
-        <td>${fmtAvail(r.available, r.available_raw)}</td>
-        <td>${r.pc||"?"}</td>
-        <td>${railBadge(r.direct)}</td>
-        <td class="sources">${sourceLinks}</td>
-      </tr>`;
-      const detail = state.expanded.has(r.id) ? detailRow(r) : "";
-      return main + detail;
-    }).join("");
+    empty.hidden = true;
+    grid.innerHTML = filtered.map(cardHtml).join("");
   }
   document.getElementById("visible-count").textContent = filtered.length;
-  document.querySelectorAll("th.sortable").forEach(th => {
-    th.classList.remove("sort-asc","sort-desc");
-    if (th.dataset.key === state.sortKey) th.classList.add("sort-"+state.sortDir);
-  });
+  // counts
+  let favCount = 0, newCount = 0;
+  for (const r of DATA) {
+    if (r.status !== "let_agreed") {
+      if (stateOf(r.dedupe_key).favourite) favCount++;
+      if (isNew(r)) newCount++;
+    }
+  }
+  document.getElementById("fav-count").textContent = favCount;
+  document.getElementById("new-count").textContent = newCount;
+  refreshCompareBtn();
 }
-document.querySelectorAll("th.sortable").forEach(th => {
-  th.addEventListener("click", () => {
-    const k = th.dataset.key;
-    if (state.sortKey === k) state.sortDir = state.sortDir === "asc" ? "desc" : "asc";
-    else { state.sortKey = k; state.sortDir = (k==="price"||k==="available"||k==="address"||k==="pc") ? "asc" : "desc"; }
+
+//---------- event wiring ----------
+function bindFilters() {
+  const map = {
+    "f-search":         v => filters.search = v.toLowerCase().trim(),
+    "f-pc":             v => filters.pc = v,
+    "f-beds":           v => filters.beds = v,
+    "f-price":          v => filters.maxPrice = v === "" ? NaN : Number(v),
+    "f-furn":           v => filters.furn = v,
+    "f-park":           v => filters.park = v,
+    "f-rail":           v => filters.rail = v,
+    "f-favs":           v => filters.favs = v,
+    "f-new":            v => filters.newOnly = v,
+    "f-hide-viewed":    v => filters.hideViewed = v,
+    "f-incl-let-agreed":v => filters.inclLetAgreed = v,
+    "f-sort":           v => filters.sort = v,
+  };
+  for (const [id, setter] of Object.entries(map)) {
+    const el = document.getElementById(id);
+    const handler = () => {
+      const v = el.type === "checkbox" ? el.checked : el.value;
+      setter(v); render();
+    };
+    el.addEventListener("input", handler);
+    el.addEventListener("change", handler);
+  }
+
+  document.getElementById("btn-reset").onclick = () => {
+    document.getElementById("f-search").value = "";
+    document.getElementById("f-pc").value = "";
+    document.getElementById("f-beds").value = "";
+    document.getElementById("f-price").value = "";
+    document.getElementById("f-sort").value = "score";
+    ["f-furn","f-park","f-rail","f-favs","f-new","f-hide-viewed","f-incl-let-agreed"]
+      .forEach(id => document.getElementById(id).checked = false);
+    Object.assign(filters, { search:"", pc:"", beds:"", maxPrice:NaN,
+      furn:false, park:false, rail:false,
+      favs:false, newOnly:false, hideViewed:false, inclLetAgreed:false, sort:"score" });
     render();
+  };
+  document.getElementById("btn-mark-seen").onclick = () => {
+    META.lastVisitAt = GENERATED_AT; saveMeta(); render();
+  };
+  document.getElementById("btn-compare").onclick = openCompare;
+}
+
+function bindGrid() {
+  const grid = document.getElementById("grid");
+  grid.addEventListener("click", (e) => {
+    const t = e.target;
+    if (t.matches("a[data-stop]")) return;       // let source links open normally
+    const card = t.closest(".card");
+    if (!card) return;
+    const key = card.dataset.key;
+
+    if (t.matches(".btn-fav")) {
+      const s = stateOf(key);
+      patchState(key, { favourite: !s.favourite });
+      render();
+      return;
+    }
+    if (t.matches(".btn-viewed")) {
+      const s = stateOf(key);
+      patchState(key, { viewed: !s.viewed });
+      render();
+      return;
+    }
+    if (t.matches(".btn-cmp")) {
+      if (compareSet.has(key)) compareSet.delete(key);
+      else if (compareSet.size < 2) compareSet.add(key);
+      else { /* already at 2 — ignore */ }
+      render();
+      return;
+    }
+    if (t.matches(".rating button")) {
+      const r = Number(t.dataset.r);
+      const cur = stateOf(key).rating || 0;
+      patchState(key, { rating: cur === r ? 0 : r });
+      render();
+      return;
+    }
+    if (t.matches(".expand-btn")) {
+      const detail = card.querySelector(".detail");
+      const open = detail.classList.toggle("open");
+      t.textContent = open ? "Less ↑" : "More ↓";
+      return;
+    }
   });
-});
-document.getElementById("rows").addEventListener("click", e => {
-  const row = e.target.closest("tr.row");
-  if (!row) return;
-  const id = Number(row.dataset.id);
-  if (state.expanded.has(id)) state.expanded.delete(id); else state.expanded.add(id);
-  render();
-});
-["f-pc","f-beds","f-price","f-furn","f-park","f-rail","f-deadline"].forEach(id => {
-  document.getElementById(id).addEventListener("input", render);
-  document.getElementById(id).addEventListener("change", render);
-});
-document.getElementById("f-reset").addEventListener("click", () => {
-  ["f-pc","f-beds","f-price"].forEach(id => document.getElementById(id).value = "");
-  ["f-furn","f-park","f-rail","f-deadline"].forEach(id => document.getElementById(id).checked = false);
-  render();
-});
+
+  // comment save on input (debounced)
+  let saveTimer;
+  grid.addEventListener("input", (e) => {
+    if (!e.target.matches(".comment")) return;
+    const key = e.target.dataset.key;
+    const val = e.target.value;
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => patchState(key, { comment: val }), 250);
+  });
+
+  // open sources in new tab without triggering card-level handlers
+  grid.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-stop]");
+    if (a) e.stopPropagation();
+  }, true);
+}
+
+function bindDialog() {
+  const dlg = document.getElementById("compare");
+  document.getElementById("cmp-close").onclick = () => dlg.close();
+  dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+}
+
+bindFilters();
+bindGrid();
+bindDialog();
 render();
 </script>
 </body>

@@ -5,9 +5,10 @@ import type { ListingRow } from "../types.ts";
 
 export async function cmdReport(): Promise<void> {
   const db = connect();
+  // include let_agreed too — dashboard hides them by default but can toggle.
   const rows = db.query(
     `SELECT *, ${SCORE_SQL} AS score
-     FROM listings WHERE status='active'
+     FROM listings
      ORDER BY score DESC, price_pcm ASC`
   ).all() as ListingRow[];
 
@@ -24,15 +25,26 @@ export async function cmdReport(): Promise<void> {
   const bySource: Record<string, number> = Object.fromEntries(
     bySourceRaw.map(r => [r.source, r.c])
   );
-  const total = rows.length;
+  const total = rows.filter(r => r.status === "active").length;
   const unique = groups.size;
   db.close();
 
   const payload: DashboardPayload[] = Array.from(groups.values()).map(items => {
     const primary = items.find(r => r.source === "openrent")
                  ?? [...items].sort((a, b) => a.price_pcm - b.price_pcm)[0]!;
+    // group status is let_agreed only if every source thinks so
+    const groupStatus = items.every(r => r.status === "let_agreed")
+                        ? "let_agreed"
+                        : "active";
+    // earliest first_seen across portals = when this property first appeared
+    const firstSeen = items
+      .map(r => r.first_seen)
+      .sort()[0]!;
     return {
       id:            primary.id,
+      dedupe_key:    primary.dedupe_key,
+      status:        groupStatus,
+      first_seen:    firstSeen,
       score:         primary.score ?? 0,
       address:       primary.address,
       price:         primary.price_pcm,
@@ -63,7 +75,8 @@ export async function cmdReport(): Promise<void> {
     sourceLabels: SOURCE_LABELS,
     total,
     unique,
+    generatedAt: new Date().toISOString().slice(0, 19),
   });
   await Bun.write(HTML_OUT, html);
-  console.log(`Wrote ${HTML_OUT}  (${unique} unique, ${total} raw)`);
+  console.log(`Wrote ${HTML_OUT}  (${unique} unique, ${total} active, ${rows.length} raw)`);
 }
