@@ -5,6 +5,7 @@ import { cmdIngest } from "./src/commands/ingest.ts";
 import { cmdReport } from "./src/commands/report.ts";
 import { cmdList } from "./src/commands/list.ts";
 import { cmdPrune } from "./src/commands/prune.ts";
+import { cmdServe } from "./src/commands/serve.ts";
 
 const USAGE = `Usage: bun jomove.ts <command> [...args]
 
@@ -12,12 +13,14 @@ Commands:
   init                          create empty SQLite database
   ingest [dir-or-file ...]      parse results_*.md into SQLite (defaults to .)
   report                        render dashboard.html from SQLite
+  serve  [--port N]             run dev server with live polling (default 3000)
   prune  [--days N] [--dry-run] mark listings unseen for >N days as let_agreed
                                 (default --days 7)
   list   [--max-price N] [--postcode SOxx] [--beds N]
          [--furnished] [--parking] [--direct-line]
 
 Examples:
+  bun jomove.ts serve
   bun jomove.ts ingest old_search
   bun jomove.ts prune --days 7 --dry-run
   bun jomove.ts list --postcode SO17`;
@@ -41,6 +44,15 @@ switch (sub) {
   case "report":
     await cmdReport();
     break;
+  case "serve": {
+    const { values } = parseArgs({
+      args: rest,
+      options: { "port": { type: "string" } },
+      strict: false,
+    });
+    cmdServe({ port: values["port"] ? Number(values["port"]) : 3000 });
+    break;
+  }
   case "prune": {
     const { values } = parseArgs({
       args: rest,

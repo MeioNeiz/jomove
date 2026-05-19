@@ -128,13 +128,15 @@ src/
   dedupe.ts                 dedupe key + direct-line detector
   markdown.ts               block-level markdown parser
   template.ts               loads template.html, substitutes variables
-  template.html             dashboard markup + embedded JS for sort/filter/state
+  template.html             dashboard markup + embedded JS (sort/filter/state/polling)
+  payload.ts                shared payload builder (used by report + serve)
   commands/
     init.ts
     ingest.ts
     list.ts
     prune.ts
     report.ts
+    serve.ts                dev server: serves / + /api/listings
 data/jomove.db              gitignored, rebuilt from markdown
 old_search/                 archived per-portal markdown
 dashboard.html              generated; commit it so others see the result

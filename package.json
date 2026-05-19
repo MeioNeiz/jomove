@@ -8,6 +8,8 @@
     "init":   "bun jomove.ts init",
     "ingest": "bun jomove.ts ingest",
     "report": "bun jomove.ts report",
+    "serve":  "bun jomove.ts serve",
+    "dev":    "bun jomove.ts serve",
     "prune":  "bun jomove.ts prune",
     "list":   "bun jomove.ts list",
     "build":  "bun jomove.ts ingest old_search && bun jomove.ts report"

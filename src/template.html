@@ -208,7 +208,7 @@
   <header>
     <div>
       <h1>Jomove<span class="by">· Southampton rental tracker</span></h1>
-      <div class="updated">Last updated {{LAST_UPDATED}}</div>
+      <div class="updated">Last updated <span id="last-updated">{{LAST_UPDATED}}</span><span id="poll-status"></span></div>
     </div>
   </header>
 
@@ -639,6 +639,39 @@ bindFilters();
 bindGrid();
 bindDialog();
 render();
+
+//---------- live polling (dev server only) ----------
+// Poll /api/listings every 5s. If generatedAt advanced (MAX(last_seen)
+// in SQLite), swap DATA + re-render without disrupting filters, sort,
+// expand state, comparison selection or scroll position.
+let CURRENT_VERSION = GENERATED_AT;
+async function pollOnce() {
+  try {
+    const res = await fetch("/api/listings", { cache: "no-store" });
+    if (!res.ok) return;
+    const fresh = await res.json();
+    if (!fresh.generatedAt || fresh.generatedAt <= CURRENT_VERSION) return;
+    CURRENT_VERSION = fresh.generatedAt;
+    DATA.length = 0;
+    for (const r of fresh.payload) DATA.push(r);
+    document.getElementById("last-updated").textContent =
+      fresh.generatedAt.slice(0, 16).replace("T", " ");
+    flashStatus("updated");
+    render();
+  } catch {
+    // file:// or server down — silently skip
+  }
+}
+function flashStatus(msg) {
+  const el = document.getElementById("poll-status");
+  el.textContent = " · " + msg;
+  el.style.color = "var(--good)";
+  setTimeout(() => { el.textContent = ""; }, 2500);
+}
+// Only poll when served via HTTP(S). Skipping file:// avoids needless errors.
+if (location.protocol.startsWith("http")) {
+  setInterval(pollOnce, 5000);
+}
 </script>
 </body>
 </html>
