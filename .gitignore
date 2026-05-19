@@ -1,13 +1,14 @@
+# SQLite database (per-user, rebuilt from markdown via `bun run ingest`)
 data/*.db
 data/*.db-journal
 data/*.db-wal
 data/*.db-shm
 
-__pycache__/
-*.pyc
-.venv/
-venv/
+# Node / Bun
+node_modules/
+.bun/
 
+# OS / editor
 .DS_Store
 Thumbs.db
 *.swp

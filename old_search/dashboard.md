@@ -18,21 +18,29 @@ Ranked by: direct rail to both Southampton Central and Airport Parkway → park 
   - Zoopla: https://www.zoopla.co.uk/to-rent/details/73196354/
   - OnTheMarket: https://www.onthemarket.com/details/11501198/
 
+Furnishing pretty rough but location is alright right by the train station
+
 ### 2. Richmond Road, SO15 3FS — £1,000 pcm
 - **Why top:** Furnished, ALLOCATED parking (rare central), EPC C, available immediately. OpenRent so no agent fees. Direct line to Central, Common 15 min.
 - **Sources:**
   - OpenRent: https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-richmond-road-so15/2856684
+
+Nicely furnished, kinda far, down by milbrook 20 minutes from common
 
 ### 3. Joseph Court, SO17 3SJ — £1,050 pcm
 - **Why top:** Best EPC at this price (B, 85). Fully furnished, parking, St Denys + Swaythling direct line (closer to Airport Parkway than central SO15 listings). OpenRent — no fees. Common 10–15 min. *Flag: 20 June availability is tight against 29 June deadline — confirm flexibility.*
 - **Sources:**
   - OpenRent: https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-joseph-court-so17/2893737
 
+Great location, near work, walk to common perfect flat great with garden but price just a bit too high
+
 ### 4. Witts Hill, SO18 4QH — £1,050 pcm (**2 BED**)
 - **Why top:** Only viable 2-bed in budget on direct line. Off-street parking, immediate, Swaythling station 15–20 min walk (direct to Airport Parkway), Riverside Park 10–15 min. Landlord 100% response rate.
 - **Sources:**
   - OpenRent: https://www.openrent.co.uk/property-to-rent/southampton/2-bed-flat-witts-hill-so18/2827106
   - Gumtree: https://www.gumtree.com/p/property-to-rent/beautiful-2-bedroom-first-floor-flat-to-let-on-witts-hill-southampton-so18-4qh-/1511179957
+
+bad location, expensive
 
 ### 5. Bellevue Road, SO15 — £1,100 pcm
 - **Why top:** Hits the ceiling but ticks every box: optional furnishing, allocated off-street parking, EPC C, ~10 min to Central direct, Watts/Palmerston Park 5 min. 15 June. Three sources.
@@ -41,10 +49,14 @@ Ranked by: direct rail to both Southampton Central and Airport Parkway → park 
   - Zoopla: https://www.zoopla.co.uk/to-rent/details/73203997/
   - OnTheMarket: https://www.onthemarket.com/details/19495490/
 
+expensive again and not the nicest but its alright
+
 ### 6. Millbrook Road East (Link House / Elmfield), SO15 — £1,000 pcm
 - **Why top:** Furnished, allocated parking, EPC C, top-floor, ~6 min walk to Central direct line. Available 22 May. Council tax band A keeps running costs low.
 - **Sources:**
   - OnTheMarket: https://www.onthemarket.com/details/19229849/
+
+right by central pretty nice flat just ideally want to be a bit closer to work/common
 
 ### 7. Carlton Road, Polygon, SO15 — £950 pcm
 - **Why top:** Polygon is a smart central postcode. Rightmove confirms furnished + parking + £950. Listed across three portals. ~10 min Central direct, Watts Park 5 min. Available now. *Verify EPC and exact parking type with agent.*
@@ -53,20 +65,28 @@ Ranked by: direct rail to both Southampton Central and Airport Parkway → park 
   - Zoopla: https://www.zoopla.co.uk/to-rent/details/60087448/
   - OnTheMarket: https://www.onthemarket.com/details/7864334/
 
+not bad furnishing, not too far from common but not as nice as others
+
 ### 8. Captain Place, SO14 1TF — £900 pcm
 - **Why top:** Furnished, parking, Ocean Village fringe. Queens Park 5–8 min, Central 15–20 min direct. Available 19 May. OpenRent. *EPC currently being obtained — could be C or could be E.*
 - **Sources:**
   - OpenRent: https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-captain-place-so14/2902514
+
+ocean village way, crazy furnishing disgusting, weird layout, no pics of kitchen
 
 ### 9. The Old Chambers, College Place, SO15 2YL — £875 pcm
 - **Why top:** Cheap with confirmed ALLOCATED parking. EPC D and unfurnished — but at £875 there's room in the budget for furniture. Watts/Palmerston Park 5–8 min, Central 10 min direct. Available now.
 - **Sources:**
   - Rightmove: https://www.rightmove.co.uk/properties/174131012
 
+Unfurnished, central, not bad. Is nice flat
+
 ### 10. Southbrook Rise, SO15 1BX — £950 pcm
 - **Why top:** Ground-floor with allocated parking, EPC C, 10–15 min Central direct line, available now. Unfurnished (factor in furniture cost).
 - **Sources:**
   - OnTheMarket: https://www.onthemarket.com/details/19141415/
+
+Again really central, I actually dont want to be really near work
 
 ---
 

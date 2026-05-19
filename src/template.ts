@@ -1,0 +1,65 @@
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const HERE = dirname(fileURLToPath(import.meta.url));
+const TEMPLATE_PATH = join(HERE, "template.html");
+
+export type DashboardSource = { src: string; url: string };
+
+export type DashboardPayload = {
+  id: number;
+  score: number;
+  address: string;
+  price: number;
+  beds: number | null;
+  baths: number | null;
+  furnished: string;
+  furnished_raw: string;
+  parking: string;
+  parking_raw: string;
+  epc: string;
+  deposit: number | null;
+  available: string;
+  available_raw: string;
+  pc: string;
+  pc_full: string;
+  green: string;
+  rail: string;
+  direct: boolean;
+  why: string;
+  caveats: string;
+  sources: DashboardSource[];
+};
+
+export type DashboardData = {
+  payload: DashboardPayload[];
+  bySource: Record<string, number>;
+  sourceLabels: Record<string, string>;
+  total: number;
+  unique: number;
+};
+
+function esc(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+export function renderDashboard(d: DashboardData): string {
+  const template = readFileSync(TEMPLATE_PATH, "utf-8");
+  const lastUpdated = new Date().toISOString().slice(0, 16).replace("T", " ");
+  const sourceChips = Object.entries(d.sourceLabels)
+    .map(([k, v]) =>
+      `<div class="stat"><div class="num">${d.bySource[k] ?? 0}</div>` +
+      `<div class="label">${esc(v)}</div></div>`
+    )
+    .join("");
+  return template
+    .replace("{{LAST_UPDATED}}", esc(lastUpdated))
+    .replace(/\{\{UNIQUE\}\}/g, String(d.unique))
+    .replace("{{TOTAL}}", String(d.total))
+    .replace("{{SOURCE_CHIPS}}", sourceChips)
+    .replace("{{DATA_JSON}}", JSON.stringify(d.payload));
+}

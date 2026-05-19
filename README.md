@@ -4,26 +4,38 @@ Lightweight Southampton rental tracker. Parses agent listings collected in
 markdown files into a small SQLite database and renders a sortable,
 filterable static HTML dashboard.
 
-No frameworks. Python 3.10+ stdlib only. No build step. The dashboard is
-one self-contained `dashboard.html` you can open in any browser or host
-anywhere.
+Bun + TypeScript. One built-in DB dep (`bun:sqlite`). No build step.
+The dashboard is one self-contained `dashboard.html` you open in any
+browser.
 
 ## Quick start
 
+Install Bun:
+
 ```sh
-python jomove.py init        # create data/jomove.db
-python jomove.py ingest      # parse results_*.md → SQLite
-python jomove.py report      # write dashboard.html
+# Windows
+winget install Oven-sh.Bun
+# macOS / Linux
+curl -fsSL https://bun.sh/install | bash
 ```
 
-Open `dashboard.html` in a browser. Sort by clicking a column header,
-filter from the bar at the top, click any row to expand the full notes.
+Then:
+
+```sh
+bun install
+bun run init                # create data/jomove.db
+bun run ingest old_search   # parse markdown into SQLite (idempotent)
+bun run report              # write dashboard.html
+```
+
+Open `dashboard.html` in a browser. Click any column header to sort,
+filter from the bar at the top, click a row to expand its full notes.
 
 ## CLI queries
 
 ```sh
-python jomove.py list --max-price 1000 --parking --direct-line
-python jomove.py list --postcode SO15 --beds 1 --furnished
+bun run list --max-price 1000 --parking --direct-line
+bun run list --postcode SO15 --beds 1 --furnished
 ```
 
 ## Adding listings
@@ -49,13 +61,12 @@ listing:
 ---
 ```
 
-Append a new block, run `jomove ingest`, then `jomove report`. Ingest is
-idempotent — re-running updates existing listings keyed by URL.
+Append a new block, run `bun run ingest <dir>`, then `bun run report`.
+Ingest is keyed on URL — re-running updates existing rows in place.
 
 ## Scoring
 
-Each listing gets a score out of 110 based on these weights, reflecting
-the search priorities:
+Each listing gets a score out of 110 reflecting the search priorities:
 
 | Factor | Points |
 |---|---|
@@ -67,14 +78,29 @@ the search priorities:
 | Near a park / green space | 15 |
 | EPC A or B / C | 10 / 5 |
 
-Adjust in `SCORE_SQL` if your priorities change.
+Adjust in `src/db.ts` (`SCORE_SQL`) if your priorities change.
 
-## Files
+## Project layout
 
-| Path | Purpose |
-|---|---|
-| `jomove.py` | All the code (CLI + parser + HTML renderer) |
-| `results_*.md` | Source-of-truth markdown per portal |
-| `data/jomove.db` | SQLite, gitignored — rebuilt from markdown |
-| `dashboard.html` | Generated, committable so others can view without running |
-| `dashboard.md` | Older curated digest, kept for reference |
+```
+jomove.ts                   CLI entry — dispatches to commands
+package.json                bun scripts
+tsconfig.json
+src/
+  config.ts                 paths, source list, labels
+  types.ts                  shared TS types
+  db.ts                     sqlite connect, schema, scoring SQL
+  field-parsers.ts          price / furnished / parking / EPC / dates
+  dedupe.ts                 dedupe key + direct-rail-line detection
+  markdown.ts               block-level markdown parser
+  template.ts               loads template.html, substitutes variables
+  template.html             dashboard HTML + embedded JS for sort/filter
+  commands/
+    init.ts
+    ingest.ts
+    list.ts
+    report.ts
+data/jomove.db              gitignored, rebuilt from markdown
+old_search/                 archived per-portal markdown
+dashboard.html              generated; commit it so others see the result
+```
