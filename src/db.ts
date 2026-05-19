@@ -37,6 +37,26 @@ CREATE TABLE IF NOT EXISTS listings (
 CREATE INDEX IF NOT EXISTS idx_dedupe   ON listings(dedupe_key);
 CREATE INDEX IF NOT EXISTS idx_postcode ON listings(postcode_area);
 CREATE INDEX IF NOT EXISTS idx_price    ON listings(price_pcm);
+
+-- Per-listing user annotations. Keyed on dedupe_key so a property's notes
+-- survive being re-found across portals or in later scrapes.
+CREATE TABLE IF NOT EXISTS user_notes (
+  dedupe_key TEXT PRIMARY KEY,
+  viewed     INTEGER NOT NULL DEFAULT 0,
+  favourite  INTEGER NOT NULL DEFAULT 0,
+  rating     INTEGER,
+  comment    TEXT,
+  updated_at TEXT NOT NULL
+);
+
+-- Generic singleton-style key/value store for app-level state:
+-- last_visit_at (NEW-badge cutoff), filters (last filter selections),
+-- sort (last sort selection). Values are JSON strings.
+CREATE TABLE IF NOT EXISTS app_state (
+  key        TEXT PRIMARY KEY,
+  value      TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
 `;
 
 // Simplified scoring — postcode sector is the main location signal,

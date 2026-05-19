@@ -276,35 +276,86 @@
 
 <script>
 //---------- payload + meta ----------
-const DATA = {{DATA_JSON}};
+const DATA       = {{DATA_JSON}};
+const APP_STATE  = {{APP_STATE_JSON}};
 const GENERATED_AT = "{{GENERATED_AT}}";
+const IS_LIVE    = location.protocol.startsWith("http");
 
-const STATE_KEY = "jomove:state:v1";
+const STATE_KEY = "jomove:state:v1";  // localStorage fallback (file:// only)
 const META_KEY  = "jomove:meta:v1";
 
-function loadState() {
-  try { return JSON.parse(localStorage.getItem(STATE_KEY) || "{}"); }
-  catch { return {}; }
-}
-function saveState() { localStorage.setItem(STATE_KEY, JSON.stringify(STATE)); }
-function loadMeta() {
-  try { return JSON.parse(localStorage.getItem(META_KEY) || "{}"); }
-  catch { return {}; }
-}
-function saveMeta() { localStorage.setItem(META_KEY, JSON.stringify(META)); }
+let STATE = {};  // { [dedupe_key]: { viewed, favourite, rating, comment } }
+let META  = {};  // { lastVisitAt }
 
-const STATE = loadState();  // { [dedupe_key]: { viewed, favourite, rating, comment } }
-const META  = loadMeta();   // { lastVisitAt }
+if (IS_LIVE) {
+  // Server (SQLite) is the source of truth — state arrives in the payload.
+  for (const r of DATA) STATE[r.dedupe_key] = { ...(r.state || {}) };
+  if (APP_STATE && APP_STATE.lastVisitAt) META.lastVisitAt = APP_STATE.lastVisitAt;
+} else {
+  // file:// mode — fall back to localStorage.
+  try { STATE = JSON.parse(localStorage.getItem(STATE_KEY) || "{}"); } catch {}
+  try { META  = JSON.parse(localStorage.getItem(META_KEY)  || "{}"); } catch {}
+}
+
 // On very first visit, suppress NEW badges (no baseline).
-if (!META.lastVisitAt) { META.lastVisitAt = GENERATED_AT; saveMeta(); }
+if (!META.lastVisitAt) {
+  META.lastVisitAt = GENERATED_AT;
+  persistLastVisitAt();
+}
 
 function stateOf(k) {
   if (!STATE[k]) STATE[k] = {};
   return STATE[k];
 }
+
+// Track in-flight POSTs so a polling refresh doesn't clobber a just-edited row.
+const pendingNoteWrites = new Set();
+
 function patchState(k, patch) {
   STATE[k] = { ...stateOf(k), ...patch };
-  saveState();
+  if (IS_LIVE) {
+    pendingNoteWrites.add(k);
+    fetch("/api/notes/" + encodeURIComponent(k), {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify(patch),
+    }).catch(() => {}).finally(() => pendingNoteWrites.delete(k));
+  } else {
+    localStorage.setItem(STATE_KEY, JSON.stringify(STATE));
+  }
+}
+
+function persistLastVisitAt() {
+  if (IS_LIVE) {
+    fetch("/api/app-state/last_visit_at", {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ value: META.lastVisitAt }),
+    }).catch(() => {});
+  } else {
+    localStorage.setItem(META_KEY, JSON.stringify(META));
+  }
+}
+
+// Debounced filter/sort persistence — server-mode only.
+let _filterSaveTimer = null;
+function persistFiltersAndSort() {
+  if (!IS_LIVE) return;
+  clearTimeout(_filterSaveTimer);
+  _filterSaveTimer = setTimeout(() => {
+    const f = { ...filters };
+    if (Number.isNaN(f.maxPrice)) f.maxPrice = null;
+    fetch("/api/app-state/filters", {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ value: f }),
+    }).catch(() => {});
+    fetch("/api/app-state/sort", {
+      method:  "POST",
+      headers: { "Content-Type": "application/json" },
+      body:    JSON.stringify({ value: filters.sort }),
+    }).catch(() => {});
+  }, 350);
 }
 
 //---------- helpers ----------
@@ -337,6 +388,30 @@ const filters = {
   favs:false, newOnly:false, hideViewed:false, inclLetAgreed:false,
   sort: "score",
 };
+
+// Restore saved filter/sort selection from server (no-op in file:// mode)
+if (IS_LIVE && APP_STATE) {
+  if (APP_STATE.filters && typeof APP_STATE.filters === "object") {
+    Object.assign(filters, APP_STATE.filters);
+    if (filters.maxPrice == null) filters.maxPrice = NaN;
+  }
+  if (APP_STATE.sort) filters.sort = APP_STATE.sort;
+}
+
+function applyFiltersToDOM() {
+  document.getElementById("f-search").value = filters.search || "";
+  document.getElementById("f-pc").value     = filters.pc     || "";
+  document.getElementById("f-beds").value   = filters.beds   || "";
+  document.getElementById("f-price").value  = Number.isFinite(filters.maxPrice) ? filters.maxPrice : "";
+  document.getElementById("f-furn").checked            = !!filters.furn;
+  document.getElementById("f-park").checked            = !!filters.park;
+  document.getElementById("f-rail").checked            = !!filters.rail;
+  document.getElementById("f-favs").checked            = !!filters.favs;
+  document.getElementById("f-new").checked             = !!filters.newOnly;
+  document.getElementById("f-hide-viewed").checked     = !!filters.hideViewed;
+  document.getElementById("f-incl-let-agreed").checked = !!filters.inclLetAgreed;
+  document.getElementById("f-sort").value              = filters.sort || "score";
+}
 
 function applyFilters(items) {
   return items.filter(r => {
@@ -544,7 +619,7 @@ function bindFilters() {
     const el = document.getElementById(id);
     const handler = () => {
       const v = el.type === "checkbox" ? el.checked : el.value;
-      setter(v); render();
+      setter(v); render(); persistFiltersAndSort();
     };
     el.addEventListener("input", handler);
     el.addEventListener("change", handler);
@@ -562,9 +637,12 @@ function bindFilters() {
       furn:false, park:false, rail:false,
       favs:false, newOnly:false, hideViewed:false, inclLetAgreed:false, sort:"score" });
     render();
+    persistFiltersAndSort();
   };
   document.getElementById("btn-mark-seen").onclick = () => {
-    META.lastVisitAt = GENERATED_AT; saveMeta(); render();
+    META.lastVisitAt = GENERATED_AT;
+    persistLastVisitAt();
+    render();
   };
   document.getElementById("btn-compare").onclick = openCompare;
 }
@@ -635,6 +713,7 @@ function bindDialog() {
   dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
 }
 
+applyFiltersToDOM();
 bindFilters();
 bindGrid();
 bindDialog();
@@ -654,6 +733,12 @@ async function pollOnce() {
     CURRENT_VERSION = fresh.generatedAt;
     DATA.length = 0;
     for (const r of fresh.payload) DATA.push(r);
+    // Refresh per-listing STATE from server, except keys with in-flight writes
+    for (const r of fresh.payload) {
+      if (!pendingNoteWrites.has(r.dedupe_key)) {
+        STATE[r.dedupe_key] = { ...(r.state || {}) };
+      }
+    }
     document.getElementById("last-updated").textContent =
       fresh.generatedAt.slice(0, 16).replace("T", " ");
     flashStatus("updated");

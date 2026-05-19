@@ -7,6 +7,13 @@ const TEMPLATE_PATH = join(HERE, "template.html");
 
 export type DashboardSource = { src: string; url: string };
 
+export type ListingUserState = {
+  viewed:    boolean;
+  favourite: boolean;
+  rating:    number | null;
+  comment:   string;
+};
+
 export type DashboardPayload = {
   id: number;
   dedupe_key: string;
@@ -33,6 +40,13 @@ export type DashboardPayload = {
   why: string;
   caveats: string;
   sources: DashboardSource[];
+  state: ListingUserState;
+};
+
+export type AppState = {
+  lastVisitAt: string | null;
+  filters:     Record<string, unknown> | null;
+  sort:        string | null;
 };
 
 export type DashboardData = {
@@ -42,6 +56,7 @@ export type DashboardData = {
   total: number;
   unique: number;
   generatedAt: string;
+  appState: AppState;
 };
 
 function esc(s: string): string {
@@ -66,5 +81,6 @@ export function renderDashboard(d: DashboardData): string {
     .replace(/\{\{UNIQUE\}\}/g, String(d.unique))
     .replace("{{TOTAL}}", String(d.total))
     .replace("{{SOURCE_CHIPS}}", sourceChips)
-    .replace("{{DATA_JSON}}", JSON.stringify(d.payload));
+    .replace("{{DATA_JSON}}", JSON.stringify(d.payload))
+    .replace("{{APP_STATE_JSON}}", JSON.stringify(d.appState));
 }

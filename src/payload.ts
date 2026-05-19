@@ -2,7 +2,9 @@ import type { Database } from "bun:sqlite";
 import { SCORE_SQL } from "./db.ts";
 import { SOURCE_LABELS } from "./config.ts";
 import type { ListingRow } from "./types.ts";
-import type { DashboardData, DashboardPayload } from "./template.ts";
+import type {
+  AppState, DashboardData, DashboardPayload, ListingUserState,
+} from "./template.ts";
 
 /**
  * Fingerprint of the listings table. Advances whenever ingest touches a row.
@@ -16,6 +18,25 @@ export function dataVersion(db: Database): string {
   return row?.v ?? "1970-01-01T00:00:00";
 }
 
+const EMPTY_STATE: ListingUserState = {
+  viewed: false, favourite: false, rating: null, comment: "",
+};
+
+function loadAppState(db: Database): AppState {
+  const rows = db.query("SELECT key, value FROM app_state")
+    .all() as Array<{ key: string; value: string }>;
+  const out: AppState = { lastVisitAt: null, filters: null, sort: null };
+  for (const r of rows) {
+    try {
+      const parsed = JSON.parse(r.value);
+      if (r.key === "last_visit_at") out.lastVisitAt = typeof parsed === "string" ? parsed : null;
+      else if (r.key === "filters")  out.filters     = parsed && typeof parsed === "object" ? parsed : null;
+      else if (r.key === "sort")     out.sort        = typeof parsed === "string" ? parsed : null;
+    } catch { /* skip bad rows */ }
+  }
+  return out;
+}
+
 /** Build the full payload the dashboard needs. Shared by `report` + `serve`. */
 export function buildPayload(db: Database): DashboardData {
   const rows = db.query(
@@ -23,6 +44,22 @@ export function buildPayload(db: Database): DashboardData {
      FROM listings
      ORDER BY score DESC, price_pcm ASC`
   ).all() as ListingRow[];
+
+  // Fetch all user_notes in one go and key by dedupe_key for O(1) lookup
+  const noteRows = db.query(
+    `SELECT dedupe_key, viewed, favourite, rating, comment FROM user_notes`
+  ).all() as Array<{
+    dedupe_key: string; viewed: number; favourite: number;
+    rating: number | null; comment: string | null;
+  }>;
+  const noteByKey = new Map<string, ListingUserState>(
+    noteRows.map(n => [n.dedupe_key, {
+      viewed:    Boolean(n.viewed),
+      favourite: Boolean(n.favourite),
+      rating:    n.rating,
+      comment:   n.comment ?? "",
+    }])
+  );
 
   const groups = new Map<string, ListingRow[]>();
   for (const r of rows) {
@@ -73,6 +110,7 @@ export function buildPayload(db: Database): DashboardData {
       why:           primary.why_worth_a_look ?? "",
       caveats:       primary.caveats ?? "",
       sources:       items.map(r => ({ src: r.source, url: r.source_url })),
+      state:         noteByKey.get(primary.dedupe_key) ?? { ...EMPTY_STATE },
     };
   });
 
@@ -83,5 +121,6 @@ export function buildPayload(db: Database): DashboardData {
     total,
     unique,
     generatedAt: dataVersion(db),
+    appState: loadAppState(db),
   };
 }
