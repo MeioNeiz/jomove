@@ -59,20 +59,22 @@ export function cmdIngest(paths: string[]): void {
     postcode_full = $postcode_full, neighbourhood = $neighbourhood,
     near_green_space = $near_green_space, rail_access = $rail_access,
     on_direct_line = $on_direct_line, why_worth_a_look = $why_worth_a_look,
-    caveats = $caveats, dedupe_key = $dedupe_key, last_seen = $last_seen
+    caveats = $caveats, dedupe_key = $dedupe_key,
+    image_url = COALESCE($image_url, image_url),
+    last_seen = $last_seen
     WHERE source_url = $source_url`);
   const insertStmt = db.query(`INSERT INTO listings (
     source, source_url, address, price_pcm, beds, baths,
     furnished_raw, furnished_status, parking_raw, parking_status, epc, deposit,
     available_raw, available_date, postcode_area, postcode_full, neighbourhood,
     near_green_space, rail_access, on_direct_line, why_worth_a_look, caveats,
-    dedupe_key, first_seen, last_seen
+    dedupe_key, image_url, first_seen, last_seen
   ) VALUES (
     $source, $source_url, $address, $price_pcm, $beds, $baths,
     $furnished_raw, $furnished_status, $parking_raw, $parking_status, $epc, $deposit,
     $available_raw, $available_date, $postcode_area, $postcode_full, $neighbourhood,
     $near_green_space, $rail_access, $on_direct_line, $why_worth_a_look, $caveats,
-    $dedupe_key, $first_seen, $last_seen
+    $dedupe_key, $image_url, $first_seen, $last_seen
   )`);
 
   let inserted = 0, updated = 0;

@@ -35,6 +35,14 @@ export function parseFile(path: string, source: string): Listing[] {
     if (linkM) link = linkM[1]!;
     if (!link.startsWith("http")) continue;
 
+    // Image URL is optional — may be a bare URL or markdown-link form
+    let image: string | null = (fields["Image"] ?? "").trim() || null;
+    if (image) {
+      const imgM = image.match(/^\[.*?\]\((.+?)\)\s*$/);
+      if (imgM) image = imgM[1]!;
+      if (!image.startsWith("http")) image = null;
+    }
+
     const bb = parseBedsBaths(fields["Beds/Baths"] ?? "");
     const furnRaw = fields["Furnished"] ?? "";
     const parkRaw = fields["Parking"] ?? "";
@@ -67,6 +75,7 @@ export function parseFile(path: string, source: string): Listing[] {
       why_worth_a_look: fields["Why it's worth a look"] ?? "",
       caveats:          fields["Caveats / things to verify"] ?? "",
       dedupe_key:       dedupeKey(address, price, pcArea),
+      image_url:        image,
     });
   }
   return out;

@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS listings (
   why_worth_a_look    TEXT,
   caveats             TEXT,
   dedupe_key          TEXT,
+  image_url           TEXT,
   first_seen          TEXT NOT NULL,
   last_seen           TEXT NOT NULL,
   status              TEXT NOT NULL DEFAULT 'active'
@@ -124,5 +125,19 @@ export function connect(): Database {
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
   const db = new Database(DB_PATH);
   db.exec(SCHEMA);
+  migrate(db);
   return db;
+}
+
+/**
+ * Lightweight column-add migrations for older DBs created before a field
+ * existed. SQLite ALTER TABLE ADD COLUMN is forward-compatible.
+ */
+function migrate(db: Database): void {
+  const cols = db.query("PRAGMA table_info(listings)")
+    .all() as Array<{ name: string }>;
+  const names = new Set(cols.map(c => c.name));
+  if (!names.has("image_url")) {
+    db.exec("ALTER TABLE listings ADD COLUMN image_url TEXT");
+  }
 }

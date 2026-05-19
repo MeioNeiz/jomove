@@ -22,6 +22,7 @@ export type Listing = {
   why_worth_a_look: string;
   caveats: string;
   dedupe_key: string;
+  image_url: string | null;
 };
 
 export type ListingRow = Listing & {

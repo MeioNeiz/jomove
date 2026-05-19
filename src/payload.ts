@@ -111,6 +111,8 @@ export function buildPayload(db: Database): DashboardData {
       caveats:       primary.caveats ?? "",
       sources:       items.map(r => ({ src: r.source, url: r.source_url })),
       state:         noteByKey.get(primary.dedupe_key) ?? { ...EMPTY_STATE },
+      // Prefer any portal that supplied an image; OpenRent picked first by group.
+      image_url:     items.find(r => r.image_url)?.image_url ?? null,
     };
   });
 

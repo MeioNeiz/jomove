@@ -41,6 +41,7 @@ export type DashboardPayload = {
   caveats: string;
   sources: DashboardSource[];
   state: ListingUserState;
+  image_url: string | null;
 };
 
 export type AppState = {

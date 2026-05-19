@@ -88,10 +88,15 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
   .card{
     background:var(--surface);border:1px solid var(--border);border-radius:8px;
-    padding:12px 14px 10px;display:flex;flex-direction:column;gap:8px;
+    overflow:hidden;display:flex;flex-direction:column;
     transition:border-color .12s, box-shadow .12s;
   }
   .card:hover{border-color:var(--border-2);box-shadow:0 1px 6px rgba(0,0,0,.04)}
+  .card-image{
+    width:100%;height:140px;object-fit:cover;background:#e5e7eb;
+    display:block;border-bottom:1px solid var(--border);
+  }
+  .card-body{padding:12px 14px 10px;display:flex;flex-direction:column;gap:8px}
   .card.fav{border-color:var(--fav)}
   .card.let-agreed{opacity:.55}
   .card.compare-selected{outline:2px solid var(--accent);outline-offset:-1px}
@@ -529,8 +534,14 @@ function cardHtml(r) {
     compareSet.has(r.dedupe_key) ? "compare-selected" : "",
   ].filter(Boolean).join(" ");
 
+  const imgHtml = r.image_url
+    ? `<img class="card-image" src="${esc(r.image_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+    : "";
+
   return `
     <article class="${classes}" data-key="${esc(r.dedupe_key)}">
+      ${imgHtml}
+      <div class="card-body">
       <div class="card-top">
         <span class="price">${fmtPrice(r.price)}</span>
         <span class="beds">${r.beds ?? "?"} bed</span>
@@ -569,6 +580,7 @@ function cardHtml(r) {
         <div class="row"><div class="k">Rail</div>${esc(r.rail || "(none)")}</div>
         <div class="row"><div class="k">Green</div>${esc(r.green || "(none)")}</div>
         ${r.deposit ? `<div class="row"><div class="k">Deposit</div>£${r.deposit}</div>` : ""}
+      </div>
       </div>
     </article>
   `;
