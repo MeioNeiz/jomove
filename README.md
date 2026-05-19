@@ -6,8 +6,9 @@ dashboard with favourites / ratings / comments persisted in your
 browser.
 
 Bun + TypeScript. One built-in DB dep (`bun:sqlite`). No build step.
-The dashboard is one self-contained `dashboard.html` — open it in any
-browser, no server.
+Two ways to view: a self-contained static `dashboard.html`, or a tiny
+`bun run dev` server that lets the dashboard auto-update after every
+ingest without a manual refresh.
 
 ## Quick start
 
@@ -18,24 +19,40 @@ winget install Oven-sh.Bun
 curl -fsSL https://bun.sh/install | bash
 ```
 
-Then:
+### Mode A — live dev server (recommended)
+
+Dashboard auto-updates within ~5s of any ingest.
 
 ```sh
 bun install
-bun run build                # = bun run ingest old_search && bun run report
+bun run build                # one-time: ingest old_search + render dashboard.html
+bun run dev                  # serves http://localhost:3000 — leave running
+# in another terminal whenever you want fresh data:
+bun run ingest current_search
+# → browser updates automatically, no refresh needed
+```
+
+### Mode B — static file only
+
+No server. You re-run `bun run report` and refresh the page to see updates.
+
+```sh
+bun install
+bun run build
 open dashboard.html          # or just double-click it
 ```
 
 ## Commands
 
 ```sh
-bun run init                   # create data/jomove.db
-bun run ingest <dir-or-file>   # parse markdown into SQLite (idempotent, keyed on URL)
-bun run report                 # render dashboard.html
-bun run prune --days 7         # mark listings unseen for 7+ days as `let_agreed`
+bun run init                       # create data/jomove.db
+bun run ingest <dir-or-file>       # parse markdown into SQLite (idempotent, keyed on URL)
+bun run report                     # render dashboard.html
+bun run dev                        # live server on :3000 (= bun run serve)
+bun run prune --days 7             # mark listings unseen for 7+ days as `let_agreed`
 bun run prune --days 7 --dry-run   # preview without writing
 bun run list --postcode SO17 --furnished --parking
-bun run build                  # ingest old_search + report (shortcut)
+bun run build                      # ingest old_search + report (shortcut)
 ```
 
 `ingest` accepts directories (scans for `results_*.md`) or specific
