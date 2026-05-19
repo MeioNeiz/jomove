@@ -12,12 +12,6 @@ export async function cmdReport(): Promise<void> {
      ORDER BY score DESC, price_pcm ASC`
   ).all() as ListingRow[];
 
-  // Persistent annotations seeded by scripts/seed-notes.ts.
-  const seedRows = db.query(
-    "SELECT dedupe_key, comment FROM user_notes"
-  ).all() as Array<{ dedupe_key: string; comment: string }>;
-  const seedByKey = new Map(seedRows.map(r => [r.dedupe_key, r.comment]));
-
   const groups = new Map<string, ListingRow[]>();
   for (const r of rows) {
     const arr = groups.get(r.dedupe_key);
@@ -72,7 +66,6 @@ export async function cmdReport(): Promise<void> {
       why:           primary.why_worth_a_look ?? "",
       caveats:       primary.caveats ?? "",
       sources:       items.map(r => ({ src: r.source, url: r.source_url })),
-      seed_comment:  seedByKey.get(primary.dedupe_key) ?? null,
     };
   });
 

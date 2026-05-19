@@ -37,16 +37,6 @@ CREATE TABLE IF NOT EXISTS listings (
 CREATE INDEX IF NOT EXISTS idx_dedupe   ON listings(dedupe_key);
 CREATE INDEX IF NOT EXISTS idx_postcode ON listings(postcode_area);
 CREATE INDEX IF NOT EXISTS idx_price    ON listings(price_pcm);
-
--- Persistent user annotations, keyed on the property's dedupe_key so they
--- survive a listing moving across portals. The dashboard's localStorage
--- still owns live edits (favourite/rating/comment); this table is the
--- one-time seed source that the dashboard hydrates from on first load.
-CREATE TABLE IF NOT EXISTS user_notes (
-  dedupe_key TEXT PRIMARY KEY,
-  comment    TEXT,
-  updated_at TEXT NOT NULL
-);
 `;
 
 // Simplified scoring — postcode sector is the main location signal,
