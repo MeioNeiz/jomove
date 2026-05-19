@@ -49,11 +49,34 @@ bun run init                       # create data/jomove.db
 bun run ingest <dir-or-file>       # parse markdown into SQLite (idempotent, keyed on URL)
 bun run report                     # render dashboard.html
 bun run dev                        # live server on :3000 (= bun run serve)
+bun run archive --label NAME       # snapshot root results_*.md → scrapes/<timestamp>-NAME/
 bun run prune --days 7             # mark listings unseen for 7+ days as `let_agreed`
 bun run prune --days 7 --dry-run   # preview without writing
 bun run list --postcode SO17 --furnished --parking
 bun run build                      # ingest old_search + report (shortcut)
 ```
+
+## Scrape workflow
+
+Each scrape gets preserved as a snapshot directory. Typical loop:
+
+```sh
+# 1. Spawn agents to write fresh markdown into the root results_*.md files
+#    (this is the part Claude orchestrates — see the existing per-portal prompts)
+
+# 2. Ingest the new data
+bun run ingest .
+
+# 3. Snapshot this run before the next one
+bun run archive --label refresh
+
+# 4. (optional) flag listings missing from the latest scrape
+bun run prune --days 7
+```
+
+After step 3, `scrapes/<timestamp>-<label>/` holds those markdown files
+forever and root is empty for the next scrape. The DB has accumulated
+data from every ingest; no listing is lost.
 
 `ingest` accepts directories (scans for `results_*.md`) or specific
 files. Re-running updates rows in place by `source_url`.
