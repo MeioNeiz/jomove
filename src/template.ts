@@ -33,6 +33,7 @@ export type DashboardPayload = {
   why: string;
   caveats: string;
   sources: DashboardSource[];
+  seed_comment: string | null;
 };
 
 export type DashboardData = {

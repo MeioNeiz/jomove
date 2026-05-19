@@ -294,9 +294,30 @@ function loadMeta() {
 function saveMeta() { localStorage.setItem(META_KEY, JSON.stringify(META)); }
 
 const STATE = loadState();  // { [dedupe_key]: { viewed, favourite, rating, comment } }
-const META  = loadMeta();   // { lastVisitAt }
+const META  = loadMeta();   // { lastVisitAt, seedMigrated }
 // On very first visit, suppress NEW badges (no baseline).
 if (!META.lastVisitAt) { META.lastVisitAt = GENERATED_AT; saveMeta(); }
+
+// One-shot: hydrate localStorage comments from SQLite user_notes seed.
+// Runs only when the dashboard sees a new seed_comment for a listing that
+// has no local comment yet. Idempotent — set seedMigrated to suppress.
+{
+  let hydrated = 0;
+  for (const r of DATA) {
+    if (!r.seed_comment) continue;
+    const s = STATE[r.dedupe_key] ?? {};
+    if (!s.comment) {
+      STATE[r.dedupe_key] = { ...s, comment: r.seed_comment };
+      hydrated++;
+    }
+  }
+  if (hydrated > 0) {
+    saveState();
+    console.log(`[jomove] hydrated ${hydrated} comment(s) from SQLite seed.`);
+  }
+  META.seedMigrated = true;
+  saveMeta();
+}
 
 function stateOf(k) {
   if (!STATE[k]) STATE[k] = {};
