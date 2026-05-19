@@ -1,6 +1,7 @@
 import type { Database } from "bun:sqlite";
 import { SCORE_SQL } from "./db.ts";
 import { SOURCE_LABELS } from "./config.ts";
+import { computeCostAdjustment } from "./cost.ts";
 import type { ListingRow } from "./types.ts";
 import type {
   AppState, DashboardData, DashboardPayload, ListingUserState,
@@ -113,6 +114,12 @@ export function buildPayload(db: Database): DashboardData {
       state:         noteByKey.get(primary.dedupe_key) ?? { ...EMPTY_STATE },
       // Prefer any portal that supplied an image; OpenRent picked first by group.
       image_url:     items.find(r => r.image_url)?.image_url ?? null,
+      cost_adjustments: computeCostAdjustment({
+        why_worth_a_look: primary.why_worth_a_look,
+        caveats:          primary.caveats,
+        parking_raw:      primary.parking_raw,
+        epc:              primary.epc,
+      }),
     };
   });
 

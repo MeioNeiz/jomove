@@ -1,166 +1,209 @@
-# OpenRent — Southampton Rentals (refresh 2026-05-19)
+# OpenRent — Southampton Rentals (refresh with images 2026-05-19)
 
 _Sub-agent appending live._
 
-## Ascupart Street, SO14 1LU — £900 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-ascupart-street-so14/2866029
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No (unfurnished — flag, tenant wants furnished)
-- **Parking:** unclear (not mentioned in listing)
-- **EPC:** E
-- **Deposit:** £900
-- **Available:** Now (immediate)
-- **Postcode area:** SO14 — city centre, north of Chapel/Northam
-- **Near green space:** Hoglands Park ~5 min walk; Queens Park ~10 min walk
-- **Rail access:** Southampton Central ~15 min walk — on direct Central -> St Denys -> Airport Parkway line
-- **Why it's worth a look:** Cheap city-centre 1-bed, available immediately, listed as "brand new"; landlord explicitly relaxed (pets, smokers, DSS all fine).
-- **Caveats / things to verify:** Unfurnished — tenant wants furnished; confirm with landlord whether furnished option exists. No parking mentioned — verify permit availability for SO14 1LU.
-
----
-
-## Ascupart Street, SO14 1LU — £1,100 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-ascupart-street-so14/2866030
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No (unfurnished — flag)
-- **Parking:** unclear (not mentioned)
-- **EPC:** E
-- **Deposit:** £1,100
-- **Available:** Now (immediate)
-- **Postcode area:** SO14 — city centre / Northam edge
-- **Near green space:** Hoglands Park ~5 min walk; Queens Park ~10 min walk
-- **Rail access:** Southampton Central ~15 min walk — direct line to Airport Parkway
-- **Why it's worth a look:** Brand-new ground-floor 1-bed with broadband included; same building as 2866029 but pricier — possibly larger or better aspect.
-- **Caveats / things to verify:** At the £1,100 ceiling so no headroom. Unfurnished — ask about furnishing. Parking unclear — check permit options.
-
----
-
-## Captain Place, SO14 1TF — £900 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-captain-place-so14/2902514
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** Yes
-- **Parking:** unclear (not mentioned)
-- **EPC:** not listed (being obtained)
-- **Deposit:** £900
-- **Available:** 19 May 2026
-- **Postcode area:** SO14 — Northam / city-centre edge
-- **Near green space:** Hoglands Park ~10 min walk; Riverside Park (SO18) ~25 min walk
-- **Rail access:** Southampton Central ~20 min walk or 1 stop from St Denys — direct Central -> Airport Parkway line
-- **Why it's worth a look:** Furnished 1-bed at £900 with broadband included; max 1 tenant (perfect fit for a solo professional); available now.
-- **Caveats / things to verify:** EPC pending — ask for rating before signing. Parking unclear at SO14 1TF (Northam controlled-parking zone). Confirm exact street address.
-
----
-
-## Atlantic Mansions, SO14 3FR — £900 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-atlantic-mansions-so14/2902162
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** Yes
-- **Parking:** unclear (not mentioned)
-- **EPC:** C
-- **Deposit:** £1,038
-- **Available:** 25 May 2026
-- **Postcode area:** SO14 — Ocean Village / Queens Park area
-- **Near green space:** Queens Park ~5 min walk; Mayflower Park ~15 min walk; waterfront on the doorstep
-- **Rail access:** Southampton Central ~20 min walk — direct Central -> Airport Parkway line
-- **Why it's worth a look:** Furnished, EPC C (cheap to run), Ocean Village setting near Queens Park and the waterfront, available end of May.
-- **Caveats / things to verify:** No parking mentioned — Ocean Village parking is tight; ask whether a permit or paid bay is available. Listing says "unable to accept families" which is irrelevant to a single tenant.
-
----
-
-## Clovelly Road, SO14 0AQ — £875 pcm
+## Clovelly Road, Southampton SO14 0AQ — £875 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-clovelly-road-so14/2827890
+- **Image:** https://imagescdn.openrent.co.uk/listings/1285656/o_1frsn0d4p1cop1jdd1tl01qeugf9b.JPG
 - **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No (unfurnished — flag)
-- **Parking:** unclear (not mentioned)
+- **Furnished:** No (FLAG — verify if furnished option available)
+- **Parking:** Yes (type unclear — verify)
 - **EPC:** D
 - **Deposit:** £1,000
 - **Available:** 21 May 2026
-- **Postcode area:** SO14 — Newtown / Bevois Valley side of city centre
-- **Near green space:** Hoglands Park ~10 min walk; Southampton Common ~20 min walk
-- **Rail access:** Southampton Central ~15-20 min walk; St Denys ~20 min walk — direct Airport Parkway line
-- **Why it's worth a look:** Sub-£900 1-bed near Bevois Valley with broadband included; landlord very relaxed.
-- **Caveats / things to verify:** Unfurnished — ask about furnishing option. Parking unclear (SO14 0AQ sits in a controlled zone) — verify permit eligibility.
+- **Postcode area:** SO14, near Northam / city centre east
+- **Near green space:** Hoglands Park ~10 min walk; Riverside Park ~15 min
+- **Rail access:** Southampton Central ~20 min walk; St Denys ~25 min — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** Cheap, no tenant-type restrictions, parking included, available comfortably before 29 June.
+- **Caveats / things to verify:** Listed as Unfurnished — ask about furniture option; confirm parking type (allocated/permit).
 
 ---
 
-## Park Place, SO15 8NY — £925 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-park-place-so15/2885001
+## Ascupart Street, Southampton SO14 1LU — £900 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-ascupart-street-so14/2866029
+- **Image:** https://imagescdn.openrent.co.uk/listings/2749924/o_1jeh4ntug6rb1auk1e1kk5n16880.JPG
 - **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No (unfurnished — flag)
-- **Parking:** unclear (not mentioned)
+- **Furnished:** No (FLAG — verify furniture option)
+- **Parking:** Yes (type unclear — verify)
+- **EPC:** E
+- **Deposit:** £900
+- **Available:** Immediate
+- **Postcode area:** SO14, central / Northam edge
+- **Near green space:** Hoglands Park ~5 min walk; Queens Park ~10 min
+- **Rail access:** Southampton Central ~15 min walk — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** Cheap, central, no tenant restrictions, immediate move-in.
+- **Caveats / things to verify:** Unfurnished; confirm parking type; EPC E is the legal minimum.
+
+---
+
+## Ascupart Street, Southampton SO14 1LU — £1,100 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-ascupart-street-so14/2866030
+- **Image:** https://imagescdn.openrent.co.uk/listings/2866030/o_1jml3uqgu17c91mpo1sl21qkh16nh3.JPG
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No (FLAG — verify furniture option)
+- **Parking:** Yes (type unclear — verify)
+- **EPC:** E
+- **Deposit:** £1,100
+- **Available:** Immediate
+- **Postcode area:** SO14, central / Northam edge
+- **Near green space:** Hoglands Park ~5 min walk; Queens Park ~10 min
+- **Rail access:** Southampton Central ~15 min walk — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** Right at budget ceiling; ground floor; no tenant restrictions.
+- **Caveats / things to verify:** Same building/landlord as £900 listing — probably a different unit; verify which; unfurnished; EPC E.
+
+---
+
+## Captain Place, Southampton SO14 1TF — £900 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-captain-place-so14/2902514
+- **Image:** https://imagescdn.openrent.co.uk/listings/2902514/o_1joulsh2212tv1p13pork2l4qe0.JPG
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Parking:** Yes (type unclear — verify)
+- **EPC:** Not listed (being obtained)
+- **Deposit:** £900
+- **Available:** 19 May 2026
+- **Postcode area:** SO14, Ocean Village / Chapel area
+- **Near green space:** Hoglands Park ~10 min walk; Queens Park ~10 min
+- **Rail access:** Southampton Central ~20 min walk — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** Furnished, single-tenant max suits brief, available now.
+- **Caveats / things to verify:** EPC not yet issued — request once available; confirm parking type.
+
+---
+
+## Atlantic Mansions, Southampton SO14 3FR — £900 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-atlantic-mansions-so14/2902162
+- **Image:** https://imagescdn.openrent.co.uk/listings/2902162/o_1jotvj015112t1bg91t5svit1cqg0.JPG
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Parking:** None on-site (FLAG — on-street/permit only)
 - **EPC:** C
-- **Deposit:** £1,067
-- **Available:** Now (immediate)
-- **Postcode area:** SO15 — Shirley / Freemantle direction
-- **Near green space:** Southampton Common ~15 min walk; Mayflower Park ~20 min walk
-- **Rail access:** Millbrook station nearby; Southampton Central ~25 min walk — Central is on the direct Airport Parkway line
-- **Why it's worth a look:** EPC C means low running costs; available now; relaxed landlord terms.
-- **Caveats / things to verify:** Unfurnished — confirm whether furnishing can be added. Parking unclear at SO15 8NY — check on-street/permit options.
-
----
-
-## Shirley, SO15 3JZ — £875 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-shirley-so15/2872693
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No (unfurnished — flag)
-- **Parking:** unclear (not mentioned)
-- **EPC:** D
-- **Deposit:** £1,009
+- **Deposit:** £1,038.46
 - **Available:** 25 May 2026
-- **Postcode area:** SO15 — Shirley
-- **Near green space:** Southampton Common ~20 min walk; small green spaces around Shirley closer by
-- **Rail access:** Millbrook station ~15 min walk; Southampton Central ~25-30 min by bus — Central is on the direct Airport Parkway line
-- **Why it's worth a look:** Large self-contained 1-bed with own private entrance and a small private courtyard — rare at this price.
-- **Caveats / things to verify:** Exact street not in listing — ask. Unfurnished — confirm furnishing options. Parking unclear — Shirley has plentiful on-street, but check restrictions.
+- **Postcode area:** SO14, Ocean Village
+- **Near green space:** Queens Park ~10 min walk; Mayflower Park ~15 min
+- **Rail access:** Southampton Central ~25 min walk / short bus — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** Furnished, EPC C (low bills), modern Ocean Village block.
+- **Caveats / things to verify:** No parking — confirm permit availability on-street; "Families not accepted" but this doesn't affect a single male tenant.
 
 ---
 
-## William Bricknell Pavilion, SO17 2AS — £950 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-william-bricknell-pavilion-so17/2772351
+## Queens Terrace, Southampton SO14 3BP — £925 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-queens-terrace-so14/2901732
+- **Image:** https://imagescdn.openrent.co.uk/listings/2901732/o_1joticc5m1sik47m10s576juh36.JPG
 - **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No (unfurnished — flag)
-- **Parking:** Yes — on-site, first-come-first-served
-- **EPC:** C
-- **Deposit:** £1,096
-- **Available:** Now (immediate)
-- **Postcode area:** SO17 — Portswood / Highfield
-- **Near green space:** Southampton Common ~10 min walk; The Avenue green corridor adjacent
-- **Rail access:** St Denys ~15 min walk; Swaythling ~20 min walk — both directly on the Central -> Airport Parkway line
-- **Why it's worth a look:** EPC C, has parking (rare for SO17), great rail position on the Airport Parkway line, £50 off first 3 months special offer.
-- **Caveats / things to verify:** Parking is first-come-first-served (no allocated bay) — confirm reality of availability. Unfurnished — ask about furnishing.
+- **Furnished:** No (FLAG — verify furniture option)
+- **Parking:** Permit nearby at tenant cost
+- **EPC:** D
+- **Deposit:** £925
+- **Available:** 6 June 2026
+- **Postcode area:** SO14, Queens Park / Ocean Village edge
+- **Near green space:** Queens Park ~3 min walk; Hoglands Park ~10 min
+- **Rail access:** Southampton Central ~20 min walk — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** Modern 2020-built block, suits single professional, near Queens Park.
+- **Caveats / things to verify:** Unfurnished — check option; smokers not allowed (fine for tenant); landlord wants stable employment proof.
 
 ---
 
-## Witts Hill, SO18 4QH — £1,050 pcm
+## Park Place, Southampton SO15 8NY — £925 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-park-place-so15/2885001
+- **Image:** https://imagescdn.openrent.co.uk/listings/2885001/o_1jnpg6fd61si91sl19222kn1d5h2.JPG
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No (FLAG — verify furniture option)
+- **Parking:** Unclear (FLAG — listing did not specify)
+- **EPC:** C
+- **Deposit:** £1,067.30
+- **Available:** Immediate
+- **Postcode area:** SO15, Banister Park / Polygon
+- **Near green space:** Southampton Common ~10 min walk; Watts Park ~10 min
+- **Rail access:** Southampton Central ~10 min walk — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** Close to Common and Central station; EPC C; no tenant restrictions.
+- **Caveats / things to verify:** Parking not mentioned — verify; furnishing.
+
+---
+
+## Shirley, Southampton SO15 3JZ — £875 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-shirley-so15/2872693
+- **Image:** https://imagescdn.openrent.co.uk/listings/2872693/o_1jot0o1mqvdap3a8th6roi7l0.JPG
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No (FLAG — verify furniture option)
+- **Parking:** Yes (type unclear — verify)
+- **EPC:** D
+- **Deposit:** £1,009.61
+- **Available:** 25 May 2026
+- **Postcode area:** SO15, Shirley
+- **Near green space:** Southampton Common ~15 min walk; Mayflower Park ~25 min
+- **Rail access:** Millbrook ~25 min walk (NOT on direct Airport Parkway line); Southampton Central ~25 min walk (IS on direct line)
+- **Why it's worth a look:** Ground floor with private entrance and courtyard garden — rare at this price.
+- **Caveats / things to verify:** Unfurnished; Shirley is a longer commute to Central; confirm parking type.
+
+---
+
+## Richmond Road, Southampton SO15 3FS — £1,000 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-richmond-road-so15/2856684
+- **Image:** https://imagescdn.openrent.co.uk/listings/1566918/o_1h1bnknhp1s0csrb1b311ip8tvr0.JPG
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Parking:** Allocated parking space included
+- **EPC:** C
+- **Deposit:** £1,000
+- **Available:** Immediate
+- **Postcode area:** SO15, Shirley
+- **Near green space:** Southampton Common ~15 min walk
+- **Rail access:** Southampton Central ~25 min walk / bus — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** Furnished + allocated parking + EPC C — ticks every box for the tenant.
+- **Caveats / things to verify:** Shirley is further from centre/work — verify commute.
+
+---
+
+## William Bricknell Pavilion, Southampton SO17 2AS — £950 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-william-bricknell-pavilion-so17/2772351
+- **Image:** https://imagescdn.openrent.co.uk/listings/2772351/o_1jg277j1lqpfrlnssgp5bdc37.JPG
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No (FLAG — verify furniture option)
+- **Parking:** First-come-first-served on-site
+- **EPC:** C
+- **Deposit:** £1,096.15
+- **Available:** Immediate
+- **Postcode area:** SO17, Portswood / Highfield
+- **Near green space:** Southampton Common ~10 min walk; The Common's eastern edge nearby
+- **Rail access:** St Denys ~15 min walk — on direct Central ↔ Airport Parkway line
+- **Why it's worth a look:** EPC C, Portswood-side near the Common, no restrictions, direct line to Airport Parkway.
+- **Caveats / things to verify:** Unfurnished; parking not guaranteed (first-come basis).
+
+---
+
+## Thorold Road, Southampton SO18 1JB — £875 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-thorold-road-so18/2894745
+- **Image:** https://imagescdn.openrent.co.uk/listings/2894745/o_1joge5kn5otg1v2m31pa6k1but0.JPG
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No (FLAG — verify furniture option)
+- **Parking:** Yes (type unclear — verify)
+- **EPC:** E
+- **Deposit:** £1,009.61
+- **Available:** 20 May 2026
+- **Postcode area:** SO18, Bitterne Park / St Denys edge
+- **Near green space:** Riverside Park ~5–10 min walk
+- **Rail access:** St Denys ~10 min walk — on direct Central ↔ Airport Parkway line; Bitterne ~15 min (Netley line)
+- **Why it's worth a look:** First-floor flat right by Riverside Park, on the Airport Parkway line, no tenant restrictions.
+- **Caveats / things to verify:** Unfurnished; EPC E is the legal floor — high bills; confirm parking type.
+
+---
+
+## Witts Hill, Southampton SO18 4QH — £1,050 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/2-bed-flat-witts-hill-so18/2827106
+- **Image:** https://imagescdn.openrent.co.uk/listings/2827106/o_1jjjtdmpqru76r2gob1f4f1rdp1.JPG
 - **Beds/Baths:** 2 bed, 1 bath
-- **Furnished:** No (unfurnished — flag)
-- **Parking:** Off-street parking
+- **Furnished:** No (FLAG — verify furniture option)
+- **Parking:** Off-street
 - **EPC:** D
 - **Deposit:** £1,050
-- **Available:** Now (immediate)
-- **Postcode area:** SO18 — Harefield / Midanbury
-- **Near green space:** Riverside Park ~15 min walk; Mansbridge / Itchen Valley accessible
-- **Rail access:** Bitterne station nearby (Netley line — NOT on direct Airport Parkway line); St Denys ~25 min by bus for the Airport Parkway line
-- **Why it's worth a look:** Only 2-bed flat under £1,100 found on OpenRent in target postcodes; off-street parking confirmed; landlord relaxed (no agents/companies).
-- **Caveats / things to verify:** Unfurnished — confirm furnishing options. Bitterne is on the Netley line, not the direct Airport Parkway line — adds a change at Central for airport runs.
+- **Available:** Immediate
+- **Postcode area:** SO18, Midanbury / Bitterne Park
+- **Near green space:** Riverside Park ~15 min walk; Mansbridge Meadow nearby
+- **Rail access:** Swaythling ~25 min walk / bus — on direct Central ↔ Airport Parkway line; St Denys ~25 min walk (same line)
+- **Why it's worth a look:** Two beds at single-bed price; off-street parking; no agent/company lets keeps it personal.
+- **Caveats / things to verify:** Unfurnished; further from centre — verify commute; confirm rooms are both proper doubles.
 
 ---
 
-## Thorold Road, SO18 1JB — £875 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-thorold-road-so18/2894745
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No (unfurnished — flag)
-- **Parking:** unclear (not mentioned)
-- **EPC:** E
-- **Deposit:** £1,009
-- **Available:** 20 May 2026
-- **Postcode area:** SO18 — Bitterne Park / Midanbury edge
-- **Near green space:** Riverside Park ~10-15 min walk; Itchen riverside paths
-- **Rail access:** St Denys ~20 min walk / short bus — directly on the Central -> Airport Parkway line; Bitterne station also nearby (Netley line)
-- **Why it's worth a look:** Sub-£900 1-bed with double bedroom and balcony, on the Itchen side close to Riverside Park.
-- **Caveats / things to verify:** Unfurnished — confirm furnishing. Parking unclear — Thorold Road has on-street parking; verify any zone restrictions. EPC E means higher running costs.
-
----
-
-_Scrape complete — 10 verified listings._
-
+_Scrape complete — 12 verified listings._

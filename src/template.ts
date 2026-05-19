@@ -14,6 +14,9 @@ export type ListingUserState = {
   comment:   string;
 };
 
+export type CostComponent = { label: string; delta: number };
+export type CostAdjustment = { delta: number; components: CostComponent[] };
+
 export type DashboardPayload = {
   id: number;
   dedupe_key: string;
@@ -42,6 +45,7 @@ export type DashboardPayload = {
   sources: DashboardSource[];
   state: ListingUserState;
   image_url: string | null;
+  cost_adjustments: CostAdjustment;
 };
 
 export type AppState = {

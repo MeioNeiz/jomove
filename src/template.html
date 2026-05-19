@@ -104,6 +104,13 @@
   .card-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .card-top .price{font-size:18px;font-weight:700;font-variant-numeric:tabular-nums}
   .card-top .beds{font-size:12px;color:var(--muted)}
+  .cost-adj{
+    font-size:11px;font-weight:500;font-variant-numeric:tabular-nums;
+    margin-left:-2px;padding:1px 6px;border-radius:10px;
+    cursor:help;
+  }
+  .cost-adj.cost-down{color:var(--good);background:rgba(4,120,87,.06)}
+  .cost-adj.cost-up  {color:var(--warn);background:rgba(180,83,9,.07)}
   .card-top .spacer{flex:1}
   .card-top .score{font-size:13px;font-variant-numeric:tabular-nums;font-weight:600;color:var(--accent);padding:1px 7px;background:var(--sweet-bg);border-radius:11px}
 
@@ -179,6 +186,19 @@
   .detail .k{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:1px}
 
   .empty{padding:50px 20px;text-align:center;color:var(--muted);background:var(--surface);border:1px dashed var(--border);border-radius:8px}
+
+  /* server-offline warning */
+  .server-status{
+    position:fixed;bottom:18px;right:18px;z-index:100;
+    background:var(--bad-bg);color:var(--bad);
+    border:1px solid var(--bad);border-radius:8px;
+    padding:10px 14px;font-size:13px;max-width:380px;
+    box-shadow:0 8px 24px rgba(0,0,0,.12);
+    display:flex;gap:10px;align-items:flex-start;
+  }
+  .server-status .icon{font-size:18px;line-height:1.1}
+  .server-status strong{display:block;margin-bottom:2px}
+  .server-status.hidden{display:none}
 
   /* ---------- compare dialog ---------- */
   dialog#compare{
@@ -271,6 +291,15 @@
   </footer>
 </div>
 
+<div id="server-status" class="server-status hidden" role="status" aria-live="polite">
+  <span class="icon">⚠</span>
+  <div>
+    <strong>Not saving — server unreachable.</strong>
+    Your edits stay on screen but aren't being written to SQLite.
+    Restart with <code>bun run dev</code>.
+  </div>
+</div>
+
 <dialog id="compare">
   <div class="cmp-head">
     <h2>Compare</h2>
@@ -316,7 +345,25 @@ function stateOf(k) {
 // Track in-flight POSTs so a polling refresh doesn't clobber a just-edited row.
 const pendingNoteWrites = new Set();
 
+// Server-reachability indicator. Any successful fetch flips us online;
+// any network failure flips us offline. Browser-side rendering only.
+let _serverOnline = true;
+function setServerOnline(ok) {
+  if (ok === _serverOnline) return;
+  _serverOnline = ok;
+  const el = document.getElementById("server-status");
+  if (el) el.classList.toggle("hidden", ok);
+}
+
 function patchState(k, patch) {
+  // Engaging with a listing (writing a comment or giving it a rating)
+  // implicitly counts as viewing it. We only set viewed → true; we never
+  // auto-unset, so clearing a comment later won't undo it.
+  if (!stateOf(k).viewed && !patch.viewed) {
+    const writingComment = typeof patch.comment === "string" && patch.comment.trim() !== "";
+    const givingRating   = typeof patch.rating === "number" && patch.rating >= 1;
+    if (writingComment || givingRating) patch = { ...patch, viewed: true };
+  }
   STATE[k] = { ...stateOf(k), ...patch };
   if (IS_LIVE) {
     pendingNoteWrites.add(k);
@@ -324,7 +371,9 @@ function patchState(k, patch) {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
       body:    JSON.stringify(patch),
-    }).catch(() => {}).finally(() => pendingNoteWrites.delete(k));
+    }).then(r => setServerOnline(r.ok))
+      .catch(() => setServerOnline(false))
+      .finally(() => pendingNoteWrites.delete(k));
   } else {
     localStorage.setItem(STATE_KEY, JSON.stringify(STATE));
   }
@@ -336,7 +385,8 @@ function persistLastVisitAt() {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
       body:    JSON.stringify({ value: META.lastVisitAt }),
-    }).catch(() => {});
+    }).then(r => setServerOnline(r.ok))
+      .catch(() => setServerOnline(false));
   } else {
     localStorage.setItem(META_KEY, JSON.stringify(META));
   }
@@ -354,12 +404,14 @@ function persistFiltersAndSort() {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
       body:    JSON.stringify({ value: f }),
-    }).catch(() => {});
+    }).then(r => setServerOnline(r.ok))
+      .catch(() => setServerOnline(false));
     fetch("/api/app-state/sort", {
       method:  "POST",
       headers: { "Content-Type": "application/json" },
       body:    JSON.stringify({ value: filters.sort }),
-    }).catch(() => {});
+    }).then(r => setServerOnline(r.ok))
+      .catch(() => setServerOnline(false));
   }, 350);
 }
 
@@ -372,6 +424,19 @@ function esc(s) {
 }
 function fmtPrice(n) { return "£" + n.toLocaleString(); }
 function fmtDate(iso, raw) { if (iso) return iso; return raw || "?"; }
+
+function costAdjHtml(r) {
+  const adj = r.cost_adjustments;
+  if (!adj || !adj.delta) return "";
+  const sign = adj.delta < 0 ? "−" : "+";
+  const cls  = adj.delta < 0 ? "cost-down" : "cost-up";
+  const breakdown = adj.components
+    .map(c => `${c.label}: ${c.delta < 0 ? "−" : "+"}£${Math.abs(c.delta)}`)
+    .join(" · ");
+  const eff = r.price + adj.delta;
+  const title = `${breakdown} · effective ≈£${eff}/mo`;
+  return `<span class="cost-adj ${cls}" title="${esc(title)}">${sign}£${Math.abs(adj.delta)}</span>`;
+}
 
 function postcodeBand(pcFull, pcArea) {
   const pc = pcFull || "";
@@ -492,7 +557,7 @@ function openCompare() {
         <dt>Deposit</dt><dd>${r.deposit ? "£" + r.deposit : "?"}</dd>
         <dt>Why</dt><dd>${esc(r.why || "")}</dd>
         <dt>Caveats</dt><dd>${esc(r.caveats || "")}</dd>
-        <dt>Sources</dt><dd>${r.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${SRC_LABEL[s.src] || s.src} ↗</a>`).join(" ")}</dd>
+        <dt>Sources</dt><dd>${r.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener" data-stop title="Click: shared window · ⌘/Ctrl-click: new tab">${SRC_LABEL[s.src] || s.src} ↗</a>`).join(" ")}</dd>
       </dl>
     </div>
   `).join("");
@@ -524,7 +589,9 @@ function cardHtml(r) {
   ).join("");
 
   const sourcesHtml = r.sources.map(s =>
-    `<a href="${esc(s.url)}" target="_blank" rel="noopener" data-stop>${SRC_LABEL[s.src] || s.src}</a>`
+    `<a href="${esc(s.url)}" target="_blank" rel="noopener" data-stop
+        title="Click: open in shared window · ⌘/Ctrl-click: new tab · Shift-click: new window · Right-click: more"
+        >${SRC_LABEL[s.src] || s.src}</a>`
   ).join("");
 
   const classes = [
@@ -544,6 +611,7 @@ function cardHtml(r) {
       <div class="card-body">
       <div class="card-top">
         <span class="price">${fmtPrice(r.price)}</span>
+        ${costAdjHtml(r)}
         <span class="beds">${r.beds ?? "?"} bed</span>
         <span class="spacer"></span>
         <span class="score" title="Score (max ~103)">${r.score}</span>
@@ -659,11 +727,23 @@ function bindFilters() {
   document.getElementById("btn-compare").onclick = openCompare;
 }
 
+// Plain click on a source link opens in a single named window.
+// Modifier-key clicks (Ctrl/Cmd, Shift, middle) fall through to browser default.
+function smartOpenLink(e, anchor) {
+  if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return false;
+  e.preventDefault();
+  e.stopPropagation();
+  const win = window.open(anchor.href, "jomove-listings");
+  if (win) win.focus();
+  return true;
+}
+
 function bindGrid() {
   const grid = document.getElementById("grid");
   grid.addEventListener("click", (e) => {
     const t = e.target;
-    if (t.matches("a[data-stop]")) return;       // let source links open normally
+    const srcAnchor = t.closest("a[data-stop]");
+    if (srcAnchor) { smartOpenLink(e, srcAnchor); return; }
     const card = t.closest(".card");
     if (!card) return;
     const key = card.dataset.key;
@@ -722,7 +802,11 @@ function bindGrid() {
 function bindDialog() {
   const dlg = document.getElementById("compare");
   document.getElementById("cmp-close").onclick = () => dlg.close();
-  dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener("click", (e) => {
+    if (e.target === dlg) { dlg.close(); return; }
+    const a = e.target.closest("a[data-stop]");
+    if (a) smartOpenLink(e, a);
+  });
 }
 
 applyFiltersToDOM();
@@ -739,6 +823,7 @@ let CURRENT_VERSION = GENERATED_AT;
 async function pollOnce() {
   try {
     const res = await fetch("/api/listings", { cache: "no-store" });
+    setServerOnline(res.ok);
     if (!res.ok) return;
     const fresh = await res.json();
     if (!fresh.generatedAt || fresh.generatedAt <= CURRENT_VERSION) return;
@@ -756,7 +841,9 @@ async function pollOnce() {
     flashStatus("updated");
     render();
   } catch {
-    // file:// or server down — silently skip
+    // file:// can't fetch — protocol check above prevents this case;
+    // when running via http, this is a real outage signal.
+    if (IS_LIVE) setServerOnline(false);
   }
 }
 function flashStatus(msg) {
