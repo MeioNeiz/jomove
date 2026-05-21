@@ -1,0 +1,18 @@
+[Unit]
+Description=Jomove rental dashboard
+After=network.target
+StartLimitBurst=5
+StartLimitIntervalSec=60
+
+[Service]
+Type=simple
+User=opc
+WorkingDirectory=/home/opc/jomove
+ExecStart=/usr/local/bin/bun jomove.ts serve --port 3000
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
