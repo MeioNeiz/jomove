@@ -1,0 +1,16 @@
+[Unit]
+Description=Jomove auto-scrape (portals → markdown → ingest → notify)
+After=network-online.target jomove.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=opc
+WorkingDirectory=/home/opc/jomove
+ExecStart=/usr/local/bin/bun jomove.ts auto-scrape --no-archive
+StandardOutput=journal
+StandardError=journal
+TimeoutStartSec=15min
+
+[Install]
+WantedBy=multi-user.target

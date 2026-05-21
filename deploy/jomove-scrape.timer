@@ -1,0 +1,11 @@
+[Unit]
+Description=Schedule jomove auto-scrape twice daily
+
+[Timer]
+OnCalendar=*-*-* 08,18:00:00 UTC
+RandomizedDelaySec=10min
+Persistent=true
+Unit=jomove-scrape.service
+
+[Install]
+WantedBy=timers.target
