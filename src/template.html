@@ -323,6 +323,10 @@
   .badge.pc{background:var(--ok-bg);color:var(--ok-fg);font-variant-numeric:tabular-nums}
   .badge.sweet{background:var(--sweet-bg);color:var(--sweet-fg);font-weight:600}
   .badge.penalty{background:var(--penalty-bg);color:var(--penalty-fg)}
+  .badge.type-flat      {background:#eef0f4;color:#475569;font-weight:600}
+  .badge.type-studio    {background:#e0e7ff;color:#4338ca;font-weight:600}
+  .badge.type-maisonette{background:#fce7f3;color:#9d174d;font-weight:600}
+  .badge.type-share     {background:var(--warn-bg);color:var(--warn);font-weight:600}
 
   .address{font-size:14px;font-weight:600;line-height:1.3;margin:0}
 
@@ -1244,6 +1248,12 @@ function cardHtml(r) {
                            `<span class="epc epc-unknown">EPC ?</span>`;
   const railBadge = r.direct ? `<span class="badge good">direct</span>` : `<span class="badge muted">change</span>`;
   const greenBadge = r.green && /common/i.test(r.green) ? `<span class="badge good">Common</span>` : "";
+  const typeBadge =
+    r.listing_type === "houseshare" ? `<span class="badge type-share">HOUSE SHARE</span>` :
+    r.listing_type === "studio"     ? `<span class="badge type-studio">STUDIO</span>` :
+    r.listing_type === "maisonette" ? `<span class="badge type-maisonette">MAISONETTE</span>` :
+    r.listing_type === "flat"       ? `<span class="badge type-flat">FLAT</span>` :
+    "";
 
   const rating = st.rating || 0;
   const ratingHtml = [1,2,3,4,5,6,7,8,9,10].map(n =>
@@ -1330,7 +1340,7 @@ function cardHtml(r) {
       <div class="badges">
         ${newBadge}
         ${letAgreed}
-        ${r.listing_type === "houseshare" ? `<span class="badge warn">ROOM</span>` : ""}
+        ${typeBadge}
         ${pcBadge}
         ${pcHtml}
       </div>
