@@ -21,10 +21,12 @@ export function parseBedsBaths(s: string): { beds: number | null; baths: number 
 export function parseFurnished(s: string): string {
   if (!s) return "unclear";
   const sl = s.toLowerCase().trim();
-  if (sl.startsWith("yes"))      return "yes";
-  if (sl.startsWith("optional")) return "optional";
-  if (sl.includes("part"))       return "part";
-  if (sl.startsWith("no"))       return "no";
+  if (/^yes\b/.test(sl))      return "yes";
+  if (/^optional\b/.test(sl)) return "optional";
+  if (sl.includes("part"))    return "part";
+  // Word-boundary required so "not specified" / "not stated" don't
+  // collapse to "no" (they should stay "unclear").
+  if (/^no\b/.test(sl) || /^unfurnished\b/.test(sl)) return "no";
   return "unclear";
 }
 
@@ -42,16 +44,21 @@ export function parseParking(s: string): string {
   return "unclear";
 }
 
+// Recognised Southampton / Eastleigh outcodes. Keep aligned with
+// ALLOWED_POSTCODES in scrapers/filters.ts and SCORE_SQL in db.ts.
+const RECOGNISED_OUTCODES = /\bSO(1[4-8]|50)\b/;
+
 export function parsePostcodeArea(s: string): string | null {
   if (!s) return null;
-  const m = s.toUpperCase().match(/\bSO(1[4578])\b/);
+  const m = s.toUpperCase().match(RECOGNISED_OUTCODES);
   return m ? `SO${m[1]}` : null;
 }
 
 export function parsePostcodeFull(s: string): string | null {
   if (!s) return null;
-  const m = s.toUpperCase().match(/\bSO\d{1,2}\s*\d[A-Z]{2}\b/);
-  return m ? m[0].replace(/\s+/g, " ") : null;
+  // Use named captures so "SO171BJ" (no space) still normalises to "SO17 1BJ".
+  const m = s.toUpperCase().match(/\b(SO\d{1,2})\s*(\d[A-Z]{2})\b/);
+  return m ? `${m[1]} ${m[2]}` : null;
 }
 
 export function parseDeposit(s: string): number | null {

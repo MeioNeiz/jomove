@@ -3,6 +3,7 @@ import { existsSync, mkdirSync, unlinkSync } from "node:fs";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
 import { USER_IMAGES_DIR } from "./config.ts";
+import { nowIso } from "./util/now.ts";
 
 const EXTS = ["png", "jpg", "webp"] as const;
 type Ext = typeof EXTS[number];
@@ -41,7 +42,7 @@ export async function saveUserImage(
 
   await Bun.write(join(USER_IMAGES_DIR, `${safe}.${ext}`), body);
 
-  const updatedAt = new Date().toISOString().slice(0, 19);
+  const updatedAt = nowIso();
   db.query(`
     INSERT INTO user_images (dedupe_key, ext, updated_at)
     VALUES ($k, $e, $t)

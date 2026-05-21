@@ -28,40 +28,11 @@ export type LinkCheck = {
   http_status?: number;
 };
 
+import { PORTALS_BY_ID } from "../scrapers/registry.ts";
+
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
-
-// Phrases that appear on a removed/let listing page for each portal.
-// Kept narrow on purpose — the AI follow-up catches anything we miss.
-const REMOVED_PHRASES: Record<string, RegExp[]> = {
-  openrent: [
-    /this property is no longer available/i,
-    /property has been let/i,
-    /this listing has been removed/i,
-  ],
-  rightmove: [
-    /this property has been removed/i,
-    /no longer (?:on|available on) the market/i,
-    /under offer/i,
-    /\blet agreed\b/i,
-  ],
-  zoopla: [
-    /listing (?:is )?no longer available/i,
-    /this property is no longer/i,
-    /\blet agreed\b/i,
-  ],
-  onthemarket: [
-    /this property is (?:now )?(?:let|under offer)/i,
-    /\blet agreed\b/i,
-    /no longer (?:on|available on) the market/i,
-  ],
-  gumtree: [
-    /this ad has been deleted/i,
-    /this ad has expired/i,
-    /ad is no longer available/i,
-  ],
-};
 
 // Final-URL paths that mean the listing redirected to a portal index —
 // usually a sign the listing was removed.
@@ -72,10 +43,6 @@ const INDEX_PATH_HINTS = [
   /\/property-to-rent\/southampton/i,
   /^\/$/,
 ];
-
-// Portals where plain fetch is blocked (Cloudflare/PerimeterX). We skip
-// HTTP entirely and let the AI follow-up handle them.
-const SKIP_HTTP_SOURCES = new Set(["zoopla"]);
 
 /** Extract high-signal status text from the page (title + og + h1 only). */
 function extractStatusText(body: string): string {
@@ -109,7 +76,8 @@ function extractStatusText(body: string): string {
 }
 
 export async function checkLink(url: string, source: string): Promise<LinkCheck> {
-  if (SKIP_HTTP_SOURCES.has(source.toLowerCase())) {
+  const portal = PORTALS_BY_ID[source.toLowerCase()];
+  if (portal?.httpVerify.skip) {
     return {
       url, source, status: "skipped",
       reason: "anti-bot — use AI follow-up",
@@ -179,7 +147,7 @@ export async function checkLink(url: string, source: string): Promise<LinkCheck>
   // by "related properties" sections or status-filter dropdowns where
   // "let agreed" appears as ambient text.
   const statusText = extractStatusText(body);
-  const patterns = REMOVED_PHRASES[source.toLowerCase()] ?? [];
+  const patterns = portal?.httpVerify.removedPhrases ?? [];
   for (const re of patterns) {
     if (re.test(statusText)) {
       return {

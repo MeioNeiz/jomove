@@ -9,18 +9,7 @@ export const USER_IMAGES_DIR = join(ROOT, "data", "user-images");
 
 export const DEADLINE = "2026-06-29";
 
-export const SOURCES: Record<string, string> = {
-  "results_openrent.md":    "openrent",
-  "results_rightmove.md":   "rightmove",
-  "results_zoopla.md":      "zoopla",
-  "results_onthemarket.md": "onthemarket",
-  "results_gumtree.md":     "gumtree",
-};
-
-export const SOURCE_LABELS: Record<string, string> = {
-  openrent:    "OpenRent",
-  rightmove:   "Rightmove",
-  zoopla:      "Zoopla",
-  onthemarket: "OnTheMarket",
-  gumtree:     "Gumtree",
-};
+// SOURCES and SOURCE_LABELS used to live here as hand-edited maps. They are
+// now derived from src/scrapers/registry.ts so adding a portal touches one
+// file. Re-exported here for compatibility with existing imports.
+export { SOURCES, SOURCE_LABELS } from "./scrapers/registry.ts";

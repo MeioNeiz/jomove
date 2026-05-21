@@ -10,7 +10,12 @@ import { DEADLINE } from "../config.ts";
 export const MAX_PRICE = 1150;
 export const MIN_BEDS  = 1;
 export const MAX_BEDS  = 2;
-export const ALLOWED_POSTCODES = new Set(["SO14", "SO15", "SO17", "SO18"]);
+// Keep in sync with parsePostcodeArea and SCORE_SQL (db.ts).
+// SO16 (Bassett) + SO50 (Eastleigh) are scored positively for the N. Stoneham
+// commute even though they're outside Southampton city centre.
+export const ALLOWED_POSTCODES = new Set([
+  "SO14", "SO15", "SO16", "SO17", "SO18", "SO50",
+]);
 
 export type FilterResult = { pass: true } | { pass: false; reason: string };
 

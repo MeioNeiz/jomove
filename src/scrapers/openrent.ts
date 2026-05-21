@@ -14,6 +14,8 @@ import { writeResults, type ScrapedListing } from "./output.ts";
 import { filterListing, type FilterResult } from "./filters.ts";
 import { filterImages } from "./images.ts";
 import { parseAvailable } from "../field-parsers.ts";
+import type { ScrapeReport } from "./registry.ts";
+export type { ScrapeReport } from "./registry.ts";
 
 const SEARCH_URL =
   "https://www.openrent.co.uk/properties-to-rent/southampton" +
@@ -21,13 +23,6 @@ const SEARCH_URL =
 
 const TITLE_RE = /^Southampton\s+-\s+(.+?)\s+-\s+To Rent Now/i;
 const ID_RE    = /var\s+PROPERTYIDS\s*=\s*\[([0-9,\s]+)\]/;
-
-export type ScrapeReport = {
-  portal:   string;
-  written:  number;
-  skipped:  Array<{ id: string | number; reason: string }>;
-  errors:   string[];
-};
 
 function decode(s: string): string {
   return s
@@ -261,7 +256,7 @@ function buildListing(id: string, finalUrl: string, body: string): ScrapedListin
 
 export async function scrapeOpenRent(): Promise<ScrapeReport> {
   const report: ScrapeReport = {
-    portal: "openrent", written: 0, skipped: [], errors: [],
+    portal: "openrent", written: 0, skipped: [], errors: [], listings: [],
   };
 
   let search;
@@ -332,5 +327,6 @@ export async function scrapeOpenRent(): Promise<ScrapeReport> {
 
   writeResults("openrent", listings);
   report.written = listings.length;
+  report.listings = listings;
   return report;
 }

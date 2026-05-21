@@ -1,9 +1,9 @@
 import type { Database } from "bun:sqlite";
-import { SCORE_SQL } from "./db.ts";
 import { SOURCE_LABELS } from "./config.ts";
 import { computeCostAdjustment } from "./cost.ts";
 import { loadGeocodes, addressQuery } from "./geocode.ts";
 import { loadUserImages } from "./user-images.ts";
+import { scoreListing } from "./score.ts";
 import type { ListingRow } from "./types.ts";
 import type {
   AppState, CostOverrides, DashboardData, DashboardPayload,
@@ -11,15 +11,29 @@ import type {
 } from "./template.ts";
 
 /**
- * Fingerprint of the listings table. Advances whenever ingest touches a row.
- * Used as `generatedAt` so the dashboard can detect real data changes
- * (not just clock time) when polling.
+ * Fingerprint of the dataset the dashboard depends on. Advances whenever
+ * any mutation touches it — ingest bumps listings.last_seen, and the
+ * mutation endpoints in serve.ts bump app_state.data_version on note /
+ * status / app-state writes. Polling the max of both means the dashboard
+ * picks up `prune` / `verify` / status flips without a manual refresh.
  */
 export function dataVersion(db: Database): string {
-  const row = db.query(
+  const listingMax = (db.query(
     "SELECT MAX(last_seen) AS v FROM listings"
-  ).get() as { v: string | null } | null;
-  return row?.v ?? "1970-01-01T00:00:00";
+  ).get() as { v: string | null } | null)?.v ?? "1970-01-01T00:00:00";
+  const stateMax = (db.query(
+    "SELECT value FROM app_state WHERE key = 'data_version'"
+  ).get() as { value: string } | null)?.value ?? "1970-01-01T00:00:00";
+  return listingMax > stateMax ? listingMax : stateMax;
+}
+
+/** Bump the dashboard data_version sentinel. Called by every mutation route. */
+export function bumpDataVersion(db: Database, when: string): void {
+  db.run(
+    `INSERT INTO app_state (key, value, updated_at) VALUES ('data_version', ?, ?)
+     ON CONFLICT(key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at`,
+    [when, when],
+  );
 }
 
 const EMPTY_STATE: ListingUserState = {
@@ -74,11 +88,12 @@ function loadAppState(db: Database): AppState {
 
 /** Build the full payload the dashboard needs. */
 export function buildPayload(db: Database): DashboardData {
-  const rows = db.query(
-    `SELECT *, ${SCORE_SQL} AS score
-     FROM listings
-     ORDER BY score DESC, price_pcm ASC`
-  ).all() as ListingRow[];
+  const rawRows = db.query("SELECT * FROM listings").all() as ListingRow[];
+  // Score in TS so the scoring rules can be unit-tested. Sort by score desc,
+  // tie-break by price asc — same as the old SQL ORDER BY.
+  for (const r of rawRows) r.score = scoreListing(r);
+  rawRows.sort((a, b) => (b.score! - a.score!) || (a.price_pcm - b.price_pcm));
+  const rows = rawRows;
 
   // Fetch all user_notes in one go and key by dedupe_key for O(1) lookup
   const noteRows = db.query(

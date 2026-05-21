@@ -1,29 +1,20 @@
 /**
  * `bun jomove.ts auto-scrape` — runs deterministic portal scrapers
- * server-side (no Claude). Writes results_<portal>.md and optionally
- * chains ingest + archive.
+ * server-side (no Claude). Writes results_<portal>.md for archival,
+ * ingests directly from in-memory listings (no MD roundtrip), and
+ * optionally fires an email digest.
  *
  * Each portal scraper is independent; if one fails the others
  * continue. The CLI prints a per-portal summary.
  */
 
-import { scrapeOpenRent, type ScrapeReport } from "../scrapers/openrent.ts";
-import { scrapeRightmove } from "../scrapers/rightmove.ts";
-import { scrapeOnTheMarket } from "../scrapers/onthemarket.ts";
-import { scrapeGumtree } from "../scrapers/gumtree.ts";
-import { cmdIngest } from "./ingest.ts";
+import { PORTALS_BY_ID, PORTALS } from "../scrapers/registry.ts";
+import { toListing } from "../scrapers/adapter.ts";
+import { ingestListings } from "./ingest.ts";
 import { cmdArchive } from "./archive.ts";
 import { notifyNewListings } from "../notify.ts";
+import { ensurePostcodeGeocodes, runAddressGeocoding } from "../geocode.ts";
 import { connect } from "../db.ts";
-
-type ScrapeFn = () => Promise<ScrapeReport>;
-
-const REGISTRY: Record<string, ScrapeFn> = {
-  openrent:    scrapeOpenRent,
-  rightmove:   scrapeRightmove,
-  onthemarket: scrapeOnTheMarket,
-  gumtree:     scrapeGumtree,
-};
 
 export type AutoScrapeOpts = {
   portals?:  string[];
@@ -33,19 +24,33 @@ export type AutoScrapeOpts = {
   archiveLabel?: string;
 };
 
-export async function cmdAutoScrape(opts: AutoScrapeOpts): Promise<void> {
+export type AutoScrapeResult = {
+  portals:  string[];          // portals attempted
+  total:    number;            // total listings written
+  errors:   number;            // count of portals that errored or crashed
+  perPortal: Array<{ portal: string; written: number; skipped: number; errors: number }>;
+  durationMs: number;
+};
+
+export async function cmdAutoScrape(opts: AutoScrapeOpts): Promise<AutoScrapeResult> {
+  const allKnown = PORTALS
+    // Skip portals that have no deterministic scraper (e.g. Zoopla — AI-only).
+    .filter(p => !p.httpVerify.skip)
+    .map(p => p.id);
+
   const requested = opts.portals && opts.portals.length > 0
     ? opts.portals
-    : Object.keys(REGISTRY);
+    : allKnown;
 
-  const unknown = requested.filter(p => !(p in REGISTRY));
+  const unknown = requested.filter(p => !(p in PORTALS_BY_ID));
   if (unknown.length > 0) {
     console.warn(`Unknown portals (skipped): ${unknown.join(", ")}`);
   }
-  const known = requested.filter(p => p in REGISTRY);
+  const known = requested.filter(p => p in PORTALS_BY_ID && !PORTALS_BY_ID[p]!.httpVerify.skip);
   if (known.length === 0) {
-    console.error("No known portals selected. Available: " + Object.keys(REGISTRY).join(", "));
-    process.exit(1);
+    const msg = "No deterministic-scraper portals selected. Available: " + allKnown.join(", ");
+    console.error(msg);
+    throw new Error(msg);
   }
 
   console.log(`auto-scrape: running ${known.join(", ")}`);
@@ -53,17 +58,31 @@ export async function cmdAutoScrape(opts: AutoScrapeOpts): Promise<void> {
 
   // Run in parallel — each scraper has its own per-host rate limiter.
   const results = await Promise.allSettled(
-    known.map(p => REGISTRY[p]!().then(r => ({ portal: p, report: r }))),
+    known.map(p => PORTALS_BY_ID[p]!.scrape()),
   );
 
   let total = 0;
-  for (const r of results) {
+  let errors = 0;
+  const perPortal: AutoScrapeResult["perPortal"] = [];
+  const allListings: { portal: string; listings: ReturnType<typeof toListing>[] }[] = [];
+  for (let i = 0; i < results.length; i++) {
+    const r = results[i]!;
+    const portal = known[i]!;
     if (r.status === "rejected") {
-      console.error(`  ✗ scraper crashed: ${r.reason?.message ?? r.reason}`);
+      console.error(`  ✗ ${portal}: scraper crashed — ${r.reason?.message ?? r.reason}`);
+      errors++;
+      perPortal.push({ portal, written: 0, skipped: 0, errors: 1 });
       continue;
     }
-    const { portal, report } = r.value;
+    const report = r.value;
     total += report.written;
+    if (report.errors.length > 0) errors++;
+    perPortal.push({
+      portal,
+      written: report.written,
+      skipped: report.skipped.length,
+      errors:  report.errors.length,
+    });
     console.log(`  ${report.written > 0 ? "✓" : "·"} ${portal}: ${report.written} written, ${report.skipped.length} skipped, ${report.errors.length} errors`);
     if (report.errors.length > 0) {
       for (const e of report.errors) console.log(`      ! ${e}`);
@@ -71,19 +90,54 @@ export async function cmdAutoScrape(opts: AutoScrapeOpts): Promise<void> {
     if (report.written === 0 && report.skipped.length === 0 && report.errors.length === 0) {
       console.log(`      ! SCRAPER_BROKEN: no listings, no skips, no errors — check selectors`);
     }
+    allListings.push({
+      portal,
+      listings: report.listings.map(s => toListing(portal, s)),
+    });
   }
   console.log(`auto-scrape: ${total} listings in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 
   if (opts.ingest !== false && total > 0) {
     console.log("--- ingesting ---");
-    await cmdIngest(["."]);
-  }
-  if (opts.notify !== false) {
+    const db = connect();
+    try {
+      let inserted = 0, updated = 0;
+      for (const { listings } of allListings) {
+        const stats = ingestListings(db, listings);
+        inserted += stats.inserted;
+        updated  += stats.updated;
+      }
+      console.log(`Ingest done: ${inserted} new, ${updated} updated`);
+
+      // Geocoding is part of "leave the DB ready-to-serve" — same as cmdIngest.
+      try {
+        await ensurePostcodeGeocodes(db);
+        await runAddressGeocoding(db);
+      } catch (err) {
+        console.warn("Geocoding pass errored:", err);
+      }
+
+      if (opts.notify !== false) {
+        await notifyNewListings(db);
+      }
+    } finally {
+      db.close();
+    }
+  } else if (opts.notify !== false) {
     const db = connect();
     try { await notifyNewListings(db); } finally { db.close(); }
   }
+
   if (opts.archive !== false && total > 0) {
     console.log("--- archiving ---");
     cmdArchive({ label: opts.archiveLabel });
   }
+
+  return {
+    portals:    known,
+    total,
+    errors,
+    perPortal,
+    durationMs: Date.now() - t0,
+  };
 }

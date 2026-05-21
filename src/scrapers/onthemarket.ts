@@ -16,6 +16,8 @@ import { writeResults, type ScrapedListing } from "./output.ts";
 import { filterListing, type FilterResult, ALLOWED_POSTCODES, MAX_PRICE } from "./filters.ts";
 import { filterImages } from "./images.ts";
 import { parseAvailable } from "../field-parsers.ts";
+import type { ScrapeReport } from "./registry.ts";
+export type { ScrapeReport } from "./registry.ts";
 
 const SEARCH_BASE =
   "https://www.onthemarket.com/to-rent/property/southampton/" +
@@ -23,13 +25,6 @@ const SEARCH_BASE =
 
 const PAGE_SIZE = 30;
 const HOST_GAP_MS = 1500;
-
-export type ScrapeReport = {
-  portal:  string;
-  written: number;
-  skipped: Array<{ id: string | number; reason: string }>;
-  errors:  string[];
-};
 
 type OtmImage = { default?: string; webp?: string };
 type OtmSummary = {
@@ -188,7 +183,9 @@ function buildFromDetail(s: OtmSummary, prop: any): ScrapedListing | null {
 }
 
 export async function scrapeOnTheMarket(): Promise<ScrapeReport> {
-  const report: ScrapeReport = { portal: "onthemarket", written: 0, skipped: [], errors: [] };
+  const report: ScrapeReport = {
+    portal: "onthemarket", written: 0, skipped: [], errors: [], listings: [],
+  };
 
   // Page 1 → learn total result count.
   let first;
@@ -263,5 +260,6 @@ export async function scrapeOnTheMarket(): Promise<ScrapeReport> {
 
   writeResults("onthemarket", listings);
   report.written = listings.length;
+  report.listings = listings;
   return report;
 }

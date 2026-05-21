@@ -21,6 +21,8 @@ import nodemailer from "nodemailer";
 import type { Database } from "bun:sqlite";
 import type { ListingRow } from "./types.ts";
 import { SOURCE_LABELS } from "./config.ts";
+import { nowIso } from "./util/now.ts";
+import { esc } from "./util/html.ts";
 
 export type SmtpConfig = {
   host: string;
@@ -70,16 +72,6 @@ function fetchNewSince(db: Database, sinceIso: string): ListingRow[] {
      WHERE status = 'active' AND first_seen > ?
      ORDER BY first_seen DESC, price_pcm ASC`)
     .all(sinceIso) as ListingRow[];
-}
-
-function esc(s: string | null | undefined): string {
-  if (s == null) return "";
-  return String(s)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;");
 }
 
 function renderListingCard(r: ListingRow): string {
@@ -134,7 +126,7 @@ export async function notifyNewListings(db: Database): Promise<number> {
     return 0;
   }
 
-  const now = new Date().toISOString().slice(0, 19);
+  const now = nowIso();
   const since = getLastNotified(db);
   if (!since) {
     setLastNotified(db, now);

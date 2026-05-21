@@ -3,6 +3,7 @@ import { existsSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 import { DB_PATH } from "./config.ts";
 import { GEOCODE_SCHEMA } from "./geocode.ts";
+import { nowIso } from "./util/now.ts";
 
 export const SCHEMA = `
 CREATE TABLE IF NOT EXISTS listings (
@@ -74,84 +75,12 @@ CREATE TABLE IF NOT EXISTS user_images (
 );
 ` + GEOCODE_SCHEMA;
 
-// Scoring tuned to user ratings/comments (2026-05-20):
-// - Common proximity + N. Stoneham commute = SO17 1 (Highfield) is sweet spot
-// - Central postcodes actively penalised (user comments: "too central")
-// - Rail signal removed (no correlation with user ratings)
-// - Availability past move-in deadline soft-penalised
-// - Studio/no-bed slight penalty (user "no bed?" comments)
-// - Bad EPC handled by cost adjustment, not score
-export const MOVE_IN_DEADLINE = "2026-06-29";
+// Scoring rules moved to src/score.ts (pure TS, unit-testable).
 
-export const SCORE_SQL = `
-(CASE
-   WHEN price_pcm <= 900  THEN 20
-   WHEN price_pcm <= 1000 THEN 15
-   WHEN price_pcm <= 1100 THEN 10
-   ELSE 0
- END) +
-(CASE
-   WHEN furnished_status IN ('yes','optional','part') THEN 15
-   WHEN furnished_status = 'unclear'                  THEN 7
-   ELSE 0
- END) +
-(CASE
-   WHEN parking_status IN ('allocated','off-street','driveway','permit','on-street') THEN 10
-   WHEN parking_status = 'unclear'                                                   THEN 5
-   ELSE 0
- END) +
-(CASE
-   -- Sweet spot: Highfield — walking to Common AND short hop to N. Stoneham
-   WHEN postcode_full LIKE 'SO17 1%' THEN 25
-   -- Portswood / Bevois — walking to Common
-   WHEN postcode_full LIKE 'SO17 2%' OR
-        postcode_full LIKE 'SO17 3%' THEN 20
-   WHEN postcode_full IS NULL AND postcode_area = 'SO17' THEN 18
-   -- Bassett — between Common and work
-   WHEN postcode_full LIKE 'SO16 5%' OR
-        postcode_full LIKE 'SO16 7%' THEN 15
-   -- Eastleigh — closest to N. Stoneham work
-   WHEN postcode_full LIKE 'SO50%' OR
-        (postcode_full IS NULL AND postcode_area = 'SO50') THEN 10
-   -- Banister / west of centre — neutral acceptable
-   WHEN postcode_full LIKE 'SO15 2%' THEN 5
-   -- Central — penalised (user: "too central")
-   WHEN postcode_full LIKE 'SO14 0%' OR
-        postcode_full LIKE 'SO14 6%' OR
-        postcode_full LIKE 'SO14 7%' OR
-        postcode_full LIKE 'SO15 1%' THEN -5
-   -- Shirley / Millbrook / Ocean Village / SO18 — too far
-   WHEN postcode_full LIKE 'SO15 3%' OR
-        postcode_full LIKE 'SO15 5%' OR
-        postcode_full LIKE 'SO15 7%' OR
-        postcode_full LIKE 'SO15 8%' OR
-        postcode_full LIKE 'SO14 1%' OR
-        postcode_full LIKE 'SO14 2%' OR
-        postcode_full LIKE 'SO14 3%' OR
-        postcode_full LIKE 'SO14 5%' OR
-        postcode_full LIKE 'SO18%' THEN -5
-   WHEN postcode_full IS NULL AND postcode_area = 'SO18' THEN -5
-   ELSE 0
- END) +
-(CASE
-   WHEN near_green_space IS NOT NULL
-        AND LOWER(near_green_space) LIKE '%common%' THEN 15
-   ELSE 0
- END) +
-(CASE
-   WHEN epc IN ('A','B') THEN 8
-   WHEN epc = 'C'        THEN 4
-   ELSE 0
- END) +
-(CASE
-   WHEN available_date IS NOT NULL AND available_date > '${MOVE_IN_DEADLINE}' THEN -10
-   ELSE 0
- END) +
-(CASE
-   WHEN beds IS NULL OR LOWER(COALESCE(listing_type,'')) = 'studio' THEN -5
-   ELSE 0
- END)
-`;
+// Bump this whenever a new entry is added to MIGRATIONS so future `connect()`
+// calls run only the new step. The current version is read from app_state
+// (key `schema_version`); if up to date, migrate() bails after one query.
+export const SCHEMA_VERSION = 1;
 
 export function connect(): Database {
   const dir = dirname(DB_PATH);
@@ -166,59 +95,79 @@ export function connect(): Database {
   return db;
 }
 
-/**
- * Lightweight column-add migrations for older DBs created before a field
- * existed. SQLite ALTER TABLE ADD COLUMN is forward-compatible.
- */
-function migrate(db: Database): void {
-  const listingCols = colNames(db, "listings");
-  if (!listingCols.has("image_url")) {
-    db.exec("ALTER TABLE listings ADD COLUMN image_url TEXT");
-  }
-  if (!listingCols.has("listing_type")) {
-    db.exec("ALTER TABLE listings ADD COLUMN listing_type TEXT");
-  }
-  if (!listingCols.has("image_urls")) {
-    db.exec("ALTER TABLE listings ADD COLUMN image_urls TEXT");
-    // Backfill: existing rows with a single image_url become a 1-element JSON
-    // array so the new code path doesn't lose them.
-    db.exec("UPDATE listings SET image_urls = json_array(image_url) WHERE image_url IS NOT NULL");
-  }
-  if (!listingCols.has("description")) {
-    db.exec("ALTER TABLE listings ADD COLUMN description TEXT");
-  }
-  if (!listingCols.has("key_features")) {
-    db.exec("ALTER TABLE listings ADD COLUMN key_features TEXT");
-  }
-  if (!listingCols.has("agent_name")) {
-    db.exec("ALTER TABLE listings ADD COLUMN agent_name TEXT");
-  }
-  const noteCols = colNames(db, "user_notes");
-  if (!noteCols.has("media_index")) {
-    db.exec("ALTER TABLE user_notes ADD COLUMN media_index INTEGER NOT NULL DEFAULT 0");
-  }
-  if (!noteCols.has("cost_overrides")) {
-    db.exec("ALTER TABLE user_notes ADD COLUMN cost_overrides TEXT");
-  }
-  // geocode table: original column was `postcode`, now generic `query`.
-  const geoCols = colNames(db, "geocode");
-  if (geoCols.has("postcode") && !geoCols.has("query")) {
-    db.exec("ALTER TABLE geocode RENAME COLUMN postcode TO query");
-  }
-  if (geoCols.size > 0 && !geoCols.has("source")) {
-    db.exec("ALTER TABLE geocode ADD COLUMN source TEXT");
-  }
+type Migration = (db: Database) => void;
 
-  // One-shot: 5-star scale → 10-star scale. Doubles existing ratings so 4★
-  // becomes 8★ etc. Guarded via app_state so it can't run twice.
-  const done = db.query("SELECT 1 FROM app_state WHERE key = 'rating_scale_v2'").get();
-  if (!done) {
-    db.exec("UPDATE user_notes SET rating = rating * 2 WHERE rating IS NOT NULL");
-    db.run(
-      "INSERT INTO app_state (key, value, updated_at) VALUES ('rating_scale_v2', '1', ?)",
-      [new Date().toISOString()],
-    );
+/**
+ * One step per logical migration. Earlier steps are kept as-is so older DBs
+ * still upgrade cleanly. Each runs inside a transaction so a crash mid-step
+ * leaves the schema in a consistent state.
+ */
+const MIGRATIONS: Migration[] = [
+  // 0 → 1: original column-add + rating-scale double migration. Now in one
+  // gated step so we don't keep probing PRAGMA table_info on every connect.
+  (db) => {
+    const listingCols = colNames(db, "listings");
+    if (!listingCols.has("image_url"))    db.exec("ALTER TABLE listings ADD COLUMN image_url TEXT");
+    if (!listingCols.has("listing_type")) db.exec("ALTER TABLE listings ADD COLUMN listing_type TEXT");
+    if (!listingCols.has("image_urls")) {
+      db.exec("ALTER TABLE listings ADD COLUMN image_urls TEXT");
+      db.exec("UPDATE listings SET image_urls = json_array(image_url) WHERE image_url IS NOT NULL");
+    }
+    if (!listingCols.has("description"))  db.exec("ALTER TABLE listings ADD COLUMN description TEXT");
+    if (!listingCols.has("key_features")) db.exec("ALTER TABLE listings ADD COLUMN key_features TEXT");
+    if (!listingCols.has("agent_name"))   db.exec("ALTER TABLE listings ADD COLUMN agent_name TEXT");
+
+    const noteCols = colNames(db, "user_notes");
+    if (!noteCols.has("media_index"))    db.exec("ALTER TABLE user_notes ADD COLUMN media_index INTEGER NOT NULL DEFAULT 0");
+    if (!noteCols.has("cost_overrides")) db.exec("ALTER TABLE user_notes ADD COLUMN cost_overrides TEXT");
+
+    const geoCols = colNames(db, "geocode");
+    if (geoCols.has("postcode") && !geoCols.has("query")) {
+      db.exec("ALTER TABLE geocode RENAME COLUMN postcode TO query");
+    }
+    if (geoCols.size > 0 && !geoCols.has("source")) {
+      db.exec("ALTER TABLE geocode ADD COLUMN source TEXT");
+    }
+
+    // 5★ → 10★ rating scale upgrade, idempotent only because it's gated by
+    // schema_version now (the old standalone sentinel is no longer required).
+    const oldDone = db.query("SELECT 1 FROM app_state WHERE key = 'rating_scale_v2'").get();
+    if (!oldDone) {
+      db.exec("UPDATE user_notes SET rating = rating * 2 WHERE rating IS NOT NULL");
+      db.run(
+        "INSERT INTO app_state (key, value, updated_at) VALUES ('rating_scale_v2', '1', ?)",
+        [nowIso()],
+      );
+    }
+  },
+];
+
+function migrate(db: Database): void {
+  const current = currentSchemaVersion(db);
+  if (current >= SCHEMA_VERSION) return;
+  for (let v = current; v < SCHEMA_VERSION; v++) {
+    const step = MIGRATIONS[v];
+    if (!step) continue;
+    db.transaction(() => {
+      step(db);
+      setSchemaVersion(db, v + 1);
+    })();
   }
+}
+
+function currentSchemaVersion(db: Database): number {
+  const row = db.query(
+    "SELECT value FROM app_state WHERE key = 'schema_version'",
+  ).get() as { value: string } | null;
+  return row ? Number(row.value) || 0 : 0;
+}
+
+function setSchemaVersion(db: Database, v: number): void {
+  db.run(
+    `INSERT INTO app_state (key, value, updated_at) VALUES ('schema_version', ?, ?)
+     ON CONFLICT(key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at`,
+    [String(v), nowIso()],
+  );
 }
 
 function colNames(db: Database, table: string): Set<string> {

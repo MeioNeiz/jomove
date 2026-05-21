@@ -18,9 +18,11 @@
 
 import { fetchText } from "./http.ts";
 import { writeResults, type ScrapedListing } from "./output.ts";
-import { filterListing, type FilterResult, MAX_PRICE } from "./filters.ts";
+import { filterListing, type FilterResult, MAX_PRICE, ALLOWED_POSTCODES } from "./filters.ts";
 import { filterImages } from "./images.ts";
 import { parseAvailable } from "../field-parsers.ts";
+import type { ScrapeReport } from "./registry.ts";
+export type { ScrapeReport } from "./registry.ts";
 
 const SEARCH_BASE_PATH = "/flats-houses/property-to-rent/uk/southampton";
 const SEARCH_HOST      = "https://www.gumtree.com";
@@ -28,13 +30,6 @@ const SEARCH_QUERY     = "?max_price=1150&min_bedrooms=1&max_bedrooms=2";
 
 const HOST_GAP_MS = 1500;
 const MAX_PAGES   = 20;
-
-export type ScrapeReport = {
-  portal:  string;
-  written: number;
-  skipped: Array<{ id: string | number; reason: string }>;
-  errors:  string[];
-};
 
 function decodeHtml(s: string): string {
   return s
@@ -97,7 +92,7 @@ function cardPreFilter(c: GumtreeCard): FilterResult {
   // Eastleigh, …). If the location string has an outcode we recognise
   // outside our allow-list, skip.
   const out = c.location.match(/\bSO\d{1,2}\b/i)?.[0]?.toUpperCase();
-  if (out && !["SO14","SO15","SO17","SO18"].includes(out)) {
+  if (out && !ALLOWED_POSTCODES.has(out)) {
     return { pass: false, reason: `card outcode ${out} not allowed` };
   }
   // Bed count over 2 is an immediate skip.
@@ -254,7 +249,9 @@ function buildListing(id: string, ld: any, body: string): ScrapedListing | null 
 }
 
 export async function scrapeGumtree(): Promise<ScrapeReport> {
-  const report: ScrapeReport = { portal: "gumtree", written: 0, skipped: [], errors: [] };
+  const report: ScrapeReport = {
+    portal: "gumtree", written: 0, skipped: [], errors: [], listings: [],
+  };
 
   // Collect cards across pages, with card-level pre-filter.
   const cardsById = new Map<string, GumtreeCard>();
@@ -329,5 +326,6 @@ export async function scrapeGumtree(): Promise<ScrapeReport> {
 
   writeResults("gumtree", listings);
   report.written = listings.length;
+  report.listings = listings;
   return report;
 }

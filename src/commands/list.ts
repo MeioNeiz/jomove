@@ -1,4 +1,5 @@
-import { connect, SCORE_SQL } from "../db.ts";
+import { connect } from "../db.ts";
+import { scoreListing } from "../score.ts";
 import type { ListArgs, ListingRow } from "../types.ts";
 
 export function cmdList(args: ListArgs): void {
@@ -22,13 +23,12 @@ export function cmdList(args: ListArgs): void {
   if (args.parking)    where.push("parking_status IN ('allocated','off-street','driveway')");
   if (args.directLine) where.push("on_direct_line = 1");
 
-  const sql = `SELECT *, ${SCORE_SQL} AS score
-               FROM listings
-               WHERE ${where.join(" AND ")}
-               ORDER BY score DESC, price_pcm ASC`;
-
-  const rows = db.query(sql).all(params) as ListingRow[];
+  const sql = `SELECT * FROM listings WHERE ${where.join(" AND ")}`;
+  const rows = db.query(sql).all(params as any) as ListingRow[];
   db.close();
+
+  for (const r of rows) r.score = scoreListing(r);
+  rows.sort((a, b) => (b.score! - a.score!) || (a.price_pcm - b.price_pcm));
 
   if (rows.length === 0) { console.log("(no matches)"); return; }
 

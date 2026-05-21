@@ -1,4 +1,5 @@
 import type { Database } from "bun:sqlite";
+import { nowIso } from "./util/now.ts";
 
 /**
  * Generic geocode cache: query (postcode or address) → lat/lon.
@@ -245,18 +246,25 @@ async function nominatimPass(
  * Latched via `_bgRunning` so re-calling while a pass is in flight is a
  * no-op — callers can safely invoke this from every request handler to
  * pick up newly-ingested listings without thrashing the geocoders.
+ *
+ * Accepts either an existing Database (re-used; not closed) or a connect
+ * factory (a fresh handle is opened and closed). The server passes the
+ * long-lived handle; CLI callers pass `connect`.
  */
-export function kickoffAddressGeocodingBackground(connect: () => Database): void {
+export function kickoffAddressGeocodingBackground(
+  source: Database | (() => Database),
+): void {
   if (_bgRunning) return;
   _bgRunning = true;
   (async () => {
-    const db = connect();
+    const isFactory = typeof source === "function";
+    const db = isFactory ? source() : source;
     try {
       await runAddressGeocoding(db);
     } catch (err) {
       console.warn("geocode: background pass errored:", err);
     } finally {
-      db.close();
+      if (isFactory) db.close();
       _bgRunning = false;
     }
   })();
@@ -287,5 +295,4 @@ function upsertStmt(db: Database) {
       fetched_at = excluded.fetched_at
   `);
 }
-function nowIso() { return new Date().toISOString().slice(0, 19); }
 function sleep(ms: number) { return new Promise(r => setTimeout(r, ms)); }

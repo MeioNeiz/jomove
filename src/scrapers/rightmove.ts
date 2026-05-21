@@ -22,19 +22,14 @@ import { filterListing, type FilterResult, ALLOWED_POSTCODES, MAX_PRICE } from "
 import { filterImages } from "./images.ts";
 import { parseAvailable } from "../field-parsers.ts";
 import { DEADLINE } from "../config.ts";
+import type { ScrapeReport } from "./registry.ts";
+export type { ScrapeReport } from "./registry.ts";
 
 const SEARCH_BASE =
   "https://www.rightmove.co.uk/property-to-rent/Southampton.html" +
   "?minBedrooms=1&maxBedrooms=2&maxPrice=1150&radius=0";
 
 const PAGE_SIZE = 24;
-
-export type ScrapeReport = {
-  portal:  string;
-  written: number;
-  skipped: Array<{ id: string | number; reason: string }>;
-  errors:  string[];
-};
 
 type RmSummary = {
   id:                number;
@@ -248,7 +243,9 @@ function buildFromDetail(id: number, summary: RmSummary, pm: any): ScrapedListin
 }
 
 export async function scrapeRightmove(): Promise<ScrapeReport> {
-  const report: ScrapeReport = { portal: "rightmove", written: 0, skipped: [], errors: [] };
+  const report: ScrapeReport = {
+    portal: "rightmove", written: 0, skipped: [], errors: [], listings: [],
+  };
 
   // Page 1 to learn total pages.
   let page1;
@@ -327,5 +324,6 @@ export async function scrapeRightmove(): Promise<ScrapeReport> {
 
   writeResults("rightmove", listings);
   report.written = listings.length;
+  report.listings = listings;
   return report;
 }

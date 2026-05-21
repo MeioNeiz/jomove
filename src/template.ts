@@ -1,9 +1,14 @@
 import { readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { esc } from "./util/html.ts";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const TEMPLATE_PATH = join(HERE, "template.html");
+
+// Cached at module load — the template doesn't change at runtime.
+// (Bun's --hot reload triggers a module reload, which re-runs this.)
+const TEMPLATE = readFileSync(TEMPLATE_PATH, "utf-8");
 
 export type DashboardSource = { src: string; url: string };
 
@@ -82,15 +87,7 @@ export type DashboardData = {
   appState: AppState;
 };
 
-function esc(s: string): string {
-  return s
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-}
-
 export function renderDashboard(d: DashboardData): string {
-  const template = readFileSync(TEMPLATE_PATH, "utf-8");
   const lastUpdated = d.generatedAt.slice(0, 16).replace("T", " ");
   const sourceChips = Object.entries(d.sourceLabels)
     .map(([k, v]) =>
@@ -98,7 +95,7 @@ export function renderDashboard(d: DashboardData): string {
       `<div class="label">${esc(v)}</div></div>`
     )
     .join("");
-  return template
+  return TEMPLATE
     .replace("{{LAST_UPDATED}}", esc(lastUpdated))
     .replace("{{GENERATED_AT}}", esc(d.generatedAt))
     .replace(/\{\{UNIQUE\}\}/g, String(d.unique))
