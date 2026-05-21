@@ -6,9 +6,8 @@ dashboard with favourites / ratings / comments persisted in your
 browser.
 
 Bun + TypeScript. One built-in DB dep (`bun:sqlite`). No build step.
-Two ways to view: a self-contained static `dashboard.html`, or a tiny
-`bun run dev` server that lets the dashboard auto-update after every
-ingest without a manual refresh.
+Dashboard is served by a tiny `bun run dev` server that re-renders on
+each request and hot-reloads code changes.
 
 ## Quick start
 
@@ -19,27 +18,13 @@ winget install Oven-sh.Bun
 curl -fsSL https://bun.sh/install | bash
 ```
 
-### Mode A — live dev server (recommended)
-
-Dashboard auto-updates within ~5s of any ingest.
-
 ```sh
 bun install
-bun run build                # one-time: ingest old_search + render dashboard.html
+bun run ingest old_search    # one-time: load historical scrapes into SQLite
 bun run dev                  # serves http://localhost:3000 — leave running
 # in another terminal whenever you want fresh data:
 bun run ingest current_search
-# → browser updates automatically, no refresh needed
-```
-
-### Mode B — static file only
-
-No server. You re-run `bun run report` and refresh the page to see updates.
-
-```sh
-bun install
-bun run build
-open dashboard.html          # or just double-click it
+# → browser shows new data on next poll, no refresh needed
 ```
 
 ## Commands
@@ -47,13 +32,11 @@ open dashboard.html          # or just double-click it
 ```sh
 bun run init                       # create data/jomove.db
 bun run ingest <dir-or-file>       # parse markdown into SQLite (idempotent, keyed on URL)
-bun run report                     # render dashboard.html
-bun run dev                        # live server on :3000 (= bun run serve)
+bun run dev                        # live server on :3000 with hot reload (= bun run serve without --hot)
 bun run archive --label NAME       # snapshot root results_*.md → scrapes/<timestamp>-NAME/
 bun run prune --days 7             # mark listings unseen for 7+ days as `let_agreed`
 bun run prune --days 7 --dry-run   # preview without writing
 bun run list --postcode SO17 --furnished --parking
-bun run build                      # ingest old_search + report (shortcut)
 ```
 
 ## Scrape workflow
@@ -83,7 +66,7 @@ files. Re-running updates rows in place by `source_url`.
 
 ## Dashboard
 
-Open `dashboard.html` and:
+Open `http://localhost:3000` and:
 
 - **Filter** by postcode, beds, max price, fuzzy text search, must-have flags
   (furnished / parking / direct rail), favourites-only, hide-viewed, new-only,
@@ -91,15 +74,14 @@ Open `dashboard.html` and:
 - **Sort** by score, price, your rating, newest first, address.
 - **★ favourite** a listing, **✓** mark as viewed, **⇄** add to compare
   (up to 2). Click *Compare (2/2)* to open a side-by-side modal.
-- **Rate** 1–5 stars and leave **comments** per listing — all stored
-  in `localStorage` keyed on the dedupe key (survives re-ingest /
-  re-report).
+- **Rate** 1–5 stars and leave **comments** per listing — persisted in
+  SQLite, keyed on the dedupe key (survives re-ingest).
 - **NEW** badges appear on listings whose `first_seen` is later than your
   last visit. *Mark all seen* clears them.
 - **LET AGREED** badges appear on listings flagged by `bun run prune`.
 
-State lives in `localStorage` under `jomove:state:v1` and `jomove:meta:v1`.
-Wipe with `localStorage.clear()` in dev tools if you want to reset.
+State lives in SQLite (`data/jomove.db`, tables `user_notes` and
+`app_state`). Delete the rows to reset.
 
 ## Scoring
 
@@ -150,7 +132,7 @@ Format used in `results_<portal>.md`:
 Drop new blocks into the right file, then:
 
 ```sh
-bun run build
+bun run ingest .
 bun run prune --days 7    # mark stale listings as let_agreed
 ```
 
@@ -169,16 +151,14 @@ src/
   markdown.ts               block-level markdown parser
   template.ts               loads template.html, substitutes variables
   template.html             dashboard markup + embedded JS (sort/filter/state/polling)
-  payload.ts                shared payload builder (used by report + serve)
+  payload.ts                builds the dashboard payload from SQLite
   commands/
     init.ts
     ingest.ts
     list.ts
     prune.ts
-    report.ts
     serve.ts                dev server: serves / + /api/listings
 data/jomove.db              gitignored, rebuilt from markdown
 old_search/                 archived per-portal markdown
-dashboard.html              generated; commit it so others see the result
 private/, local/, personal/ gitignored — drop local-only scratch here
 ```

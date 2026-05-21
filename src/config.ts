@@ -5,7 +5,7 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 export const ROOT = dirname(HERE);
 
 export const DB_PATH = join(ROOT, "data", "jomove.db");
-export const HTML_OUT = join(ROOT, "dashboard.html");
+export const USER_IMAGES_DIR = join(ROOT, "data", "user-images");
 
 export const DEADLINE = "2026-06-29";
 

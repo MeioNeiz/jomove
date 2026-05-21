@@ -71,6 +71,16 @@ export function parseEpc(s: string): string | null {
   return m ? m[1]! : null;
 }
 
+export function parseListingType(s: string): string | null {
+  if (!s) return null;
+  const sl = s.toLowerCase();
+  if (/(house ?share|room only|hmo|shared house|room in)/.test(sl)) return "houseshare";
+  if (/studio/.test(sl))         return "studio";
+  if (/maisonette/.test(sl))     return "maisonette";
+  if (/(flat|apartment)/.test(sl)) return "flat";
+  return null;
+}
+
 export function parseAvailable(s: string): { raw: string | null; iso: string | null } {
   if (!s) return { raw: null, iso: null };
   const raw = s.trim();

@@ -1,4 +1,4 @@
-import type { CostAdjustment, CostComponent } from "./template.ts";
+import type { CostAdjustment, CostComponent, CostOverrides } from "./template.ts";
 
 /**
  * Heuristic "true monthly cost" adjustment relative to the headline rent.
@@ -21,19 +21,20 @@ export function computeCostAdjustment(input: {
   caveats?:          string | null;
   parking_raw?:      string | null;
   epc?:              string | null;
+  overrides?:        CostOverrides | null;
 }): CostAdjustment {
   const text = [input.why_worth_a_look, input.caveats, input.parking_raw]
     .filter(Boolean)
     .join(" ")
     .toLowerCase();
 
-  const components: CostComponent[] = [];
+  const auto: CostComponent[] = [];
   let billsCoveredFully = false;
 
   // "all bills included" / "bills inc"
   if (/\b(?:all\s+)?bills\s+(?:inc(?:luded|l|\.)?\b)/.test(text) ||
       /\binc(?:luded|l|\.)?\s+bills?\b/.test(text)) {
-    components.push({ label: "bills incl", delta: -130 });
+    auto.push({ label: "bills incl", delta: -130 });
     billsCoveredFully = true;
   }
 
@@ -41,14 +42,14 @@ export function computeCostAdjustment(input: {
   if (!billsCoveredFully) {
     if (/\bwater\s+(?:rates?\s+)?(?:inc(?:luded|l|\.)?|are\s+inc(?:luded|l|\.)?)\b/.test(text) ||
         /\binc(?:luded|l|\.)?\s+water\b/.test(text)) {
-      components.push({ label: "water incl", delta: -25 });
+      auto.push({ label: "water incl", delta: -25 });
     }
     if (/\bheating\s+(?:inc(?:luded|l|\.)?|is\s+inc(?:luded|l|\.)?)\b/.test(text)) {
-      components.push({ label: "heating incl", delta: -60 });
+      auto.push({ label: "heating incl", delta: -60 });
     }
     if (/\b(?:broadband|wi-?fi|internet)\s+(?:inc(?:luded|l|\.)?|is\s+inc(?:luded|l|\.)?)\b/.test(text) ||
         /\binc(?:luded|l|\.)?\s+(?:broadband|wi-?fi|internet)\b/.test(text)) {
-      components.push({ label: "wifi incl", delta: -30 });
+      auto.push({ label: "wifi incl", delta: -30 });
     }
   }
 
@@ -67,20 +68,17 @@ export function computeCostAdjustment(input: {
 
   const parkingSurcharge = surchargeNear(/parking|car\s*park|car\s*space|bay/);
   if (parkingSurcharge !== null) {
-    components.push({ label: `+£${parkingSurcharge} parking`, delta: parkingSurcharge });
+    auto.push({ label: `+£${parkingSurcharge} parking`, delta: parkingSurcharge });
   }
-  const waterSurcharge = surchargeNear(/water/);
-  if (waterSurcharge !== null &&
-      !components.some(c => c.label === "water incl")) {
-    components.push({ label: `+£${waterSurcharge} water`, delta: waterSurcharge });
-  }
+  // Water is in the baseline (tenant pays), so a quoted figure isn't a surcharge —
+  // skip it to avoid over-penalising flats where the agent simply states the cost.
 
   // EPC heating cost relative to C baseline
   const epc = input.epc?.toUpperCase();
-  if (epc === "A" || epc === "B") components.push({ label: `EPC ${epc}`,    delta: -30 });
-  else if (epc === "D")            components.push({ label: "EPC D",        delta:  20 });
-  else if (epc === "E")            components.push({ label: "EPC E",        delta:  55 });
-  else if (epc === "F" || epc === "G") components.push({ label: `EPC ${epc}`, delta: 95 });
+  if (epc === "A" || epc === "B") auto.push({ label: `EPC ${epc}`,    delta: -30 });
+  else if (epc === "D")            auto.push({ label: "EPC D",        delta:  20 });
+  else if (epc === "E")            auto.push({ label: "EPC E",        delta:  55 });
+  else if (epc === "F" || epc === "G") auto.push({ label: `EPC ${epc}`, delta: 95 });
 
   // Council tax band — band B treated as baseline
   const ctMatch = text.match(/council\s*tax\s*band\s*([a-h])\b/i);
@@ -91,10 +89,26 @@ export function computeCostAdjustment(input: {
     };
     const adj = ctAdj[band];
     if (adj !== undefined && adj !== 0) {
-      components.push({ label: `CT band ${band}`, delta: adj });
+      auto.push({ label: `CT band ${band}`, delta: adj });
     }
   }
 
+  // Apply user overrides: drop any auto labels listed in `remove`, then
+  // append user-added components. Both contribute to the total delta.
+  const ov = input.overrides;
+  const removed = new Set(ov?.remove ?? []);
+  const kept: CostComponent[] = auto
+    .filter(c => !removed.has(c.label))
+    .map(c => ({ ...c, source: "auto" }));
+  const userAdds: CostComponent[] = (ov?.add ?? [])
+    .filter(c => c && typeof c.label === "string" && Number.isFinite(c.delta))
+    .map(c => ({ label: c.label, delta: c.delta, source: "user" }));
+
+  const components = [...kept, ...userAdds];
   const delta = components.reduce((sum, c) => sum + c.delta, 0);
-  return { delta, components };
+  return {
+    delta,
+    components,
+    auto: auto.map(c => ({ ...c, source: "auto" })),
+  };
 }

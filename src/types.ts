@@ -23,14 +23,24 @@ export type Listing = {
   caveats: string;
   dedupe_key: string;
   image_url: string | null;
+  image_urls: string[];
+  listing_type: string | null;
+  // Raw fields captured by deterministic scrapers so Claude can analyse
+  // listings later without re-fetching. Null/empty when not available.
+  description: string | null;
+  key_features: string[];
+  agent_name: string | null;
 };
 
-export type ListingRow = Listing & {
+// SQLite stores image_urls + key_features as JSON strings — override.
+export type ListingRow = Omit<Listing, "image_urls" | "key_features"> & {
   id: number;
   first_seen: string;
   last_seen: string;
   status: string;
   score?: number;
+  image_urls: string | null;
+  key_features: string | null;
 };
 
 export type ListArgs = {

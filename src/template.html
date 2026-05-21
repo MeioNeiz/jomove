@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <title>Jomove — Southampton Rentals</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
 <style>
   :root {
     --bg:        #f5f6f8;
@@ -84,18 +88,138 @@
   .filters button.primary:hover{background:var(--accent-2)}
   .filters button:disabled{opacity:.5;cursor:not-allowed}
 
+  /* ---------- filter primitive: .f-cell ----------
+     Every filter (search, multi-checkbox, dropdown, number, date, flag bundle)
+     is rendered as a labelled cell with the same chrome. Label sits in a
+     muted gutter; controls live inside the body strip with no extra borders
+     so the cell reads as one chip. */
+  .f-cell{
+    display:inline-flex;align-items:stretch;
+    border:1px solid var(--border-2);border-radius:6px;
+    background:var(--surface);overflow:hidden;
+    line-height:1;
+  }
+  .f-cell:focus-within{border-color:var(--accent)}
+  .f-cell__label{
+    display:inline-flex;align-items:center;
+    padding:0 8px;
+    font-size:10px;font-weight:600;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.6px;
+    background:var(--surface-2);border-right:1px solid var(--border);
+    user-select:none;
+  }
+  .f-cell__body{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:3px 8px;
+  }
+  .f-cell select,
+  .f-cell input[type=number],
+  .f-cell input[type=date],
+  .f-cell input[type=search]{
+    font:inherit;font-size:13px;padding:3px 4px;
+    border:0;background:transparent;outline:none;color:var(--fg);
+  }
+  .f-cell input[type=number]{width:64px;text-align:right}
+  .f-cell input[type=search]{min-width:200px}
+  .f-cell .check{font-size:12px;line-height:1.2}
+  .f-cell--grow{flex:1;min-width:240px}
+  .f-cell--grow .f-cell__body{flex:1}
+  .f-cell--grow input[type=search]{width:100%;min-width:0}
+
   /* ---------- cards grid ---------- */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:12px}
   .card{
     background:var(--surface);border:1px solid var(--border);border-radius:8px;
     overflow:hidden;display:flex;flex-direction:column;
     transition:border-color .12s, box-shadow .12s;
+    /* Trap Leaflet's high pane z-indexes (200–700) so they can't punch
+       through the sticky filter bar (z:30) or other page chrome. */
+    isolation:isolate;
   }
   .card:hover{border-color:var(--border-2);box-shadow:0 1px 6px rgba(0,0,0,.04)}
-  .card-image{
-    width:100%;height:140px;object-fit:cover;background:#e5e7eb;
-    display:block;border-bottom:1px solid var(--border);
+  .card-media{
+    position:relative;width:100%;height:140px;
+    background:#e5e7eb;border-bottom:1px solid var(--border);overflow:hidden;
   }
+  .media-stage{position:absolute;inset:0;display:block}
+  .media-stage img.card-image{
+    width:100%;height:140px;object-fit:cover;display:block;
+  }
+  .media-stage .card-map{position:absolute;inset:0}
+  .media-stage .leaflet-mount{position:absolute;inset:0;height:140px}
+  .media-stage .leaflet-container{
+    width:100%;height:140px;background:#dde1e7;
+  }
+  .media-stage .leaflet-control-attribution{
+    font-size:9px;background:rgba(255,255,255,.72);padding:0 4px;
+  }
+  .media-stage .leaflet-control-attribution a{color:var(--muted)}
+  .media-stage .leaflet-control-zoom a{
+    width:22px;height:22px;line-height:22px;font-size:14px;
+  }
+  /* Click-shield over the map so the whole panel opens Google Maps.
+     Sits BELOW the overlay UI (nav/dots/paste-btn at z:700) so those
+     buttons stay clickable. */
+  .media-stage .map-click-shield{
+    position:absolute;inset:0;z-index:500;
+    background:transparent;cursor:zoom-in;
+    display:block;
+  }
+  .card-placeholder{
+    width:100%;height:140px;
+    background:linear-gradient(135deg,#eef0f4,#e0e3e8);
+    display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+    gap:4px;color:var(--fg);font-size:11.5px;line-height:1.35;
+    text-align:left;padding:10px 14px;overflow:hidden;
+  }
+  .card-placeholder .why{
+    display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;
+  }
+  .card-placeholder .hint{
+    color:var(--muted);font-size:10px;font-weight:500;letter-spacing:.3px;
+    text-transform:uppercase;
+  }
+  .media-nav{
+    position:absolute;top:6px;left:6px;
+    display:flex;gap:2px;z-index:700;align-items:stretch;
+    background:rgba(255,255,255,.92);
+    border:1px solid var(--border-2);border-radius:5px;
+    box-shadow:0 1px 3px rgba(0,0,0,.1);
+    height:22px;
+  }
+  .media-nav button{
+    background:transparent;color:var(--fg);border:0;
+    width:20px;cursor:pointer;font-size:14px;line-height:1;
+    padding:0;display:inline-flex;align-items:center;justify-content:center;
+  }
+  .media-nav button:hover{color:var(--accent)}
+  .media-nav .counter{
+    display:inline-flex;align-items:center;
+    font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;
+    color:var(--fg);padding:0 3px;min-width:26px;justify-content:center;
+    border-left:1px solid var(--border);border-right:1px solid var(--border);
+  }
+.paste-btn{
+    position:absolute;top:6px;right:6px;z-index:700;
+    background:rgba(255,255,255,.92);color:var(--fg);
+    border:1px solid var(--border-2);border-radius:5px;
+    font:inherit;font-size:11px;font-weight:500;
+    padding:3px 8px;cursor:pointer;line-height:1.2;
+    box-shadow:0 1px 3px rgba(0,0,0,.06);
+    display:none;
+  }
+  .card-media:hover .paste-btn,
+  .paste-btn:focus{display:inline-block}
+  .paste-btn:hover{background:#fff;border-color:var(--accent);color:var(--accent)}
+  .paste-btn.busy{opacity:.6;cursor:wait}
+  .paste-btn.user-img-replace{display:inline-block;opacity:.55}
+  .paste-btn.user-img-replace:hover{opacity:1}
+  .badge.pc-link{
+    background:var(--ok-bg);color:var(--accent);
+    font-variant-numeric:tabular-nums;
+    text-decoration:none;cursor:pointer;
+  }
+  .badge.pc-link:hover{background:#dbe5f5;text-decoration:underline}
   .card-body{padding:12px 14px 10px;display:flex;flex-direction:column;gap:8px}
   .card.fav{border-color:var(--fav)}
   .card.let-agreed{opacity:.55}
@@ -107,10 +231,69 @@
   .cost-adj{
     font-size:11px;font-weight:500;font-variant-numeric:tabular-nums;
     margin-left:-2px;padding:1px 6px;border-radius:10px;
-    cursor:help;
+    cursor:pointer;border:1px solid transparent;
   }
+  .cost-adj:hover{border-color:var(--border-2)}
   .cost-adj.cost-down{color:var(--good);background:rgba(4,120,87,.06)}
   .cost-adj.cost-up  {color:var(--warn);background:rgba(180,83,9,.07)}
+  .cost-adj.cost-zero{color:var(--muted);background:var(--ok-bg)}
+
+  /* ---------- cost-overrides editor (popover under price) ---------- */
+  .card-body{position:relative}
+  .cost-editor{
+    position:absolute;left:14px;right:14px;top:42px;z-index:50;
+    background:var(--surface);border:1px solid var(--border-2);
+    border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.12);
+    padding:10px 12px;font-size:12px;
+  }
+  .cost-editor .ce-title{font-weight:600;font-size:11px;color:var(--muted);
+    text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+  .cost-editor ul{list-style:none;margin:0 0 8px;padding:0;display:flex;flex-direction:column;gap:3px}
+  .cost-editor li{
+    display:flex;align-items:center;gap:6px;
+    padding:3px 5px;border-radius:5px;background:var(--surface-2);
+  }
+  .cost-editor li .ce-label{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .cost-editor li.ce-auto .ce-label{color:var(--fg)}
+  .cost-editor li.ce-user .ce-label{color:var(--accent)}
+  .cost-editor li .ce-delta{font-variant-numeric:tabular-nums;font-weight:600}
+  .cost-editor li.ce-down .ce-delta{color:var(--good)}
+  .cost-editor li.ce-up   .ce-delta{color:var(--warn)}
+  .cost-editor li button.ce-x{
+    width:18px;height:18px;border:none;background:transparent;
+    color:var(--muted);font-size:14px;line-height:1;cursor:pointer;border-radius:3px;
+  }
+  .cost-editor li button.ce-x:hover{background:var(--bad-bg);color:var(--bad)}
+  .cost-editor .ce-empty{color:var(--muted);font-style:italic;padding:4px 5px}
+  .cost-editor .ce-presets{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+  .cost-editor .ce-presets button{
+    font:inherit;font-size:11px;padding:3px 8px;
+    background:var(--surface);border:1px solid var(--border-2);
+    border-radius:11px;cursor:pointer;color:var(--fg);
+  }
+  .cost-editor .ce-presets button:hover{background:var(--sweet-bg);border-color:var(--accent);color:var(--accent)}
+  .cost-editor .ce-custom{display:flex;gap:4px;align-items:center;margin-bottom:8px}
+  .cost-editor .ce-custom input{
+    font:inherit;font-size:12px;padding:3px 6px;
+    border:1px solid var(--border-2);border-radius:4px;background:var(--surface);
+  }
+  .cost-editor .ce-custom .ce-label-in{flex:1;min-width:0}
+  .cost-editor .ce-custom .ce-amount-in{width:70px;text-align:right}
+  .cost-editor .ce-custom button{
+    font:inherit;font-size:11px;padding:3px 10px;
+    background:var(--accent);color:white;border:0;border-radius:4px;cursor:pointer;
+  }
+  .cost-editor .ce-custom button:disabled{background:var(--border-2);cursor:not-allowed}
+  .cost-editor .ce-foot{display:flex;justify-content:space-between;align-items:center;gap:6px}
+  .cost-editor .ce-foot button{
+    font:inherit;font-size:11px;padding:3px 8px;
+    background:transparent;border:1px solid var(--border-2);
+    border-radius:4px;cursor:pointer;color:var(--muted);
+  }
+  .cost-editor .ce-foot button:hover{color:var(--fg);background:var(--surface-2)}
+  .cost-editor .ce-total{font-variant-numeric:tabular-nums;font-weight:600}
+  .cost-editor .ce-total.cost-down{color:var(--good)}
+  .cost-editor .ce-total.cost-up{color:var(--warn)}
   .card-top .spacer{flex:1}
   .card-top .score{font-size:13px;font-variant-numeric:tabular-nums;font-weight:600;color:var(--accent);padding:1px 7px;background:var(--sweet-bg);border-radius:11px}
 
@@ -124,6 +307,7 @@
   .icons button.on{color:var(--fav);border-color:var(--fav);background:#fff8eb}
   .icons button.viewed-on{color:var(--good);border-color:var(--good);background:#ecfdf5}
   .icons button.cmp-on{color:var(--accent);border-color:var(--accent);background:var(--sweet-bg)}
+  .icons button.let-on{color:var(--bad);border-color:var(--bad);background:var(--bad-bg)}
 
   .badges{display:flex;gap:4px;flex-wrap:wrap}
   .badge{
@@ -152,13 +336,16 @@
   .epc-E{background:var(--epc-E)} .epc-F{background:var(--epc-F)} .epc-G{background:var(--epc-G)}
   .epc-unknown{background:#bbb;color:white}
 
-  .rating{display:flex;gap:1px}
+  .rating{display:flex;gap:0}
   .rating button{
-    background:none;border:none;cursor:pointer;font-size:18px;line-height:1;
+    background:none;border:none;cursor:pointer;font-size:15px;line-height:1;
     color:#d1d5db;padding:0 1px;
   }
   .rating button.lit{color:var(--fav)}
-  .rating button:hover{transform:scale(1.1)}
+  .rating button:hover{transform:scale(1.15)}
+  /* Subtle gap between the 5th and 6th star to make the 1–10 scale readable
+     at a glance (e.g. "that's a 7"). */
+  .rating button:nth-child(5){margin-right:4px}
 
   .comment{
     width:100%;border:1px solid var(--border);border-radius:5px;padding:5px 8px;
@@ -243,35 +430,150 @@
     <div class="stat"><div class="num">{{TOTAL}}</div><div class="label">Active raw</div></div>
     <div class="stat"><div class="num" id="fav-count">0</div><div class="label">Favourites</div></div>
     <div class="stat"><div class="num" id="new-count">0</div><div class="label">New</div></div>
+    <div class="stat"><div class="num" id="reviewed-count">0</div><div class="label">Reviewed</div></div>
     {{SOURCE_CHIPS}}
   </div>
 
   <div class="filters">
     <div class="filters-row">
-      <input id="f-search" type="search" placeholder="Search address, area, postcode…" autocomplete="off">
-      <select id="f-pc">
-        <option value="">Any postcode</option>
-        <option>SO14</option><option>SO15</option><option>SO17</option><option>SO18</option>
-      </select>
-      <select id="f-beds">
-        <option value="">Any beds</option><option value="1">1 bed</option><option value="2">2 bed</option>
-      </select>
-      <input id="f-price" type="number" min="0" step="50" placeholder="Max £/mo">
-      <label class="check"><input id="f-furn" type="checkbox"> Furnished</label>
-      <label class="check"><input id="f-park" type="checkbox"> Parking</label>
-      <label class="check"><input id="f-rail" type="checkbox"> Direct rail</label>
-      <label class="check"><input id="f-favs" type="checkbox"> Favourites</label>
-      <label class="check"><input id="f-new"  type="checkbox"> New only</label>
-      <label class="check"><input id="f-hide-viewed"  type="checkbox"> Hide viewed</label>
-      <label class="check"><input id="f-incl-let-agreed" type="checkbox"> Show let-agreed</label>
-      <select id="f-sort">
-        <option value="score">Sort: Score</option>
-        <option value="price-asc">Price low → high</option>
-        <option value="price-desc">Price high → low</option>
-        <option value="first_seen-desc">Newest first</option>
-        <option value="rating-desc">Your rating</option>
-        <option value="address">Address A–Z</option>
-      </select>
+      <div class="f-cell f-cell--grow">
+        <span class="f-cell__label">Search</span>
+        <div class="f-cell__body">
+          <input id="f-search" type="search" placeholder="address, area, postcode…" autocomplete="off">
+        </div>
+      </div>
+      <div class="f-cell" title="Postcode areas. All ticked = no postcode filter.">
+        <span class="f-cell__label">PC</span>
+        <div class="f-cell__body">
+          <label class="check"><input class="f-pc" type="checkbox" value="SO14"> 14</label>
+          <label class="check"><input class="f-pc" type="checkbox" value="SO15"> 15</label>
+          <label class="check"><input class="f-pc" type="checkbox" value="SO17"> 17</label>
+          <label class="check"><input class="f-pc" type="checkbox" value="SO18"> 18</label>
+        </div>
+      </div>
+      <div class="f-cell" title="Bedroom count. Studios are listing_type=studio regardless of bed count. All ticked = no beds filter.">
+        <span class="f-cell__label">Beds</span>
+        <div class="f-cell__body">
+          <label class="check"><input class="f-beds" type="checkbox" value="studio"> S</label>
+          <label class="check"><input class="f-beds" type="checkbox" value="1"> 1</label>
+          <label class="check"><input class="f-beds" type="checkbox" value="2"> 2</label>
+          <label class="check"><input class="f-beds" type="checkbox" value="3+"> 3+</label>
+        </div>
+      </div>
+      <div class="f-cell" title="Min/max monthly rent. Toggle 'eff' to compare price + cost adjustments instead of headline rent (also affects price sort).">
+        <span class="f-cell__label">£</span>
+        <div class="f-cell__body">
+          <input id="f-price-min" type="number" min="0" step="50" placeholder="min" style="width:54px">
+          <span style="color:var(--muted)">–</span>
+          <input id="f-price" type="number" min="0" step="50" placeholder="max" style="width:54px">
+          <label class="check"><input id="f-use-eff" type="checkbox"> eff</label>
+        </div>
+      </div>
+      <div class="f-cell">
+        <span class="f-cell__label">Furn</span>
+        <div class="f-cell__body">
+          <select id="f-furn">
+            <option value="">Any</option>
+            <option value="hide-no">Hide unfurnished</option>
+            <option value="furnished">Furnished only</option>
+            <option value="yes">Strictly yes</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-cell">
+        <span class="f-cell__label">Park</span>
+        <div class="f-cell__body">
+          <select id="f-park">
+            <option value="">Any</option>
+            <option value="hide-none">Hide no-parking</option>
+            <option value="strict">Parking only</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-cell" title="Minimum EPC rating (unknowns kept).">
+        <span class="f-cell__label">EPC</span>
+        <div class="f-cell__body">
+          <select id="f-epc-min">
+            <option value="">Any</option>
+            <option value="A">A only</option>
+            <option value="B">B+</option>
+            <option value="C">C+</option>
+            <option value="D">D+</option>
+            <option value="E">E+</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-cell" title="Available on or before this date (unknowns kept).">
+        <span class="f-cell__label">By</span>
+        <div class="f-cell__body">
+          <input id="f-avail-by" type="date">
+        </div>
+      </div>
+      <div class="f-cell" title="First seen within…">
+        <span class="f-cell__label">Seen</span>
+        <div class="f-cell__body">
+          <select id="f-first-seen">
+            <option value="">Any</option>
+            <option value="1">Last 24h</option>
+            <option value="3">Last 3 days</option>
+            <option value="7">Last week</option>
+            <option value="14">Last 2 weeks</option>
+            <option value="30">Last month</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-cell" title="Viewed = you've physically been to the property (toggle the ✓ on a card).">
+        <span class="f-cell__label">Viewed</span>
+        <div class="f-cell__body">
+          <select id="f-viewed">
+            <option value="">Any</option>
+            <option value="only">Viewed only</option>
+            <option value="hide">Hide viewed</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-cell" title="Reviewed = you've given a star rating AND left a comment.">
+        <span class="f-cell__label">Reviewed</span>
+        <div class="f-cell__body">
+          <select id="f-reviewed">
+            <option value="">Any</option>
+            <option value="only">Reviewed only</option>
+            <option value="hide">Hide reviewed</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-cell" title="Listings flagged let_agreed (by /verify, /prune, or the user).">
+        <span class="f-cell__label">Let</span>
+        <div class="f-cell__body">
+          <select id="f-let">
+            <option value="">Hide (default)</option>
+            <option value="include">Include</option>
+            <option value="only">Let only</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-cell">
+        <span class="f-cell__label">Flags</span>
+        <div class="f-cell__body">
+          <label class="check" title="Direct rail to Southampton Central / Airport Parkway"><input id="f-rail" type="checkbox"> Rail</label>
+          <label class="check"><input id="f-favs" type="checkbox"> Fav</label>
+          <label class="check" title="Listings whose first_seen is later than your last visit"><input id="f-new" type="checkbox"> New</label>
+          <label class="check" title="Include house shares"><input id="f-incl-houseshare" type="checkbox"> Share</label>
+        </div>
+      </div>
+      <div class="f-cell">
+        <span class="f-cell__label">Sort</span>
+        <div class="f-cell__body">
+          <select id="f-sort">
+            <option value="score">Score</option>
+            <option value="price-asc">Price ↑</option>
+            <option value="price-desc">Price ↓</option>
+            <option value="first_seen-desc">Newest</option>
+            <option value="rating-desc">Rating</option>
+            <option value="address">A–Z</option>
+          </select>
+        </div>
+      </div>
     </div>
     <div class="filters-row">
       <button id="btn-compare" class="primary" disabled>Compare (0/2)</button>
@@ -284,10 +586,10 @@
   <div id="empty" class="empty" hidden>No listings match the current filters.</div>
 
   <footer>
-    Generated by <code>bun run report</code> · scoring weights:
+    Served by <code>bun run dev</code> · scoring weights:
     postcode 20 · price 20 · furnished 15 · parking 10 · direct rail 10 ·
     Common 10 · EPC 8 (max ~103) ·
-    Your ratings &amp; notes live in localStorage on this device.
+    Your ratings &amp; notes live in SQLite (data/jomove.db).
   </footer>
 </div>
 
@@ -356,14 +658,9 @@ function setServerOnline(ok) {
 }
 
 function patchState(k, patch) {
-  // Engaging with a listing (writing a comment or giving it a rating)
-  // implicitly counts as viewing it. We only set viewed → true; we never
-  // auto-unset, so clearing a comment later won't undo it.
-  if (!stateOf(k).viewed && !patch.viewed) {
-    const writingComment = typeof patch.comment === "string" && patch.comment.trim() !== "";
-    const givingRating   = typeof patch.rating === "number" && patch.rating >= 1;
-    if (writingComment || givingRating) patch = { ...patch, viewed: true };
-  }
+  // `viewed` is reserved for "viewed in person" — only the user toggles it
+  // via the ✓ button. Adding a rating/comment marks a listing as REVIEWED
+  // (derived state via isReviewed), which is a separate filter dimension.
   STATE[k] = { ...stateOf(k), ...patch };
   if (IS_LIVE) {
     pendingNoteWrites.add(k);
@@ -415,6 +712,88 @@ function persistFiltersAndSort() {
   }, 350);
 }
 
+//---------- media / carousel helpers ----------
+function clampIdx(i, len) {
+  if (!len) return 0;
+  return ((i % len) + len) % len;
+}
+function gmapsHref(query) {
+  return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(query);
+}
+function renderMediaItem(item, r) {
+  if (!item) return "";
+  if (item.kind === "scraped") {
+    return `<img class="card-image" src="${esc(item.url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`;
+  }
+  if (item.kind === "user") {
+    return `<img class="card-image" src="${esc(item.url)}" alt="" loading="lazy">`;
+  }
+  if (item.kind === "map") {
+    // Leaflet inits lazily into .leaflet-mount; map is interactive.
+    // Click-through to Google Maps is via the postcode badge below the card.
+    return `<div class="card-map">
+              <div class="leaflet-mount" data-lat="${item.lat}" data-lon="${item.lon}"></div>
+            </div>`;
+  }
+  return "";
+}
+
+const _leafletMounted = new WeakSet();
+const _leafletObserver = ("IntersectionObserver" in window)
+  ? new IntersectionObserver(entries => {
+      for (const e of entries) {
+        if (e.isIntersecting) initLeafletMount(e.target);
+      }
+    }, { rootMargin: "200px" })
+  : null;
+
+function initLeafletMount(el) {
+  if (_leafletMounted.has(el)) return;
+  if (typeof L === "undefined") return; // script still loading; retry later
+  const lat = Number(el.dataset.lat), lon = Number(el.dataset.lon);
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+  const map = L.map(el, {
+    // Interactive: drag, double-click zoom, pinch zoom, +/- buttons.
+    // scrollWheelZoom intentionally OFF so the page can scroll over the map
+    // without trapping the wheel. Default zoom control disabled so we can
+    // place it in the bottom-right (top-left is taken by carousel nav).
+    zoomControl: false, attributionControl: true,
+    scrollWheelZoom: false, doubleClickZoom: true,
+    dragging: true, touchZoom: true, boxZoom: true,
+    keyboard: false, tap: true,
+  }).setView([lat, lon], 13);
+  L.control.zoom({ position: "bottomright" }).addTo(map);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19, attribution: "&copy; OSM",
+  }).addTo(map);
+  L.marker([lat, lon]).addTo(map);
+  _leafletMounted.add(el);
+}
+
+function bindLeafletInCard(card) {
+  const mount = card.querySelector(".leaflet-mount");
+  if (!mount) return;
+  if (_leafletObserver) _leafletObserver.observe(mount);
+  else initLeafletMount(mount);
+}
+
+/** Re-render just the media slot of one card (after carousel nav). */
+function rerenderCardMedia(card, r, idx) {
+  const stage = card.querySelector(".media-stage");
+  if (!stage) return;
+  stage.innerHTML = renderMediaItem(r.media[idx], r);
+  const counter = card.querySelector(".media-nav .counter");
+  if (counter) counter.textContent = `${idx + 1}/${r.media.length}`;
+  card.querySelector(".card-media").dataset.idx = idx;
+  bindLeafletInCard(card);
+}
+// Retry mounts once Leaflet's <script> finishes loading.
+window.addEventListener("load", () => {
+  document.querySelectorAll(".leaflet-mount").forEach(el => {
+    if (!_leafletMounted.has(el)) initLeafletMount(el);
+  });
+});
+
 //---------- helpers ----------
 const SRC_LABEL = { openrent:"OR", rightmove:"RM", zoopla:"Z", onthemarket:"OTM", gumtree:"GT" };
 const PARK_RANK = { allocated:5, driveway:5, "off-street":5, permit:3, "on-street":3, unclear:1, none:0, "":0 };
@@ -425,17 +804,154 @@ function esc(s) {
 function fmtPrice(n) { return "£" + n.toLocaleString(); }
 function fmtDate(iso, raw) { if (iso) return iso; return raw || "?"; }
 
+// Compute the resolved cost adjustment from base auto + user overrides.
+// Mirrors src/cost.ts so the dashboard can re-render instantly on edit
+// without waiting for the next poll.
+function resolveCostAdjustment(r) {
+  const auto = (r.cost_adjustments && r.cost_adjustments.auto) || [];
+  const ov   = stateOf(r.dedupe_key).cost_overrides
+            || { remove: [], add: [] };
+  const removed = new Set(ov.remove || []);
+  const kept = auto
+    .filter(c => !removed.has(c.label))
+    .map(c => ({ label: c.label, delta: c.delta, source: "auto" }));
+  const adds = (ov.add || [])
+    .filter(c => c && typeof c.label === "string" && Number.isFinite(c.delta))
+    .map(c => ({ label: c.label, delta: c.delta, source: "user" }));
+  const components = [...kept, ...adds];
+  const delta = components.reduce((s, c) => s + c.delta, 0);
+  return { delta, components, auto };
+}
+
 function costAdjHtml(r) {
-  const adj = r.cost_adjustments;
-  if (!adj || !adj.delta) return "";
-  const sign = adj.delta < 0 ? "−" : "+";
-  const cls  = adj.delta < 0 ? "cost-down" : "cost-up";
-  const breakdown = adj.components
-    .map(c => `${c.label}: ${c.delta < 0 ? "−" : "+"}£${Math.abs(c.delta)}`)
-    .join(" · ");
+  const adj = resolveCostAdjustment(r);
+  const cls = adj.delta === 0 ? "cost-zero" : (adj.delta < 0 ? "cost-down" : "cost-up");
+  const sign = adj.delta === 0 ? "±" : (adj.delta < 0 ? "−" : "+");
+  const amount = adj.delta === 0 ? "£0" : `£${Math.abs(adj.delta)}`;
+  const breakdown = adj.components.length
+    ? adj.components.map(c => `${c.label}: ${c.delta < 0 ? "−" : "+"}£${Math.abs(c.delta)}`).join(" · ")
+    : "no adjustments — click to add";
   const eff = r.price + adj.delta;
-  const title = `${breakdown} · effective ≈£${eff}/mo`;
-  return `<span class="cost-adj ${cls}" title="${esc(title)}">${sign}£${Math.abs(adj.delta)}</span>`;
+  const title = `${breakdown} · effective ≈£${eff}/mo — click to edit`;
+  return `<span class="cost-adj ${cls}" title="${esc(title)}">${sign}${amount}</span>`;
+}
+
+// ---------- cost-overrides editor ----------
+const COST_PRESETS = [
+  { label: "water incl",    delta: -25 },
+  { label: "heating incl",  delta: -60 },
+  { label: "bills incl",    delta: -130 },
+  { label: "wifi incl",     delta: -30 },
+];
+
+function cloneOverrides(ov) {
+  return {
+    remove: [...(ov?.remove || [])],
+    add:    (ov?.add || []).map(c => ({ label: c.label, delta: c.delta })),
+  };
+}
+
+function emptyIfTrivial(ov) {
+  if ((ov.remove?.length || 0) === 0 && (ov.add?.length || 0) === 0) return null;
+  return ov;
+}
+
+function setCostOverrides(key, ov) {
+  patchState(key, { cost_overrides: emptyIfTrivial(ov) });
+}
+
+function buildCostEditor(r) {
+  const adj = resolveCostAdjustment(r);
+  const ov  = cloneOverrides(stateOf(r.dedupe_key).cost_overrides);
+  const items = adj.components.map(c => {
+    const dir = c.delta < 0 ? "ce-down" : "ce-up";
+    const sign = c.delta < 0 ? "−" : "+";
+    const klass = c.source === "user" ? "ce-user" : "ce-auto";
+    return `
+      <li class="${klass} ${dir}">
+        <span class="ce-label">${esc(c.label)}</span>
+        <span class="ce-delta">${sign}£${Math.abs(c.delta)}</span>
+        <button class="ce-x" data-ce-remove="${esc(c.label)}" data-ce-source="${c.source}"
+                title="Remove this adjustment">×</button>
+      </li>`;
+  }).join("");
+
+  // Hide presets already active (either as live auto or as a user-add).
+  const activeLabels = new Set(adj.components.map(c => c.label));
+  const presets = COST_PRESETS
+    .filter(p => !activeLabels.has(p.label))
+    .map(p => `<button class="ce-preset" data-ce-add="${esc(p.label)}" data-ce-delta="${p.delta}">+ ${esc(p.label)} ${p.delta < 0 ? "−" : "+"}£${Math.abs(p.delta)}</button>`)
+    .join("");
+
+  const totalCls = adj.delta === 0 ? "" : (adj.delta < 0 ? "cost-down" : "cost-up");
+  const totalSign = adj.delta === 0 ? "±" : (adj.delta < 0 ? "−" : "+");
+  const hasOv = (ov.remove.length + ov.add.length) > 0;
+
+  return `
+    <div class="cost-editor" data-key="${esc(r.dedupe_key)}">
+      <div class="ce-title">Cost adjustments</div>
+      <ul>${items || `<li class="ce-empty">No adjustments yet.</li>`}</ul>
+      ${presets ? `<div class="ce-presets">${presets}</div>` : ""}
+      <div class="ce-custom">
+        <input class="ce-label-in" type="text" placeholder="Custom label (e.g. cleaning)" maxlength="40">
+        <input class="ce-amount-in" type="number" step="1" placeholder="±£">
+        <button class="ce-add-custom" disabled>Add</button>
+      </div>
+      <div class="ce-foot">
+        <span>Total: <span class="ce-total ${totalCls}">${totalSign}£${Math.abs(adj.delta)}</span></span>
+        <span>
+          <button class="ce-reset" ${hasOv ? "" : "disabled"} title="Drop all user edits, restore auto">Reset</button>
+          <button class="ce-close">Close</button>
+        </span>
+      </div>
+    </div>`;
+}
+
+function closeAllCostEditors(except) {
+  document.querySelectorAll(".cost-editor").forEach(el => {
+    if (el !== except) el.remove();
+  });
+}
+
+function openCostEditor(card, r) {
+  closeAllCostEditors();
+  const body = card.querySelector(".card-body");
+  if (!body) return;
+  body.insertAdjacentHTML("afterbegin", buildCostEditor(r));
+  const editor = body.querySelector(".cost-editor");
+  // Wire custom-add button enable state
+  const lblIn = editor.querySelector(".ce-label-in");
+  const amtIn = editor.querySelector(".ce-amount-in");
+  const addBtn = editor.querySelector(".ce-add-custom");
+  const refreshAdd = () => {
+    addBtn.disabled = !(lblIn.value.trim() && amtIn.value.trim() && Number.isFinite(Number(amtIn.value)));
+  };
+  lblIn.addEventListener("input", refreshAdd);
+  amtIn.addEventListener("input", refreshAdd);
+  editor.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") { editor.remove(); }
+    if (e.key === "Enter" && (e.target === lblIn || e.target === amtIn)) {
+      if (!addBtn.disabled) addBtn.click();
+    }
+  });
+}
+
+function refreshCostUI(key) {
+  const card = _cardNodes.get(key);
+  if (!card) return;
+  const r = DATA.find(x => x.dedupe_key === key);
+  if (!r) return;
+  // Rebuild pill
+  const top = card.querySelector(".card-top .cost-adj");
+  const tmp = document.createElement("div");
+  tmp.innerHTML = costAdjHtml(r);
+  if (top && tmp.firstElementChild) top.replaceWith(tmp.firstElementChild);
+  // Rebuild editor (if open) — preserves focus is not critical here
+  const open = card.querySelector(".cost-editor");
+  if (open) {
+    open.remove();
+    openCostEditor(card, r);
+  }
 }
 
 function postcodeBand(pcFull, pcArea) {
@@ -450,37 +966,174 @@ function isNew(item) {
   if (!META.lastVisitAt) return false;
   return item.first_seen > META.lastVisitAt && !stateOf(item.dedupe_key).viewed;
 }
+function newBadgeTitle(item) {
+  // first_seen lacks a TZ suffix; treat as UTC for the diff (matches how
+  // ingest writes it). Good enough for human-readable "X ago".
+  const seenMs = new Date(item.first_seen + "Z").getTime();
+  if (!Number.isFinite(seenMs)) return "First seen " + item.first_seen;
+  const mins = Math.max(0, Math.round((Date.now() - seenMs) / 60000));
+  let ago;
+  if (mins < 60)            ago = mins + " min ago";
+  else if (mins < 60 * 24)  ago = Math.round(mins / 60) + " h ago";
+  else                      ago = Math.round(mins / (60 * 24)) + " d ago";
+  return "First seen " + item.first_seen.replace("T", " ") + " (" + ago + ")";
+}
+function isReviewed(item) {
+  const s = stateOf(item.dedupe_key);
+  const hasRating  = typeof s.rating === "number" && s.rating >= 1;
+  const hasComment = typeof s.comment === "string" && s.comment.trim() !== "";
+  return hasRating && hasComment;
+}
 
 //---------- filtering + sorting ----------
+const EPC_RANK = { A:1, B:2, C:3, D:4, E:5, F:6, G:7 };
+// The universe of the multi-checkbox filters. "All ticked" is treated as
+// "no filter" so unknown values (e.g. an SO19 listing) still appear.
+const ALL_PCS  = ["SO14","SO15","SO17","SO18"];
+const ALL_BEDS = ["studio","1","2","3+"];
+// Legacy persisted filter shape (pre-studio split). Used to upgrade saved
+// filters to "all ticked" so returning users keep seeing studios by default.
+const LEGACY_BEDS = ["1","2","3+"];
+
 const filters = {
-  search: "", pc: "", beds: "", maxPrice: NaN,
-  furn:false, park:false, rail:false,
-  favs:false, newOnly:false, hideViewed:false, inclLetAgreed:false,
+  search: "",
+  pcs: [...ALL_PCS],        // all-ticked default == no filter
+  bedsSet: [...ALL_BEDS],   // all-ticked default == no filter
+  minPrice: NaN,
+  maxPrice: NaN,
+  useEffectivePrice: false,
+  furnMode: "",             // "" | "hide-no" | "furnished" | "yes"
+  parkMode: "",             // "" | "hide-none" | "strict"
+  reviewedMode: "",         // "" | "only" | "hide"  (reviewed = rating + comment)
+  viewedMode: "",           // "" | "only" | "hide"  (viewed = physically been there)
+  letMode: "",              // "" hide (default) | "include" | "only"
+  rail: false,
+  availBy: "",              // YYYY-MM-DD
+  epcMin: "",               // "" | "A" | ... | "G"
+  firstSeenDays: "",        // "" | number-string
+  favs: false,
+  newOnly: false,
+  inclHouseshare: false,
   sort: "score",
 };
 
-// Restore saved filter/sort selection from server (no-op in file:// mode)
+// Restore saved filter/sort selection from server (no-op in file:// mode).
+// Migrates the older single-select / boolean shape so personal-tool persisted
+// state still loads cleanly.
 if (IS_LIVE && APP_STATE) {
   if (APP_STATE.filters && typeof APP_STATE.filters === "object") {
-    Object.assign(filters, APP_STATE.filters);
+    const f = APP_STATE.filters;
+    // Migrate legacy single-select / boolean shape.
+    if (typeof f.pc === "string" && !Array.isArray(f.pcs)) {
+      f.pcs = f.pc ? [f.pc] : [...ALL_PCS];
+    }
+    if (typeof f.beds === "string" && !Array.isArray(f.bedsSet)) {
+      f.bedsSet = f.beds ? [f.beds] : [...ALL_BEDS];
+    }
+    if (f.furn === true && !f.furnMode) f.furnMode = "furnished";
+    if (f.park === true && !f.parkMode) f.parkMode = "hide-none";
+    if (f.hideViewed === true && !f.viewedMode) f.viewedMode = "hide";
+    if (f.inclLetAgreed === true && !f.letMode) f.letMode = "include";
+    delete f.pc; delete f.beds; delete f.furn; delete f.park;
+    delete f.hideViewed; delete f.inclLetAgreed;
+    Object.assign(filters, f);
+    if (filters.minPrice == null) filters.minPrice = NaN;
     if (filters.maxPrice == null) filters.maxPrice = NaN;
+    if (!Array.isArray(filters.pcs))     filters.pcs     = [...ALL_PCS];
+    if (!Array.isArray(filters.bedsSet)) filters.bedsSet = [...ALL_BEDS];
+    // Empty array = "show all" (any earlier session ended up here under the
+    // previous semantics). Normalise so the UI checkboxes match what's shown.
+    if (filters.pcs.length === 0)     filters.pcs     = [...ALL_PCS];
+    if (filters.bedsSet.length === 0) filters.bedsSet = [...ALL_BEDS];
+    // Upgrade old persisted shape: if every legacy bed value is ticked
+    // and "studio" isn't present, treat that as "show all" and add it.
+    if (filters.bedsSet.length === LEGACY_BEDS.length &&
+        LEGACY_BEDS.every(b => filters.bedsSet.includes(b)) &&
+        !filters.bedsSet.includes("studio")) {
+      filters.bedsSet = [...ALL_BEDS];
+    }
   }
   if (APP_STATE.sort) filters.sort = APP_STATE.sort;
 }
 
 function applyFiltersToDOM() {
   document.getElementById("f-search").value = filters.search || "";
-  document.getElementById("f-pc").value     = filters.pc     || "";
-  document.getElementById("f-beds").value   = filters.beds   || "";
-  document.getElementById("f-price").value  = Number.isFinite(filters.maxPrice) ? filters.maxPrice : "";
-  document.getElementById("f-furn").checked            = !!filters.furn;
-  document.getElementById("f-park").checked            = !!filters.park;
-  document.getElementById("f-rail").checked            = !!filters.rail;
+  document.querySelectorAll(".f-pc").forEach(el => {
+    el.checked = filters.pcs.includes(el.value);
+  });
+  document.querySelectorAll(".f-beds").forEach(el => {
+    el.checked = filters.bedsSet.includes(el.value);
+  });
+  document.getElementById("f-price-min").value = Number.isFinite(filters.minPrice) ? filters.minPrice : "";
+  document.getElementById("f-price").value     = Number.isFinite(filters.maxPrice) ? filters.maxPrice : "";
+  document.getElementById("f-use-eff").checked = !!filters.useEffectivePrice;
+  document.getElementById("f-furn").value      = filters.furnMode || "";
+  document.getElementById("f-park").value      = filters.parkMode || "";
+  document.getElementById("f-reviewed").value  = filters.reviewedMode || "";
+  document.getElementById("f-viewed").value    = filters.viewedMode || "";
+  document.getElementById("f-let").value       = filters.letMode || "";
+  document.getElementById("f-rail").checked    = !!filters.rail;
+  document.getElementById("f-avail-by").value  = filters.availBy || "";
+  document.getElementById("f-epc-min").value   = filters.epcMin || "";
+  document.getElementById("f-first-seen").value = filters.firstSeenDays || "";
   document.getElementById("f-favs").checked            = !!filters.favs;
   document.getElementById("f-new").checked             = !!filters.newOnly;
-  document.getElementById("f-hide-viewed").checked     = !!filters.hideViewed;
-  document.getElementById("f-incl-let-agreed").checked = !!filters.inclLetAgreed;
+  document.getElementById("f-incl-houseshare").checked = !!filters.inclHouseshare;
   document.getElementById("f-sort").value              = filters.sort || "score";
+}
+
+function passesPcs(r) {
+  // All ticked = no filter (lets non-listed postcodes through too).
+  if (filters.pcs.length === ALL_PCS.length) return true;
+  return filters.pcs.includes(r.pc);
+}
+function passesBeds(r) {
+  if (filters.bedsSet.length === ALL_BEDS.length) return true;
+  // Studios are their own bucket — bed count is irrelevant when listing_type=studio.
+  if (r.listing_type === "studio") return filters.bedsSet.includes("studio");
+  if (r.beds == null) return false;
+  if (filters.bedsSet.includes("3+") && r.beds >= 3) return true;
+  return filters.bedsSet.includes(String(r.beds));
+}
+function passesFurn(r) {
+  switch (filters.furnMode) {
+    case "hide-no":    return r.furnished !== "no";
+    case "furnished":  return ["yes","optional","part"].includes(r.furnished);
+    case "yes":        return r.furnished === "yes";
+    default:           return true;
+  }
+}
+function passesPark(r) {
+  switch (filters.parkMode) {
+    case "hide-none":  return r.parking !== "none";
+    case "strict":     return r.parking !== "none" && r.parking !== "unclear";
+    default:           return true;
+  }
+}
+function passesAvailBy(r) {
+  if (!filters.availBy) return true;
+  if (!r.available)     return true;  // unknown date — keep
+  return r.available <= filters.availBy;
+}
+function passesEpcMin(r) {
+  if (!filters.epcMin) return true;
+  if (!r.epc)          return true;  // unknown — keep
+  const want = EPC_RANK[filters.epcMin] ?? 99;
+  const got  = EPC_RANK[r.epc]          ?? 99;
+  return got <= want;
+}
+function passesFirstSeen(r) {
+  if (!filters.firstSeenDays) return true;
+  const days = Number(filters.firstSeenDays);
+  if (!Number.isFinite(days) || days <= 0) return true;
+  const cutoffMs = Date.now() - days * 86400_000;
+  return new Date(r.first_seen).getTime() >= cutoffMs;
+}
+function effectivePriceFor(r) {
+  if (!filters.useEffectivePrice) return r.price;
+  // Use locally-resolved overrides so the filter is consistent with the pill,
+  // not the (possibly stale) server-computed delta in r.cost_adjustments.
+  return r.price + resolveCostAdjustment(r).delta;
 }
 
 function applyFilters(items) {
@@ -489,27 +1142,40 @@ function applyFilters(items) {
       const hay = (r.address + " " + r.pc_full + " " + r.green).toLowerCase();
       if (!hay.includes(filters.search)) return false;
     }
-    if (filters.pc && r.pc !== filters.pc) return false;
-    if (filters.beds && String(r.beds) !== filters.beds) return false;
-    if (!Number.isNaN(filters.maxPrice) && r.price > filters.maxPrice) return false;
-    if (filters.furn && !["yes","optional","part"].includes(r.furnished)) return false;
-    if (filters.park && r.parking === "none") return false;
+    if (!passesPcs(r))       return false;
+    if (!passesBeds(r))      return false;
+    if (!Number.isNaN(filters.minPrice) && effectivePriceFor(r) < filters.minPrice) return false;
+    if (!Number.isNaN(filters.maxPrice) && effectivePriceFor(r) > filters.maxPrice) return false;
+    if (!passesFurn(r))      return false;
+    if (!passesPark(r))      return false;
     if (filters.rail && !r.direct) return false;
+    if (!passesAvailBy(r))   return false;
+    if (!passesEpcMin(r))    return false;
+    if (!passesFirstSeen(r)) return false;
 
     const s = stateOf(r.dedupe_key);
     if (filters.favs && !s.favourite) return false;
     if (filters.newOnly && !isNew(r)) return false;
-    if (filters.hideViewed && s.viewed) return false;
-    if (!filters.inclLetAgreed && r.status === "let_agreed") return false;
+    if (filters.viewedMode === "only" && !s.viewed) return false;
+    if (filters.viewedMode === "hide" &&  s.viewed) return false;
+    if (filters.reviewedMode === "only" && !isReviewed(r)) return false;
+    if (filters.reviewedMode === "hide" &&  isReviewed(r)) return false;
+    // Let-agreed: "" = hide (default), "include" = show, "only" = exclude actives.
+    if (filters.letMode === "only"    && r.status !== "let_agreed") return false;
+    if (filters.letMode === ""        && r.status === "let_agreed") return false;
+    if (!filters.inclHouseshare && r.listing_type === "houseshare") return false;
     return true;
   });
 }
 function applySort(items) {
   const [key, dirRaw] = filters.sort.split("-");
-  const dir = dirRaw === "desc" ? -1 : 1;
+  // "Score" in the dropdown has no -desc suffix; high-is-better keys default
+  // to desc so the natural reading ("sort by rating") puts your 10s on top.
+  const highIsBetter = key === "score" || key === "rating" || key === "first_seen";
+  const dir = (dirRaw || (highIsBetter ? "desc" : "asc")) === "desc" ? -1 : 1;
   const v = (r) => {
     if (key === "score")      return r.score;
-    if (key === "price")      return r.price;
+    if (key === "price")      return effectivePriceFor(r);
     if (key === "first_seen") return r.first_seen;
     if (key === "address")    return r.address.toLowerCase();
     if (key === "rating")     return stateOf(r.dedupe_key).rating || 0;
@@ -518,12 +1184,8 @@ function applySort(items) {
   return items.slice().sort((a, b) => {
     const va = v(a), vb = v(b);
     if (va === vb) {
-      // tiebreak: score desc
-      return (b.score - a.score) || (a.price - b.price);
-    }
-    // default direction depends on key
-    if (key === "score" || key === "rating" || key === "first_seen") {
-      return dir === 1 ? (vb < va ? -1 : 1) : (va < vb ? -1 : 1);
+      // tiebreak: score desc, then effective price asc (matches sort meaning).
+      return (b.score - a.score) || (effectivePriceFor(a) - effectivePriceFor(b));
     }
     return (va < vb ? -1 : 1) * dir;
   });
@@ -567,7 +1229,7 @@ function openCompare() {
 //---------- rendering ----------
 function cardHtml(r) {
   const st = stateOf(r.dedupe_key);
-  const newBadge = isNew(r) ? `<span class="badge new">NEW</span>` : "";
+  const newBadge = isNew(r) ? `<span class="badge new" title="${esc(newBadgeTitle(r))}">NEW</span>` : "";
   const letAgreed = r.status === "let_agreed" ? `<span class="badge let-agreed">LET AGREED</span>` : "";
   const band = postcodeBand(r.pc_full, r.pc);
   const pcBadge = band === "sweet"   ? `<span class="badge sweet">sweet spot</span>` :
@@ -584,8 +1246,8 @@ function cardHtml(r) {
   const greenBadge = r.green && /common/i.test(r.green) ? `<span class="badge good">Common</span>` : "";
 
   const rating = st.rating || 0;
-  const ratingHtml = [1,2,3,4,5].map(n =>
-    `<button data-r="${n}" class="${n <= rating ? "lit" : ""}" aria-label="${n} star${n>1?"s":""}">★</button>`
+  const ratingHtml = [1,2,3,4,5,6,7,8,9,10].map(n =>
+    `<button data-r="${n}" class="${n <= rating ? "lit" : ""}" aria-label="${n} out of 10">★</button>`
   ).join("");
 
   const sourcesHtml = r.sources.map(s =>
@@ -601,13 +1263,56 @@ function cardHtml(r) {
     compareSet.has(r.dedupe_key) ? "compare-selected" : "",
   ].filter(Boolean).join(" ");
 
-  const imgHtml = r.image_url
-    ? `<img class="card-image" src="${esc(r.image_url)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.display='none'">`
+  // Media: [map?, scraped?, user-pasted?]. Map is the default (index 0)
+  // because location is the screen-stage signal. The stage holds the
+  // active item only; nav arrows + dots appear on hover when >1 item.
+  const media = Array.isArray(r.media) ? r.media : [];
+  const hasScraped = media.some(m => m.kind === "scraped");
+  const hasUser    = media.some(m => m.kind === "user");
+  const idx = clampIdx(st.media_index || 0, media.length);
+  const stageInner = media.length === 0
+    ? `<div class="card-placeholder">
+         ${r.why ? `<div class="why">${esc(r.why)}</div>` : ""}
+         <div class="hint">📋 Paste an image (Ctrl+V)</div>
+       </div>`
+    : renderMediaItem(media[idx], r);
+
+  const navHtml = media.length > 1
+    ? `<div class="media-nav">
+         <button class="media-prev" aria-label="Previous">‹</button>
+         <span class="counter">${idx + 1}/${media.length}</span>
+         <button class="media-next" aria-label="Next">›</button>
+       </div>`
+    : "";
+
+  // Kind label dropped: the carousel counter ("1/2", "2/2") makes which-
+  // item-am-I-on obvious, and the content (map vs photo) speaks for itself.
+  const kindBadge = "";
+
+  // Paste affordance whenever there's no scraped image. Re-paste replaces.
+  const pasteBtn = hasScraped
+    ? ""
+    : `<button class="paste-btn${hasUser ? " user-img-replace" : ""}"
+                title="Paste image from clipboard">📋 ${hasUser ? "Replace" : "Paste"}</button>`;
+
+  const mediaHtml = `<div class="card-media" data-idx="${idx}" data-len="${media.length}">
+    <div class="media-stage">${stageInner}</div>
+    ${navHtml}${kindBadge}${pasteBtn}
+  </div>`;
+
+  // Clickable postcode badge → Google Maps. Uses the full address as the
+  // search target (more precise than just an SO15 area chip).
+  const pcText = r.pc_full || r.pc;
+  const pcHtml = pcText
+    ? `<a class="badge pc-link" data-stop target="_blank" rel="noopener"
+          title="Open in Google Maps: ${esc(r.map_link_query)}"
+          href="${esc(gmapsHref(r.map_link_query))}"
+       >${esc(pcText)} ↗</a>`
     : "";
 
   return `
     <article class="${classes}" data-key="${esc(r.dedupe_key)}">
-      ${imgHtml}
+      ${mediaHtml}
       <div class="card-body">
       <div class="card-top">
         <span class="price">${fmtPrice(r.price)}</span>
@@ -619,13 +1324,15 @@ function cardHtml(r) {
           <button class="btn-fav ${st.favourite ? "on" : ""}" title="Favourite">★</button>
           <button class="btn-viewed ${st.viewed ? "viewed-on" : ""}" title="Viewed">✓</button>
           <button class="btn-cmp ${compareSet.has(r.dedupe_key) ? "cmp-on" : ""}" title="Add to compare">⇄</button>
+          <button class="btn-let ${r.status === "let_agreed" ? "let-on" : ""}" title="Mark as let agreed">🏷</button>
         </span>
       </div>
       <div class="badges">
         ${newBadge}
         ${letAgreed}
+        ${r.listing_type === "houseshare" ? `<span class="badge warn">ROOM</span>` : ""}
         ${pcBadge}
-        ${r.pc_full ? `<span class="badge pc">${esc(r.pc_full)}</span>` : (r.pc ? `<span class="badge pc">${esc(r.pc)}</span>` : "")}
+        ${pcHtml}
       </div>
       <h3 class="address">${esc(r.address)}</h3>
       <ul class="facets">
@@ -654,28 +1361,130 @@ function cardHtml(r) {
   `;
 }
 
+// Card DOM cache keyed by dedupe_key. Persisting nodes across renders keeps
+// Leaflet maps mounted instead of being destroyed-and-rebuilt on every state
+// change (rating, favourite, viewed, compare). Only state-driven bits update
+// in place; listing-data changes flow through pollOnce, which clears the cache.
+const _cardNodes = new Map();
+
+function updateCardState(node, r) {
+  const st = stateOf(r.dedupe_key);
+  node.classList.toggle("fav", !!st.favourite);
+  node.classList.toggle("let-agreed", r.status === "let_agreed");
+  node.classList.toggle("compare-selected", compareSet.has(r.dedupe_key));
+
+  const favBtn = node.querySelector(".btn-fav");
+  if (favBtn) favBtn.classList.toggle("on", !!st.favourite);
+  const viewedBtn = node.querySelector(".btn-viewed");
+  if (viewedBtn) viewedBtn.classList.toggle("viewed-on", !!st.viewed);
+  const cmpBtn = node.querySelector(".btn-cmp");
+  if (cmpBtn) cmpBtn.classList.toggle("cmp-on", compareSet.has(r.dedupe_key));
+  const letBtn = node.querySelector(".btn-let");
+  if (letBtn) letBtn.classList.toggle("let-on", r.status === "let_agreed");
+
+  const rating = st.rating || 0;
+  node.querySelectorAll(".rating button").forEach((btn, i) => {
+    btn.classList.toggle("lit", i < rating);
+  });
+
+  // NEW badge toggles with first_seen vs lastVisitAt + viewed.
+  const badges = node.querySelector(".badges");
+  if (badges) {
+    const want = isNew(r);
+    let badge = badges.querySelector(".badge.new");
+    if (want && !badge) {
+      badge = document.createElement("span");
+      badge.className = "badge new";
+      badge.textContent = "NEW";
+      badge.title = newBadgeTitle(r);
+      badges.insertBefore(badge, badges.firstChild);
+    } else if (!want && badge) {
+      badge.remove();
+    } else if (want && badge) {
+      // Keep the tooltip's "X ago" fresh across re-renders/polls.
+      badge.title = newBadgeTitle(r);
+    }
+    const wantLet = r.status === "let_agreed";
+    let letBadge = badges.querySelector(".badge.let-agreed");
+    if (wantLet && !letBadge) {
+      letBadge = document.createElement("span");
+      letBadge.className = "badge let-agreed";
+      letBadge.textContent = "LET AGREED";
+      badges.insertBefore(letBadge, badges.firstChild);
+    } else if (!wantLet && letBadge) {
+      letBadge.remove();
+    }
+  }
+
+  // Comment textarea: only sync if user isn't editing it (don't blow away typing).
+  const ta = node.querySelector(".comment");
+  if (ta && document.activeElement !== ta) {
+    const want = st.comment || "";
+    if (ta.value !== want) ta.value = want;
+  }
+}
+
+function ensureCard(r) {
+  const cached = _cardNodes.get(r.dedupe_key);
+  if (cached) {
+    updateCardState(cached, r);
+    return { node: cached, created: false };
+  }
+  const tmp = document.createElement("div");
+  tmp.innerHTML = cardHtml(r);
+  const node = tmp.firstElementChild;
+  _cardNodes.set(r.dedupe_key, node);
+  return { node, created: true };
+}
+
 function render() {
   const filtered = applySort(applyFilters(DATA));
   const grid = document.getElementById("grid");
   const empty = document.getElementById("empty");
-  if (filtered.length === 0) {
-    grid.innerHTML = "";
-    empty.hidden = false;
-  } else {
-    empty.hidden = true;
-    grid.innerHTML = filtered.map(cardHtml).join("");
+
+  // Evict cached nodes whose listing has dropped out of DATA (poll churn).
+  const liveKeys = new Set(DATA.map(r => r.dedupe_key));
+  for (const key of [..._cardNodes.keys()]) {
+    if (!liveKeys.has(key)) {
+      const n = _cardNodes.get(key);
+      if (n && n.parentElement) n.remove();
+      _cardNodes.delete(key);
+    }
   }
+
+  const visible = new Set();
+  let cursor = 0;
+  for (const r of filtered) {
+    const { node, created } = ensureCard(r);
+    // Only touch the DOM when this node isn't already where it belongs.
+    // Blind appendChild on every iteration shuffles each card through the
+    // DOM (remove+insert) even for stable orderings, which causes 1 reflow
+    // per card per click — visually a full view reset.
+    if (grid.children[cursor] !== node) {
+      grid.insertBefore(node, grid.children[cursor] || null);
+    }
+    if (created) bindLeafletInCard(node);
+    visible.add(r.dedupe_key);
+    cursor++;
+  }
+  // Detach filtered-out cards (kept in cache so re-appearing is free).
+  for (const [key, node] of _cardNodes) {
+    if (!visible.has(key) && node.parentElement) node.remove();
+  }
+  empty.hidden = filtered.length !== 0;
+
   document.getElementById("visible-count").textContent = filtered.length;
-  // counts
-  let favCount = 0, newCount = 0;
+  let favCount = 0, newCount = 0, reviewedCount = 0;
   for (const r of DATA) {
     if (r.status !== "let_agreed") {
       if (stateOf(r.dedupe_key).favourite) favCount++;
       if (isNew(r)) newCount++;
+      if (isReviewed(r)) reviewedCount++;
     }
   }
-  document.getElementById("fav-count").textContent = favCount;
-  document.getElementById("new-count").textContent = newCount;
+  document.getElementById("fav-count").textContent      = favCount;
+  document.getElementById("new-count").textContent      = newCount;
+  document.getElementById("reviewed-count").textContent = reviewedCount;
   refreshCompareBtn();
 }
 
@@ -683,16 +1492,21 @@ function render() {
 function bindFilters() {
   const map = {
     "f-search":         v => filters.search = v.toLowerCase().trim(),
-    "f-pc":             v => filters.pc = v,
-    "f-beds":           v => filters.beds = v,
+    "f-price-min":      v => filters.minPrice = v === "" ? NaN : Number(v),
     "f-price":          v => filters.maxPrice = v === "" ? NaN : Number(v),
-    "f-furn":           v => filters.furn = v,
-    "f-park":           v => filters.park = v,
+    "f-use-eff":        v => filters.useEffectivePrice = v,
+    "f-furn":           v => filters.furnMode = v,
+    "f-park":           v => filters.parkMode = v,
+    "f-reviewed":       v => filters.reviewedMode = v,
+    "f-viewed":         v => filters.viewedMode = v,
+    "f-let":            v => filters.letMode = v,
     "f-rail":           v => filters.rail = v,
+    "f-avail-by":       v => filters.availBy = v,
+    "f-epc-min":        v => filters.epcMin = v,
+    "f-first-seen":     v => filters.firstSeenDays = v,
     "f-favs":           v => filters.favs = v,
     "f-new":            v => filters.newOnly = v,
-    "f-hide-viewed":    v => filters.hideViewed = v,
-    "f-incl-let-agreed":v => filters.inclLetAgreed = v,
+    "f-incl-houseshare":v => filters.inclHouseshare = v,
     "f-sort":           v => filters.sort = v,
   };
   for (const [id, setter] of Object.entries(map)) {
@@ -705,17 +1519,37 @@ function bindFilters() {
     el.addEventListener("change", handler);
   }
 
+  // Multi-checkbox groups (postcodes, beds) — collect the checked values.
+  // Unticking the last box auto-reverts to "all ticked" so the visual state
+  // always matches the result set ("if showing all, all should be checked").
+  const wireGroup = (cls, target, all) => {
+    document.querySelectorAll("." + cls).forEach(el => {
+      el.addEventListener("change", () => {
+        let next = [...document.querySelectorAll("." + cls + ":checked")]
+          .map(x => x.value);
+        if (next.length === 0) {
+          next = [...all];
+          document.querySelectorAll("." + cls).forEach(x => x.checked = true);
+        }
+        filters[target] = next;
+        render(); persistFiltersAndSort();
+      });
+    });
+  };
+  wireGroup("f-pc",   "pcs",     ALL_PCS);
+  wireGroup("f-beds", "bedsSet", ALL_BEDS);
+
   document.getElementById("btn-reset").onclick = () => {
-    document.getElementById("f-search").value = "";
-    document.getElementById("f-pc").value = "";
-    document.getElementById("f-beds").value = "";
-    document.getElementById("f-price").value = "";
-    document.getElementById("f-sort").value = "score";
-    ["f-furn","f-park","f-rail","f-favs","f-new","f-hide-viewed","f-incl-let-agreed"]
-      .forEach(id => document.getElementById(id).checked = false);
-    Object.assign(filters, { search:"", pc:"", beds:"", maxPrice:NaN,
-      furn:false, park:false, rail:false,
-      favs:false, newOnly:false, hideViewed:false, inclLetAgreed:false, sort:"score" });
+    Object.assign(filters, {
+      search:"", pcs:[...ALL_PCS], bedsSet:[...ALL_BEDS],
+      minPrice:NaN, maxPrice:NaN, useEffectivePrice:false,
+      furnMode:"", parkMode:"", reviewedMode:"", viewedMode:"",
+      letMode:"", rail:false,
+      availBy:"", epcMin:"", firstSeenDays:"",
+      favs:false, newOnly:false,
+      inclHouseshare:false, sort:"score",
+    });
+    applyFiltersToDOM();
     render();
     persistFiltersAndSort();
   };
@@ -725,6 +1559,52 @@ function bindFilters() {
     render();
   };
   document.getElementById("btn-compare").onclick = openCompare;
+}
+
+async function pasteImageFromClipboard(key, btn) {
+  if (!navigator.clipboard || !navigator.clipboard.read) {
+    alert("Your browser doesn't expose the clipboard. Try focusing this card and pressing Ctrl+V instead.");
+    return;
+  }
+  try {
+    const items = await navigator.clipboard.read();
+    for (const item of items) {
+      for (const type of item.types) {
+        if (type.startsWith("image/")) {
+          const blob = await item.getType(type);
+          await uploadUserImage(key, blob, btn);
+          return;
+        }
+      }
+    }
+    alert("No image found in clipboard. Copy an image first.");
+  } catch (err) {
+    alert("Paste failed: " + (err.message || err));
+  }
+}
+
+async function uploadUserImage(key, blob, btn) {
+  if (btn) btn.classList.add("busy");
+  try {
+    const res = await fetch("/api/user-image/" + encodeURIComponent(key), {
+      method:  "POST",
+      headers: { "Content-Type": blob.type || "image/png" },
+      body:    blob,
+    });
+    if (!res.ok) {
+      alert("Upload failed: " + res.status + " " + (await res.text()));
+      return;
+    }
+    const { url } = await res.json();
+    // Patch DATA in place + re-render this card without losing scroll/filters
+    const item = DATA.find(r => r.dedupe_key === key);
+    if (item) item.user_image_url = url;
+    render();
+  } catch (err) {
+    alert("Upload failed: " + (err.message || err));
+  } finally {
+    if (btn) btn.classList.remove("busy");
+  }
 }
 
 // Plain click on a source link opens in a single named window.
@@ -748,6 +1628,69 @@ function bindGrid() {
     if (!card) return;
     const key = card.dataset.key;
 
+    // ---------- cost-overrides editor ----------
+    if (t.matches(".cost-adj")) {
+      e.stopPropagation();
+      const r = DATA.find(x => x.dedupe_key === key);
+      if (!r) return;
+      const existing = card.querySelector(".cost-editor");
+      if (existing) existing.remove();
+      else openCostEditor(card, r);
+      return;
+    }
+    const editor = t.closest(".cost-editor");
+    if (editor) {
+      e.stopPropagation();
+      const r = DATA.find(x => x.dedupe_key === key);
+      if (!r) return;
+      const ov = cloneOverrides(stateOf(key).cost_overrides);
+
+      if (t.matches(".ce-close")) { editor.remove(); return; }
+      if (t.matches(".ce-reset")) { setCostOverrides(key, { remove: [], add: [] }); refreshCostUI(key); return; }
+      if (t.matches(".ce-x")) {
+        const label = t.dataset.ceRemove;
+        const source = t.dataset.ceSource;
+        if (source === "auto") {
+          if (!ov.remove.includes(label)) ov.remove.push(label);
+        } else {
+          ov.add = ov.add.filter(c => c.label !== label);
+        }
+        setCostOverrides(key, ov);
+        refreshCostUI(key);
+        return;
+      }
+      if (t.matches(".ce-preset")) {
+        const label = t.dataset.ceAdd;
+        const delta = Number(t.dataset.ceDelta);
+        // If the label was previously removed from auto, un-remove it.
+        const removedIdx = ov.remove.indexOf(label);
+        if (removedIdx >= 0) {
+          ov.remove.splice(removedIdx, 1);
+        } else {
+          // Skip if already active via auto without removal.
+          const adj = resolveCostAdjustment(r);
+          if (!adj.components.some(c => c.label === label)) {
+            ov.add.push({ label, delta });
+          }
+        }
+        setCostOverrides(key, ov);
+        refreshCostUI(key);
+        return;
+      }
+      if (t.matches(".ce-add-custom")) {
+        const lblIn = editor.querySelector(".ce-label-in");
+        const amtIn = editor.querySelector(".ce-amount-in");
+        const label = (lblIn.value || "").trim();
+        const delta = Number(amtIn.value);
+        if (!label || !Number.isFinite(delta)) return;
+        ov.add.push({ label, delta });
+        setCostOverrides(key, ov);
+        refreshCostUI(key);
+        return;
+      }
+      return;
+    }
+
     if (t.matches(".btn-fav")) {
       const s = stateOf(key);
       patchState(key, { favourite: !s.favourite });
@@ -767,6 +1710,22 @@ function bindGrid() {
       render();
       return;
     }
+    if (t.matches(".btn-let")) {
+      const item = DATA.find(x => x.dedupe_key === key);
+      if (!item) return;
+      const next = item.status === "let_agreed" ? "active" : "let_agreed";
+      item.status = next;
+      if (IS_LIVE) {
+        fetch("/api/listings/" + encodeURIComponent(key) + "/status", {
+          method:  "POST",
+          headers: { "Content-Type": "application/json" },
+          body:    JSON.stringify({ status: next }),
+        }).then(r => setServerOnline(r.ok))
+          .catch(() => setServerOnline(false));
+      }
+      render();
+      return;
+    }
     if (t.matches(".rating button")) {
       const r = Number(t.dataset.r);
       const cur = stateOf(key).rating || 0;
@@ -780,6 +1739,46 @@ function bindGrid() {
       t.textContent = open ? "Less ↑" : "More ↓";
       return;
     }
+    if (t.matches(".paste-btn")) {
+      e.stopPropagation();
+      pasteImageFromClipboard(key, t);
+      return;
+    }
+    if (t.matches(".media-prev") || t.matches(".media-next")) {
+      e.stopPropagation();
+      e.preventDefault();
+      const dir = t.matches(".media-next") ? 1 : -1;
+      const r = DATA.find(x => x.dedupe_key === key);
+      if (!r || !r.media || r.media.length < 2) return;
+      const cur = stateOf(key).media_index || 0;
+      const next = clampIdx(cur + dir, r.media.length);
+      patchState(key, { media_index: next });
+      // Local DOM swap is cheap; avoids re-rendering all cards.
+      rerenderCardMedia(card, r, next);
+      return;
+    }
+  });
+
+  // Ctrl+V while hovering a no-scrape-image card → paste into that card.
+  let _hoverCard = null;
+  grid.addEventListener("mouseover", (e) => {
+    const c = e.target.closest && e.target.closest(".card");
+    if (c) _hoverCard = c.dataset.key;
+  });
+  grid.addEventListener("mouseout", (e) => {
+    const c = e.target.closest && e.target.closest(".card");
+    if (c && c.dataset.key === _hoverCard) _hoverCard = null;
+  });
+  document.addEventListener("paste", (e) => {
+    if (!_hoverCard) return;
+    if (e.target && e.target.matches && e.target.matches(".comment, input, textarea")) return;
+    const item = [...(e.clipboardData?.items || [])].find(i => i.type.startsWith("image/"));
+    if (!item) return;
+    e.preventDefault();
+    const blob = item.getAsFile();
+    if (!blob) return;
+    const btn = document.querySelector(`.card[data-key="${CSS.escape(_hoverCard)}"] .paste-btn`);
+    uploadUserImage(_hoverCard, blob, btn);
   });
 
   // comment save on input (debounced)
@@ -815,6 +1814,13 @@ bindGrid();
 bindDialog();
 render();
 
+// Close any open cost-editor when clicking outside it.
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".cost-editor")) return;
+  if (e.target.closest(".cost-adj")) return;
+  closeAllCostEditors();
+});
+
 //---------- live polling (dev server only) ----------
 // Poll /api/listings every 5s. If generatedAt advanced (MAX(last_seen)
 // in SQLite), swap DATA + re-render without disrupting filters, sort,
@@ -839,6 +1845,13 @@ async function pollOnce() {
     document.getElementById("last-updated").textContent =
       fresh.generatedAt.slice(0, 16).replace("T", " ");
     flashStatus("updated");
+    // Snapshot advanced — listing fields may have changed (price, media,
+    // status, badges). Drop the card cache so render rebuilds from cardHtml.
+    // Maps get re-created here, but only when the data really moved.
+    for (const n of _cardNodes.values()) {
+      if (n.parentElement) n.remove();
+    }
+    _cardNodes.clear();
     render();
   } catch {
     // file:// can't fetch — protocol check above prevents this case;

@@ -2,22 +2,34 @@
 import { parseArgs } from "node:util";
 import { cmdInit } from "./src/commands/init.ts";
 import { cmdIngest } from "./src/commands/ingest.ts";
-import { cmdReport } from "./src/commands/report.ts";
 import { cmdList } from "./src/commands/list.ts";
 import { cmdPrune } from "./src/commands/prune.ts";
 import { cmdServe } from "./src/commands/serve.ts";
 import { cmdArchive } from "./src/commands/archive.ts";
+import { cmdVerify } from "./src/commands/verify.ts";
+import { cmdAutoScrape } from "./src/commands/auto-scrape.ts";
 
 const USAGE = `Usage: bun jomove.ts <command> [...args]
 
 Commands:
   init                          create empty SQLite database
   ingest [dir-or-file ...]      parse results_*.md into SQLite (defaults to .)
-  report                        render dashboard.html from SQLite
   serve  [--port N]             run dev server with live polling (default 3000)
   archive [--label NAME]        move root results_*.md → scrapes/<timestamp>/
   prune  [--days N] [--dry-run] mark listings unseen for >N days as let_agreed
                                 (default --days 7)
+  verify [--http-only] [--dry-run] [--apply file…] [--concurrency N]
+                                HTTP-check all active source URLs and mark
+                                confirmed-removed as let_agreed. Writes
+                                verify_survivors.md for AI follow-up unless
+                                --http-only. --apply file.txt marks every
+                                URL in the file (one per line) as let_agreed.
+  auto-scrape [--portals=openrent,rightmove,onthemarket,gumtree]
+              [--no-ingest] [--no-archive] [--no-notify] [--label NAME]
+                                deterministic server-side scrapers. Writes
+                                results_<portal>.md, then ingests + archives,
+                                then emails a digest of new listings (SMTP
+                                creds in .env — see .env.example).
   list   [--max-price N] [--postcode SOxx] [--beds N]
          [--furnished] [--parking] [--direct-line]
 
@@ -26,6 +38,8 @@ Examples:
   bun jomove.ts ingest old_search
   bun jomove.ts archive --label refresh
   bun jomove.ts prune --days 7 --dry-run
+  bun jomove.ts verify --http-only
+  bun jomove.ts verify --apply verify_removed_openrent.txt
   bun jomove.ts list --postcode SO17`;
 
 function usage(): never {
@@ -42,10 +56,7 @@ switch (sub) {
     cmdInit();
     break;
   case "ingest":
-    cmdIngest(rest.length > 0 ? rest : ["."]);
-    break;
-  case "report":
-    await cmdReport();
+    await cmdIngest(rest.length > 0 ? rest : ["."]);
     break;
   case "serve": {
     const { values } = parseArgs({
@@ -77,6 +88,49 @@ switch (sub) {
     cmdPrune({
       days:   values["days"] ? Number(values["days"]) : 7,
       dryRun: Boolean(values["dry-run"]),
+    });
+    break;
+  }
+  case "verify": {
+    const { values } = parseArgs({
+      args: rest,
+      options: {
+        "http-only":   { type: "boolean" },
+        "dry-run":     { type: "boolean" },
+        "apply":       { type: "string", multiple: true },
+        "concurrency": { type: "string" },
+        "out":         { type: "string" },
+      },
+      strict: false,
+    });
+    await cmdVerify({
+      httpOnly:      Boolean(values["http-only"]),
+      dryRun:        Boolean(values["dry-run"]),
+      apply:         (values["apply"] as string[] | undefined) ?? [],
+      concurrency:   values["concurrency"] ? Number(values["concurrency"]) : 5,
+      survivorsPath: (values["out"] as string | undefined) ?? "verify_survivors.md",
+    });
+    break;
+  }
+  case "auto-scrape": {
+    const { values } = parseArgs({
+      args: rest,
+      options: {
+        "portals":    { type: "string" },
+        "no-ingest":  { type: "boolean" },
+        "no-archive": { type: "boolean" },
+        "no-notify":  { type: "boolean" },
+        "label":      { type: "string" },
+      },
+      strict: false,
+    });
+    const portalsStr = values["portals"] as string | undefined;
+    await cmdAutoScrape({
+      portals:      portalsStr ? portalsStr.split(",").map(s => s.trim()).filter(Boolean) : undefined,
+      ingest:       !values["no-ingest"],
+      archive:      !values["no-archive"],
+      notify:       !values["no-notify"],
+      archiveLabel: values["label"] as string | undefined,
     });
     break;
   }

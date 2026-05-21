@@ -1,112 +1,6 @@
 # OnTheMarket — Southampton Rentals
 _Scraped 2026-05-21_
 
-## Anglesea Terrace, Southampton, SO14 — ££1,000 pcm (£231 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19292001/
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO14
-- **Agent:** Cryers
-- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-0-81x55.png
-- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-4-81x55.jpg
-
-**Description:**
-<p>Zero Deposit Guarantee Available</p><p>This well-equipped one-bedroom furnished apartment enjoys a convenient position in the heart of the city centre, located on the first floor of a highly sought-after building, making it perfect for a couple or a single professional.</p><p>The accommodation has a modern throughout, featuring an open plan living room and kitchen. The bedroom is a good size double, and next to it is a well-appointed shower room, complete with a glazed shower enclosure, wash basin, and WC. Allocated parking is available at an additional cost.</p><p>Chapel Annexe is a well-designed building that boasts two private roof terraces for residents, situated on the first and top floors.</p><p>The apartment is offered furnished and is available now. Council Tax Band:  Holding Deposit: £0.00</p><p>Availabe NOW</p><p>Furnished 1 Bed Apartment</p><p>Modern Finish</p><p>Good Size Double Bedroom</p><p>Open Plan Kitchen</p><p>Shower Room</p><p>Access to Communal Roof Terrace</p><p>Optional Parking Charged at £100 pcm</p><p>Walking Distance To Westquay</p><p>Transport links Nearby</p>
-
----
-
-## Southbrook Rise, Southampton SO15 — ££950 pcm (£219 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19540717/
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO15
-- **Agent:** Letco
-- **Image:** https://media.onthemarket.com/properties/19540717/1616258762/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19540717/1616258762/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19540717/1616258762/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19540717/1616258762/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19540717/1616258762/image-4-81x55.jpg
-
-**Description:**
-LetCo is pleased to offer this modern one bedroom ground floor apartment situated in the heart of the city, located a few minutes' walk from Southampton central train station, this property offers open plan living with a fitted kitchen with integrated appliances and lounge, double bedroom and modern bathroom with shower over bath.<br/><br/>The building is situated in an ideal location with just a short walk to Southampton central train station, other transport links, University and Southampton City Centre. In addition, there is allocated parking for one car. Available June 2026.<br/><br/> <br/>  <b>IMPORTANT NOTE TO PURCHASERS:</b><br/> We endeavour to make our sales particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. Any services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All measurements have been taken as a guide to prospective buyers only, and are not precise. Please be advised that some of the particulars may be awaiting vendor approval. If you require clarification or further information on any points, please contact us, especially if you are travelling some distance to view. Fixtures and fittings other than those mentioned are to be agreed with the seller. <br/><br/> LET230011/
-
-**Key features:**
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-
----
-
-## Carrington House, Westwood Road, Southampton, SO17 — ££1,100 pcm (£254 pw) pcm
-- **Link:** https://www.onthemarket.com/details/18172831/
-- **Type:** flat
-- **Beds/Baths:** 2 bed, 1 bath
-- **Postcode area:** SO17
-- **Agent:** Leaders
-- **Image:** https://media.onthemarket.com/properties/18172831/1616256016/image-0-81x55.jpg
-
-**Description:**
-An unfurnished apartment with two bedrooms in a modern block in a very sought after location situated in Southampton.<br/><br/>The accommodation comprises, entrance hallway, double bedroom with built-in-wardrobes, single bedroom, kitchen, lounge/diner and bathroom with shower.<br/><br/>Further benefits include parking for one vehicle, its prime location and spacious sizing.<br/><br/>Holding deposit: £253.00<br/>5 week deposit: £1269.00<br/>EPC rating: D<br/>Council Tax: B
-
-**Key features:**
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-
----
-
-## King Street, Southampton SO14 — ££900 pcm (£208 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19540212/
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO14
-- **Agent:** Jackson Bailey
-- **Image:** https://media.onthemarket.com/properties/19540212/1616245969/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19540212/1616245969/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19540212/1616245969/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19540212/1616245969/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19540212/1616245969/image-4-81x55.jpg
-
-**Description:**
-Welcome to this stylish one-bedroom upper-floor flat, available to let immediately and perfect for anyone looking for a fresh start. <br/><br/>Recently refurbished throughout, the property feels bright and modern as soon as you step inside. <br/><br/>The newly fitted kitchen comes complete with sleek units and plenty of space for all your culinary adventures, while the newly fitted bathroom offers a clean and contemporary finish (ideal for relaxing after a long day). <br/><br/>The living area is welcoming and airy, making it a great spot to unwind or entertain friends. <br/><br/>The bedroom is generously sized and benefits from plenty of natural light, creating a peaceful retreat at the end of the day. <br/><br/>There is also a balcony, providing an extra touch of space to enjoy your morning coffee or an evening read. <br/><br/>With neutral décor and quality finishes throughout, this flat is ready for you to move straight in and make it your own. Located close to local shops, transport links, and amenities, everything you need is right on your doorstep. <br/><br/>Don’t miss your chance to view this fantastic flat - get in touch today to arrange a viewing and see for yourself what makes this place so special.<br/>EPC Rating: D
-
-**Key features:**
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-
----
-
-## Commodore Court, Captains Place, Southampton, SO14 — ££1,150 pcm (£265 pw) pcm
-- **Link:** https://www.onthemarket.com/details/7847595/
-- **Type:** flat
-- **Beds/Baths:** 2 bed, 1 bath
-- **Postcode area:** SO14
-- **Agent:** Tenant Direct
-- **Image:** https://media.onthemarket.com/properties/7847595/1616237285/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/7847595/1616237285/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/7847595/1616237285/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/7847595/1616237285/image-3-81x55.jpg
-
-**Description:**
-<p><br/>2 bedroom apartment in the city centre,benefits from a modern refitted bathroom and kitchen, there are wooden floors throughout and built in wardrobes to both bedrooms. There is a generous sized lounge with patio doors leading to the communal gardens.<br/>There is also allocated parking at the front of the property<br/><br/>Viewing essential!<br/><strong>Reception 1</strong> <br/><br/><strong>Kitchen</strong> <br/><br/><strong>Bedroom 1</strong> <br/><br/><strong>Bedroom 2</strong> <br/><br/><strong>Bathroom</strong> <br/><br/><strong>Parking</strong> <br/><br/><strong>Central Heating</strong> <br/><br/><strong>Double Glazing</strong></p>
-
----
-
 ## Oxford St, Southampton, SO14 — ££900 pcm (£208 pw) pcm
 - **Link:** https://www.onthemarket.com/details/18834815/
 - **Type:** flat
@@ -186,7 +80,7 @@ Property Reference: 2904935.<br/><br/><b>Charming 1-Bedroom Flat for Rent in Tow
 - **Image:** https://media.onthemarket.com/properties/19350219/1610663537/image-4-81x55.jpg
 
 **Description:**
-Located in the popular area of Ocean Village, this first floor, one-bedroom apartment is conveniently located for all local amenities including the vibrant Oxford Street as well as being only a short walk from the marina<br/><br/>The open plan kitchen/living area offers ample space for living and dining with the kitchen comprising both wall and floor units, integrated white goods and lots of counter top space. Furthermore, the double bedroom benefits from a triple built in wardrobe. The bathroom offers a white three-piece suite with a shower over the bath. The property further benefits from being within walking distance of the city centre, offered furnished and available early June 2026.<br/><br/>Security Deposit: £1,096.15 (based on advertised rental price) <br/>Holding Deposit: £219.23 (based on advertised rental price)  <br/>Minimum Term: 12 Months  <br/>Council Tax Band:  B<br/><br/>ADDITIONAL INFORMATION  <br/><br/>Materials used in construction: Ask Agent  <br/><br/>For further information on broadband and mobile coverage, please refer to the Ofcom Checker online<br/><br/>Southampton is a thriving commercial port with a population in excess of 250,000 and achieved city status in 1964 due to its contribution to trade and the economy. The city centre offers an extensive range of shopping and leisure facilities ranging from small boutique outlets to major department stores including the landmark West Quay shopping mall.  Restaurants, bars and cafes cater for every taste and the Cinema de lux offers the finest film viewing experience. Numerous pleasant parks together with The Common, City golf course and sports centre offer a wide range of leisure opportunities with hundreds of acres of green open space. Premier league football is played at St Marys and the Ageas Bowl is the home of Hampshire cricket hosting domestic and international matches together with live music events.  The Guildhall, Mayflower and Nuffield theatres host a wide and eclectic range of plays, opera, ballet and musicals and the public art gallery in the civic centre has a famous and acclaimed collection.
+Located in the popular area of Ocean Village, this first floor, one-bedroom apartment is conveniently located for all local amenities including the vibrant Oxford Street as well as being only a short walk from the marina<br/><br/>The open plan kitchen/living area offers ample space for living and dining with the kitchen comprising both wall and floor units, integrated white goods and lots of counter top space. Furthermore, the double bedroom benefits from a triple built in wardrobe. The bathroom offers a white three-piece suite with a shower over the bath. The property further benefits from being within walking distance of the city centre, offered furnished and available early June 2026.<br/><br/>Security Deposit: £1,153.84 (based on advertised rental price) <br/>Holding Deposit: £230.76 (based on advertised rental price)  <br/>Minimum Term: 12 Months  <br/>Council Tax Band:  B<br/><br/>ADDITIONAL INFORMATION  <br/><br/>Materials used in construction: Ask Agent  <br/><br/>For further information on broadband and mobile coverage, please refer to the Ofcom Checker online<br/><br/>Southampton is a thriving commercial port with a population in excess of 250,000 and achieved city status in 1964 due to its contribution to trade and the economy. The city centre offers an extensive range of shopping and leisure facilities ranging from small boutique outlets to major department stores including the landmark West Quay shopping mall.  Restaurants, bars and cafes cater for every taste and the Cinema de lux offers the finest film viewing experience. Numerous pleasant parks together with The Common, City golf course and sports centre offer a wide range of leisure opportunities with hundreds of acres of green open space. Premier league football is played at St Marys and the Ageas Bowl is the home of Hampshire cricket hosting domestic and international matches together with live music events.  The Guildhall, Mayflower and Nuffield theatres host a wide and eclectic range of plays, opera, ballet and musicals and the public art gallery in the civic centre has a famous and acclaimed collection.
 
 **Key features:**
 - [object Object]
@@ -404,23 +298,6 @@ ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY W
 
 ---
 
-## Vale Drive, SOUTHAMPTON, SO18 — ££1,050 pcm (£242 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19210406/
-- **Type:** flat
-- **Beds/Baths:** 2 bed, 0 bath
-- **Postcode area:** SO18
-- **Agent:** Connells
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-4-81x55.jpg
-
-**Description:**
-<p>Zero Deposit Guarantee Available</p><p>Available Nowtwo Bedroomfirst Flooronstreet Parking</p><p>TWO BEDROOM first floor maisonette in Midanbury.the property benefits from a modern fitted kitchen with white goods, lounge, two double bedrooms both with storage and a family three piece bathroom.</p><p>On road parking and a private garden. Other benefits include Gas central heating and double glazing throughout. Available now. Council Tax Band: A Holding Deposit: £242.00</p><p>Available Now</p><p>Two Bedroom</p><p>First Floor</p><p>On Street Parking</p><p>Tax Band A</p><p>Epc C</p><p>Deposit £1211</p>
-
----
-
 ## Berkeley Close, Southampton, SO15 — ££725 pcm (£167 pw) pcm
 - **Link:** https://www.onthemarket.com/details/19521791/
 - **Type:** house
@@ -472,6 +349,22 @@ ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY W
 - [object Object]
 - [object Object]
 - [object Object]
+
+---
+
+## Briton Street, Southampton, SO14 — ££900 pcm (£208 pw) pcm
+- **Link:** https://www.onthemarket.com/details/18880528/
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO14
+- **Agent:** Cryers
+- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-3-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>STUDENTS WELCOME – 50% Off 1st Months Rent!!  - Brand New room to rent with utility bills included. Ideal for professional sharers or students.</p><p>Friary House is a brand-new development in the heart of Southampton's City Centre, featuring high end self-contained apartments. Each bedroom has its own en-suite shower room and shares a fitted kitchen. There is also access to the on-site common room, bike store and laundry facilities.</p><p>Please contact us for further information by phone - Cryers lettings[use Contact Agent Button]</p><p>Situated less than 10 minute walk from Westquay Shopping Centre, with restaurants, shops and bars all within close proximity. There are great transport links nearby with a bus stop located just outside and Southampton Central train station is within walking distance. This development is a great opportunity for students and working professionals alike with easy access to Southampton Solent and Uni Of Southampton Universities, as well as the famous docks, Hospitals and shopping centre. There is also a Cinema complex just a short walk away. Council Tax Band:  Holding Deposit: £150.00</p><p>Available Now</p><p>New En-Suite Room</p><p>Furnished</p><p>High Speed WiFi Included</p><p>Electric and Water Bills Included</p><p>On Site Laundrette</p><p>Students and Professionals Welcome</p><p>No Parking</p><p>Easy Walk to Westquay</p><p>Bus Stops Nearby</p>
 
 ---
 
@@ -1133,6 +1026,23 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION. ONE BEDROOM APARTMENT. CITY CENTRE. OPEN P
 
 ---
 
+## Vale Drive, SOUTHAMPTON, SO18 — ££1,050 pcm (£242 pw) pcm
+- **Link:** https://www.onthemarket.com/details/19210406/
+- **Type:** flat
+- **Beds/Baths:** 2 bed, 0 bath
+- **Postcode area:** SO18
+- **Agent:** Connells
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>Available Nowtwo Bedroomfirst Flooronstreet Parking</p><p>TWO BEDROOM first floor maisonette in Midanbury.the property benefits from a modern fitted kitchen with white goods, lounge, two double bedrooms both with storage and a family three piece bathroom.</p><p>On road parking and a private garden. Other benefits include Gas central heating and double glazing throughout. Available now. Council Tax Band: A Holding Deposit: £242.00</p><p>Available Now</p><p>Two Bedroom</p><p>First Floor</p><p>On Street Parking</p><p>Tax Band A</p><p>Epc C</p><p>Deposit £1211</p>
+
+---
+
 ## Howard Road, Hampshire SO15 — ££1,050 pcm (£242 pw) pcm
 - **Link:** https://www.onthemarket.com/details/16051042/
 - **Type:** flat
@@ -1386,6 +1296,23 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION. AVAILABLE FURNISHED FOR AN ADDITIONAL RENT
 - [object Object]
 - [object Object]
 - [object Object]
+
+---
+
+## Anglesea Terrace, Southampton, SO14 — ££1,000 pcm (£231 pw) pcm
+- **Link:** https://www.onthemarket.com/details/19292001/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO14
+- **Agent:** Cryers
+- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-0-81x55.png
+- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19292001/1608866364/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>This well-equipped one-bedroom furnished apartment enjoys a convenient position in the heart of the city centre, located on the first floor of a highly sought-after building, making it perfect for a couple or a single professional.</p><p>The accommodation has a modern throughout, featuring an open plan living room and kitchen. The bedroom is a good size double, and next to it is a well-appointed shower room, complete with a glazed shower enclosure, wash basin, and WC. Allocated parking is available at an additional cost.</p><p>Chapel Annexe is a well-designed building that boasts two private roof terraces for residents, situated on the first and top floors.</p><p>The apartment is offered furnished and is available now. Council Tax Band:  Holding Deposit: £0.00</p><p>Availabe NOW</p><p>Furnished 1 Bed Apartment</p><p>Modern Finish</p><p>Good Size Double Bedroom</p><p>Open Plan Kitchen</p><p>Shower Room</p><p>Access to Communal Roof Terrace</p><p>Optional Parking Charged at £100 pcm</p><p>Walking Distance To Westquay</p><p>Transport links Nearby</p>
 
 ---
 
@@ -2647,22 +2574,6 @@ ENFIELDS PRESENT - PURPOSE BUILT APARTMENT. TWO DOUBLE BEDROOMS. RESIDENTS PARKI
 - [object Object]
 - [object Object]
 - [object Object]
-
----
-
-## Briton Street, Southampton, SO14 — ££900 pcm (£208 pw) pcm
-- **Link:** https://www.onthemarket.com/details/18880528/
-- **Type:** houseshare
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO14
-- **Agent:** Cryers
-- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-3-81x55.jpg
-
-**Description:**
-<p>Zero Deposit Guarantee Available</p><p>STUDENTS WELCOME – 50% Off 1st Months Rent!!  - Brand New room to rent with utility bills included. Ideal for professional sharers or students.</p><p>Friary House is a brand-new development in the heart of Southampton's City Centre, featuring high end self-contained apartments. Each bedroom has its own en-suite shower room and shares a fitted kitchen. There is also access to the on-site common room, bike store and laundry facilities.</p><p>Please contact us for further information by phone - Cryers lettings[use Contact Agent Button]</p><p>Situated less than 10 minute walk from Westquay Shopping Centre, with restaurants, shops and bars all within close proximity. There are great transport links nearby with a bus stop located just outside and Southampton Central train station is within walking distance. This development is a great opportunity for students and working professionals alike with easy access to Southampton Solent and Uni Of Southampton Universities, as well as the famous docks, Hospitals and shopping centre. There is also a Cinema complex just a short walk away. Council Tax Band:  Holding Deposit: £150.00</p><p>Available Now</p><p>New En-Suite Room</p><p>Furnished</p><p>High Speed WiFi Included</p><p>Electric and Water Bills Included</p><p>On Site Laundrette</p><p>Students and Professionals Welcome</p><p>No Parking</p><p>Easy Walk to Westquay</p><p>Bus Stops Nearby</p>
 
 ---
 

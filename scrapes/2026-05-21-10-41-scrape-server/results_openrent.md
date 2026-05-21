@@ -248,13 +248,13 @@ Minimum tenancy is 6 months
 
 ---
 
-## Portland Street, Southampton — £995 pcm
+## Portland Street, Southampton — £1,050 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-portland-street-so14/2708158
 - **Type:** flat
 - **Beds/Baths:** 1 bed
 - **Furnished:** No
 - **Parking:** none
-- **Deposit:** £1145
+- **Deposit:** £1200
 - **Available:** Today
 - **Postcode area:** SO14
 - **Image:** https://imagescdn.openrent.co.uk/listings/2708158/o_1jn89svk61m4u1792pc8hmfuh01.JPG
@@ -999,6 +999,33 @@ Maximum number of tenants is 2
 ---
 
 ## High Street, Southampton — £1,100 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-high-street-so14/2904935
+- **Type:** flat
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** none
+- **Deposit:** £1269
+- **Available:** 26 August, 2026
+- **Postcode area:** SO14
+
+**Description:**
+Charming 1-Bedroom Flat for Rent in Town Center
+Available from 26th August 2026 Discover the perfect blend of historic charm and modern convenience in this spacious, newly renovated Grade II-listed 1-bedroom flat.
+Key Features:
+Victorian Elegance: Features a stunning Victorian fireplace, high ceilings, and original flooring.
+Prime Location: Situated in the heart of town with a bus stop right at your doorstep. The town centre is just a 5-minute walk, the train station 10 minutes away, and bars and restaurants only 2 minutes away. University bus links are right in front of the building.
+Fully Furnished: Includes a comfortable bed with mattress, 2 cosy sofas, a coffee table, a side table, a dressing table, and an area rug.
+White Goods Provided: Comes with a washing dryer and fridge freezer.
+All Electric Property
+Students Welcome Ideal for those looking for a convenient and stylish living space.
+Please note, the flat is located on the 2nd floor and there is no lift access.
+Special Offer: If possible Pay rent yearly in advance for added convenience for students - offer on rent.
+Don’t miss out on this unique opportunity to live in a beautifully restored historic building with all the modern amenities you need.
+Contact us today to arrange a viewing!
+
+---
+
+## High Street, Southampton — £1,100 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-high-street-so14/2904927
 - **Type:** flat
 - **Beds/Baths:** 1 bed
@@ -1023,33 +1050,6 @@ Please note, the flat is located on the 1st floor and there is no lift access.
 ** Special Offer **: Pay rent yearly in advance for added convenience.
 Don’t miss out on this unique opportunity to live in a beautifully restored historic building with all the modern amenities you need.
 **Contact us today to arrange a viewing!**
-
----
-
-## High Street, Southampton — £1,100 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-high-street-so14/2904935
-- **Type:** flat
-- **Beds/Baths:** 1 bed
-- **Furnished:** Yes
-- **Parking:** none
-- **Deposit:** £1269
-- **Available:** 26 August, 2026
-- **Postcode area:** SO14
-
-**Description:**
-Charming 1-Bedroom Flat for Rent in Town Center
-Available from 26th August 2026 Discover the perfect blend of historic charm and modern convenience in this spacious, newly renovated Grade II-listed 1-bedroom flat.
-Key Features:
-Victorian Elegance: Features a stunning Victorian fireplace, high ceilings, and original flooring.
-Prime Location: Situated in the heart of town with a bus stop right at your doorstep. The town centre is just a 5-minute walk, the train station 10 minutes away, and bars and restaurants only 2 minutes away. University bus links are right in front of the building.
-Fully Furnished: Includes a comfortable bed with mattress, 2 cosy sofas, a coffee table, a side table, a dressing table, and an area rug.
-White Goods Provided: Comes with a washing dryer and fridge freezer.
-All Electric Property
-Students Welcome Ideal for those looking for a convenient and stylish living space.
-Please note, the flat is located on the 2nd floor and there is no lift access.
-Special Offer: If possible Pay rent yearly in advance for added convenience for students - offer on rent.
-Don’t miss out on this unique opportunity to live in a beautifully restored historic building with all the modern amenities you need.
-Contact us today to arrange a viewing!
 
 ---
 
@@ -2570,6 +2570,35 @@ Summary
 Rent £950.00 per month (£219.23 per week)
 Deposit / Bond is £950.00
 Maximum number of tenants is 2
+
+---
+
+## Granby Grove, Southampton — £620 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-granby-grove-so17/2838497
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** off-street
+- **Deposit:** £620
+- **Available:** Today
+- **Postcode area:** SO17
+- **Image:** https://imagescdn.openrent.co.uk/listings/2838497/o_1jkfop61g4ofbm2jhv123ckrk0.JPG
+
+**Description:**
+We are proud to offer these 2 delightful rooms in a 5 bedroom, 2 bathroom shared house in a great location.
+Available to move in from 20 April 2026, this property benefits from available parking, and garden access. Property is offered furnished.
+Viewing highly recommended. Contact OpenRent today for more details or to arrange a viewing!
+Summary
+Room 3 - Double room for 1 person - £640.00 per month (£147.69 per week)
+Room 1 - Double room for 1 person - £620.00 per month (£143.08 per week)
+Deposit / Bond is from £620.00, depending on room
+Minimum tenancy is 6 months
+Maximum number of tenants is 2
+
+**Key features:**
+- Garden
+- Smokers allowed
+- Bills included
 
 ---
 

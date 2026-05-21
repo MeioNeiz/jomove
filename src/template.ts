@@ -8,14 +8,30 @@ const TEMPLATE_PATH = join(HERE, "template.html");
 export type DashboardSource = { src: string; url: string };
 
 export type ListingUserState = {
-  viewed:    boolean;
-  favourite: boolean;
-  rating:    number | null;
-  comment:   string;
+  viewed:         boolean;
+  favourite:      boolean;
+  rating:         number | null;
+  comment:        string;
+  media_index:    number;
+  cost_overrides: CostOverrides | null;
 };
 
-export type CostComponent = { label: string; delta: number };
-export type CostAdjustment = { delta: number; components: CostComponent[] };
+export type CostOverrides = {
+  remove: string[];                 // auto-detected labels to suppress
+  add:    { label: string; delta: number }[];  // user-added items
+};
+
+export type MediaItem =
+  | { kind: "map";     lat: number; lon: number }
+  | { kind: "scraped"; url: string }
+  | { kind: "user";    url: string };
+
+export type CostComponent = { label: string; delta: number; source?: "auto" | "user" };
+export type CostAdjustment = {
+  delta:      number;
+  components: CostComponent[];      // resolved list (auto-kept + user-added)
+  auto:       CostComponent[];      // full auto list ungated, for re-enable lookups
+};
 
 export type DashboardPayload = {
   id: number;
@@ -44,7 +60,9 @@ export type DashboardPayload = {
   caveats: string;
   sources: DashboardSource[];
   state: ListingUserState;
-  image_url: string | null;
+  media: MediaItem[];
+  map_link_query: string;
+  listing_type: string | null;
   cost_adjustments: CostAdjustment;
 };
 

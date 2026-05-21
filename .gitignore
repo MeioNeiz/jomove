@@ -4,9 +4,29 @@ data/*.db-journal
 data/*.db-wal
 data/*.db-shm
 
+# User-pasted images (local only; per-user)
+data/user-images/
+
+# Scheduled-run logs
+data/logs/
+
 # Node / Bun
 node_modules/
 .bun/
+
+# Local secrets (SMTP creds, etc)
+.env
+.env.local
+
+# Throwaway previews/scratch
+email-preview.html
+
+# Verify command outputs (generated; per-run)
+verify_survivors.md
+verify_removed_*.txt
+
+# Accidental path-mangled scratch dumps
+UsersJacobMaschler*.html
 
 # OS / editor
 .DS_Store

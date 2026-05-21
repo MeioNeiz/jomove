@@ -1,21 +1,26 @@
 {
   "name": "jomove",
   "version": "0.1.0",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/nodemailer": "^8.0.0"
+  },
   "description": "Lightweight Southampton rental tracker — parses agent listings into SQLite and renders a static HTML dashboard.",
-  "type": "module",
   "private": true,
   "scripts": {
-    "init":    "bun jomove.ts init",
-    "ingest":  "bun jomove.ts ingest",
-    "report":  "bun jomove.ts report",
-    "serve":   "bun jomove.ts serve",
-    "dev":     "bun jomove.ts serve",
+    "init": "bun jomove.ts init",
+    "ingest": "bun jomove.ts ingest",
+    "serve": "bun jomove.ts serve",
+    "dev": "bun --hot jomove.ts serve",
     "archive": "bun jomove.ts archive",
-    "prune":   "bun jomove.ts prune",
-    "list":    "bun jomove.ts list",
-    "build":   "bun jomove.ts ingest old_search && bun jomove.ts report"
+    "prune": "bun jomove.ts prune",
+    "verify": "bun jomove.ts verify",
+    "verify:http": "bun jomove.ts verify --http-only",
+    "auto-scrape": "bun jomove.ts auto-scrape",
+    "list": "bun jomove.ts list"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
+  "type": "module",
+  "dependencies": {
+    "nodemailer": "^8.0.7"
   }
 }

@@ -1,41 +1,39 @@
 # Rightmove — Southampton Rentals
 _Scraped 2026-05-21_
 
-## King Street, Canute House King Street, SO14 — £900 pcm
-- **Link:** https://www.rightmove.co.uk/properties/88775634
+## Hill Lane, SO15 — £875 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88709460
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
 - **Furnished:** No
-- **Deposit:** £1038
-- **Available:** Now
-- **Postcode area:** SO14
-- **Postcode:** SO14 3DG
-- **Agent:** Jackson Bailey Ltd
-- **Image:** https://media.rightmove.co.uk/property-photo/40dec317a/88775634/40dec317ac90aa99b0720a99f6a4b07e.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/d508f8a0c/88775634/d508f8a0cf3686832df13a68dbb19bb5.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/81f8cfe2c/88775634/81f8cfe2c80a4199c13b53ff52c48871.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/74f67afb0/88775634/74f67afb08f2b324a7be5a58b52455e4.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/34d754429/88775634/34d7544295c4a28f8b5ea0078db24e68.jpeg
+- **Deposit:** £1005
+- **Available:** 29/05/2026
+- **Postcode area:** SO15
+- **Postcode:** SO15 5DD
+- **Agent:** Embley Management Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/33a9b51aa/88709460/33a9b51aad589d58d12dc8f2fd66ab68.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/379e7931d/88709460/379e7931db5d7e3611e7a11dd0a1991c.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/0dd1c73e8/88709460/0dd1c73e856005b3cd0c51a21e546876.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/c98a1b9bf/88709460/c98a1b9bffdce91e791a0a01592a3ec6.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/c859079d6/88709460/c859079d6410814c81ba7c6353b161d4.jpeg
 
 **Description:**
-Welcome to this stylish one-bedroom upper-floor flat, available to let immediately and perfect for anyone looking for a fresh start.
-Recently refurbished throughout, the property feels bright and modern as soon as you step inside.
-The newly fitted kitchen comes complete with sleek units and plenty of space for all your culinary adventures, while the newly fitted bathroom offers a clean and contemporary finish (ideal for relaxing after a long day).
-The living area is welcoming and airy, making it a great spot to unwind or entertain friends.
-The bedroom is generously sized and benefits from plenty of natural light, creating a peaceful retreat at the end of the day.
-There is also a balcony, providing an extra touch of space to enjoy your morning coffee or an evening read.
-With neutral décor and quality finishes throughout, this flat is ready for you to move straight in and make it your own. Located close to local shops, transport links, and amenities, everything you need is right on your doorstep.
-Don’t miss your chance to view this fantastic flat - get in touch today to arrange a viewing and see for yourself what makes this place so special.
-EPC Rating: D
+ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY WINDOWS. ALLOCATED PARKING. HILL LANE LOCATION. OPEN PLAN KITCHEN/LIVING ROOM. FITTED WARDROBES. A lovely, well proportioned flat in Hill Lane, Southampton. Council Tax Band A. EPC Rating C.
+INTERNAL
+The property is accessed via the communal entrance and the property is located on the first floor, accessible via the staircase. The property consists of an open plan kitchen/living room with bay window and a further window to the front aspect. There is a double bedroom with fitted wardrobes, airing cupboard and bay window to the side aspect. There is also an en-suite shower room/wc with window to the side aspect.
+EXTERNAL
+There is a communal garden to the rear aspect and an allocated parking space.
+LOCATION
+Southampton is a dynamic port city located on the south coast of England, in the county of Hampshire. Known for its deep maritime roots, the city famously served as the departure point for the RMS Titanic and remains one of the UK-s most important cruise and cargo ports today. It boasts a vibrant blend of historical charm and modern development, offering a diverse cultural scene, two universities, University of Southampton and Solent University, and extensive shopping destinations such as Westquay. With its wide-open green spaces like Southampton Common, riverside parks, and strong transport connections, Southampton is an attractive and well-connected place to live and work.
 
 **Key features:**
-- One Bedroom Upper Floor Flat For Let
-- Recently Refurbished
-- Newly Fitted Kitchen
-- Newly Fitted Bathroom
-- Balcony
-- Available Immediately
-- WhatsApp Jackson Bailey On (0 7 5 1 3 7 5 7 0 3 6) To Book Your Viewing Now
+- FIRST FLOOR FLAT
+- EN-SUITE SHOWER ROOM/WC
+- OPEN PLAN KITCHEN/LIVING ROOM
+- HILL LANE LOCATION
+- FITTED WARDROBES
+- COUNCIL TAX BAND A
+- EPC RATING C
 
 ---
 
@@ -146,8 +144,8 @@ Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7
 **Description:**
 Located in the popular area of Ocean Village, this first floor, one-bedroom apartment is conveniently located for all local amenities including the vibrant Oxford Street as well as being only a short walk from the marina
 The open plan kitchen/living area offers ample space for living and dining with the kitchen comprising both wall and floor units, integrated white goods and lots of counter top space. Furthermore, the double bedroom benefits from a triple built in wardrobe. The bathroom offers a white three-piece suite with a shower over the bath. The property further benefits from being within walking distance of the city centre, offered furnished and available early June 2026.
-Security Deposit: £1,096.15 (based on advertised rental price)
-Holding Deposit: £219.23 (based on advertised rental price)
+Security Deposit: £1,153.84 (based on advertised rental price)
+Holding Deposit: £230.76 (based on advertised rental price)
 Minimum Term: 12 Months
 Council Tax Band: B
 ADDITIONAL INFORMATION
@@ -346,42 +344,6 @@ Offering a dynamic blend of history, culture, and modern living, Southampton app
 
 ---
 
-## Hill Lane, SO15 — £875 pcm
-- **Link:** https://www.rightmove.co.uk/properties/88709460
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No
-- **Deposit:** £1005
-- **Available:** 29/05/2026
-- **Postcode area:** SO15
-- **Postcode:** SO15 5DD
-- **Agent:** Embley Management Ltd
-- **Image:** https://media.rightmove.co.uk/property-photo/33a9b51aa/88709460/33a9b51aad589d58d12dc8f2fd66ab68.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/379e7931d/88709460/379e7931db5d7e3611e7a11dd0a1991c.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/0dd1c73e8/88709460/0dd1c73e856005b3cd0c51a21e546876.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/c98a1b9bf/88709460/c98a1b9bffdce91e791a0a01592a3ec6.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/c859079d6/88709460/c859079d6410814c81ba7c6353b161d4.jpeg
-
-**Description:**
-ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY WINDOWS. ALLOCATED PARKING. HILL LANE LOCATION. OPEN PLAN KITCHEN/LIVING ROOM. FITTED WARDROBES. A lovely, well proportioned flat in Hill Lane, Southampton. Council Tax Band A. EPC Rating C.
-INTERNAL
-The property is accessed via the communal entrance and the property is located on the first floor, accessible via the staircase. The property consists of an open plan kitchen/living room with bay window and a further window to the front aspect. There is a double bedroom with fitted wardrobes, airing cupboard and bay window to the side aspect. There is also an en-suite shower room/wc with window to the side aspect.
-EXTERNAL
-There is a communal garden to the rear aspect and an allocated parking space.
-LOCATION
-Southampton is a dynamic port city located on the south coast of England, in the county of Hampshire. Known for its deep maritime roots, the city famously served as the departure point for the RMS Titanic and remains one of the UK-s most important cruise and cargo ports today. It boasts a vibrant blend of historical charm and modern development, offering a diverse cultural scene, two universities, University of Southampton and Solent University, and extensive shopping destinations such as Westquay. With its wide-open green spaces like Southampton Common, riverside parks, and strong transport connections, Southampton is an attractive and well-connected place to live and work.
-
-**Key features:**
-- FIRST FLOOR FLAT
-- EN-SUITE SHOWER ROOM/WC
-- OPEN PLAN KITCHEN/LIVING ROOM
-- HILL LANE LOCATION
-- FITTED WARDROBES
-- COUNCIL TAX BAND A
-- EPC RATING C
-
----
-
 ## Millbrook Road East, Southampton, SO15 — £930 pcm
 - **Link:** https://www.rightmove.co.uk/properties/88706625
 - **Type:** flat
@@ -471,6 +433,36 @@ SOU260395/2
 - First Floor
 - EPC rating E
 - Council Tax band A
+
+---
+
+## Tasman Court, Southampton, Hampshire, SO14 — £900 pcm
+- **Link:** https://www.rightmove.co.uk/properties/172129544
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £1095
+- **Available:** Ask agent
+- **Postcode area:** SO14
+- **Postcode:** SO14 3TP
+- **Agent:** Radian Homes (Re-lets)
+- **Image:** https://media.rightmove.co.uk/property-photo/0ed732322/172129544/0ed732322d642b5e32e27af0476187ef.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/a32933b46/172129544/a32933b4627c5583d249a408d4cfb406.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/573a7067e/172129544/573a7067ed8c836472a564c7ae8f2d29.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/d8d67f66e/172129544/d8d67f66e01d4e2ea0f201a9c75ea0e8.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/4b40f992c/172129544/4b40f992cab529b07b623fa6e8ed2d08.jpeg
+
+**Description:**
+Tasman Court is located next to the Marina, with restaurants and bars located a short distance away and close to Southampton City centre.
+The property consists of one double bedroom, kitchen with white goods, bathroom suite and a generous living/dining room area. The decor is neutral and there is ample storage space available also. The property looks out to the marina and communal garden area of the site.
+The property also benefits from electric heating & double glazing, parking permit and is located on the doorstep of the desirable Ocean Village Marina, Southampton.
+
+**Key features:**
+- Double bedroom
+- Permit parking
+- Kitchen with built in Fridge freezer, hob, oven and washer dryer.
+- Communal garden
+- Located only minutes from Ocean Village shops, bars and restaurants and close to Southampton City Centre
 
 ---
 
@@ -565,6 +557,56 @@ Rent excludes the tenancy deposit and any other permitted payments. A Holding De
 - Ground Floor
 - No Parking
 - Central Location
+
+---
+
+## Oaktree Road, Southampton, Hampshire, SO18 — £995 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88549809
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £995
+- **Available:** Now
+- **Postcode area:** SO18
+- **Postcode:** SO18 1PL
+- **Agent:** Blue Bubble Lettings
+- **Image:** https://media.rightmove.co.uk/property-photo/7a1f0dfb7/88549809/7a1f0dfb7394aee1379f03b9cdaf1f96.png
+- **Image:** https://media.rightmove.co.uk/property-photo/b0cb7cb47/88549809/b0cb7cb47d527ac670c6ac5d1e35c885.png
+- **Image:** https://media.rightmove.co.uk/property-photo/d46e594be/88549809/d46e594be5d731d3982757979659e995.png
+- **Image:** https://media.rightmove.co.uk/property-photo/1c16df753/88549809/1c16df753c3ced361c6dfb28b0c78f6e.png
+- **Image:** https://media.rightmove.co.uk/property-photo/1a1fd068e/88549809/1a1fd068e3807e8db2d25f83780f3602.png
+
+**Description:**
+A fully refurbished, unfurnished, one bedroom maisonette in Bitterne Park, Southampton. The maisonette comprises of a ground floor entrance in a converted house of just two flats. The ground floor entrance rises via stairs to the hallway, providing access to all rooms.
+At the front of the property is the living/dining room with sash windows over the front elevation.
+The master bedroom is a good size and has a sash window over the rear elevation
+The kitchen has been fully refurbished to include integrated fridge/freezer, full size dish washer, electric oven and induction hob, as well as black sink with mixer tap and solid oak worktops. The separate island provides a relaxing space to eat or work.
+An inner hallway leads to a storage cupboard housing the gas boiler alongside space and plumbing for a washing machine or condensing washer dryer.
+The fully refurbished bathroom comprises of a white suite with vanity unit under sink, an L-shaped bath with glass screen rainfall and handheld shower, and a heated towel rail.
+From the hallway there is a ladder and access to the loft for storage. Unlimited parking is provided on the road adjacent to the property.
+The property is available immediately following its refurbishment.
+Approximate dimensions;
+Lounge/Diner
+15'1" x 11'7" (4.62m x 3.54m)
+Kitchen
+10'7" x 10'6" (3.25m x 3.21m)
+Bedroom
+11'7" x 9'7" (3.55m x 2.94m)
+Holding Deposit: £225.00
+EPC Rating: C
+Council Tax Band: A
+
+**Key features:**
+- One bedroom maisonette
+- First floor
+- Fully refurbished throughout
+- Brand new kitchen with island
+- Brand new bathroom with rainfall shower
+- On street parking
+- Unfurnished
+- EPC Rating C
+- Council Tax Band A
+- Available immediately
 
 ---
 
@@ -713,6 +755,44 @@ Offering a dynamic blend of history, culture, and modern living, Southampton app
 
 ---
 
+## Clarendon Apartments, Canal Walk, Southampton, SO14 — £925 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88249752
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £1065
+- **Available:** 12/06/2026
+- **Postcode area:** SO14
+- **Postcode:** SO14 3BT
+- **Agent:** Embley Management Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/08b6f5665/88249752/08b6f56659d0b5a433a9b61d25b70f64.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/047938735/88249752/04793873569c8242934f89993e64ff00.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/571e6b144/88249752/571e6b144b9fe77bd7822cc8fc1f0f04.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/315ec57ba/88249752/315ec57ba8a93f56a822efc88cae688f.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/abd002b86/88249752/abd002b862f81fadbed7c9d4030a3c10.jpeg
+
+**Description:**
+ENFIELDS PRESENT - NO DEPOSIT OPTION. ONE BEDROOM APARTMENT. CITY CENTRE. OPEN PLAN KITCHEN/LIVING ROOM. INTEGRATED APPLICANCES. SHOWER ROOM/WC. A modern, one bedroom apartment in Clarendon Apartments, located in the city centre. Council Tax Band A. EPC Rating C.
+INTERNAL
+The property is accessed via the communal entrance with security entry system and the apartment is located on the ground floor. The apartment consists of an open plan kitchen/living room with integrated appliances), double bedroom and shower room/wc.
+LOCATION
+Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.
+The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.
+Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city's bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.
+Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
+
+**Key features:**
+- ONE BEDROOM APARTMENT
+- NO DEPOSIT OPTION AVAILABLE
+- CITY CENTRE LOCATION
+- OPEN PLAN KITCHEN/LIVING ROOM
+- SHOWER ROOM/WC
+- BIKE STORE
+- COUNCIL TAX BAND A
+- EPC RATING C
+
+---
+
 ## |Ref: R153684|, Bellevue Road, Southampton, SO15 2AY — £825 pcm
 - **Link:** https://www.rightmove.co.uk/properties/88508472
 - **Type:** flat
@@ -856,44 +936,6 @@ Offering a dynamic blend of history, culture, and modern living, Southampton app
 - CITY CENTRE LOCATION
 - GROUND FLOOR
 - BATHROOM/WC
-- COUNCIL TAX BAND A
-- EPC RATING C
-
----
-
-## Clarendon Apartments, Canal Walk, Southampton, SO14 — £925 pcm
-- **Link:** https://www.rightmove.co.uk/properties/88249752
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No
-- **Deposit:** £1065
-- **Available:** 12/06/2026
-- **Postcode area:** SO14
-- **Postcode:** SO14 3BT
-- **Agent:** Embley Management Ltd
-- **Image:** https://media.rightmove.co.uk/property-photo/08b6f5665/88249752/08b6f56659d0b5a433a9b61d25b70f64.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/047938735/88249752/04793873569c8242934f89993e64ff00.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/571e6b144/88249752/571e6b144b9fe77bd7822cc8fc1f0f04.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/315ec57ba/88249752/315ec57ba8a93f56a822efc88cae688f.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/abd002b86/88249752/abd002b862f81fadbed7c9d4030a3c10.jpeg
-
-**Description:**
-ENFIELDS PRESENT - NO DEPOSIT OPTION. ONE BEDROOM APARTMENT. CITY CENTRE. OPEN PLAN KITCHEN/LIVING ROOM. INTEGRATED APPLICANCES. SHOWER ROOM/WC. A modern, one bedroom apartment in Clarendon Apartments, located in the city centre. Council Tax Band A. EPC Rating C.
-INTERNAL
-The property is accessed via the communal entrance with security entry system and the apartment is located on the ground floor. The apartment consists of an open plan kitchen/living room with integrated appliances), double bedroom and shower room/wc.
-LOCATION
-Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.
-The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.
-Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city's bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.
-Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
-
-**Key features:**
-- ONE BEDROOM APARTMENT
-- NO DEPOSIT OPTION AVAILABLE
-- CITY CENTRE LOCATION
-- OPEN PLAN KITCHEN/LIVING ROOM
-- SHOWER ROOM/WC
-- BIKE STORE
 - COUNCIL TAX BAND A
 - EPC RATING C
 
@@ -2157,36 +2199,6 @@ Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7
 - Students Can Enquire
 - Bills Included
 - Property Reference Number: 2879709
-
----
-
-## Tasman Court, Southampton, Hampshire, SO14 — £900 pcm
-- **Link:** https://www.rightmove.co.uk/properties/172129544
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No
-- **Deposit:** £1095
-- **Available:** Ask agent
-- **Postcode area:** SO14
-- **Postcode:** SO14 3TP
-- **Agent:** Radian Homes (Re-lets)
-- **Image:** https://media.rightmove.co.uk/property-photo/0ed732322/172129544/0ed732322d642b5e32e27af0476187ef.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/a32933b46/172129544/a32933b4627c5583d249a408d4cfb406.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/573a7067e/172129544/573a7067ed8c836472a564c7ae8f2d29.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/d8d67f66e/172129544/d8d67f66e01d4e2ea0f201a9c75ea0e8.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/4b40f992c/172129544/4b40f992cab529b07b623fa6e8ed2d08.jpeg
-
-**Description:**
-Tasman Court is located next to the Marina, with restaurants and bars located a short distance away and close to Southampton City centre.
-The property consists of one double bedroom, kitchen with white goods, bathroom suite and a generous living/dining room area. The decor is neutral and there is ample storage space available also. The property looks out to the marina and communal garden area of the site.
-The property also benefits from electric heating & double glazing, parking permit and is located on the doorstep of the desirable Ocean Village Marina, Southampton.
-
-**Key features:**
-- Double bedroom
-- Permit parking
-- Kitchen with built in Fridge freezer, hob, oven and washer dryer.
-- Communal garden
-- Located only minutes from Ocean Village shops, bars and restaurants and close to Southampton City Centre
 
 ---
 
@@ -3565,43 +3577,6 @@ Please note that some images used in this advertisement have been digitally enha
 - Well-maintained communal gardens
 - Garage in a nearby block
 - Nicely presented throughout in a desirable location
-
----
-
-## Southbrook Rise, Southampton, SO15 — £950 pcm
-- **Link:** https://www.rightmove.co.uk/properties/88778808
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No
-- **Deposit:** £1096
-- **Available:** 26/06/2026
-- **Postcode area:** SO15
-- **Postcode:** SO15 1BX
-- **Agent:** LSL Franchise
-- **Image:** https://media.rightmove.co.uk/property-photo/774d811e9/88778808/774d811e9f7cc8fda152682988eb8840.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/51761e95c/88778808/51761e95cf812603f2a85877f3d95a7d.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/1f833016b/88778808/1f833016b172922ca843e99124a448e0.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/d895da853/88778808/d895da853f2b90b26e6e3897fa96fc8d.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/03592951f/88778808/03592951f310bcc10fb937e767c3a42a.jpeg
-
-**Description:**
-LetCo is pleased to offer this modern one bedroom ground floor apartment situated in the heart of the city, located a few minutes' walk from Southampton central train station, this property offers open plan living with a fitted kitchen with integrated appliances and lounge, double bedroom and modern bathroom with shower over bath.
-The building is situated in an ideal location with just a short walk to Southampton central train station, other transport links, University and Southampton City Centre. In addition, there is allocated parking for one car. Available June 2026.
-IMPORTANT NOTE TO PURCHASERS:
-We endeavour to make our sales particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. Any services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All measurements have been taken as a guide to prospective buyers only, and are not precise. Please be advised that some of the particulars may be awaiting vendor approval. If you require clarification or further information on any points, please contact us, especially if you are travelling some distance to view. Fixtures and fittings other than those mentioned are to be agreed with the seller.
-LET230011/
-
-**Key features:**
-- Double Bedroom
-- Central Location
-- Available June 2024
-- Modern
-- Open Plan
-- Allocated Parking
-- Close to Southampton Centre &amp; Train
-- Integrated Appliances
-- Unfurnished
-- Ground Floor
 
 ---
 

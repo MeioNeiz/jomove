@@ -42,7 +42,7 @@ export function cmdPrune(args: PruneArgs): void {
     db.query(
       `UPDATE listings SET status = 'let_agreed' WHERE status = 'active' AND last_seen < ?`
     ).run(cutoffIso);
-    console.log(`Done. Run \`bun run report\` to refresh the dashboard.`);
+    console.log(`Done. The dev server picks this up on the next poll.`);
   } else {
     console.log(`Dry run — no changes written.`);
   }

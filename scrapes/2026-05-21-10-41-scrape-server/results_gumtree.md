@@ -20,25 +20,6 @@ Studio Flat Second-floor studio flat Portswood SO14 6WB Available NOW ​ This s
 
 ---
 
-## 1 bedroom flat Maryfield so14 (Inc bills), Southampton — £1,100 pcm
-- **Link:** https://www.gumtree.com/p/property-to-rent/-/1512991296
-- **Type:** flat
-- **Beds/Baths:** 1 bed
-- **Furnished:** Yes
-- **Parking:** unclear
-- **Available:** from the 11th of May 2026
-- **Postcode area:** SO14
-- **Agent:** lorraine
-- **Image:** https://img.gumtree.com/ePR8PyKf84wPHx7_RYmEag/51bf95de12254c2183_52acb59bf889/86
-- **Image:** https://img.gumtree.com/ePR8PyKf84wPHx7_RYmEag/9fe29d4964a14f9baa_222ac7b5706e/86
-- **Image:** https://img.gumtree.com/ePR8PyKf84wPHx7_RYmEag/c34c2f79ee6144ccb4_9dff4e866c7c/86
-- **Image:** https://img.gumtree.com/ePR8PyKf84wPHx7_RYmEag/d9c173da52ca4f33b7_a6ef4d1c232b/86
-
-**Description:**
-1 bedroom flat for rent short 3 or 6 months term,  Great location in city centre near oxford street (maryfield southampton) 2nd floor Furnished Double bed with lots of storage space. Parking available (when registered) Available from the 11th of May 2026 £1100 including all bills Holding deposit £275 No agency
-
----
-
 ## Studio flat London rd Southhampton SO15, Southampton — £1,150 pcm
 - **Link:** https://www.gumtree.com/p/property-to-rent/-/1507876256
 - **Type:** studio
@@ -55,6 +36,25 @@ Studio Flat Second-floor studio flat Portswood SO14 6WB Available NOW ​ This s
 
 **Description:**
 Studio Flat, London Road, SO15  1 bathrooms 2 tenants max. Southampton A self Contained studio flat located on 1st floor of private block  Very good location close to all shops and transport links Fully furnished  Suit professional couple  Available early Feb Price & Bills Deposit	£1,150.00 Rent PCM	£1,150.00 Bills Included	No Broadband	View Offers Tenant Preference Student Friendly	 Families Allowed	 Pets Allowed	 Smokers Allowed	no DSS/LHA Covers Rent Availability Available From	Today Minimum Tenancy	12 Months Online Viewings Features Garden	no Parking	no Fireplace	no Furnishing	Furnished EPC Rating	C
+
+---
+
+## 1 bedroom flat Maryfield so14 (Inc bills), Southampton — £1,100 pcm
+- **Link:** https://www.gumtree.com/p/property-to-rent/-/1512991296
+- **Type:** flat
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** unclear
+- **Available:** from the 11th of May 2026
+- **Postcode area:** SO14
+- **Agent:** lorraine
+- **Image:** https://img.gumtree.com/ePR8PyKf84wPHx7_RYmEag/51bf95de12254c2183_52acb59bf889/86
+- **Image:** https://img.gumtree.com/ePR8PyKf84wPHx7_RYmEag/9fe29d4964a14f9baa_222ac7b5706e/86
+- **Image:** https://img.gumtree.com/ePR8PyKf84wPHx7_RYmEag/c34c2f79ee6144ccb4_9dff4e866c7c/86
+- **Image:** https://img.gumtree.com/ePR8PyKf84wPHx7_RYmEag/d9c173da52ca4f33b7_a6ef4d1c232b/86
+
+**Description:**
+1 bedroom flat for rent short 3 or 6 months term,  Great location in city centre near oxford street (maryfield southampton) 2nd floor Furnished Double bed with lots of storage space. Parking available (when registered) Available from the 11th of May 2026 £1100 including all bills Holding deposit £275 No agency
 
 ---
 
