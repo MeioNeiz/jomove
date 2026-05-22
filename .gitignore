@@ -9,6 +9,7 @@ data/user-images/
 
 # Scheduled-run logs
 data/logs/
+data/scrape.log
 
 # Node / Bun
 node_modules/

@@ -1,5 +1,5 @@
 # OpenRent — Southampton Rentals
-_Scraped 2026-05-21_
+_Scraped 2026-05-22_
 
 ## St Andrews Road, Southampton — £700 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-st-andrews-road-so14/2784017
@@ -579,33 +579,6 @@ Early viewing is recommended.
 
 ---
 
-## Dorrick Court, Southampton — £1,100 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-dorrick-court-so15/2891611
-- **Type:** flat
-- **Beds/Baths:** 1 bed
-- **Furnished:** Yes
-- **Parking:** off-street
-- **EPC:** C
-- **Deposit:** £1100
-- **Available:** 12 June, 2026
-- **Postcode area:** SO15
-
-**Description:**
-Stunning 1 Bedroom top floor apartment on Archers Road near Bedford Place.
-Furnished to a high standard.
-This apartament comes fully equipped with everything you need including a TV, all kitchen equipment including pots, pans, kettle, toaster, microwave and cutlery ect.
-Move in with just your belongings.
-Centrally located with just a 10 minuet walk to train station and few minuets walk into the town centre. 2 minute walk into Bedford Place with many restaurants, shops and hairdressers.
-Ocean Village and Oxford Street also within walking distance.
-Possibility of car parking space if required.
-Available now
-Full Referencing and Credit Checks will be required. Tenants must have a good credit rating or a suitable Guarantor.
-
-**Key features:**
-- Garden
-
----
-
 ## Lyon St, Southampton — £575 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-lyon-st-so14/2881822
 - **Type:** houseshare
@@ -846,7 +819,7 @@ If you'd like to view please drop us a message - Tell us a little about yourself
 - **Parking:** none
 - **EPC:** D
 - **Deposit:** £778
-- **Available:** 22 May, 2026
+- **Available:** Today
 - **Postcode area:** SO14
 - **Image:** https://imagescdn.openrent.co.uk/listings/2899749/o_1joo8jb3r16g016pj1s991srg6bq3.JPG
 
@@ -999,6 +972,33 @@ Maximum number of tenants is 2
 ---
 
 ## High Street, Southampton — £1,100 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-high-street-so14/2904935
+- **Type:** flat
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** none
+- **Deposit:** £1269
+- **Available:** 26 August, 2026
+- **Postcode area:** SO14
+
+**Description:**
+Charming 1-Bedroom Flat for Rent in Town Center
+Available from 26th August 2026 Discover the perfect blend of historic charm and modern convenience in this spacious, newly renovated Grade II-listed 1-bedroom flat.
+Key Features:
+Victorian Elegance: Features a stunning Victorian fireplace, high ceilings, and original flooring.
+Prime Location: Situated in the heart of town with a bus stop right at your doorstep. The town centre is just a 5-minute walk, the train station 10 minutes away, and bars and restaurants only 2 minutes away. University bus links are right in front of the building.
+Fully Furnished: Includes a comfortable bed with mattress, 2 cosy sofas, a coffee table, a side table, a dressing table, and an area rug.
+White Goods Provided: Comes with a washing dryer and fridge freezer.
+All Electric Property
+Students Welcome Ideal for those looking for a convenient and stylish living space.
+Please note, the flat is located on the 2nd floor and there is no lift access.
+Special Offer: If possible Pay rent yearly in advance for added convenience for students - offer on rent.
+Don’t miss out on this unique opportunity to live in a beautifully restored historic building with all the modern amenities you need.
+Contact us today to arrange a viewing!
+
+---
+
+## High Street, Southampton — £1,100 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-high-street-so14/2904927
 - **Type:** flat
 - **Beds/Baths:** 1 bed
@@ -1023,33 +1023,6 @@ Please note, the flat is located on the 1st floor and there is no lift access.
 ** Special Offer **: Pay rent yearly in advance for added convenience.
 Don’t miss out on this unique opportunity to live in a beautifully restored historic building with all the modern amenities you need.
 **Contact us today to arrange a viewing!**
-
----
-
-## High Street, Southampton — £1,100 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-high-street-so14/2904935
-- **Type:** flat
-- **Beds/Baths:** 1 bed
-- **Furnished:** Yes
-- **Parking:** none
-- **Deposit:** £1269
-- **Available:** 26 August, 2026
-- **Postcode area:** SO14
-
-**Description:**
-Charming 1-Bedroom Flat for Rent in Town Center
-Available from 26th August 2026 Discover the perfect blend of historic charm and modern convenience in this spacious, newly renovated Grade II-listed 1-bedroom flat.
-Key Features:
-Victorian Elegance: Features a stunning Victorian fireplace, high ceilings, and original flooring.
-Prime Location: Situated in the heart of town with a bus stop right at your doorstep. The town centre is just a 5-minute walk, the train station 10 minutes away, and bars and restaurants only 2 minutes away. University bus links are right in front of the building.
-Fully Furnished: Includes a comfortable bed with mattress, 2 cosy sofas, a coffee table, a side table, a dressing table, and an area rug.
-White Goods Provided: Comes with a washing dryer and fridge freezer.
-All Electric Property
-Students Welcome Ideal for those looking for a convenient and stylish living space.
-Please note, the flat is located on the 2nd floor and there is no lift access.
-Special Offer: If possible Pay rent yearly in advance for added convenience for students - offer on rent.
-Don’t miss out on this unique opportunity to live in a beautifully restored historic building with all the modern amenities you need.
-Contact us today to arrange a viewing!
 
 ---
 
@@ -1220,29 +1193,6 @@ Nearby parking permit available to purchase at tenant cost
 
 ---
 
-## Queens Terrace, Southampton — £595 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-flat-queens-terrace-so14/2835286
-- **Type:** houseshare
-- **Beds/Baths:** 1 bed
-- **Furnished:** Yes
-- **Parking:** none
-- **Deposit:** £595
-- **Available:** Today
-- **Postcode area:** SO14
-
-**Description:**
-Single room available.
-This room comes with an ensuite bathroom, wardrobe, desk, chairs etc.
-You will be sharing the kitchen with another tenant.
-In a great location situated near ocean village and a short walk into Southampton city centre and Southampton Solent university.
-This is available to students or professionals.
-
-**Key features:**
-- Smokers allowed
-- Bills included
-
----
-
 ## Suffolk Avenue, Southampton — £875 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-suffolk-avenue-so15/2895787
 - **Type:** flat
@@ -1371,6 +1321,33 @@ Deposit: £865
 
 ---
 
+## Alma Road, Southampton — £895 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-maisonette-alma-road-so14/2905666
+- **Type:** maisonette
+- **Beds/Baths:** 1 bed
+- **Furnished:** At tenant choice
+- **Parking:** off-street
+- **EPC:** C
+- **Deposit:** £895
+- **Available:** 01 July, 2026
+- **Postcode area:** SO14
+
+**Description:**
+We are proud to offer this delightful 1 bedroom, 1 bathroom maisonette in a great location.
+Available to move in from 01 July 2026, this property benefits from available parking, and garden access. Property is offered furnished or unfurnished (tenant can decide).
+Viewing highly recommended. Contact OpenRent today for more details or to arrange a viewing!
+Summary
+Rent £895.00 per month (£206.54 per week)
+Deposit / Bond is £895.00
+Maximum number of tenants is 2
+
+**Key features:**
+- Garden
+- Pets allowed
+- Smokers allowed
+
+---
+
 ## Albert Road South, Southampton — £825 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-albert-road-south-so14/2895782
 - **Type:** flat
@@ -1452,7 +1429,7 @@ Deposit: £865
 - **Parking:** none
 - **EPC:** D
 - **Deposit:** £1326
-- **Available:** 22 May, 2026
+- **Available:** Today
 - **Postcode area:** SO14
 - **Image:** https://imagescdn.openrent.co.uk/listings/2899748/o_1joo89tn4pfn41v1bf42ar1hp21.JPG
 
@@ -1976,13 +1953,13 @@ One bedroom first floor unfurnished flat available. The property has been newly 
 
 ---
 
-## Northcote Road, Southampton — £610 pcm
+## Northcote Road, Southampton — £590 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-northcote-road-so17/2864275
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed
 - **Furnished:** Yes
 - **Parking:** off-street
-- **Deposit:** £610
+- **Deposit:** £590
 - **Available:** Today
 - **Postcode area:** SO17
 - **Image:** https://imagescdn.openrent.co.uk/listings/2864275/o_1jmjudng512em1hgq1nmo1s5p1kdpb.JPG
@@ -2008,25 +1985,76 @@ Next viewing: 22 May 26.
 
 ---
 
-## Broadlands Road, Southampton — £515 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-broadlands-road-so17/2762139
-- **Type:** houseshare
+## Shirley, Southampton — £875 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-shirley-so16/2875405
+- **Type:** flat
 - **Beds/Baths:** 1 bed
-- **Furnished:** Yes
+- **Furnished:** At tenant choice
 - **Parking:** none
-- **Deposit:** £595
-- **Available:** Today
-- **Postcode area:** SO17
+- **EPC:** D
+- **Deposit:** £875
+- **Available:** 15 June, 2026
+- **Postcode area:** SO16
 
 **Description:**
-We are pleased to offer this room in a house with 5 bedrooms and 2 bathrooms.
-Each room allows for one tenant maximum.
-This is a house with 5 bedrooms, and 1 dining room. -9 mins walking distance to the main campus of Southampton University -5 mins by walking to supermarkets and restaurants and fast food, 3 mins bus stops. -Gas central heating -All white goods, inc. Dishwasher, fully furnished -Beautiful garden with different seasonal plants
+We are proud to offer this delightful 1 bedroom, 1 bathroom flat in a great location.
+Available to move in from 15 June 2026. Property is offered furnished or unfurnished (tenant can decide).
+Viewing highly recommended. Contact OpenRent today for more details or to arrange a viewing!
+Summary
+Rent £875.00 per month (£201.92 per week)
+Deposit / Bond is £875.00
+Minimum tenancy is 12 months
+Maximum number of tenants is 2
+
+---
+
+## Dale Valley Road, Southampton — £600 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-dale-valley-road-so16/2873090
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** No
+- **Parking:** off-street
+- **Deposit:** £276
+- **Available:** Today
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2873090/o_1jmvlh6iiom4f931ki913dc1bv54.JPG
+
+**Description:**
+A well-presented room in a professional shared house located on Dale Valley Road, Southampton, ideally suited for working professionals only.
+The property is situated in close proximity to Southampton General Hospital, making it an excellent choice for NHS staff and professionals working in the surrounding area. Local shops, transport links, and amenities are all within easy reach.
+The room is offered as part of a friendly, well-maintained household and benefits from access to shared kitchen and bathroom facilities. The property is kept to a high standard throughout.
 
 **Key features:**
 - Garden
-- Pets allowed
-- Smokers allowed
+- Bills included
+
+---
+
+## Winchester Road, Southampton — £650 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-winchester-road-so16/2875542
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** off-street
+- **Deposit:** £700
+- **Available:** Today
+- **Postcode area:** SO16
+
+**Description:**
+We are proud to offer delightful rooms in a 4 bedroom, 2 bathroom shared house in a great location.
+This well-presented four-bedroom home offers two bathrooms, a modern kitchen, a private garden, and a driveway, making it perfect for professional.
+Key Features:
+✔ Generous Space – Five well-sized bedrooms and two bathrooms
+✔ Modern Kitchen – Fully equipped for all your cooking needs
+✔ Outdoor Living – A private garden for relaxation and entertainment
+✔ Parking Convenience – Driveway for off-street parking
+Prime Location:
+• 5 min drive supermarkets, schools,Hospitals and public transport
+• Within easy reach of Millbrook railway station and major roads
+
+**Key features:**
+- Garden
+- Bills included
 
 ---
 
@@ -2053,6 +2081,51 @@ Maximum number of tenants is 1
 
 **Key features:**
 - Garden
+
+---
+
+## Tremona Road, Southampton — £600 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-tremona-road-so16/2896832
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** off-street
+- **Deposit:** £400
+- **Available:** Today
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2896832/2896832StreetViewPhotod478da7e-b3ff-46d4-a160-e49f41a58423.JPG
+
+**Description:**
+Double bedrooms in Professional shared house with two bathrooms and one toilet, Immediately opposite Southampton General Hospital.
+Wi-Fi, gas, electricity, water rates, Council tax included.
+Optional parking available.
+
+**Key features:**
+- Garden
+- Bills included
+
+---
+
+## Tremona Road, Southampton — £602 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-tremona-road-so16/2866541
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** off-street
+- **Deposit:** £400
+- **Available:** Today
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2866541/o_1jme8ic3lr75a5k11rq1hvv17710.JPG
+
+**Description:**
+Double bedrooms in Professional shared house with two bathrooms and one toilet, Immediately opposite Southampton General Hospital.
+Wi-Fi, gas, electricity, water rates, Council tax included.
+Optional parking available.
+Rents range from £139/week, £155/week, £173/week depending on room size.
+
+**Key features:**
+- Garden
+- Bills included
 
 ---
 
@@ -2205,6 +2278,204 @@ Several nurseries and childcare centres nearby
 
 ---
 
+## Langhorn Road, Southampton — £600 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-langhorn-road-so16/2803821
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** off-street
+- **Deposit:** £300
+- **Available:** Today
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2803821/o_1jmt121dsl8o1n7016qf2bp1k7m1.JPG
+
+**Description:**
+Rooms available in a clean, friendly house – all bills included with Parking
+• Gas, electricity, water, WiFi & council tax included
+• Communal areas cleaned every 4 weeks
+• Spacious garden
+• Fully fitted kitchen (washing machine & fridge/freezer)
+• Gas central heating
+• Close to shops, transport & local amenities
+Single occupancy only (1 person per room)
+Requirements:
+• Proof of income
+• Positive landlord/employer reference
+Message now to arrange a viewing – ready to move in.
+
+**Key features:**
+- Garden
+- Bills included
+
+---
+
+## Langhorn Road, Southampton — £540 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-langhorn-road-so16/2741067
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** none
+- **Deposit:** £540
+- **Available:** Today
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2741067/o_1jjib433i1tet147iare1gksd3k2.JPG
+
+**Description:**
+6 bedroom house close to hospital.
+Room 3: £540 - Single - Upstairs - Available NOW
+Room 5: £600 - double - Upstairs - Available NOW
+This house features, a fitted kitchen with a washing machine and x2 fridge freezer, and has gas central heating.
+There are 2 shared bathrooms.
+The house is fully furnished, there's a separate lounge and a garden area.
+The Bus Stop is right outside the house.
+The property is in close proximity to shops, bars and transport links.
+Included in the rent:
+• Gas & Electricity
+• Water
+• TV licence
+• Wifi (Broadband)
+• Council Tax - Band C (Although not applicable for students)
+• Maintenance Team available for any assistance or concerns.
+• Communal areas are cleaned every 2 weeks
+TENANCY REQUIREMENTS
+*Minimum term is 6 months*
+*Rooms are single occupancy only - each room is only licensed for 1 person
+All tenants are asked to be considerate to others and adhere to our sensible house rules inc. cleaning up after yourself in the kitchen/bathrooms and locking doors for security purposes.
+TENANT CRITERIA:
+References are required - A £100 holding deposit will be requested while references, employment checks, credit checks and affordability checks are being completed.
+Checks take approx 5-7 working days
+Prospect tenants must be able to:
+Prove regular income.
+Positive employers and landlord reference.
+We may ask for a guarantor if:
+- if you're starting a new job and will be in the probation period
+- if you have CCJ's or IVA's
+We think this is a lovely property but come and see for yourself.
+In-person and virtual viewings will be available.
+If you'd like to view please drop us a message - Tell us a little about yourself!
+
+**Key features:**
+- Garden
+- Smokers allowed
+- Bills included
+
+---
+
+## High Road, Southampton — £717 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-high-road-so16/2894420
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** off-street
+- **Deposit:** £500
+- **Available:** 06 July, 2026
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2894420/o_1jodph5oj76h1ao91j46orqm840.JPG
+
+**Description:**
+* OVERVIEW - Lovely Double Room available in upper Portswood/lower Swaythling area with UBER Fast wifi + Free Onsite Parking!*
+THE ROOM
+The room is a decent sized double room at circa 13msq and contains pretty much everything you would expect including a double bed with comfortable mattress, wardrobe and a small desk/chair. There are also some shelves - perfect to store all your books/niknaks, and a TV point. The room is located on the first floor at the rear of the house with a large bay window letting in plenty of natural light and has a lovely view of the garden. It would would suit either a working professional or Masters/PhD student and is available early July.
+THE HOUSE
+The house is a large semi-detached house located on High Road. There are six rooms in total with 2 bathrooms. There is a front garden and large rear grassy garden. Perfect for exercising/circuits/yoga/meditation. There is also a storage shed and bike racks. The house is fully HMO compliant with fire doors and smoke alarms. The house is kept clean and tidy by the existing housemates.
+THE LOCATION
+Quiet area away from the hustle and bustle of down-town central Portswood, yet a 15 walk to University areas, local shops and local restaurants (Persian, India, Thai, Chinese and good old McDonalds).
+Its a 5 minute walk to Swaythling station and Convenient for access to M3 and M27 motorways.
+Its also a short commute to Southampton City Centre and Eastleigh.
+A 12 minute walk to beautiful Riverside Park and Woodmill for lovely stroll along the water. Sainsburys supermarket is a 15 minute walk.
+PUBLIC TRANSPORT AND PARKING
+There is a bus stop just outside property with buses into City Centre and Portswood High Street.
+Its a 30 minute bus ride to General Hospital. Swaythling station is around a 5 minute walk. There is free parking for up to 2 cars at the rear of the property.
+WHAT IS INCLUDED IN THE RENT?
+All bills are included. We also have fortnightly cleaner service of communal areas and grass cutting included in rent. There is super fast full-fat fibre from Toob rated very highly; perfect for streaming movies and online gaming! Believe me this is uber fast!
+TELL ME ABOUT THE SHARED FACILITIES
+There is a new fitted kitchen with full range of utensils including microwave, dishwasher, washing machine and condenser dryer. There are three fridge freezers, a leather sofa in the lounge and a solid wooden dining table and chairs. You will have access to two bathrooms - one with a full size bath/shower and the other a dedicated shower room.
+WHAT ABOUT THE OTHER HOUSEMATES?
+There are currently 5 other housemates consisting of four males and one female. Ages range from 21-45. The housemates nationalities are English, Polish and Sudanese; a real cosmopolitan household!
+EXCLUSIONS
+-No pets
+-No Couples-
+-No Druggies!
+BONUS FEATURES
+- Free on-site parking!
+PRIVATE LANDLORD - Member of NRLA (National Residential Landlords Association)
+
+**Key features:**
+- Garden
+- Bills included
+
+---
+
+## Southampton, Southampton — £1,025 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-southampton-so16/2877860
+- **Type:** flat
+- **Beds/Baths:** 1 bed
+- **Furnished:** At tenant choice
+- **Parking:** off-street
+- **EPC:** C
+- **Deposit:** £1182
+- **Available:** 01 June, 2026
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2877860/o_1jo1ig58qior1sa8hptse2l330.JPG
+
+**Description:**
+Lovely 1-bed flat available from June as I’m moving before the end of my tenancy and helping the landlord find new tenants.
+Great location, second floor with an amazing park view – only a 15-minute walk to Southampton General Hospital, ideal for healthcare staff or anyone working nearby.
+Lovely neighbors/ community with a nice social area and simple gym area
+Available from June 2026
+The flat is comfortable, well-located, and perfect for a single person or couple.
+I am happy to leave part of my furniture, the flat is unfinished.
+
+**Key features:**
+- Smokers allowed
+
+---
+
+## Romsey Road, Southampton — £1,025 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-romsey-road-so16/2890917
+- **Type:** flat
+- **Beds/Baths:** 1 bed
+- **Furnished:** At tenant choice
+- **Parking:** off-street
+- **EPC:** C
+- **Deposit:** £1182
+- **Available:** Today
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2890917/2890917StreetViewPhoto9f95ae62-f675-405c-8bc1-737d7ffa5f58.JPG
+
+**Description:**
+Lovely 1-bed flat available from June as I’m moving before the end of my tenancy and helping the landlord find new tenants.
+Great location, second floor with an amazing park view – only a 15-minute walk to Southampton General Hospital, ideal for healthcare staff or anyone working nearby.
+Lovely neighbors/ community with a nice social area and simple gym area
+Available from June 2026
+The flat is comfortable, well-located, and perfect for a single person or couple.
+I am happy to leave part of my furniture, the flat is unfinished.
+
+**Key features:**
+- Smokers allowed
+
+---
+
+## Compass Point, Southampton — £950 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/studio-flat-compass-point-so16/2897155
+- **Type:** studio
+- **Beds/Baths:** 1 bed
+- **Furnished:** No
+- **Parking:** off-street
+- **EPC:** D
+- **Deposit:** £1096
+- **Available:** Today
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2897155/o_1joveop1or1f1g591njv1n68p0q0.JPG
+
+**Description:**
+One-bedroom apartment located in Southampton. With spacious rooms, a modern kitchen with a washing machine, dishwasher, and integrated fridge/freezer, and a prime location, this is the perfect opportunity for a freelancer/professional looking to live close to Southampton General Hospital or the port. This well-maintained home features one bedroom and a spacious living room. It also features Venetian blinds and curtains for added privacy. A fully equipped kitchen, bathroom, and private parking space are also included. Secure bicycle storage is available. A secure intercom system and video surveillance are also included.
+
+**Key features:**
+- Garden
+
+---
+
 ## Fir Tree Court, Southampton — £1,150 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/2-bed-flat-fir-tree-court-so18/2892314
 - **Type:** flat
@@ -2218,19 +2489,64 @@ Several nurseries and childcare centres nearby
 - **Image:** https://imagescdn.openrent.co.uk/listings/2892314/o_1jp4uv7ngjvi4nq1pjev7jcqo0.JPG
 
 **Description:**
-Spacious 2 Bedroom Apartment with Balcony & Parking – Southampton
+Spacious 2 Bedroom Apartment with Balcony – West End Road
 Property is undergoing a full redecoration now
 Private Balcony with pleasant green outlook
 Brand New Boiler
 Two Good Sized Bedrooms
-Available from 17th of May
+Available NOW
 A generously sized two double bedroom first-floor apartment, offered with no forward chain and available in a convenient residential location in Southampton.
-The property features a welcoming entrance hallway providing access to all rooms. The open-plan lounge and dining area is bright and spacious, offering plenty of room for both relaxing and entertaining. From here, you can access a private balcony, perfect for outdoor seating.
+The property features a welcoming entrance hallway providing access to all rooms. Well sized living area is bright and spacious, offering plenty of room for both relaxing and entertaining. From here, you can access a private balcony, perfect for outdoor seating.
 The modern fitted kitchen includes an integrated hob and oven, along with ample storage space, making it both practical and stylish.
 There are two well-proportioned double bedrooms, ideal for sharers, couples, or small families.
 The bathroom is fully tiled and fitted with a clean, modern three-piece suite.
 This is a comfortable, well-maintained apartment offering good space, natural light, and practical living in a popular Southampton location.
 Available from 17th of May!
+
+---
+
+## Bassett Row, Southampton — £1,150 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-semi-detached-house-bassett-row-so16/2884853
+- **Type:** house
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** off-street
+- **EPC:** D
+- **Deposit:** £1150
+- **Available:** Today
+- **Postcode area:** SO16
+
+**Description:**
+Beautiful light and airy cottage, with high ceilings and a private garden, in an exclusive road in Bassett, Southampton. Shaker style kitchen with built in washing machine and dining area with views to the private garden, shower and new bosch boiler. Double bed at property with John Lewis mattress. Really pretty with well stocked garden and french doors leading onto patio. There is also a private parking space available along with a garden shed for storage. It is furnished apart from the living room as the sofa and chairs have now been sold. A unique property with great road links.
+
+**Key features:**
+- Garden
+
+---
+
+## Sedbergh Road, Southampton — £675 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-flat-sedbergh-road-so16/2892816
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** off-street
+- **Deposit:** £0
+- **Available:** 29 June, 2026
+- **Postcode area:** SO16
+
+**Description:**
+A furnished room is available for rent around Sedbergh Road, Southampton, SO16.
+All bills inclusive, and facilities are shared (sitting room, bathroom, and kitchen).
+3min walk to the bus stop, with a direct bus going to Southampton General Hospital, Millbrook Tesco, Shirley Lidl, and City Centre.
+Available for single occupancy.
+Parking space is available in front of the main building.
+Short-term let can be considered (3 months).
+If interested, kindly send a DM for enquiries.
+Available to move in at the end of June 2026.
+
+**Key features:**
+- Garden
+- Bills included
 
 ---
 
@@ -2348,53 +2664,53 @@ Maximum number of tenants is 1
 
 ---
 
-## Hampton House, Southampton — £920 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-hampton-house-so14/2839267
+## Dorrick Court, Southampton — £1,100 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-dorrick-court-so15/2891611
 - **Type:** flat
 - **Beds/Baths:** 1 bed
 - **Furnished:** Yes
 - **Parking:** off-street
 - **EPC:** C
-- **Deposit:** £920
-- **Available:** Today
-- **Postcode area:** SO14
-- **Image:** https://imagescdn.openrent.co.uk/listings/2839267/o_1jkgpd77l115s156u13qh17js16k00.JPG
-
-**Description:**
-We are proud to offer this delightful 1 bedroom, 1 bathroom flat in a great location.
-Available to move in from 22 April 2026, this property benefits from available parking. Property is offered furnished.
-Viewing highly recommended. Contact OpenRent today for more details or to arrange a viewing!
-Summary
-Rent £920.00 per month (£212.31 per week)
-Deposit / Bond is £920.00
-Minimum tenancy is 6 months
-Maximum number of tenants is 2
-
----
-
-## Archers Road, Southampton — £1,000 pcm
-- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-archers-road-so15/2885571
-- **Type:** flat
-- **Beds/Baths:** 1 bed
-- **Furnished:** Yes
-- **Parking:** off-street
-- **EPC:** B
-- **Deposit:** £1153
-- **Available:** 29 June, 2026
+- **Deposit:** £1100
+- **Available:** 12 June, 2026
 - **Postcode area:** SO15
-- **Image:** https://imagescdn.openrent.co.uk/listings/2885571/o_1jnt1bli815m56jluq11pvf720.JPG
 
 **Description:**
-Spacious Furnished One-Bedroom Apartment – Archers Road
-A well-presented one-bedroom apartment on the first floor of a modern purpose, built development in the sought after Archers Road area, close to The Avenue and the University.
-The property offers a bright living space, modern fitted kitchen with appliances (electric oven, gas hob, fridge/freezer), a generous double bedroom, and a bathroom with shower over bath. Recently refurbished with stylish laminate flooring throughout.
-Further benefits include gas central heating, double glazing, secure entry, communal garden, and allocated parking.
-Ideally located with easy access to Southampton city centre, local amenities, the University (approx. 30 mins walk / 15 mins bus), Southampton Common, and excellent transport links.
-Full Referencing and credit checks will be required. Tenants must have a good credit rating or a suitable guarantor.
-Available from late June.
+Stunning 1 Bedroom top floor apartment on Archers Road near Bedford Place.
+Furnished to a high standard.
+This apartament comes fully equipped with everything you need including a TV, all kitchen equipment including pots, pans, kettle, toaster, microwave and cutlery ect.
+Move in with just your belongings.
+Centrally located with just a 10 minuet walk to train station and few minuets walk into the town centre. 2 minute walk into Bedford Place with many restaurants, shops and hairdressers.
+Ocean Village and Oxford Street also within walking distance.
+Possibility of car parking space if required.
+Available now
+Full Referencing and Credit Checks will be required. Tenants must have a good credit rating or a suitable Guarantor.
 
 **Key features:**
 - Garden
+
+---
+
+## Queens Terrace, Southampton — £595 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-flat-queens-terrace-so14/2835286
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** none
+- **Deposit:** £595
+- **Available:** Today
+- **Postcode area:** SO14
+
+**Description:**
+Single room available.
+This room comes with an ensuite bathroom, wardrobe, desk, chairs etc.
+You will be sharing the kitchen with another tenant.
+In a great location situated near ocean village and a short walk into Southampton city centre and Southampton Solent university.
+This is available to students or professionals.
+
+**Key features:**
+- Smokers allowed
+- Bills included
 
 ---
 
@@ -2573,6 +2889,29 @@ Maximum number of tenants is 2
 
 ---
 
+## Burgess Road, Southampton — £750 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-burgess-road-so16/2899302
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** At tenant choice
+- **Parking:** off-street
+- **Deposit:** £750
+- **Available:** 31 May, 2026
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2899302/o_1jomcvfvdtab1eu8nil1qf61hsv3.JPG
+
+**Description:**
+Large triple-size room with private ensuite (including bathtub), kitchenette and parking, available in a family home in Bassett, Southampton.
+Located opposite the Common and around a 7-minute walk to local shops including Sainsbury’s Local and the Post Office.
+This is a home with mum, two young children and one cat, so finding the right person to share the space with us is important.
+Please get in touch to find out more and tell us a bit about yourself. Thank you 🙂
+
+**Key features:**
+- Garden
+- Bills included
+
+---
+
 ## Joseph Court, Southampton — £1,050 pcm
 - **Link:** https://www.openrent.co.uk/property-to-rent/southampton/1-bed-flat-joseph-court-so17/2893737
 - **Type:** flat
@@ -2637,6 +2976,55 @@ Message now to arrange a viewing.
 **Key features:**
 - Garden
 - Bills included
+
+---
+
+## Broadlands Road, Southampton — £515 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/room-in-a-shared-house-broadlands-road-so17/2762139
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Parking:** none
+- **Deposit:** £595
+- **Available:** Today
+- **Postcode area:** SO17
+
+**Description:**
+We are pleased to offer this room in a house with 5 bedrooms and 2 bathrooms.
+Each room allows for one tenant maximum.
+This is a house with 5 bedrooms, and 1 dining room. -9 mins walking distance to the main campus of Southampton University -5 mins by walking to supermarkets and restaurants and fast food, 3 mins bus stops. -Gas central heating -All white goods, inc. Dishwasher, fully furnished -Beautiful garden with different seasonal plants
+
+**Key features:**
+- Garden
+- Pets allowed
+- Smokers allowed
+
+---
+
+## Southampton, Southampton — £825 pcm
+- **Link:** https://www.openrent.co.uk/property-to-rent/southampton/studio-flat-southampton-so16/2736527
+- **Type:** studio
+- **Beds/Baths:** 1 bed
+- **Furnished:** At tenant choice
+- **Parking:** none
+- **EPC:** D
+- **Deposit:** £951
+- **Available:** Today
+- **Postcode area:** SO16
+- **Image:** https://imagescdn.openrent.co.uk/listings/2736527/o_1jdgcss8plqe1erf1r5p11rpc0m0.JPG
+
+**Description:**
+We are proud to offer this delightful 1 bedroom, 1 bathroom studio flat in a great location.
+Available to move in from 09 January 2026, this property benefits from garden access. Property is offered furnished or unfurnished (tenant can decide).
+Viewing highly recommended. Contact OpenRent today for more details or to arrange a viewing!
+Summary
+Rent £825.00 per month (£190.38 per week)
+Deposit / Bond is £951.92
+Minimum tenancy is 6 months
+Maximum number of tenants is 2
+
+**Key features:**
+- Garden
 
 ---
 

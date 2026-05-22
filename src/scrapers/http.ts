@@ -11,6 +11,8 @@
  *   `gt_p`/`gt_s`) persist across requests.
  */
 
+import { logFetch, logFetchError } from "./log.ts";
+
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
@@ -98,6 +100,7 @@ export async function fetchText(
       await new Promise(r => setTimeout(r, jitter(800 * Math.pow(2, attempt - 1))));
     }
     state.lastAt = Date.now();
+    const t0 = Date.now();
     try {
       const res = await fetch(url, {
         headers,
@@ -115,12 +118,15 @@ export async function fetchText(
       }
 
       if (res.status === 429 || res.status >= 500) {
+        logFetch({ url, status: res.status, ms: Date.now() - t0, bytes: 0, attempt: attempt + 1 });
         lastErr = new Error(`HTTP ${res.status}`);
         continue;
       }
       const body = await res.text();
+      logFetch({ url, status: res.status, ms: Date.now() - t0, bytes: body.length, attempt: attempt + 1 });
       return { status: res.status, url: res.url, body };
     } catch (err) {
+      logFetchError({ url, attempt: attempt + 1, err: (err as Error).message ?? String(err) });
       lastErr = err;
     }
   }

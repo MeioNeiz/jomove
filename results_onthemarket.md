@@ -1,7 +1,7 @@
 # OnTheMarket — Southampton Rentals
-_Scraped 2026-05-21_
+_Scraped 2026-05-22_
 
-## Anglesea Terrace, Southampton, SO14 — ££1,000 pcm (£231 pw) pcm
+## Anglesea Terrace, Southampton, SO14 — £1,000 pcm
 - **Link:** https://www.onthemarket.com/details/19292001/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -18,7 +18,319 @@ _Scraped 2026-05-21_
 
 ---
 
-## Southbrook Rise, Southampton SO15 — ££950 pcm (£219 pw) pcm
+## Atlantic Mansions, Albert Road South, Southampton, SO14 — £925 pcm
+- **Link:** https://www.onthemarket.com/details/17623679/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO14
+- **Agent:** Tenant Direct
+- **Image:** https://media.onthemarket.com/properties/17623679/1616490181/image-0-81x55.jpg
+
+**Description:**
+<p>* The rent includes gas and water *</p><p>A one bed apartment in the City Centre located just minutes walk from Ocean Village. Contemporary kitchen, laminate flooring, CCTV, intercom, lifts, d/g, Gas central heating, economy 7 electric, sky, parking, f/unfurnished. </p><p>No Parking<br/></p>
+
+---
+
+## Neptune House, 1 Neptune Way, Southampton, SO14 — £925 pcm
+- **Link:** https://www.onthemarket.com/details/19547517/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO14
+- **Agent:** Leaders
+- **Image:** https://media.onthemarket.com/properties/19547517/1616471769/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19547517/1616471769/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19547517/1616471769/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19547517/1616471769/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19547517/1616471769/image-4-81x55.jpg
+
+**Description:**
+* NO DEPOSIT OPTION AVAILABLE *<br/><br/>Situated on the third floor of the popular Neptune House, this good sized one bedroom apartment is available for rental.<br/><br/>The accomodation comprises: Entrance hall, double bedroom with built in wardrobes, modern bathroom with shower over the bath, and open plan kitchen/living area. There is a balcony which can be accessed from the living room, and the kitchen has integrated appliances included. <br/><br/>Further benefits include lift access to all floors and a secure entry system. <br/><br/>Please note that there is no parking available with this property. <br/><br/>EPC Rating: C<br/><br/>Rent excludes the tenancy deposit and any other permitted payments. A Holding Deposit of £213.46 based on the advertised rent, is required to reserve this property. Longer term tenancies preferred. Deposit payable is £1,067.30 or this property is available with our No Deposit Option.
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Shirley Road, Southampton SO15 — £925 pcm
+- **Link:** https://www.onthemarket.com/details/18595289/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO15
+- **Agent:** Enfields Estate Agents
+- **Image:** https://media.onthemarket.com/properties/18595289/1616381836/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18595289/1616381836/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18595289/1616381836/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18595289/1616381836/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18595289/1616381836/image-4-81x55.jpg
+
+**Description:**
+ENFIELDS PRESENT - SECOND FLOOR FLAT. ONE BEDROOM. BALCONY. PURPOSE BUILT. LIVING/DINING ROOM. SEPARATE KITCHEN. BATHROOM/WC. WALK-IN WARDROBE. A well presented one bedroom flat in Shirley Road, Southampton. Council Tax Band A. EPC Rating D. <br/><br/><br/><b>INTERNAL</b> <br/>The property is accessed via the communal entrance and the property is located on the second floor, accessible via the staircase. The property consists of an entrance hall, living/dining room with window & door to balcony, kitchen with window, bathroom/wc, dual aspect bedroom with walk-in wardrobe, containing the washing machine. <br/><b>EXTERNAL</b> <br/>There is a communal garden and a residents car park, subject to permit.<br/><b>LOCATION</b> <br/>Located to the west of the city centre, Shirley is one of Southampton¿s largest and most bustling suburbs. It is centred around Shirley High Street, which offers a broad selection of independent shops, cafés, supermarkets, and services that give the area a lively and self-sufficient feel. The neighbourhood is known for its diversity, family-friendly atmosphere, and wide variety of housing, ranging from period properties to modern flats. St James¿ Park provides a welcome green retreat in the heart of the community, and with good schools and transport connections, Shirley is a highly sought-after location for families and commuters alike.<br/><br/>Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.<br/><br/>The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.<br/><br/>Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city¿s bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.<br/><br/>Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Northcote Road, Southampton, SO17 — £590 pcm
+- **Link:** https://www.onthemarket.com/details/19292553/
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO17
+- **Agent:** OpenRent
+- **Image:** https://media.onthemarket.com/properties/19292553/1608876017/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19292553/1612763535/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19292553/1612763535/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19292553/1612763535/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19292553/1612763535/image-4-81x55.jpg
+
+**Description:**
+Property Reference: 2864275.<br/><br/>Spacious 4 Bedroom HMO for Rent<br/>Bills include gas, electricity, water and council tax.<br/><br/>Perfect for professionals or students!<br/><br/>A bright and modern 4-bedroom home located in a quiet and friendly neighbourhood, ideal for working professionals or students looking to share. The house has gone for complete renovation and fully furnished, offering a comfortable and homely atmosphere.<br/><br/>Spacious living room with plenty of natural light.<br/><br/>Fully equipped kitchen (fridge-freezer, oven, microwave, washing machine).<br/><br/>3 piece suite bathroom and a separate WC.<br/>Private garden.<br/><br/>2 hours On-street parking (permanent permit available from Council)<br/><br/>Excellent transport links to Southampton City centre and within walking distance of Southampton main university. Close to shops and local amenities and 10 minutes walk to vibrant Portswood restaurants area.<br/><br/>Looking for clean, respectful and responsible tenants who will treat the house as their own home.<br/><br/>Next viewing: 22 May 26.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: 2 rooms available, from £590.00 each per month (£136.15 per week)<br/>- Deposit / Bond: from £590.00 per room<br/>- 4 Bedroom Property (2 rooms currently available for rent)<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- Smokers considered<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2864275 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-four thousand two hundred and seventy-five</i>
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Paignton Road, Hampshire SO16 — £895 pcm
+- **Link:** https://www.onthemarket.com/details/19545197/
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Your Move
+- **Image:** https://media.onthemarket.com/properties/19545197/1616332297/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19545197/1616332297/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19545197/1616332297/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19545197/1616332297/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19545197/1616332297/image-4-81x55.jpg
+
+**Description:**
+<br/>Step into a brand-new luxury HMO designed for modern professional living. Finished to an exceptional standard throughout, this stunning 5-bedroom property offers the perfect blend of comfort, style, and convenience. Every detail has been carefully considered to create a high-end living experience that stands out from the rest.<br/><br/>Each spacious bedroom comes complete with its own private ensuite bathroom, wall-mounted TV, superfast business broadband, and dedicated RJ45 internet connection points — perfect for professionals working from home or simply enjoying seamless entertainment. The property also benefits from a full mesh WiFi system, ensuring fast and reliable connectivity in every corner of the house.<br/><br/>At the heart of the home is a beautifully finished communal kitchen and lounge area, providing a stylish social space to relax, cook, and unwind. Outside, the large garden with outdoor furniture offers the ideal setting for summer evenings and social gatherings. With parking for up to 3 vehicles, all bills included (including Council Tax), excellent transport links, and premium finishes including LVT flooring, carpets, double glazing, and continuous hot water via an unvented cylinder system, this property delivers luxury shared living at its finest.<br/><br/>Properties finished to this specification rarely become available — early viewing is highly recommended<br/><br/><b>IMPORTANT NOTE TO POTENTIAL PURCHASERS & TENANTS:</b><br/> We endeavour to make our particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. The services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All photographs and measurements have been taken as a guide only and are not precise. Floor plans where included are not to scale and accuracy is not guaranteed. If you require clarification or further information on any points, please contact us, especially if you are traveling some distance to view. POTENTIAL PURCHASERS: Fixtures and fittings other than those mentioned are to be agreed with the seller. POTENTIAL TENANTS: All properties are available for a minimum length of time, with the exception of short term accommodation. Please contact the branch for details. A security deposit of at least one month’s rent is required. Rent is to be paid one month in advance. It is the tenant’s responsibility to insure any personal possessions. Payment of all utilities including water rates or metered supply and Council Tax is the responsibility of the tenant in most cases. <br/><br/>SOU260402/2
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Alma Road, Southampton, SO14 — £895 pcm
+- **Link:** https://www.onthemarket.com/details/19544851/
+- **Type:** maisonette
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO14
+- **Agent:** OpenRent
+- **Image:** https://media.onthemarket.com/properties/19544851/1616325265/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544851/1616325265/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544851/1616325265/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544851/1616325265/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544851/1616325265/image-4-81x55.jpg
+
+**Description:**
+Property Reference: 2905666.<br/><br/>We are proud to offer this delightful 1 bedroom, 1 bathroom maisonette in a great location.<br/><br/>Available to move in from 01 July 2026, this property benefits from available parking, and garden access. Property is offered furnished or unfurnished (tenant can decide).<br/><br/>Viewing highly recommended. Contact OpenRent today for more details or to arrange a viewing! <br/><br/><b>Summary</b><br/><br/>Rent £895.00 per month (£206.54 per week)<br/>Deposit / Bond is £895.00<br/><br/>Maximum number of tenants is 2<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £895.00 per month (£206.54 per week)<br/>- Deposit / Bond: £895.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes furnished or unfurnished (tenant can decide)<br/>- Available to move in from 01 July 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Family Friendly<br/>- Bills not included<br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: C<br/><br/> <b> If calling, please quote reference: 2905666 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million nine hundred and five thousand six hundred and sixty-six</i>
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Ranelagh Gardens, Southampton SO15 — £595 pcm
+- **Link:** https://www.onthemarket.com/details/19544773/
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO15
+- **Agent:** Jackson Bailey
+- **Image:** https://media.onthemarket.com/properties/19544773/1616324508/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544773/1616324508/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544773/1616324508/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544773/1616324508/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544773/1616324508/image-4-81x55.jpg
+
+**Description:**
+<p>AVAILABLE NOW! Tenant required for quick move! Fully furnished, top-floor double room situated in Ranelagh Gardens in the quiet, sought after location of Banister Park. The room benefits from it’s own en-suite shower room, there’s also a modern shared kitchen with tumble dryer and a shared garden. The advertised rent price includes all utility bills, internet, communal cleaning and council tax.The property has 6 bedrooms all of which have private shower rooms and are currently occupied by professional tenants. Income requirement circa £18k per annum. No couples. </p><br/>EPC Rating: C
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## High Street, Southampton, SO14 — £975 pcm
+- **Link:** https://www.onthemarket.com/details/19544507/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO14
+- **Agent:** Leaders
+- **Image:** https://media.onthemarket.com/properties/19544507/1616321820/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544507/1616321820/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544507/1616321820/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544507/1616321820/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544507/1616321820/image-4-81x55.jpg
+
+**Description:**
+* NO DEPOSIT OPTION AVAILABLE *<br/><br/>Leaders are delighted to offer for rent this stunning, 1-bedroom 1st floor apartment in the heart of the city.<br/><br/>Accommodation comprises of large open-plan lounge and kitchen, double bedroom, and modern bathroom.<br/><br/>This apartment comes with many benefits including integrated appliances (washer/dryer, fridge freezer, and dishwasher), underfloor heating in the bathroom,  a feature electric fire , electric panel heaters, double glazing,, intercom entry, SKY ready and fitted double wardrobe.<br/><br/>This is apartment finished to the very highest standard and early viewing is recommended to avoid disappointment. <br/><br/>EPC Rating - C<br/>Council Tax - A<br/>Holding Deposit - £225.00<br/>5 Week Deposit -£1125.00
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Handel Terrace, SOUTHAMPTON, SO15 — £500 pcm
+- **Link:** https://www.onthemarket.com/details/19544321/
+- **Type:** house
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO15
+- **Agent:** Morris Dibben
+- **Image:** https://media.onthemarket.com/properties/19544321/1616319401/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544321/1616319401/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544321/1616319401/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544321/1616319401/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544321/1616319401/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>Located in the highly sought-after Polygon area of Southampton, this well-presented Victorian end-of-terrace house offers a selection of spacious rooms to rent within a well-maintained house share.</p><p>The property features generous and versatile accommodation, including a large open-plan kitchen with communal dining and living space, ideal for modern shared living. There are also two shower rooms, providing convenience across the property.</p><p>Each room is well-proportioned with good natural light, and the property retains character features throughout, complemented by practical communal areas.</p><p>Externally, the house benefits from an enclosed rear garden, offering outdoor space. The property is ideally positioned within walking distance of Southampton city centre, Southampton Central train station, local shops, restaurants, and excellent transport links. Council Tax Band:  Holding Deposit: £0.00</p><p>Rooms to rent Southampton</p><p>House share Polygon Southampton</p><p>Available now</p><p>Walking distance to train station</p><p>Southampton city centre location</p><p>Close to shops, bars and restaurants</p><p>Spacious rooms available</p><p>Shared kitchen and living space</p><p>Two shower rooms</p><p>Popular Polygon location</p>
+
+---
+
+## Handel Terrace, SOUTHAMPTON, SO15 — £500 pcm
+- **Link:** https://www.onthemarket.com/details/19544325/
+- **Type:** house
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO15
+- **Agent:** Morris Dibben
+- **Image:** https://media.onthemarket.com/properties/19544325/1616319407/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544325/1616319407/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544325/1616319407/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544325/1616319407/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544325/1616319407/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>Located in the highly sought-after Polygon area of Southampton, this well-presented Victorian end-of-terrace house offers a selection of spacious rooms to rent within a well-maintained house share.</p><p>The property features generous and versatile accommodation, including a large open-plan kitchen with communal dining and living space, ideal for modern shared living. There are also two shower rooms, providing convenience across the property.</p><p>Each room is well-proportioned with good natural light, and the property retains character features throughout, complemented by practical communal areas.</p><p>Externally, the house benefits from an enclosed rear garden, offering outdoor space. The property is ideally positioned within walking distance of Southampton city centre, Southampton Central train station, local shops, restaurants, and excellent transport links. Council Tax Band:  Holding Deposit: £0.00</p><p>Rooms to rent Southampton</p><p>House share Polygon Southampton</p><p>Available now</p><p>Southampton city centre location</p><p>Walking distance to train station</p><p>Close to shops, bars and restaurants</p><p>Spacious rooms available</p><p>Shared kitchen and living space</p><p>Two shower rooms</p><p>Popular Polygon location</p>
+
+---
+
+## Handel Terrace, Southampton, SO15 — £500 pcm
+- **Link:** https://www.onthemarket.com/details/19544326/
+- **Type:** house
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO15
+- **Agent:** Morris Dibben
+- **Image:** https://media.onthemarket.com/properties/19544326/1616319408/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544326/1616319408/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544326/1616319408/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544326/1616319408/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544326/1616319408/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>Located in the highly sought-after Polygon area of Southampton, this well-presented Victorian end-of-terrace house offers a selection of spacious rooms to rent within a well-maintained house share.</p><p>The property features generous and versatile accommodation, including a large open-plan kitchen with communal dining and living space, ideal for modern shared living. There are also two shower rooms, providing convenience across the property.</p><p>Each room is well-proportioned with good natural light, and the property retains character features throughout, complemented by practical communal areas.</p><p>Externally, the house benefits from an enclosed rear garden, offering outdoor space. The property is ideally positioned within walking distance of Southampton city centre, Southampton Central train station, local shops, restaurants, and excellent transport links.</p><p>restaurants, and excellent transport links. Council Tax Band:  Holding Deposit: £115.00</p><p>Rooms to rent Southampton</p><p>House share Polygon Southampton</p><p>Available now</p><p>Southampton city centre location</p><p>Walking distance to train station</p><p>Close to shops, bars and restaurants</p><p>Spacious rooms available</p><p>Shared kitchen and living space</p><p>Two shower rooms</p><p>Popular Polygon location</p>
+
+---
+
+## Bernard Street, Hampshire SO14 — £995 pcm
+- **Link:** https://www.onthemarket.com/details/19544184/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO14
+- **Agent:** Charters
+- **Image:** https://media.onthemarket.com/properties/19544184/1616316763/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544184/1616316763/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544184/1616316763/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544184/1616316763/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19544184/1616316763/image-4-81x55.jpg
+
+**Description:**
+This modern one-bedroom apartment is well positioned in the heart of Southampton, ideally located within walking distance of the popular amenities of Ocean Village and Oxford Street.<br/><br/>The accommodation comprises a good-sized double bedroom with built-in wardrobe storage, a spacious open-plan lounge and dining area and a modern fitted kitchen featuring a range of wall and base units along with integrated white goods and breakfast bar. The property further benefits from a contemporary three-piece shower room consisting of a shower enclosure, wash basin, and WC.<br/><br/>The apartment is offered to the market on a furnished or unfurnished basis and will be available from July 2026.<br/><br/>Security Deposit: £1,148.07 (based on advertised rental price) <br/>Holding Deposit: £229.61 (based on advertised rental price)  <br/>Council Tax Band: A  <br/><br/>ADDITIONAL INFORMATION  <br/><br/>Materials used in construction: Ask Agent  <br/><br/>For further information on broadband and mobile coverage, please refer to the Ofcom Checker online<br/><br/>Southampton is a vibrant and well-connected coastal city on the south coast of England, offering an excellent mix of modern convenience, green open spaces and rich maritime heritage. The city provides a wide range of shopping, dining and leisure facilities, including the popular Westquay shopping centre, independent restaurants, cafés and entertainment venues. Southampton also benefits from numerous parks and outdoor spaces, with Southampton Common offering over 300 acres of woodland, parkland and walking routes. Excellent transport links make the city particularly convenient, with direct rail services to London, easy access to the M3 and M27 motorway networks, and Southampton Airport located nearby. The city’s waterfront setting, bustling marina and strong employment opportunities continue to make Southampton one of the South Coast’s most desirable and dynamic places to live.
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Handel Terrace, SOUTHAMPTON, SO15 — £500 pcm
+- **Link:** https://www.onthemarket.com/details/19543886/
+- **Type:** house
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO15
+- **Agent:** Morris Dibben
+- **Image:** https://media.onthemarket.com/properties/19543886/1616310768/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19543886/1616310768/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19543886/1616310768/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19543886/1616310768/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19543886/1616310768/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>Located in the highly sought-after Polygon area of Southampton, this well-presented Victorian end-of-terrace house offers a selection of spacious rooms to rent within a well-maintained house share.</p><p>The property features generous and versatile accommodation, including a large open-plan kitchen with communal dining and living space, ideal for modern shared living. There are also two shower rooms, providing convenience across the property.</p><p>Each room is well-proportioned with good natural light, and the property retains character features throughout, complemented by practical communal areas.</p><p>Externally, the house benefits from an enclosed rear garden, offering outdoor space. The property is ideally positioned within walking distance of Southampton city centre, Southampton Central train station, local shops, restaurants, and excellent transport links. Council Tax Band:  Holding Deposit: £0.00</p><p>Rooms to rent Southampton</p><p>House share Polygon Southampton</p><p>Available now</p><p>Southampton city centre location</p><p>Walking distance to train station</p><p>Close to shops, bars and restaurants</p><p>Spacious rooms available</p><p>Shared kitchen and living space</p><p>Popular Polygon location</p><p>Popular Polygon location</p>
+
+---
+
+## Pansy Road, Hampshire SO16 — £650 pcm
+- **Link:** https://www.onthemarket.com/details/19541364/
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Charters
+- **Image:** https://media.onthemarket.com/properties/19541364/1616269665/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19541364/1616269665/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19541364/1616269665/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19541364/1616269665/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19541364/1616269665/image-4-81x55.jpg
+
+**Description:**
+This spacious ground floor double room is situated within a well-presented semi-detached residence in the popular area of Pansy Road and is offered on a furnished basis.<br/><br/>The room is well laid out and includes a double bed, desk with chair, and storage shelves, making it ideal for comfortable day-to-day living.<br/><br/>The property comprises a total of five bedrooms and benefits from one to two shared W.C./shower rooms, as well as a shared kitchen fitted with essential appliances and laundry facilities. Residents also have access to well-maintained communal gardens, providing pleasant outdoor space, and on-street parking is available nearby.<br/><br/>The rental price is inclusive of all bills, offering convenient and hassle-free living. Available immediately.<br/><br/>Security Deposit: £750.00 (based on advertised rental price) <br/>Holding Deposit: £150.00 (based on advertised rental price)  <br/>Council Tax Band: B  <br/><br/>ADDITIONAL INFORMATION  <br/><br/>Materials used in construction: Ask Agent  <br/><br/>For further information on broadband and mobile coverage, please refer to the Ofcom Checker online<br/><br/>Southampton is a vibrant port city on England’s south coast, known for its rich maritime heritage and modern, energetic character. Best known as the departure point of the Titanic, the city has played a key role in British and global maritime history for centuries, reflected in its historic docks, medieval city walls, and landmarks such as the Tudor House and SeaCity Museum. Today, Southampton combines this history with a youthful feel shaped by its two major universities, a diverse population, and a lively arts, music, and dining scene. The city offers plenty of green spaces, including Southampton Common, and benefits from excellent transport links, a busy cruise port, and close proximity to the New Forest, the Solent, and the Isle of Wight, making it both a dynamic urban centre and a gateway to nature.
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Southbrook Rise, Southampton SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/19540717/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -47,7 +359,7 @@ LetCo is pleased to offer this modern one bedroom ground floor apartment situate
 
 ---
 
-## Carrington House, Westwood Road, Southampton, SO17 — ££1,100 pcm (£254 pw) pcm
+## Carrington House, Westwood Road, Southampton, SO17 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/18172831/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -66,7 +378,7 @@ An unfurnished apartment with two bedrooms in a modern block in a very sought af
 
 ---
 
-## King Street, Southampton SO14 — ££900 pcm (£208 pw) pcm
+## King Street, Southampton SO14 — £900 pcm
 - **Link:** https://www.onthemarket.com/details/19540212/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -91,7 +403,7 @@ Welcome to this stylish one-bedroom upper-floor flat, available to let immediate
 
 ---
 
-## Commodore Court, Captains Place, Southampton, SO14 — ££1,150 pcm (£265 pw) pcm
+## Commodore Court, Captains Place, Southampton, SO14 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/7847595/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -107,7 +419,7 @@ Welcome to this stylish one-bedroom upper-floor flat, available to let immediate
 
 ---
 
-## Oxford St, Southampton, SO14 — ££900 pcm (£208 pw) pcm
+## Oxford St, Southampton, SO14 — £900 pcm
 - **Link:** https://www.onthemarket.com/details/18834815/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -119,7 +431,7 @@ Welcome to this stylish one-bedroom upper-floor flat, available to let immediate
 - **Image:** https://media.onthemarket.com/properties/18834815/1596698775/image-3-81x55.jpg
 
 **Description:**
-Property Reference: 2170040.<br/><br/><p>1 Bedroom Apartment to Rent - Prime Oxford Street Location -  £900 (Bills Included)</p> <p><br/></p> <p>A newly renovated 1 bedroom, 1 bathroom apartment available in the heart of - one of 's most vibrant and sought-after locations.</p> <p><br/></p> <p> Rent: £900 per month (Bills Included)</p> <p> Deposit: £900 (1 month's rent)</p> <p> Selected white goods included</p> <p>Recently renovated to a modern standard, the property offers comfortable city living in a prime central location.</p> <p><br/></p> <p> Location Highlights:</p> <p><br/></p> <ul><li>Situated in the heart of Oxford Street</li><li>Surrounded by popular bars and restaurants</li><li>Town centre just a 10-minute walk away</li><li>Excellent transport links nearby</li></ul> <p><br/></p> <p>Please note: Due to its central location, the property can be lively, with some noise on Friday and Saturday evenings until approximately midnight - ideal for those who enjoy being in the centre of the action.</p> <p><br/></p> <p>Perfect for a working professional or couple looking to live in a vibrant area with everything on your doorstep.</p> <p><br/></p> <p> Get in touch today to arrange a viewing</p><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £900.00 per month (£207.69 per week)<br/>- Deposit / Bond: £900.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: EPC Not Required (Property is a listed building)<br/><br/> <b> If calling, please quote reference: 2170040 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million one hundred and seventy thousand and forty</i>
+Property Reference: 2170040.<br/><br/><p>1 Bedroom Apartment to Rent - Prime Oxford Street Location -  £900 (Bills Included)</p> <p><br/></p> <p>A newly renovated 1 bedroom, 1 bathroom apartment available in the heart of - one of 's most vibrant and sought-after locations.</p> <p><br/></p> <p> Rent: £900 per month (Bills Included)</p> <p> Deposit: £900 (1 month's rent)</p> <p> Selected white goods included</p> <p>Recently renovated to a modern standard, the property offers comfortable city living in a prime central location.</p> <p><br/></p> <p> Location Highlights:</p> <p><br/></p> <ul><li>Situated in the heart of Oxford Street</li><li>Surrounded by popular bars and restaurants</li><li>Town centre just a 10-minute walk away</li><li>Excellent transport links nearby</li></ul> <p><br/></p> <p>Please note: Due to its central location, the property can be lively, with some noise on Friday and Saturday evenings until approximately midnight - ideal for those who enjoy being in the centre of the action.</p> <p><br/></p> <p>Perfect for a working professional or couple looking to live in a vibrant area with everything on your doorstep.</p> <p><br/></p> <p> Get in touch today to arrange a viewing</p><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £900.00 per month (£207.69 per week)<br/>- Deposit / Bond: £900.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: EPC Not Required (Property is a listed building)<br/><br/> <b> If calling, please quote reference: 2170040 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million one hundred and seventy thousand and forty</i>
 
 **Key features:**
 - [object Object]
@@ -129,7 +441,7 @@ Property Reference: 2170040.<br/><br/><p>1 Bedroom Apartment to Rent - Prime Oxf
 
 ---
 
-## High Street, Southampton, SO14 — ££1,100 pcm (£254 pw) pcm
+## High Street, Southampton, SO14 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19536874/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -151,7 +463,7 @@ Property Reference: 2904927.<br/><br/><b>Charming 1-Bedroom Flat for Rent in Tow
 
 ---
 
-## High Street, Southampton, SO14 — ££1,100 pcm (£254 pw) pcm
+## High Street, Southampton, SO14 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19536898/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -173,7 +485,7 @@ Property Reference: 2904935.<br/><br/><b>Charming 1-Bedroom Flat for Rent in Tow
 
 ---
 
-## Channel Way, Southampton SO14 — ££950 pcm (£219 pw) pcm
+## Channel Way, Southampton SO14 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/19350219/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -198,7 +510,7 @@ Located in the popular area of Ocean Village, this first floor, one-bedroom apar
 
 ---
 
-## Alexandra House, Southampton, SO14 — ££575 pcm (£133 pw) pcm
+## Alexandra House, Southampton, SO14 — £575 pcm
 - **Link:** https://www.onthemarket.com/details/19531664/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 1 bath
@@ -221,7 +533,7 @@ Property Reference: 2894669.<br/><br/>We are proud to offer this delightful room
 
 ---
 
-## Maddalena House, Southampton, SO15 — ££1,000 pcm (£231 pw) pcm
+## Maddalena House, Southampton, SO15 — £1,000 pcm
 - **Link:** https://www.onthemarket.com/details/19531169/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -234,7 +546,7 @@ Property Reference: 2894669.<br/><br/>We are proud to offer this delightful room
 
 ---
 
-## Bedford Place, Southampton, SO15 — ££850 pcm (£196 pw) pcm
+## Bedford Place, Southampton, SO15 — £850 pcm
 - **Link:** https://www.onthemarket.com/details/19531177/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -251,7 +563,7 @@ Property Reference: 2894669.<br/><br/>We are proud to offer this delightful room
 
 ---
 
-## Chapel Annexe, 8 Anglesea Terrace, SO14 — ££900 pcm (£208 pw) pcm
+## Chapel Annexe, 8 Anglesea Terrace, SO14 — £900 pcm
 - **Link:** https://www.onthemarket.com/details/19355870/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -280,7 +592,7 @@ Property Reference: 2894669.<br/><br/>We are proud to offer this delightful room
 
 ---
 
-## Chapel Annexe, 8 Anglesea Terrace, SO14 — ££900 pcm (£208 pw) pcm
+## Chapel Annexe, 8 Anglesea Terrace, SO14 — £900 pcm
 - **Link:** https://www.onthemarket.com/details/19528556/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -309,7 +621,36 @@ Property Reference: 2894669.<br/><br/>We are proud to offer this delightful room
 
 ---
 
-## Southampton SO14 — ££750 pcm (£173 pw) pcm
+## CLOSE TO GENERAL HOSPITAL, SO16 — £850 pcm
+- **Link:** https://www.onthemarket.com/details/17662356/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Pearsons
+- **Image:** https://media.onthemarket.com/properties/17662356/1615904578/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/17662356/1615904578/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/17662356/1615904578/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/17662356/1615904578/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/17662356/1615904578/image-4-81x55.jpg
+
+**Description:**
+Pearsons lettings are pleased to offer this modern 1 bedroom 4th floor apartment offered part furnished.  The apartment is right opposite the General Hospital.  The apartment benefits from owner storage cupboard but unfortunately there is no lift or parking.  Avail mid 22nd July 2026.<br/><br/>The property comprises of:<br/><br/>COMMUNAL HALLWAY - Security entryphone with stairs to 4th floor. No lift.<br/><br/>HALLWAY - Carpeted with 2 x storage cupboards. Doors to bathroom and into other rooms.   <br/><br/>BATHROOM - White suite which consists of bath with shower over, sink and toilet.<br/><br/>BEDROOM - Double bedroom with window to rear.  Wardrobe remains.<br/><br/>LOUNGE/OPENPLAN KITCHEN<br/><br/>LOUNGE - Carpet with door to juliette balcony.  Cupboard off housing boiler.<br/><br/>KITCHEN - Modern wall and base units.  Appliances consist of: gas hob, electric oven, fridge/freezer and washer/dryer.<br/><br/>STORAGE CUPBOARD - Own storage cupboard located off carpark.<br/><br/>PARKING - Regret no parking. althoough there are 2 communal spaces to front of block.<br/><br/>The property has gas central heating and is double glazed.   <br/><br/>EPC -  BAND B<br/><br/>COUNCIL TAX - A<br/><br/>DEPOSIT -  £980 (TO BE HELD UNDER TDS) <br/><br/>BROADBAND - 900 mbps - Openreach / TOOB  <br/>PHONES - Vodafone / EE / O2 / Three<br/><br/>A holding deposit of one week's rent will be required to secure the property. This fee is payable at the time of application for the tenancy and will be held for up to 15 calendar days whilst reference checks and preparation for the tenancy agreement are undertaken.<br/><br/>The holding deposit can be retained should the applicant fail the Right to Rent check, provide false or misleading information that would affect the Landlord's decision to grant the tenancy, the applicant withdraws from the tenancy, or the applicant fails to take all reasonable steps to enter into a tenancy agreement.
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Southampton SO14 — £750 pcm
 - **Link:** https://www.onthemarket.com/details/19526077/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -334,7 +675,7 @@ ENFIELDS PRESENT - FURNISHED ROOM TO LET. EN-SUITE SHOWER ROOM/WC. PORTSWOOD LOC
 
 ---
 
-## Southampton SO15 — ££995 pcm (£230 pw) pcm
+## Southampton SO15 — £995 pcm
 - **Link:** https://www.onthemarket.com/details/17009292/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -361,7 +702,7 @@ ENFIELDS PRESENT - GROUND FLOOR FLAT, TWO BEDROOMS, GARDEN, GAS CENTRAL HEATING,
 
 ---
 
-## 142 Hill Lane, Southampton SO15 — ££875 pcm (£202 pw) pcm
+## 142 Hill Lane, Southampton SO15 — £875 pcm
 - **Link:** https://www.onthemarket.com/details/19525998/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -387,7 +728,7 @@ ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY W
 
 ---
 
-## Rosida Gardens, Southampton, SO15 — ££950 pcm (£219 pw) pcm
+## Rosida Gardens, Southampton, SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/19382713/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -404,24 +745,7 @@ ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY W
 
 ---
 
-## Vale Drive, SOUTHAMPTON, SO18 — ££1,050 pcm (£242 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19210406/
-- **Type:** flat
-- **Beds/Baths:** 2 bed, 0 bath
-- **Postcode area:** SO18
-- **Agent:** Connells
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-4-81x55.jpg
-
-**Description:**
-<p>Zero Deposit Guarantee Available</p><p>Available Nowtwo Bedroomfirst Flooronstreet Parking</p><p>TWO BEDROOM first floor maisonette in Midanbury.the property benefits from a modern fitted kitchen with white goods, lounge, two double bedrooms both with storage and a family three piece bathroom.</p><p>On road parking and a private garden. Other benefits include Gas central heating and double glazing throughout. Available now. Council Tax Band: A Holding Deposit: £242.00</p><p>Available Now</p><p>Two Bedroom</p><p>First Floor</p><p>On Street Parking</p><p>Tax Band A</p><p>Epc C</p><p>Deposit £1211</p>
-
----
-
-## Berkeley Close, Southampton, SO15 — ££725 pcm (£167 pw) pcm
+## Berkeley Close, Southampton, SO15 — £725 pcm
 - **Link:** https://www.onthemarket.com/details/19521791/
 - **Type:** house
 - **Beds/Baths:** 1 bed, 0 bath
@@ -437,7 +761,7 @@ ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY W
 
 ---
 
-## Berkeley Close, Southampton, SO15 — ££625 pcm (£144 pw) pcm
+## Berkeley Close, Southampton, SO15 — £625 pcm
 - **Link:** https://www.onthemarket.com/details/19521356/
 - **Type:** house
 - **Beds/Baths:** 1 bed, 1 bath
@@ -451,7 +775,7 @@ ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY W
 
 ---
 
-## Thornbury Avenue, Hampshire SO15 — ££1,150 pcm (£265 pw) pcm
+## Thornbury Avenue, Hampshire SO15 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19521438/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -475,7 +799,7 @@ ENFIELDS PRESENT - FIRST FLOOR FLAT. ONE BEDROOM. EN-SUITE SHOWER ROOM/WC. BAY W
 
 ---
 
-## Albert Road South, Southampton, Hampshire, SO14 — ££1,150 pcm (£265 pw) pcm
+## Albert Road South, Southampton, Hampshire, SO14 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19518988/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -488,7 +812,7 @@ New to the market comes this Two Bedroom unfurnished upper floor apartment - Ava
 
 ---
 
-## Portland Street, Southampton, SO14 — ££875 pcm (£202 pw) pcm
+## Portland Street, Southampton, SO14 — £875 pcm
 - **Link:** https://www.onthemarket.com/details/19517845/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -505,7 +829,7 @@ New to the market comes this Two Bedroom unfurnished upper floor apartment - Ava
 
 ---
 
-## Atlantic Mansions, 151 Albert Road South, SO14 — ££1,150 pcm (£265 pw) pcm
+## Atlantic Mansions, 151 Albert Road South, SO14 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/18025904/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -526,7 +850,7 @@ New to the market comes this Two Bedroom unfurnished upper floor apartment - Ava
 
 ---
 
-## Millbrook Road East, Southampton SO15 — ££1,000 pcm (£231 pw) pcm
+## Millbrook Road East, Southampton SO15 — £1,000 pcm
 - **Link:** https://www.onthemarket.com/details/19229849/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -551,7 +875,7 @@ This is an lovely one bedroom apartment located in Link House, part of the Elmfi
 
 ---
 
-## Southampton SO15 — ££925 pcm (£213 pw) pcm
+## Southampton SO15 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/19514413/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -568,7 +892,7 @@ Enfields are pleased to offer this well presented furnished one bedroom flat in 
 
 ---
 
-## Atlantic Mansions, Southampton, SO14 — ££900 pcm (£208 pw) pcm
+## Atlantic Mansions, Southampton, SO14 — £900 pcm
 - **Link:** https://www.onthemarket.com/details/19513711/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -590,7 +914,7 @@ Property Reference: 2902162.<br/><br/>We are proud to offer this delightful 1 be
 
 ---
 
-## Harrison Road, Southampton, SO17 — ££750 pcm (£173 pw) pcm
+## Harrison Road, Southampton, SO17 — £750 pcm
 - **Link:** https://www.onthemarket.com/details/19512868/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 6 bath
@@ -614,7 +938,7 @@ Property Reference: 2901605.<br/><br/><b>Only 1 room remaining!!</b><br/><br/><b
 
 ---
 
-## Portswood Road, Hampshire SO17 — ££380 pcm (£88 pw) pcm
+## Portswood Road, Hampshire SO17 — £380 pcm
 - **Link:** https://www.onthemarket.com/details/19512230/
 - **Type:** property
 - **Beds/Baths:** 1 bed, 1 bath
@@ -636,7 +960,7 @@ Property Reference: 2901605.<br/><br/><b>Only 1 room remaining!!</b><br/><br/><b
 
 ---
 
-## Portswood Road, Hampshire SO17 — ££380 pcm (£88 pw) pcm
+## Portswood Road, Hampshire SO17 — £380 pcm
 - **Link:** https://www.onthemarket.com/details/19512231/
 - **Type:** property
 - **Beds/Baths:** 1 bed, 1 bath
@@ -658,7 +982,7 @@ Property Reference: 2901605.<br/><br/><b>Only 1 room remaining!!</b><br/><br/><b
 
 ---
 
-## Southbrook Rise, Southampton, SO15 1BX — ££950 pcm (£219 pw) pcm
+## Southbrook Rise, Southampton, SO15 1BX — £950 pcm
 - **Link:** https://www.onthemarket.com/details/19141415/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -683,7 +1007,7 @@ EMAIL ENQUIRIES  PLEASE. HARRISON ESTATE AGENTS ARE PLEASED TO OFFER A Modern Gr
 
 ---
 
-## The Blake Building, Ocean Way, Southampton, SO14 — ££1,100 pcm (£254 pw) pcm
+## The Blake Building, Ocean Way, Southampton, SO14 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/16099120/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -709,7 +1033,7 @@ EMAIL ENQUIRIES  PLEASE. HARRISON ESTATE AGENTS ARE PLEASED TO OFFER A Modern Gr
 
 ---
 
-## Brunel Road, Southampton SO15 — ££925 pcm (£213 pw) pcm
+## Brunel Road, Southampton SO15 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/19510580/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -732,7 +1056,7 @@ EMAIL ENQUIRIES  PLEASE. HARRISON ESTATE AGENTS ARE PLEASED TO OFFER A Modern Gr
 
 ---
 
-## Middle Street, Southampton, SO14 — ££825 pcm (£190 pw) pcm
+## Middle Street, Southampton, SO14 — £825 pcm
 - **Link:** https://www.onthemarket.com/details/19509184/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 5 bath
@@ -756,7 +1080,7 @@ Property Reference: 2901591.<br/><br/><p>Modern ensuite room including bills (Co
 
 ---
 
-## Carlton Road, Polygon, Southampton, SO15 — ££950 pcm (£219 pw) pcm
+## Carlton Road, Polygon, Southampton, SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/7864334/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -773,7 +1097,7 @@ Property Reference: 2901591.<br/><br/><p>Modern ensuite room including bills (Co
 
 ---
 
-## Upper Banister Street, Southampton, Hampshire, SO15 — ££875 pcm (£202 pw) pcm
+## Upper Banister Street, Southampton, Hampshire, SO15 — £875 pcm
 - **Link:** https://www.onthemarket.com/details/18127679/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -797,7 +1121,7 @@ Located within the highly sought-after Lance House development on Upper Banniste
 
 ---
 
-## Lodge Road, Hampshire SO14 — ££1,000 pcm (£231 pw) pcm
+## Lodge Road, Hampshire SO14 — £1,000 pcm
 - **Link:** https://www.onthemarket.com/details/19507511/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -824,7 +1148,7 @@ Charters are pleased to offer to market this modern and stylish one-bedroom firs
 
 ---
 
-## Lansdowne Hill, Southampton, Hampshire, SO14 — ££875 pcm (£202 pw) pcm
+## Lansdowne Hill, Southampton, Hampshire, SO14 — £875 pcm
 - **Link:** https://www.onthemarket.com/details/19173298/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -847,7 +1171,7 @@ Leaders are pleased to bring to the market this 1 bedroom flat to rent in Castle
 
 ---
 
-## Broadlands road, Southampton SO17 — ££1,095 pcm (£253 pw) pcm
+## Broadlands road, Southampton SO17 — £1,095 pcm
 - **Link:** https://www.onthemarket.com/details/10161489/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -864,7 +1188,24 @@ Leaders are pleased to bring to the market this 1 bedroom flat to rent in Castle
 
 ---
 
-## Lyon St, Southampton, SO14 — ££575 pcm (£133 pw) pcm
+## Danes Court, Southampton, SO15 — £850 pcm
+- **Link:** https://www.onthemarket.com/details/19320047/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO15
+- **Agent:** Austin & Wyatt
+- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>We are delighted to offer for let this second floor apartment, situated within a quiet yet thriving area of Southampton. With Southampton city centre within walking distance and all local bus routes close by this is a perfect little apartment. Southampton train station within arms reach and all the local clubs and pubs about a 10 minutes walk.</p><p>The property comprises of a good sized lounge, seperate kitchen with electric hob and oven, extractor fan, washing machine and fridge.</p><p>There is one double bedroom and bathroom with bath and mixer tap shower.</p><p>Parking is available. Council Tax Band: A Holding Deposit: £196.00</p><p>Available Now</p><p>Unfurnished</p><p>One double bedroom</p><p>Lounge</p><p>Kitchen with appliances</p><p>Parking</p><p>Central location</p><p>Economy 7 heating</p><p>Close to amenities</p>
+
+---
+
+## Lyon St, Southampton, SO14 — £575 pcm
 - **Link:** https://www.onthemarket.com/details/19389149/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 1 bath
@@ -877,7 +1218,7 @@ Leaders are pleased to bring to the market this 1 bedroom flat to rent in Castle
 - **Image:** https://media.onthemarket.com/properties/19389149/1611728075/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2881822.<br/><br/>* DOUBLE ROOM IN CENTRAL HOUSE SHARE*<br/><br/>Large double furnished room (1st floor)<br/>Open plan kitchen/living area<br/>Court yard garden<br/>Modern bathroom<br/>Separate wc<br/>Furnished<br/>All bills included<br/>Available Now <br/><br/>Single occupancy only <br/>Assured Periodic Tenancy (with two months notice from tenant required)<br/><br/>£575.00 per month<br/>£575.00 Deposit<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £575.00 per month (£132.69 per week)<br/>- Deposit / Bond: £575.00<br/>- 3 Bedroom Property (1 room currently available for rent)<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 1<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2881822 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and eighty-one thousand eight hundred and twenty-two</i>
+Property Reference: 2881822.<br/><br/>* DOUBLE ROOM IN CENTRAL HOUSE SHARE*<br/><br/>Large double furnished room (1st floor)<br/>Open plan kitchen/living area<br/>Court yard garden<br/>Modern bathroom<br/>Separate wc<br/>Furnished<br/>All bills included<br/>Available Now <br/><br/>Single occupancy only <br/>Assured Periodic Tenancy (with two months notice from tenant required)<br/><br/>£575.00 per month<br/>£575.00 Deposit<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £575.00 per month (£132.69 per week)<br/>- Deposit / Bond: £575.00<br/>- 3 Bedroom Property (1 room currently available for rent)<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 1<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2881822 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and eighty-one thousand eight hundred and twenty-two</i>
 
 **Key features:**
 - [object Object]
@@ -888,20 +1229,20 @@ Property Reference: 2881822.<br/><br/>* DOUBLE ROOM IN CENTRAL HOUSE SHARE*<br/>
 
 ---
 
-## Fir Tree Court, Southampton, SO18 — ££1,150 pcm (£265 pw) pcm
+## Fir Tree Court, Southampton, SO18 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19447974/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
 - **Postcode area:** SO18
 - **Agent:** OpenRent
-- **Image:** https://media.onthemarket.com/properties/19447974/1613624185/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19447974/1613624185/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19447974/1613624185/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19447974/1613624185/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19447974/1613624185/image-4-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19447974/1616266177/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19447974/1616266177/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19447974/1616352688/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19447974/1616352688/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19447974/1616352688/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2892314.<br/><br/><p><b>Spacious 2 Bedroom Apartment with Balcony & Parking - Southampton</b></p><p></p><ul><li><b><i>Property is undergoing a full redecoration now</i></b></li><li><b><i>Private Balcony with pleasant green outlook</i></b></li><li><b><i>Brand New Boiler</i></b></li><li><b><i>Two Good Sized Bedrooms</i></b></li><li><b><i>Available from 17th of May</i></b></li></ul><p></p> <p>A generously sized two double bedroom first-floor apartment, offered with no forward chain and available in a convenient residential location in Southampton.</p> <p>The property features a welcoming entrance hallway providing access to all rooms. The open-plan lounge and dining area is bright and spacious, offering plenty of room for both relaxing and entertaining. From here, you can access a private balcony, perfect for outdoor seating.</p> <p>The modern fitted kitchen includes an integrated hob and oven, along with ample storage space, making it both practical and stylish.</p> <p>There are two well-proportioned double bedrooms, ideal for sharers, couples, or small families.</p> <p>The bathroom is fully tiled and fitted with a clean, modern three-piece suite.</p><ul></ul> <p>This is a comfortable, well-maintained apartment offering good space, natural light, and practical living in a popular Southampton location.</p> Available from 17th of May!<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £1,150.00 per month (£265.38 per week)<br/>- Deposit / Bond: £1,325.00<br/>- 2 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 24 May 2026<br/>- Maximum number of tenants is 2<br/>- No Students<br/>- No Pets, sorry<br/>- No Smokers<br/>- Family Friendly<br/>- Bills not included<br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: C<br/><br/> <b> If calling, please quote reference: 2892314 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and ninety-two thousand three hundred and fourteen</i>
+Property Reference: 2892314.<br/><br/><p><b>Spacious 2 Bedroom Apartment with Balcony - West End Road</b></p><p></p><ul><li><b><i>Property is undergoing a full redecoration now</i></b></li><li><b><i>Private Balcony with pleasant green outlook</i></b></li><li><b><i>Brand New Boiler</i></b></li><li><b><i>Two Good Sized Bedrooms</i></b></li><li><b><i>Available NOW</i></b></li></ul><p></p> <p>A generously sized two double bedroom first-floor apartment, offered with no forward chain and available in a convenient residential location in Southampton.</p> <p>The property features a welcoming entrance hallway providing access to all rooms. Well sized living area is bright and spacious, offering plenty of room for both relaxing and entertaining. From here, you can access a private balcony, perfect for outdoor seating.</p> <p>The modern fitted kitchen includes an integrated hob and oven, along with ample storage space, making it both practical and stylish.</p> <p>There are two well-proportioned double bedrooms, ideal for sharers, couples, or small families.</p> <p>The bathroom is fully tiled and fitted with a clean, modern three-piece suite.</p><ul></ul> <p>This is a comfortable, well-maintained apartment offering good space, natural light, and practical living in a popular Southampton location.</p> Available from 17th of May!<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £1,150.00 per month (£265.38 per week)<br/>- Deposit / Bond: £1,325.00<br/>- 2 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 24 May 2026<br/>- Maximum number of tenants is 2<br/>- No Students<br/>- No Pets, sorry<br/>- No Smokers<br/>- Family Friendly<br/>- Bills not included<br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: C<br/><br/> <b> If calling, please quote reference: 2892314 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and ninety-two thousand three hundred and fourteen</i>
 
 **Key features:**
 - [object Object]
@@ -909,7 +1250,7 @@ Property Reference: 2892314.<br/><br/><p><b>Spacious 2 Bedroom Apartment with Ba
 
 ---
 
-## Millbrook Road East, Southampton, SO15 — ££930 pcm (£215 pw) pcm
+## Millbrook Road East, Southampton, SO15 — £930 pcm
 - **Link:** https://www.onthemarket.com/details/19500046/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -931,7 +1272,7 @@ Property Reference: 2898319.<br/><br/><p> </p><br/><b>Modern 1-Bed Apartment wit
 
 ---
 
-## Bellevue Road, Hampshire SO15 — ££1,100 pcm (£254 pw) pcm
+## Bellevue Road, Hampshire SO15 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19495490/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -956,7 +1297,7 @@ Charters are pleased to present to the rental market this delightful one-bedroom
 
 ---
 
-## Polymond House, Southampton, SO14 — ££1,000 pcm (£231 pw) pcm
+## Polymond House, Southampton, SO14 — £1,000 pcm
 - **Link:** https://www.onthemarket.com/details/19494633/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -973,7 +1314,24 @@ Charters are pleased to present to the rental market this delightful one-bedroom
 
 ---
 
-## 8 Howard Road, Southampton SO15 — ££825 pcm (£190 pw) pcm
+## Flat 4 408 Winchester Road, Southampton, SO16 — £425 pcm
+- **Link:** https://www.onthemarket.com/details/19494263/
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 2 bath
+- **Postcode area:** SO16
+- **Agent:** Morris Dibben
+- **Image:** https://media.onthemarket.com/properties/19494263/1614871154/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19494263/1614871154/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19494263/1614871154/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19494263/1614871154/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19494263/1614871154/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>Double Bedroom in house share available Now. Suitable for single occupancy only. Close to General Hospital. Ideal for professional sharers. Offered Furnished the apartment comes with a fitted kitchen with appliances, Separate lounge, 2 bathrooms and parking options. This is a split level apartment which has a spacious bright and airy feel.</p><p>The furniture consists of a double bed, 2 wardrobes, 2 bedside cabinets, chest of draws and chair.</p><p>Entering the property on the ground floor there is a reception hall and stairs that lead to the 1st and 2nd floors. On the 1st floor there are 2 double bedrooms, shower room, fitted kitchen and a good size lounge/diner. Going up to the second floor there is a further 2 bedrooms and 2nd bathroom.</p><p>Winchester Road is a great location to access the General Hospital or Southampton University. There are also great public transport links for access in and out of the City Centre.</p><p>£250 on top of the rent is paid to the landlord to cover gas, electric, water, council tax and WIFI.</p><p>Available from 23rd June.</p><p>Please call Morris Dibben to register your interest and arrange to view. Council Tax Band:  Holding Deposit: £98.00</p><p>Double Bedroom in Shared House</p><p>£250 For All Utilities Paid On Top Of Rent</p><p>2 Bathrooms</p><p>Gas Central Heating</p><p>Seperate Lounge</p><p>Split Level Apartment</p><p>Fitted Kitchen</p><p>Ideal For Professional Sharers</p><p>Close to General Hospital</p><p>Grea Transport Links in and Out of Town Centre</p>
+
+---
+
+## 8 Howard Road, Southampton SO15 — £825 pcm
 - **Link:** https://www.onthemarket.com/details/19005273/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1000,7 +1358,7 @@ ENFIELDS PRESENT - FIRST FLOOR FLAT. HOWARD ROAD LOCATION. OPEN PLAN KITCHEN/LIV
 
 ---
 
-## High Street, Southampton SO14 — ££995 pcm (£230 pw) pcm
+## High Street, Southampton SO14 — £995 pcm
 - **Link:** https://www.onthemarket.com/details/18388520/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1025,7 +1383,7 @@ Charters are pleased to present this well-maintained third-floor, one-bedroom ap
 
 ---
 
-## Hill Lane, Hampshire SO15 — ££950 pcm (£219 pw) pcm
+## Hill Lane, Hampshire SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/11501198/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1054,7 +1412,7 @@ Charters are pleased to present this well-maintained third-floor, one-bedroom ap
 
 ---
 
-## Blenheim Avenue , Southampton SO17 — ££875 pcm (£202 pw) pcm
+## Blenheim Avenue , Southampton SO17 — £875 pcm
 - **Link:** https://www.onthemarket.com/details/17958383/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1079,7 +1437,7 @@ Located in the heart of Highfield, this is an absolutely fantastic one bedroom g
 
 ---
 
-## Clarendon Apartments, Southampton SO14 — ££925 pcm (£213 pw) pcm
+## Clarendon Apartments, Southampton SO14 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/19002068/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1106,7 +1464,7 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION AVAILABLE. GROUND FLOOR APARTMENT. ONE BEDR
 
 ---
 
-## Clarendon Apartments, Southampton SO14 — ££925 pcm (£213 pw) pcm
+## Clarendon Apartments, Southampton SO14 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/19441724/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1133,7 +1491,24 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION. ONE BEDROOM APARTMENT. CITY CENTRE. OPEN P
 
 ---
 
-## Howard Road, Hampshire SO15 — ££1,050 pcm (£242 pw) pcm
+## Winchester Road, Southampton, SO16 — £850 pcm
+- **Link:** https://www.onthemarket.com/details/19487022/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 0 bath
+- **Postcode area:** SO16
+- **Agent:** Connells
+- **Image:** https://media.onthemarket.com/properties/19487022/1614659508/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19487022/1614659508/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19487022/1614659508/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19487022/1614659508/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19487022/1614659508/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>Avaliable  Maynewly  Refurbishedcourt Yard Gardenwater Bill Included</p><p>One bedroom ground floor flat< just undergone a full refurb, open plain livening., kitchen area, double bedroom and a modern bathroom with shower, The property also has a small private court yard garden located and the front of the property.</p><p>The water bill is include within the rent, the tenant will be responsible for all other bills, Council Tax Band:  Holding Deposit: £196.00</p><p>Avaliable May</p><p>Under Going Full Referb</p><p>Ground Floor</p><p>Court Yard Garden</p><p>Close To Hospital</p><p>Modern Through Out</p><p>Water Included In Rent</p><p>Epc C</p><p>Holding Depost £196</p><p>Tax Band A</p>
+
+---
+
+## Howard Road, Hampshire SO15 — £1,050 pcm
 - **Link:** https://www.onthemarket.com/details/16051042/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1157,7 +1532,7 @@ Charters are delighted to offer to market this top floor one bedroom apartment i
 
 ---
 
-## Wilton Avenue, Hampshire SO15 — ££995 pcm (£230 pw) pcm
+## Wilton Avenue, Hampshire SO15 — £995 pcm
 - **Link:** https://www.onthemarket.com/details/17868147/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1181,7 +1556,27 @@ Charters are delighted to offer to market this charming one-bedroom annexe, loca
 
 ---
 
-## High Street, Hampshire SO14 — ££1,100 pcm (£254 pw) pcm
+## Tremona Road, Southampton, SO16 — £600 pcm
+- **Link:** https://www.onthemarket.com/details/19480448/
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 5 bath
+- **Postcode area:** SO16
+- **Agent:** OpenRent
+- **Image:** https://media.onthemarket.com/properties/19480448/1614448781/image-0-81x55.jpg
+
+**Description:**
+Property Reference: 2896832.<br/><br/>Double bedrooms in Professional shared house with two bathrooms and one toilet, Immediately opposite Southampton General Hospital.<br/>Wi-Fi, gas, electricity, water rates, Council tax included.<br/>Optional parking available.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: 5 rooms available, from £600.00 each per month (£138.46 per week)<br/>- Deposit / Bond: from £400.00 per room<br/>- 6 Bedroom Property (5 rooms currently available for rent)<br/>- 5 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 5<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2896832 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and ninety-six thousand eight hundred and thirty-two</i>
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## High Street, Hampshire SO14 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19479957/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1206,7 +1601,7 @@ Benefitting from a large balcony accessed via sliding patio doors from the livin
 
 ---
 
-## Clifton Road, Southampton SO15 — ££1,045 pcm (£241 pw) pcm
+## Clifton Road, Southampton SO15 — £1,045 pcm
 - **Link:** https://www.onthemarket.com/details/13664198/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 0 bath
@@ -1223,7 +1618,7 @@ Benefitting from a large balcony accessed via sliding patio doors from the livin
 
 ---
 
-## Broadlands road, Southampton SO17 — ££1,095 pcm (£253 pw) pcm
+## Broadlands road, Southampton SO17 — £1,095 pcm
 - **Link:** https://www.onthemarket.com/details/10371652/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -1240,7 +1635,7 @@ Benefitting from a large balcony accessed via sliding patio doors from the livin
 
 ---
 
-## Clifton road , southampton  SO15 — ££895 pcm (£207 pw) pcm
+## Clifton road , southampton  SO15 — £895 pcm
 - **Link:** https://www.onthemarket.com/details/13290304/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1257,7 +1652,7 @@ Benefitting from a large balcony accessed via sliding patio doors from the livin
 
 ---
 
-## Sunningdale Gardens, Hampshire SO18 — ££900 pcm (£208 pw) pcm
+## Sunningdale Gardens, Hampshire SO18 — £900 pcm
 - **Link:** https://www.onthemarket.com/details/19475075/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1282,7 +1677,7 @@ This well-presented one bedroom ground floor flat is situated in a quiet and des
 
 ---
 
-## Thorold Road, Southampton, SO18 — ££875 pcm (£202 pw) pcm
+## Thorold Road, Southampton, SO18 — £875 pcm
 - **Link:** https://www.onthemarket.com/details/19475111/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1295,7 +1690,7 @@ This well-presented one bedroom ground floor flat is situated in a quiet and des
 - **Image:** https://media.onthemarket.com/properties/19475111/1614328001/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2894745.<br/><br/>One bedroom first floor unfurnished flat available. The property has been newly redecorated with new carpets throughout. It comprises of good sized lounge, fitted kitchen with built in oven, washing machine, double bedroom with balcony, bathroom with shower over bath, electric heating throughout.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £875.00 per month (£201.92 per week)<br/>- Deposit / Bond: £1,009.61<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- No Smokers<br/>- Family Friendly<br/>- Bills not included<br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: E<br/><br/> <b> If calling, please quote reference: 2894745 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and ninety-four thousand seven hundred and forty-five</i>
+Property Reference: 2894745.<br/><br/>One bedroom first floor unfurnished flat available. The property has been newly redecorated with new carpets throughout. It comprises of good sized lounge, fitted kitchen with built in oven, washing machine, double bedroom with balcony, bathroom with shower over bath, electric heating throughout.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £875.00 per month (£201.92 per week)<br/>- Deposit / Bond: £1,009.61<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- No Smokers<br/>- Family Friendly<br/>- Bills not included<br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: E<br/><br/> <b> If calling, please quote reference: 2894745 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and ninety-four thousand seven hundred and forty-five</i>
 
 **Key features:**
 - [object Object]
@@ -1304,7 +1699,32 @@ Property Reference: 2894745.<br/><br/>One bedroom first floor unfurnished flat a
 
 ---
 
-## Liverpool St, Southampton, SO14 — ££1,100 pcm (£254 pw) pcm
+## Kern Close, Romsey Road, Southampton, SO16 9RA — £795 pcm
+- **Link:** https://www.onthemarket.com/details/19151519/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Postcode:** SO16 9RA
+- **Agent:** Harrison Estate Agents
+- **Image:** https://media.onthemarket.com/properties/19151519/1604790402/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19151519/1604790402/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19151519/1604790402/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19151519/1604790402/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19151519/1604790402/image-4-81x55.jpg
+
+**Description:**
+EMAIL ENQUIRIES PLEASE. HARRISON ESTATE AGENTS ARE PLEASED TO OFFER A First Floor Studio Apartment Located in a Sought After Location and Close to the Local Amenities. The accommodation comprises Living and bedroom Areas, Modern Kitchen and Bathroom, The property benefits from Double Glazing and Electric Heating. Extended lease and One Allocated Parking Space. AVAILABLE FOR OCCUPATION JUNE 2026<br/><br/><b>Front</b> - Well maintained gardens surround the development. Communal door with entry phone, stairs to the upper floors.<br/><br/><b>Hall</b> - Neutral decoration, laminate wood flooring and door to the airing cupboard housing a factory lagged hot water tank.<br/><br/><b>Living Area</b> - 3.68m x 3.40m - Continuation of the laminate wood flooring. Double glazed windows to the front elevation. television, power points and electric heater.<br/><br/><b>Kitchen</b> - 2.39m x 1.90m - Modern matching base and wall units a mixture of cupboards and drawers with heat resistant work surfaces. Single bowl, single drainer sink, fitted oven and hob. Space for a fridge freezer, space and plumbing for a washing machine..<br/><br/><b>Bedroom Area</b> - 2.82m x 2.21m - Window to the side elevation, continuation of the laminate wood flooring and power points.<br/><br/><b>Bathroom</b> - 2,34.01m x 1.88m - Modern suite comprising bath with electric shower and glass screen, wc and wash hand basin.<br/><br/><b>Tenure</b> - The property benefits from an extended lease with a balance of 159 years. Current service charges are £670 per annum, to be confirmed by the vendors solicitors.<br/><br/><b>Outside</b> - Communal dustbin store.<br/><br/><b>Parking</b> - The property benefits from one allocated parking space to the side of the property.<br/><br/>
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Liverpool St, Southampton, SO14 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19469327/
 - **Type:** house
 - **Beds/Baths:** 2 bed, 1 bath
@@ -1322,7 +1742,7 @@ Property Reference: 2842181.<br/><br/>We are proud to offer this delightful 2 be
 
 ---
 
-## Foundry Lane, Southampton, SO15 — ££1,150 pcm (£265 pw) pcm
+## Foundry Lane, Southampton, SO15 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19467609/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -1335,7 +1755,7 @@ Property Reference: 2842181.<br/><br/>We are proud to offer this delightful 2 be
 - **Image:** https://media.onthemarket.com/properties/19467609/1614131103/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2893219.<br/><br/>Two bedroom unfurnished ground floor flat available to rent in Freemantle. The property comprises of 2 double bedrooms, good sized lounge, fitted kitchen with built in oven and hob, bath and shower over. Electric heating throughout, on road parking. Close to local shops and schools.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £1,150.00 per month (£265.38 per week)<br/>- Deposit / Bond: £1,150.00<br/>- 2 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 3<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Family Friendly<br/>- Bills not included<br/>- Property has parking<br/>- No Garden Access<br/>- EPC Rating: E<br/><br/> <b> If calling, please quote reference: 2893219 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and ninety-three thousand two hundred and nineteen</i>
+Property Reference: 2893219.<br/><br/>Two bedroom unfurnished ground floor flat available to rent in Freemantle. The property comprises of 2 double bedrooms, good sized lounge, fitted kitchen with built in oven and hob, bath and shower over. Electric heating throughout, on road parking. Close to local shops and schools.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £1,150.00 per month (£265.38 per week)<br/>- Deposit / Bond: £1,150.00<br/>- 2 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 3<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Family Friendly<br/>- Bills not included<br/>- Property has parking<br/>- No Garden Access<br/>- EPC Rating: E<br/><br/> <b> If calling, please quote reference: 2893219 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and ninety-three thousand two hundred and nineteen</i>
 
 **Key features:**
 - [object Object]
@@ -1344,7 +1764,7 @@ Property Reference: 2893219.<br/><br/>Two bedroom unfurnished ground floor flat 
 
 ---
 
-## Atlantic Mansions, Albert Road South, Southampton, SO14 — ££1,150 pcm (£265 pw) pcm
+## Atlantic Mansions, Albert Road South, Southampton, SO14 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19466564/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -1361,7 +1781,7 @@ Property Reference: 2893219.<br/><br/>Two bedroom unfurnished ground floor flat 
 
 ---
 
-## Clarendon Apartments, Southampton SO14 — ££995 pcm (£230 pw) pcm
+## Clarendon Apartments, Southampton SO14 — £995 pcm
 - **Link:** https://www.onthemarket.com/details/19462724/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1389,7 +1809,7 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION. AVAILABLE FURNISHED FOR AN ADDITIONAL RENT
 
 ---
 
-## Southern House, 80 Shirley Road, SO15 — ££1,150 pcm (£265 pw) pcm
+## Southern House, 80 Shirley Road, SO15 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19461952/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1414,7 +1834,7 @@ Introducing this modern and spacious one-bedroom apartment, now available for re
 
 ---
 
-## Ogle Road, SO14 — ££925 pcm (£213 pw) pcm
+## Ogle Road, SO14 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/19461631/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1439,7 +1859,7 @@ Leaders are proud to bring to the market this Modern One bedroom apartment in th
 
 ---
 
-## Thomas House, Southampton SO14 — ££925 pcm (£213 pw) pcm
+## Thomas House, Southampton SO14 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/16959873/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1468,7 +1888,7 @@ ENFIELDS PRESENT - AVAILABLE WITH NO DEPOSIT OPTION. HALF PRICE RENT FOR THE FIR
 
 ---
 
-## Canal Walk, Southampton SO14 — ££1,050 pcm (£242 pw) pcm
+## Canal Walk, Southampton SO14 — £1,050 pcm
 - **Link:** https://www.onthemarket.com/details/19101740/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1493,7 +1913,7 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION AVAILABLE. NEW BUILD. ONE BEDROOM. AVAILABL
 
 ---
 
-## Thomas House, Southampton SO14 — ££925 pcm (£213 pw) pcm
+## Thomas House, Southampton SO14 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/16959875/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1522,7 +1942,7 @@ ENFIELDS PRESENT - HALF PRICE RENT FOR THE FIRST MONTH. NO DEPOSIT OPTION AVAILA
 
 ---
 
-## Thomas House, Southampton SO14 — ££925 pcm (£213 pw) pcm
+## Thomas House, Southampton SO14 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/16959877/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1551,7 +1971,7 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION AVAILABLE. HALF PRICE RENT FOR THE FIRST MO
 
 ---
 
-## 32 Bernard Street, Southampton SO14 — ££925 pcm (£213 pw) pcm
+## 32 Bernard Street, Southampton SO14 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/17794766/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1579,7 +1999,7 @@ ENFIELDS PRESENT - HALF PRICE RENT FOR FIRST MONTH. NO DEPOSIT OPTION AVAILABLE.
 
 ---
 
-## Thornbury Avenue, Hampshire SO15 — ££950 pcm (£219 pw) pcm
+## Thornbury Avenue, Hampshire SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/16098256/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1603,7 +2023,7 @@ This spacious first floor one-bedroom apartment is offered to the market on a fu
 
 ---
 
-## River View Road, Southampton SO18 — ££995 pcm (£230 pw) pcm
+## River View Road, Southampton SO18 — £995 pcm
 - **Link:** https://www.onthemarket.com/details/19456831/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1629,7 +2049,7 @@ This spacious first floor one-bedroom apartment is offered to the market on a fu
 
 ---
 
-## Thornbury Avenue, Southampton, SO15 — ££1,100 pcm (£254 pw) pcm
+## Thornbury Avenue, Southampton, SO15 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19454450/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1646,7 +2066,7 @@ This spacious first floor one-bedroom apartment is offered to the market on a fu
 
 ---
 
-## Thornbury Avenue, Southampton, SO15 — ££800 pcm (£185 pw) pcm
+## Thornbury Avenue, Southampton, SO15 — £800 pcm
 - **Link:** https://www.onthemarket.com/details/19454451/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1663,7 +2083,7 @@ This spacious first floor one-bedroom apartment is offered to the market on a fu
 
 ---
 
-## Aberdeen Road, 1 Aberdeen Road, Southampton, SO17 — ££895 pcm (£207 pw) pcm
+## Aberdeen Road, 1 Aberdeen Road, Southampton, SO17 — £895 pcm
 - **Link:** https://www.onthemarket.com/details/19453387/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1689,7 +2109,7 @@ This spacious first floor one-bedroom apartment is offered to the market on a fu
 
 ---
 
-## 11 Malmesbury Place, Southampton SO15 — ££475 pcm (£110 pw) pcm
+## 11 Malmesbury Place, Southampton SO15 — £475 pcm
 - **Link:** https://www.onthemarket.com/details/19260257/
 - **Type:** house
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1717,7 +2137,7 @@ ENFIELDS PRESENT - ROOM TO RENT. FURNISHED. BILLS INCLUDED. SHARED KITCHEN. SHAR
 
 ---
 
-## 11 Malmesbury Place, Southampton SO15 — ££550 pcm (£127 pw) pcm
+## 11 Malmesbury Place, Southampton SO15 — £550 pcm
 - **Link:** https://www.onthemarket.com/details/19261449/
 - **Type:** house
 - **Beds/Baths:** 1 bed, 0 bath
@@ -1745,29 +2165,7 @@ ENFIELDS PRESENT - DOUBLE BEDROOM TO RENT IN A SHARED HOUSE. FURNISHED. BILLS IN
 
 ---
 
-## Dorrick Court, Southampton, SO15 — ££1,100 pcm (£254 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19446799/
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO15
-- **Agent:** OpenRent
-- **Image:** https://media.onthemarket.com/properties/19446799/1613501501/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19446799/1613501501/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19446799/1613501501/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19446799/1613501501/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19446799/1613501501/image-4-81x55.jpg
-
-**Description:**
-Property Reference: 2891611.<br/><br/>Stunning 1 Bedroom top floor apartment on Archers Road near Bedford Place. <br/><br/>Furnished to a high standard. <br/>This apartament comes fully equipped with everything you need including a TV, all kitchen equipment including pots, pans, kettle, toaster, microwave and cutlery ect. <br/>Move in with just your belongings.<br/><br/>Centrally located with just a 10 minuet walk to train station and few minuets walk into the town centre. 2 minute walk into Bedford Place with many restaurants, shops and hairdressers. <br/>Ocean Village and Oxford Street also within walking distance. <br/><br/>Possibility of car parking space if required. <br/><br/>Available now<br/><br/>Full Referencing and Credit Checks will be required. Tenants must have a good credit rating or a suitable Guarantor.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £1,100.00 per month (£253.85 per week)<br/>- Deposit / Bond: £1,100.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 12 June 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- Bills not included<br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: C<br/><br/> <b> If calling, please quote reference: 2891611 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and ninety-one thousand six hundred and eleven</i>
-
-**Key features:**
-- [object Object]
-- [object Object]
-- [object Object]
-
----
-
-## 59 Gordon Avenue, Southampton SO14 — ££995 pcm (£230 pw) pcm
+## 59 Gordon Avenue, Southampton SO14 — £995 pcm
 - **Link:** https://www.onthemarket.com/details/17579923/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1792,7 +2190,7 @@ ENFIELDS PRESENT - FURNISHED ROOM TO LET. EN-SUITE SHOWER ROOM/WC. PORTSWOOD LOC
 
 ---
 
-## Shirley Road, Southampton, SO15 — ££950 pcm (£219 pw) pcm
+## Shirley Road, Southampton, SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/19439952/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1809,7 +2207,31 @@ ENFIELDS PRESENT - FURNISHED ROOM TO LET. EN-SUITE SHOWER ROOM/WC. PORTSWOOD LOC
 
 ---
 
-## Harborough Road, Southampton, SO15 — ££640 pcm (£148 pw) pcm
+## High Road, Southampton, SO16 — £850 pcm
+- **Link:** https://www.onthemarket.com/details/19439144/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Leaders
+- **Image:** https://media.onthemarket.com/properties/19439144/1613312810/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19439144/1613312810/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19439144/1613312810/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19439144/1613312810/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19439144/1613312810/image-4-81x55.jpg
+
+**Description:**
+Leaders are pleased to present this one bedroom flat located on High Road Southampton.<br/><br/>The flat is offered part furnished and is available July 2026, the property benefits from a brilliant size bedroom, bathroom with shower over bath, and kitchen comes with Oven & Fridge Freezer.<br/>The rent also includes the water rates, to the rare of the property you do have parking spaces which is offered on a first come first served basis.<br/><br/>EPC Rating: D<br/>Council Tax Band: A<br/>Holding Deposit: £196.00<br/>Traditional 5 Week Deposit: £980.00
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Harborough Road, Southampton, SO15 — £640 pcm
 - **Link:** https://www.onthemarket.com/details/19436376/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 2 bath
@@ -1833,7 +2255,7 @@ Property Reference: 2885863.<br/><br/><p><b>Couples may be allowed at additional
 
 ---
 
-## Shirley Road, Southampton SO15 — ££900 pcm (£208 pw) pcm
+## Shirley Road, Southampton SO15 — £900 pcm
 - **Link:** https://www.onthemarket.com/details/17147869/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1860,7 +2282,7 @@ ENFIELDS PRESENT - FIRST FLOOR APARTMENT. ONE BEDROOM. UNFURNISHED. BALCONY. REF
 
 ---
 
-## White Star Place, Southampton, SO14 — ££1,150 pcm (£265 pw) pcm
+## White Star Place, Southampton, SO14 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19430967/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 0 bath
@@ -1877,7 +2299,60 @@ ENFIELDS PRESENT - FIRST FLOOR APARTMENT. ONE BEDROOM. UNFURNISHED. BALCONY. REF
 
 ---
 
-## 47 Homespinney House, River View Road SO18 — ££1,025 pcm (£237 pw) pcm
+## Burgess Road, Southampton SO16 — £675 pcm
+- **Link:** https://www.onthemarket.com/details/19425006/
+- **Type:** property
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Your Move
+- **Image:** https://media.onthemarket.com/properties/19425006/1612975007/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19425006/1612975007/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19425006/1612975007/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19425006/1612975007/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19425006/1612975007/image-4-81x55.jpg
+
+**Description:**
+<br/>This furnished room in a shared house is available to let and offers a practical option for a single occupant seeking a base in Southampton. The property provides one bedroom within a shared house arrangement, with access to a communal bathroom, a large communal kitchen and a separate dining room. The room also benefits from a private balcony overlooking the rear shared garden.<br/><br/>Located in Southampton, the property is positioned for access to local amenities, including everyday shops, cafés and services along nearby main routes into the city. Southampton Common, with its extensive green space, walking routes and recreational areas, is within easy reach and provides an outdoor setting for leisure and exercise.<br/><br/>Public transport links in Southampton include bus services connecting residential areas with the city centre, Southampton General Hospital and the University districts. Southampton Central railway station offers regular services to London Waterloo, with typical journey times of around 1 hour 20 minutes, as well as routes to Portsmouth, Bournemouth and other South Coast destinations. From the property, the station can be reached by local bus or a short drive.<br/><br/>This shared house arrangement, with one bedroom to let, communal facilities and outdoor space, may suit working professionals who require access to transport connections and city amenities.<br/><br/>Broadband (estimated speeds)<br/>Standard 23 mbps<br/>Superfast -<br/>Ultrafast 1000 mbps<br/><br/><b>IMPORTANT NOTE TO POTENTIAL PURCHASERS & TENANTS:</b><br/> We endeavour to make our particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. The services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All photographs and measurements have been taken as a guide only and are not precise. Floor plans where included are not to scale and accuracy is not guaranteed. If you require clarification or further information on any points, please contact us, especially if you are traveling some distance to view. POTENTIAL PURCHASERS: Fixtures and fittings other than those mentioned are to be agreed with the seller. POTENTIAL TENANTS: All properties are available for a minimum length of time, with the exception of short term accommodation. Please contact the branch for details. A security deposit of at least one month’s rent is required. Rent is to be paid one month in advance. It is the tenant’s responsibility to insure any personal possessions. Payment of all utilities including water rates or metered supply and Council Tax is the responsibility of the tenant in most cases. <br/><br/>SOU210418/2
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Burgess Road, Southampton SO16 — £625 pcm
+- **Link:** https://www.onthemarket.com/details/19425009/
+- **Type:** property
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Your Move
+- **Image:** https://media.onthemarket.com/properties/19425009/1612975026/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19425009/1612975026/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19425009/1612975026/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19425009/1612975026/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19425009/1612975026/image-4-81x55.jpg
+
+**Description:**
+<br/>This furnished room in a shared house is available to let and offers a practical option for a single occupant seeking a base in Southampton. The property provides one bedroom within a shared house arrangement, with access to a communal bathroom, a large communal kitchen and a separate dining room. There is also a shared rear garden.<br/><br/>Located in Southampton, the property is positioned for access to local amenities, including everyday shops, cafés and services along nearby main routes into the city. Southampton Common, with its extensive green space, walking routes and recreational areas, is within easy reach and provides an outdoor setting for leisure and exercise.<br/><br/>Public transport links in Southampton include bus services connecting residential areas with the city centre, Southampton General Hospital and the University districts. Southampton Central railway station offers regular services to London Waterloo, with typical journey times of around 1 hour 20 minutes, as well as routes to Portsmouth, Bournemouth and other South Coast destinations. From the property, the station can be reached by local bus or a short drive.<br/><br/>This shared house arrangement, with one bedroom to let, communal facilities and outdoor space, may suit working professionals who require access to transport connections and city amenities.<br/><br/>Broadband (estimated speeds)<br/>Standard 23 mbps<br/>Superfast -<br/>Ultrafast 1000 mbps<br/><br/><b>IMPORTANT NOTE TO POTENTIAL PURCHASERS & TENANTS:</b><br/> We endeavour to make our particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. The services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All photographs and measurements have been taken as a guide only and are not precise. Floor plans where included are not to scale and accuracy is not guaranteed. If you require clarification or further information on any points, please contact us, especially if you are traveling some distance to view. POTENTIAL PURCHASERS: Fixtures and fittings other than those mentioned are to be agreed with the seller. POTENTIAL TENANTS: All properties are available for a minimum length of time, with the exception of short term accommodation. Please contact the branch for details. A security deposit of at least one month’s rent is required. Rent is to be paid one month in advance. It is the tenant’s responsibility to insure any personal possessions. Payment of all utilities including water rates or metered supply and Council Tax is the responsibility of the tenant in most cases. <br/><br/>SOU260362/2
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## 47 Homespinney House, River View Road SO18 — £1,025 pcm
 - **Link:** https://www.onthemarket.com/details/19424494/
 - **Type:** retirement property
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1906,7 +2381,7 @@ A one bedroom over 60s RETIREMENT apartment on the second floor.   The accommoda
 
 ---
 
-## Atlantic Mansions, Southampton SO14 — ££1,150 pcm (£265 pw) pcm
+## Atlantic Mansions, Southampton SO14 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19299562/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -1934,7 +2409,49 @@ A one bedroom over 60s RETIREMENT apartment on the second floor.   The accommoda
 
 ---
 
-## Appleton Road, Southampton, SO18 — ££1,100 pcm (£254 pw) pcm
+## Southampton SO16 — £825 pcm
+- **Link:** https://www.onthemarket.com/details/19423316/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Enfields Estate Agents
+- **Image:** https://media.onthemarket.com/properties/19423316/1612938527/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19423316/1612938527/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19423316/1612938527/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19423316/1612938527/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19423316/1612938527/image-4-81x55.jpg
+
+**Description:**
+ENFIELDS PRESENT - GROUND FLOOR APARTMENT. ONE BEDROOM. PURPOSE BUILT. BATHROOM/WC. RESIDENTS PARKING. A one bedroom, ground floor apartment in Kern Close, Southampton. Council Tax Band A. EPC Rating C.<br/><b>INTERNAL</b> <br/>The property is accessed via the communal entrance with security entrance system, and the apartment is located on the ground floor. The property comprises of an entrance hall with storage cupboard, living/dining room with window to the front aspect and an archway leading to the kitchen area with window to the front aspect. There is a bedroom with fitted wardrobe and window to the side aspect, and there is a bathroom/wc. <br/><b>EXTERNAL</b> <br/>There is residents parking and a communal garden to the rear of the building. <br/><b>LOCATION</b> <br/>Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.<br/><br/>The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.<br/><br/>Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city-s bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.<br/><br/>Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Briton Street, Southampton, SO14 — £900 pcm
+- **Link:** https://www.onthemarket.com/details/18880528/
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO14
+- **Agent:** Cryers
+- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-3-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>STUDENTS WELCOME – 50% Off 1st Months Rent!!  - Brand New room to rent with utility bills included. Ideal for professional sharers or students.</p><p>Friary House is a brand-new development in the heart of Southampton's City Centre, featuring high end self-contained apartments. Each bedroom has its own en-suite shower room and shares a fitted kitchen. There is also access to the on-site common room, bike store and laundry facilities.</p><p>Please contact us for further information by phone - Cryers lettings[use Contact Agent Button]</p><p>Situated less than 10 minute walk from Westquay Shopping Centre, with restaurants, shops and bars all within close proximity. There are great transport links nearby with a bus stop located just outside and Southampton Central train station is within walking distance. This development is a great opportunity for students and working professionals alike with easy access to Southampton Solent and Uni Of Southampton Universities, as well as the famous docks, Hospitals and shopping centre. There is also a Cinema complex just a short walk away. Council Tax Band:  Holding Deposit: £150.00</p><p>Available Now</p><p>New En-Suite Room</p><p>Furnished</p><p>High Speed WiFi Included</p><p>Electric and Water Bills Included</p><p>On Site Laundrette</p><p>Students and Professionals Welcome</p><p>No Parking</p><p>Easy Walk to Westquay</p><p>Bus Stops Nearby</p>
+
+---
+
+## Appleton Road, Southampton, SO18 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19246714/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -1961,7 +2478,7 @@ A one bedroom over 60s RETIREMENT apartment on the second floor.   The accommoda
 
 ---
 
-## Mansfield Park Street, Harefeild, Southampton, SO18 — ££925 pcm (£213 pw) pcm
+## Mansfield Park Street, Harefeild, Southampton, SO18 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/19414391/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -1988,17 +2505,17 @@ Located in Harefeild, Southampton, this modern one-bedroom flat offers a comfort
 
 ---
 
-## Elmfield North, Millbrook Road East, SO15 — ££1,050 pcm (£242 pw) pcm
+## Elmfield North, Millbrook Road East, SO15 — £1,050 pcm
 - **Link:** https://www.onthemarket.com/details/19219754/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
 - **Postcode area:** SO15
 - **Agent:** Hunters
-- **Image:** https://media.onthemarket.com/properties/19219754/1606760856/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19219754/1606760856/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19219754/1606760856/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19219754/1606760856/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19219754/1606760856/image-4-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19219754/1616275269/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19219754/1616275269/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19219754/1616275269/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19219754/1616275269/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19219754/1616275269/image-4-81x55.jpg
 
 **Description:**
 Located just a short distance from Southampton city centre, the building is a private hidden oasis in almost three acres behind secure electric gates, only minutes from the central railway station giving excellent access to London Waterloo.<br/><br/>This spacious first floor one bedroom apartment with an open plan lounge and kitchen/dining area with views overlooking the scenic and well maintained communal gardens. The property also benefits from a modern bathroom, a walk in storage and complemented with communal parking and communal grounds.<br/><br/>Located just a short distance from Southampton city centre, the building is a private hidden oasis in almost three acres behind secure electric gates, only minutes from the central railway station giving excellent access to London Waterloo.<br/><br/>This spacious first floor one bedroom apartment with an open plan lounge and kitchen/dining area with views overlooking the scenic and well maintained communal gardens. The property also benefits from a modern bathroom, a walk in storage and complemented with communal parking and communal grounds.<br/><br/>
@@ -2015,7 +2532,7 @@ Located just a short distance from Southampton city centre, the building is a pr
 
 ---
 
-## Bevois Valley Road, Southampton SO14 — ££1,150 pcm (£265 pw) pcm
+## Bevois Valley Road, Southampton SO14 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/19409301/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2040,7 +2557,28 @@ This property is on the second floor within a purpose built modern development. 
 
 ---
 
-## Bullar Road, Bitterne Park, Southampton, SO18 — ££1,150 pcm (£265 pw) pcm
+## Bassett Row, Southampton, SO16 — £1,150 pcm
+- **Link:** https://www.onthemarket.com/details/19402448/
+- **Type:** house
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** OpenRent
+- **Image:** https://media.onthemarket.com/properties/19402448/1612228528/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19402448/1612228528/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19402448/1612228528/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19402448/1612228528/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19402448/1612228528/image-4-81x55.jpg
+
+**Description:**
+Property Reference: 2884853.<br/><br/>Beautiful light and airy cottage, with high ceilings and a private garden, in an exclusive road in Bassett, Southampton.  Shaker style kitchen with built in washing machine and dining area with views to the private garden, shower and new bosch boiler. Double bed at property with John Lewis mattress. Really pretty with well stocked garden and french doors leading onto patio. There is also a private parking space available along with a garden shed for storage.  It is furnished apart from the living room as the sofa and chairs have now been sold. A unique property with great road links.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £1,150.00 per month (£265.38 per week)<br/>- Deposit / Bond: £1,150.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 2<br/>- No Students<br/>- No Pets, sorry<br/>- No Smokers<br/>- Family Friendly<br/>- Bills not included<br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: D<br/><br/> <b> If calling, please quote reference: 2884853 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and eighty-four thousand eight hundred and fifty-three</i>
+
+**Key features:**
+- [object Object]
+- [object Object]
+
+---
+
+## Bullar Road, Bitterne Park, Southampton, SO18 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/8577640/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2057,24 +2595,24 @@ This property is on the second floor within a purpose built modern development. 
 
 ---
 
-## Anglesea Terrace, Southampton, SO14 — ££1,000 pcm (£231 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19381564/
+## Dymott Close, Southampton, SO15 — £1,150 pcm
+- **Link:** https://www.onthemarket.com/details/19382715/
 - **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO14
+- **Beds/Baths:** 2 bed, 1 bath
+- **Postcode area:** SO15
 - **Agent:** Austin & Wyatt
-- **Image:** https://media.onthemarket.com/properties/19381564/1611505812/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19381564/1611505812/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19381564/1611505812/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19381564/1611505812/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19381564/1611505812/image-4-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19382715/1611521697/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19382715/1611521697/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19382715/1611521697/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19382715/1611521697/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19382715/1611521697/image-4-81x55.jpg
 
 **Description:**
-<p>This well presented one bedroom apartment is located in popular Anglesea Terrace, ideally positioned close to Southampton city centre, local amenities, and excellent transport links.</p><p>The property is offered furnished and comprises a modern open plan kitchen and lounge, providing a comfortable living space, along with a well proportioned double bedroom.</p><p>The apartment is well presented throughout and further benefits from access to a communal roof terrace, offering outdoor space with city views.</p><p>Anglesea Terrace is conveniently situated for the city centre, central station, and the wider city centre, with a wide selection of shops, bars, restaurants, and leisure facilities close by.</p><p>Allocated parking is available by separate negotiation at an additional cost of £100 per month.</p><p>Early viewing is highly recommended. Council Tax Band: A Holding Deposit: £230.00</p><p>Available Now</p><p>One bedroom furnished apartment</p><p>Close to the city centre, Southampton Central Station</p><p>Modern open plan kitchen and lounge</p><p>Well proportioned double bedroom</p><p>Well presented throughout</p><p>Communal roof terrace with city views</p><p>Optional parking available at an additional £100 pcm</p>
+<p>Zero Deposit Guarantee Available</p><p>This well located two bedroom first floor maisonette is situated in Dymott Close, a quiet residential area of Southampton, conveniently positioned for local amenities, transport links and easy access to the city centre.</p><p>The accommodation comprises a lounge, separate kitchen, two bedrooms, and a bathroom. The property offers well balanced living space.</p><p>Further benefits include communal parking available to residents.</p><p>Dymott Close is well placed for shops, schools and local services, while also offering straightforward access to Southampton city centre and surrounding areas.</p><p>Early viewing is recommended. Council Tax Band: A Holding Deposit: £265.00</p><p>Available 25th May 2026</p><p>Unfurnished</p><p>Two bedrooms</p><p>First floor maisonette</p><p>Communal parking</p><p>Near train station</p><p>Freemantle area</p><p>Walking distance to city centre</p><p>Local ammenities near by</p>
 
 ---
 
-## Anglesea Terrace, SOUTHAMPTON, SO14 — ££1,000 pcm (£231 pw) pcm
+## Anglesea Terrace, SOUTHAMPTON, SO14 — £1,000 pcm
 - **Link:** https://www.onthemarket.com/details/19381574/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2091,7 +2629,24 @@ This property is on the second floor within a purpose built modern development. 
 
 ---
 
-## Palmerston Road, Southampton, SO14 — ££625 pcm (£144 pw) pcm
+## Southampton SO16 — £435 pcm
+- **Link:** https://www.onthemarket.com/details/18373925/
+- **Type:** property
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Enfields Estate Agents
+- **Image:** https://media.onthemarket.com/properties/18373925/1611316409/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18373925/1611316409/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18373925/1611316409/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18373925/1611316409/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18373925/1611316409/image-4-81x55.jpg
+
+**Description:**
+ENFIELDS PRESENT - ROOM TO RENT. BILLS INCLUDED. FURNISHED. SHARED KITCHEN, SHOWER ROOM & WC. COMMUNAL REAR GARDEN. CLOSE TO CENTRAL SHIRLEY. A first floor bedroom in a shared house in Romsey Road, Shirley.
+
+---
+
+## Palmerston Road, Southampton, SO14 — £625 pcm
 - **Link:** https://www.onthemarket.com/details/19371576/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2101,7 +2656,7 @@ This property is on the second floor within a purpose built modern development. 
 - **Image:** https://media.onthemarket.com/properties/19371576/1611265380/image-1-81x55.jpg
 
 **Description:**
-Property Reference: 2879709.<br/><br/>We are proud to offer this delightful room in a 5 bedroom, 1 bathroom shared flat in a great location available from 6th May. Close to Southampton Solent University, City Centre and good bus links across Southampton. Benefitting from the following:<br/><br/><ul><li><b>Gas central heating throughout</b></li><li><b>Roof Garden</b></li><li><b>Wifi</b></li><li><b>Bills Included</b></li><li><b>Furnished</b></li></ul>Viewing highly recommended. Contact us today for more details or to arrange a viewing!<br/><br/><br/><b>Summary</b><br/><br/>Room 1 - Double room for 1 person - £625.00 per month<br/><br/>Deposit - £625.00<br/><br/>Minimum tenancy is 6 months<br/>Maximum number of tenants is 1<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £625.00 per month (£144.23 per week)<br/>- Deposit / Bond: £625.00<br/>- 5 Bedroom Property (1 room currently available for rent)<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 1<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- Smokers considered<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2879709 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and seventy-nine thousand seven hundred and nine</i>
+Property Reference: 2879709.<br/><br/>We are proud to offer this delightful room in a 5 bedroom, 1 bathroom shared flat in a great location available from 6th May. Close to Southampton Solent University, City Centre and good bus links across Southampton. Benefitting from the following:<br/><br/><ul><li><b>Gas central heating throughout</b></li><li><b>Roof Garden</b></li><li><b>Wifi</b></li><li><b>Bills Included</b></li><li><b>Furnished</b></li></ul>Viewing highly recommended. Contact us today for more details or to arrange a viewing!<br/><br/><br/><b>Summary</b><br/><br/>Room 1 - Double room for 1 person - £625.00 per month<br/><br/>Deposit - £625.00<br/><br/>Minimum tenancy is 6 months<br/>Maximum number of tenants is 1<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £625.00 per month (£144.23 per week)<br/>- Deposit / Bond: £625.00<br/>- 5 Bedroom Property (1 room currently available for rent)<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 1<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- Smokers considered<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2879709 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and seventy-nine thousand seven hundred and nine</i>
 
 **Key features:**
 - [object Object]
@@ -2112,7 +2667,7 @@ Property Reference: 2879709.<br/><br/>We are proud to offer this delightful room
 
 ---
 
-## Hill Lane, Southampton SO15 — ££1,150 pcm (£265 pw) pcm
+## Hill Lane, Southampton SO15 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/8365047/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2141,24 +2696,7 @@ Property Reference: 2879709.<br/><br/>We are proud to offer this delightful room
 
 ---
 
-## Danes Court, Southampton, SO15 — ££850 pcm (£196 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19320047/
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO15
-- **Agent:** Austin & Wyatt
-- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19320047/1609734234/image-4-81x55.jpg
-
-**Description:**
-<p>Zero Deposit Guarantee Available</p><p>We are delighted to offer for let this second floor apartment, situated within a quiet yet thriving area of Southampton. With Southampton city centre within walking distance and all local bus routes close by this is a perfect little apartment. Southampton train station within arms reach and all the local clubs and pubs about a 10 minutes walk.</p><p>The property comprises of a good sized lounge, seperate kitchen with electric hob and oven, extractor fan, washing machine and fridge.</p><p>There is one double bedroom and bathroom with bath and mixer tap shower.</p><p>Parking is available. Council Tax Band: A Holding Deposit: £196.00</p><p>Available Now</p><p>Unfurnished</p><p>One double bedroom</p><p>Lounge</p><p>Kitchen with appliances</p><p>Parking</p><p>Central location</p><p>Economy 7 heating</p><p>Close to amenities</p>
-
----
-
-## 50 Midanbury Lane, Southampton SO18 — ££1,100 pcm (£254 pw) pcm
+## 50 Midanbury Lane, Southampton SO18 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19349854/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2185,7 +2723,7 @@ ENFIELDS PRESENT - PURPOSE BUILT APARTMENT. TWO DOUBLE BEDROOMS. FITTED WARDROBE
 
 ---
 
-## High Street, Southampton SO14 — ££1,000 pcm (£231 pw) pcm
+## High Street, Southampton SO14 — £1,000 pcm
 - **Link:** https://www.onthemarket.com/details/10781336/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2214,7 +2752,31 @@ ENFIELDS PRESENT - PURPOSE BUILT APARTMENT. TWO DOUBLE BEDROOMS. FITTED WARDROBE
 
 ---
 
-## Archers Road, Southampton, SO15 — ££995 pcm (£230 pw) pcm
+## Coxford Close, Hampshire SO16 — £1,100 pcm
+- **Link:** https://www.onthemarket.com/details/19335772/
+- **Type:** flat
+- **Beds/Baths:** 2 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Your Move
+- **Image:** https://media.onthemarket.com/properties/19335772/1610134845/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19335772/1610134845/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19335772/1610134845/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19335772/1610134845/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19335772/1610134845/image-4-81x55.jpg
+
+**Description:**
+<br/>Introducing a charming first-floor apartment boasting two bedrooms, located in a sought-after area. This unfurnished property offers a spacious and bright living space, perfect for individuals or couples looking for a comfortable place to call home. <br/>The apartment features kitchen, a stylish bathroom, and ample storage options. With its convenient location, residents can enjoy easy access to local amenities, schools, and transport links. The property benefits from a peaceful neighbourhood, ideal for those seeking a quiet and cosy environment. Don't miss the opportunity to reside in this well-maintained and inviting apartment. Contact us today to arrange a viewing and secure your new home.<br/>EPC rating TBC<br/>Council Tax Band B<br/>Mobile (based on calls indoors)<br/>O2, EE, Three and Vodafone<br/>Satellite & Cable TV Availability<br/>BT, Sky and Virgin<br/>Broadband (estimated speeds)<br/>Standard 15 mbps<br/>Superfast 75 mbps<br/>Ultrafast 1800 mbps<br/><br/><b>IMPORTANT NOTE TO POTENTIAL PURCHASERS & TENANTS:</b><br/> We endeavour to make our particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. The services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All photographs and measurements have been taken as a guide only and are not precise. Floor plans where included are not to scale and accuracy is not guaranteed. If you require clarification or further information on any points, please contact us, especially if you are traveling some distance to view. POTENTIAL PURCHASERS: Fixtures and fittings other than those mentioned are to be agreed with the seller. POTENTIAL TENANTS: All properties are available for a minimum length of time, with the exception of short term accommodation. Please contact the branch for details. A security deposit of at least one month’s rent is required. Rent is to be paid one month in advance. It is the tenant’s responsibility to insure any personal possessions. Payment of all utilities including water rates or metered supply and Council Tax is the responsibility of the tenant in most cases. <br/><br/>SOU260197/2
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Archers Road, Southampton, SO15 — £995 pcm
 - **Link:** https://www.onthemarket.com/details/19328734/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2236,7 +2798,7 @@ Property Reference: 2873274.<br/><br/>Luxury 1 Bedroom ground floor apartment on
 
 ---
 
-## 188 Millbrook Road East, Southampton SO15 — ££850 pcm (£196 pw) pcm
+## 188 Millbrook Road East, Southampton SO15 — £850 pcm
 - **Link:** https://www.onthemarket.com/details/19310163/
 - **Type:** maisonette
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2263,29 +2825,7 @@ ENFIELDS PRESENT - GROUND FLOOR MAISONETTE. GARDEN. RESIDENTS PARKING. OPEN PLAN
 
 ---
 
-## Queens Terrace, Southampton, SO14 — ££595 pcm (£137 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19292664/
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO14
-- **Agent:** OpenRent
-- **Image:** https://media.onthemarket.com/properties/19292664/1608877072/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292664/1608877072/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292664/1608877072/image-2-81x55.jpg
-
-**Description:**
-Property Reference: 2835286.<br/><br/>Single room available.<br/>This room comes with an ensuite bathroom, wardrobe, desk, chairs etc.<br/><br/>You will be sharing the kitchen with another tenant.<br/>In a great location situated near ocean village and a short walk into Southampton city centre and Southampton Solent university.<br/>This is available to students or professionals.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £595.00 per month (£137.31 per week)<br/>- Deposit / Bond: £595.00<br/>- 1 Bedroom Property (1 room currently available for rent)<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 1<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- Smokers considered<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2835286 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and thirty-five thousand two hundred and eighty-six</i>
-
-**Key features:**
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-
----
-
-## Ascupart Street, Southampton, SO14 — ££1,100 pcm (£254 pw) pcm
+## Ascupart Street, Southampton, SO14 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19292484/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2298,7 +2838,7 @@ Property Reference: 2835286.<br/><br/>Single room available.<br/>This room comes
 - **Image:** https://media.onthemarket.com/properties/19292484/1608873798/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2866030.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - Ready to Move In</p> </b></i><b><i><p></p> </i></b><i><b><p>This brand new one-bedroom ground floor flat offers modern living in a convenient and accessible setting, perfect for individuals or couples ready to move in immediately. Finished to a high standard throughout, the property features a bright and spacious open-plan living and kitchen area, complete with contemporary fittings and ample natural light.</p></b></i><b><i><p>The generously sized bedroom provides a comfortable retreat, while the sleek, fully fitted bathroom showcases stylish fixtures and a clean, modern design. Being on the ground floor, the flat offers easy access with no stairs, making it ideal for a wide range of tenants.</p></i></b><i><b><p>Additional benefits include brand new appliances, energy-efficient features, and a fresh, neutral decor ready for personal touches. Located in a desirable area close to local amenities, transport links, and green spaces, this flat combines comfort, convenience, and modern style.</p></b></i><b><i><p>Available now and ready to move in - early viewing is highly recommended.</p> </i></b><i><b><p></p> </b></i><b></b><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £1,100.00 per month (£253.85 per week)<br/>- Deposit / Bond: £1,100.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 3<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Family Friendly<br/>- Bills not included<br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: E<br/><br/> <b> If calling, please quote reference: 2866030 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-six thousand and thirty</i>
+Property Reference: 2866030.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - Ready to Move In</p> </b></i><b><i><p></p> </i></b><i><b><p>This brand new one-bedroom ground floor flat offers modern living in a convenient and accessible setting, perfect for individuals or couples ready to move in immediately. Finished to a high standard throughout, the property features a bright and spacious open-plan living and kitchen area, complete with contemporary fittings and ample natural light.</p></b></i><b><i><p>The generously sized bedroom provides a comfortable retreat, while the sleek, fully fitted bathroom showcases stylish fixtures and a clean, modern design. Being on the ground floor, the flat offers easy access with no stairs, making it ideal for a wide range of tenants.</p></i></b><i><b><p>Additional benefits include brand new appliances, energy-efficient features, and a fresh, neutral decor ready for personal touches. Located in a desirable area close to local amenities, transport links, and green spaces, this flat combines comfort, convenience, and modern style.</p></b></i><b><i><p>Available now and ready to move in - early viewing is highly recommended.</p> </i></b><i><b><p></p> </b></i><b></b><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £1,100.00 per month (£253.85 per week)<br/>- Deposit / Bond: £1,100.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 3<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Family Friendly<br/>- Bills not included<br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: E<br/><br/> <b> If calling, please quote reference: 2866030 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-six thousand and thirty</i>
 
 **Key features:**
 - [object Object]
@@ -2307,7 +2847,7 @@ Property Reference: 2866030.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - R
 
 ---
 
-## Wordsworth Road, Southampton, SO15 — ££520 pcm (£120 pw) pcm
+## Wordsworth Road, Southampton, SO15 — £520 pcm
 - **Link:** https://www.onthemarket.com/details/19292506/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 2 bath
@@ -2320,7 +2860,7 @@ Property Reference: 2866030.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - R
 - **Image:** https://media.onthemarket.com/properties/19292506/1615740230/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2868467.<br/><br/><b>12 Wordsworth Road, Southampton, SO15 </b><br/><br/>Rooms for rent in exclusive shared property. Highest standard, freshly renovated and decorated & fully furnished with brand new high quality furniture.<br/><br/> Quick response and high quality service provided by management company.<br/> Property benefits from large bedrooms and lovely garden.<br/> Cleaning service of communal areas provided by professional cleaning company is included.<br/> Fast unlimited internet, 7 days a week maintenance and ALL bills included in the price.<br/> Clean, tidy and peaceful people only.<br/> Property located in close proximity to local shops, takeaways and town centre.<br/>Walking distance to Hospital, close proximity to shops & takeaways.<br/><br/> Call us to book a viewing. Virtual viewings available as well.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £520.00 per month (£120.00 per week)<br/>- Deposit / Bond: £400.00<br/>- 6 Bedroom Property (1 room currently available for rent)<br/>- 2 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 1<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2868467 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-eight thousand four hundred and sixty-seven</i>
+Property Reference: 2868467.<br/><br/><b>12 Wordsworth Road, Southampton, SO15 </b><br/><br/>Rooms for rent in exclusive shared property. Highest standard, freshly renovated and decorated & fully furnished with brand new high quality furniture.<br/><br/> Quick response and high quality service provided by management company.<br/> Property benefits from large bedrooms and lovely garden.<br/> Cleaning service of communal areas provided by professional cleaning company is included.<br/> Fast unlimited internet, 7 days a week maintenance and ALL bills included in the price.<br/> Clean, tidy and peaceful people only.<br/> Property located in close proximity to local shops, takeaways and town centre.<br/>Walking distance to Hospital, close proximity to shops & takeaways.<br/><br/> Call us to book a viewing. Virtual viewings available as well.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £520.00 per month (£120.00 per week)<br/>- Deposit / Bond: £400.00<br/>- 6 Bedroom Property (1 room currently available for rent)<br/>- 2 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 1<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- No Parking Available<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2868467 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-eight thousand four hundred and sixty-seven</i>
 
 **Key features:**
 - [object Object]
@@ -2331,20 +2871,20 @@ Property Reference: 2868467.<br/><br/><b>12 Wordsworth Road, Southampton, SO15 <
 
 ---
 
-## Northcote Road, Southampton, SO17 — ££610 pcm (£141 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19292553/
+## Tremona Road, Southampton, SO16 — £598 pcm
+- **Link:** https://www.onthemarket.com/details/19284957/
 - **Type:** houseshare
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO17
+- **Beds/Baths:** 1 bed, 2 bath
+- **Postcode area:** SO16
 - **Agent:** OpenRent
-- **Image:** https://media.onthemarket.com/properties/19292553/1608876017/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292553/1612763535/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292553/1612763535/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292553/1612763535/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19292553/1612763535/image-4-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19284957/1608508621/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19284957/1608508621/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19284957/1608508621/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19284957/1608508621/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19284957/1608508621/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2864275.<br/><br/>Spacious 4 Bedroom HMO for Rent<br/>Bills include gas, electricity, water and council tax.<br/><br/>Perfect for professionals or students!<br/><br/>A bright and modern 4-bedroom home located in a quiet and friendly neighbourhood, ideal for working professionals or students looking to share. The house has gone for complete renovation and fully furnished, offering a comfortable and homely atmosphere.<br/><br/>Spacious living room with plenty of natural light.<br/><br/>Fully equipped kitchen (fridge-freezer, oven, microwave, washing machine).<br/><br/>3 piece suite bathroom and a separate WC.<br/>Private garden.<br/><br/>2 hours On-street parking (permanent permit available from Council)<br/><br/>Excellent transport links to Southampton City centre and within walking distance of Southampton main university. Close to shops and local amenities and 10 minutes walk to vibrant Portswood restaurants area.<br/><br/>Looking for clean, respectful and responsible tenants who will treat the house as their own home.<br/><br/>Next viewing: 22 May 26.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: 2 rooms available, from £610.00 each per month (£140.77 per week)<br/>- Deposit / Bond: from £610.00 per room<br/>- 4 Bedroom Property (2 rooms currently available for rent)<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- Smokers considered<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2864275 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-four thousand two hundred and seventy-five</i>
+Property Reference: 2866541.<br/><br/>Double bedrooms in Professional shared house with two bathrooms and one toilet, Immediately opposite Southampton General Hospital.<br/>Wi-Fi, gas, electricity, water rates, Council tax included.<br/>Optional parking available.<br/>Rents range from £139/week, £155/week, £173/week depending on room size.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: 5 rooms available, from £602.33 each per month (£139.00 per week)<br/>- Deposit / Bond: from £400.00 per room<br/>- 6 Bedroom Property (5 rooms currently available for rent)<br/>- 2 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 5<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2866541 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-six thousand five hundred and forty-one</i>
 
 **Key features:**
 - [object Object]
@@ -2355,7 +2895,7 @@ Property Reference: 2864275.<br/><br/>Spacious 4 Bedroom HMO for Rent<br/>Bills 
 
 ---
 
-## Ascupart Street, Southampton, SO14 — ££900 pcm (£208 pw) pcm
+## Ascupart Street, Southampton, SO14 — £900 pcm
 - **Link:** https://www.onthemarket.com/details/19281912/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2368,7 +2908,7 @@ Property Reference: 2864275.<br/><br/>Spacious 4 Bedroom HMO for Rent<br/>Bills 
 - **Image:** https://media.onthemarket.com/properties/19281912/1608378969/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2866029.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - Ready to Move In</p> </b></i><b><i><p>A well-presented one-bedroom flat offering comfortable and practical living space. The property features a separate, fully fitted kitchen and a spacious separate living room, providing a clear and functional layout.</p> </i></b><i><b><p>The bedroom is a good-sized double room, while the bathroom is neatly finished and well maintained.</p> </b></i><b><i><p>The flat is in good condition throughout and is ready for immediate occupation, making it an ideal home for a single professional or couple.</p> </i></b><i><b><p>Early viewing is recommended.</p> </b></i><b></b><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £900.00 per month (£207.69 per week)<br/>- Deposit / Bond: £900.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 3<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Family Friendly<br/>- Bills not included<br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: E<br/><br/> <b> If calling, please quote reference: 2866029 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-six thousand and twenty-nine</i>
+Property Reference: 2866029.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - Ready to Move In</p> </b></i><b><i><p>A well-presented one-bedroom flat offering comfortable and practical living space. The property features a separate, fully fitted kitchen and a spacious separate living room, providing a clear and functional layout.</p> </i></b><i><b><p>The bedroom is a good-sized double room, while the bathroom is neatly finished and well maintained.</p> </b></i><b><i><p>The flat is in good condition throughout and is ready for immediate occupation, making it an ideal home for a single professional or couple.</p> </i></b><i><b><p>Early viewing is recommended.</p> </b></i><b></b><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £900.00 per month (£207.69 per week)<br/>- Deposit / Bond: £900.00<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 3<br/>- Students welcome to enquire<br/>- Pets considered / by arrangement<br/>- Smokers considered<br/>- Family Friendly<br/>- Bills not included<br/>- No Parking Available<br/>- No Garden Access<br/>- EPC Rating: E<br/><br/> <b> If calling, please quote reference: 2866029 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million eight hundred and sixty-six thousand and twenty-nine</i>
 
 **Key features:**
 - [object Object]
@@ -2377,7 +2917,7 @@ Property Reference: 2866029.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - R
 
 ---
 
-## Broadlands Road, Hampshire SO17 — ££600 pcm (£138 pw) pcm
+## Broadlands Road, Hampshire SO17 — £600 pcm
 - **Link:** https://www.onthemarket.com/details/19256925/
 - **Type:** property
 - **Beds/Baths:** 1 bed, 2 bath
@@ -2394,7 +2934,7 @@ Property Reference: 2866029.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - R
 
 ---
 
-## Broadlands Road, Hampshire SO17 — ££600 pcm (£138 pw) pcm
+## Broadlands Road, Hampshire SO17 — £600 pcm
 - **Link:** https://www.onthemarket.com/details/19256229/
 - **Type:** property
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2411,7 +2951,33 @@ Property Reference: 2866029.<br/><br/><b><i> </i></b><i><b><p>1-Bedroom Flat - R
 
 ---
 
-## Albert Road South, Southampton, SO14 — ££925 pcm (£213 pw) pcm
+## Compass Point, 450 Romsey Road, SO16 — £995 pcm
+- **Link:** https://www.onthemarket.com/details/18264217/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Leaders
+- **Image:** https://media.onthemarket.com/properties/18264217/1616285167/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18264217/1611292367/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18264217/1616285167/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18264217/1616285167/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18264217/1616285167/image-4-81x55.jpg
+
+**Description:**
+* MULTIPLE MODERN ONE BEDROOM APARTMENTS AVAILABLE – COMPASS POINT *<br/><br/>* AVAILABLE NOW, NEXT MONTH OR EARLY MARCH *<br/><br/>* VIRTUAL VIEWINGS AVAILABLE * <br/><br/>Leaders are delighted to present a selection of contemporary one bedroom apartments at Compass Point, Southampton.<br/><br/>We currently have multiple units available, all offering the same spacious layout and internal size, with rental prices ranging from £995 – £1000 PCM, depending on floor level and position within the building.<br/><br/>Apartments are available on:<br/><br/>- Ground Floor<br/>- First Floor<br/>- Second Floor<br/>- Third Floor (Top Floor)<br/><br/>Both long-term and short-term tenancies are available.<br/><br/>The Apartments:<br/><br/>- Each apartment offers modern, well-designed living and comprises:<br/><br/>- Bright and spacious open-plan living area<br/><br/>- Fully integrated contemporary kitchen including:<br/><br/>- Large fridge freezer<br/><br/>- Washer dryer<br/><br/>- Dishwasher<br/><br/>- Electric oven and hob<br/><br/>- Generous double bedroom<br/><br/>- Contemporary shower room with stand-in shower or bath/shower combination<br/><br/>- Integrated blinds built into the windows<br/><br/>Neutral and stylish décor throughout<br/><br/>- Full fibre broadband pre-installed and ready for use (at an additional cost)<br/><br/>Building & Development Features:<br/><br/>Compass Point has been designed to provide secure, convenient and accessible living, benefiting from:<br/><br/>- Allocated off-road parking monitored via ANPR<br/><br/>- CCTV coverage internally and externally<br/><br/>- Video intercom system with live entrance monitoring<br/><br/>- Secure entry system<br/><br/>- Dedicated post room<br/><br/>- Communal landscaped courtyard<br/><br/>- Wheelchair accessible building<br/><br/>- Four lifts servicing all floors<br/><br/>Additional Information:<br/><br/>- EPC ratings range from C to D<br/><br/>- Pets considered (subject to terms)<br/><br/>- 5-week deposit ranging from £1,096 – £1,125<br/><br/>- No Deposit Option available<br/><br/>This development is ideal for professionals seeking modern, secure and low-maintenance living in a well-managed building within Southampton.<br/><br/>Viewings are highly recommended.<br/>We are able to show multiple available units during one appointment, allowing you to compare floor levels and positions on the same visit.<br/><br/>Contact us today to arrange your viewing!
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Albert Road South, Southampton, SO14 — £925 pcm
 - **Link:** https://www.onthemarket.com/details/19243801/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2437,7 +3003,7 @@ Available May 2026!<br/><br/>Leaders are proud to offer this One Bedroom apartme
 
 ---
 
-## Southampton SO14 — ££995 pcm (£230 pw) pcm
+## Southampton SO14 — £995 pcm
 - **Link:** https://www.onthemarket.com/details/19243159/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2464,7 +3030,7 @@ ENFIELDS PRESENT -  NO DEPOSIT OPTION AVAILABLE. CITY CENTRE FLAT. TWO DOUBLE BE
 
 ---
 
-## Hulse Road, Hampshire SO15 — ££950 pcm (£219 pw) pcm
+## Hulse Road, Hampshire SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/17146300/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2490,7 +3056,24 @@ ENFIELDS PRESENT -  NO DEPOSIT OPTION AVAILABLE. CITY CENTRE FLAT. TWO DOUBLE BE
 
 ---
 
-## Millbrook Road East, Hampshire SO15 — ££1,050 pcm (£242 pw) pcm
+## Vale Drive, SOUTHAMPTON, SO18 — £1,050 pcm
+- **Link:** https://www.onthemarket.com/details/19210406/
+- **Type:** flat
+- **Beds/Baths:** 2 bed, 0 bath
+- **Postcode area:** SO18
+- **Agent:** Connells
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/19210406/1606529318/image-4-81x55.jpg
+
+**Description:**
+<p>Zero Deposit Guarantee Available</p><p>Available Nowtwo Bedroomfirst Flooronstreet Parking</p><p>TWO BEDROOM first floor maisonette in Midanbury.the property benefits from a modern fitted kitchen with white goods, lounge, two double bedrooms both with storage and a family three piece bathroom.</p><p>On road parking and a private garden. Other benefits include Gas central heating and double glazing throughout. Available now. Council Tax Band: A Holding Deposit: £242.00</p><p>Available Now</p><p>Two Bedroom</p><p>First Floor</p><p>On Street Parking</p><p>Tax Band A</p><p>Epc C</p><p>Deposit £1211</p>
+
+---
+
+## Millbrook Road East, Hampshire SO15 — £1,050 pcm
 - **Link:** https://www.onthemarket.com/details/15425777/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2514,7 +3097,7 @@ ENFIELDS PRESENT -  NO DEPOSIT OPTION AVAILABLE. CITY CENTRE FLAT. TWO DOUBLE BE
 
 ---
 
-## Atlantic Mansions, Southampton, SO14 — ££1,150 pcm (£265 pw) pcm
+## Atlantic Mansions, Southampton, SO14 — £1,150 pcm
 - **Link:** https://www.onthemarket.com/details/17937010/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2543,7 +3126,7 @@ ENFIELDS PRESENT -  NO DEPOSIT OPTION AVAILABLE. CITY CENTRE FLAT. TWO DOUBLE BE
 
 ---
 
-## Hill Lane, Southampton SO15 — ££650 pcm (£150 pw) pcm
+## Hill Lane, Southampton SO15 — £650 pcm
 - **Link:** https://www.onthemarket.com/details/19200946/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 0 bath
@@ -2572,7 +3155,7 @@ ENFIELDS PRESENT -  NO DEPOSIT OPTION AVAILABLE. CITY CENTRE FLAT. TWO DOUBLE BE
 
 ---
 
-## Clarendon Apartments, Southampton SO14 — ££975 pcm (£225 pw) pcm
+## Clarendon Apartments, Southampton SO14 — £975 pcm
 - **Link:** https://www.onthemarket.com/details/17364259/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2600,30 +3183,7 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION AVAILABLE. MODERN APARTMENT. CITY CENTRE. O
 
 ---
 
-## Hill Lane, Southampton, SO15 — ££800 pcm (£185 pw) pcm
-- **Link:** https://www.onthemarket.com/details/19185307/
-- **Type:** houseshare
-- **Beds/Baths:** 1 bed, 9 bath
-- **Postcode area:** SO15
-- **Agent:** OpenRent
-- **Image:** https://media.onthemarket.com/properties/19185307/1605749377/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19185307/1605749377/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19185307/1605749377/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19185307/1605749377/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/19185307/1605749377/image-4-81x55.jpg
-
-**Description:**
-Property Reference: 2580991.<br/><br/><p>Brand New En-Suite Double Room with Kitchenette Room -Southampton, SO15</p> <p><br/></p> <p>We are pleased to offer these brand new self-contained rooms at Hill Lane, Southampton, SO15.</p><p><br/></p> <p>Each room is finished to a high standard and includes:</p> <p>-Private en-suite</p> <p>-Private kitchenette</p> <p>-Large double bedroom</p> <p><br/></p> <p>Ideal for working professionals only, these rooms offer more privacy and convenience than a standard house share.</p> <p><br/></p> <p>What's included</p> <p>-Gas, water, council tax and internet included</p> <p>-Weekly cleaning</p> <p>-Electric top-up rooms</p> <p>-Limited parking available on site</p> <p><br/></p> <p>Great location</p> <p><br/></p> <p>The property is conveniently located close to:</p> <p>-Southampton General Hospital</p> <p>-Local centre and amenities</p> <p>-Shirley High Street</p> <p>-Southampton City Centre</p> <p>-Motorway links</p> <p><br/></p> <p>A great opportunity to rent a brand new high-spec room in a well-connected Southampton location.</p> <p><br/></p> <p>Message now to arrange a viewing.</p><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: 2 rooms available, from £800.00 each per month (£184.62 per week)<br/>- Deposit / Bond: from £800.00 per room<br/>- 9 Bedroom Property (2 rooms currently available for rent)<br/>- 9 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 2<br/>- No Students<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2580991 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million five hundred and eighty thousand nine hundred and ninety-one</i>
-
-**Key features:**
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-
----
-
-## 44 Cobbett Road, Southampton SO18 — ££1,100 pcm (£254 pw) pcm
+## 44 Cobbett Road, Southampton SO18 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19172947/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2650,23 +3210,7 @@ ENFIELDS PRESENT - PURPOSE BUILT APARTMENT. TWO DOUBLE BEDROOMS. RESIDENTS PARKI
 
 ---
 
-## Briton Street, Southampton, SO14 — ££900 pcm (£208 pw) pcm
-- **Link:** https://www.onthemarket.com/details/18880528/
-- **Type:** houseshare
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO14
-- **Agent:** Cryers
-- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18880528/1597411064/image-3-81x55.jpg
-
-**Description:**
-<p>Zero Deposit Guarantee Available</p><p>STUDENTS WELCOME – 50% Off 1st Months Rent!!  - Brand New room to rent with utility bills included. Ideal for professional sharers or students.</p><p>Friary House is a brand-new development in the heart of Southampton's City Centre, featuring high end self-contained apartments. Each bedroom has its own en-suite shower room and shares a fitted kitchen. There is also access to the on-site common room, bike store and laundry facilities.</p><p>Please contact us for further information by phone - Cryers lettings[use Contact Agent Button]</p><p>Situated less than 10 minute walk from Westquay Shopping Centre, with restaurants, shops and bars all within close proximity. There are great transport links nearby with a bus stop located just outside and Southampton Central train station is within walking distance. This development is a great opportunity for students and working professionals alike with easy access to Southampton Solent and Uni Of Southampton Universities, as well as the famous docks, Hospitals and shopping centre. There is also a Cinema complex just a short walk away. Council Tax Band:  Holding Deposit: £150.00</p><p>Available Now</p><p>New En-Suite Room</p><p>Furnished</p><p>High Speed WiFi Included</p><p>Electric and Water Bills Included</p><p>On Site Laundrette</p><p>Students and Professionals Welcome</p><p>No Parking</p><p>Easy Walk to Westquay</p><p>Bus Stops Nearby</p>
-
----
-
-## Shirley Road, Southampton SO15 — ££1,100 pcm (£254 pw) pcm
+## Shirley Road, Southampton SO15 — £1,100 pcm
 - **Link:** https://www.onthemarket.com/details/19056733/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2693,7 +3237,7 @@ ENFIELDS PRESENT - PURPOSE BUILT APARTMENT. SECOND FLOOR.  TWO DOUBLE BEDROOMS. 
 
 ---
 
-## 34 Homespinney House, River View Road SO18 — ££975 pcm (£225 pw) pcm
+## 34 Homespinney House, River View Road SO18 — £975 pcm
 - **Link:** https://www.onthemarket.com/details/19039603/
 - **Type:** retirement property
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2722,7 +3266,7 @@ A light and bright, one bedroom over 60s RETIREMENT apartment situated on the se
 
 ---
 
-## 149 Shirley Road, Southampton SO15 — ££775 pcm (£179 pw) pcm
+## 149 Shirley Road, Southampton SO15 — £775 pcm
 - **Link:** https://www.onthemarket.com/details/19009922/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2749,7 +3293,7 @@ ENFIELDS PRESENT - PURPOSE BUILT APARTMENT. ONE BEDROOM. FIRST FLOOR. SEPARATE K
 
 ---
 
-## Christine Court, Cobbett Road, SO18 — ££1,050 pcm (£242 pw) pcm
+## Christine Court, Cobbett Road, SO18 — £1,050 pcm
 - **Link:** https://www.onthemarket.com/details/18980714/
 - **Type:** flat
 - **Beds/Baths:** 2 bed, 1 bath
@@ -2776,7 +3320,7 @@ Presenting a lovely flat available for let. This property is neutrally decorated
 
 ---
 
-## 29 Homespinney House, River View Road, Bitterne Park SO18 — ££1,050 pcm (£242 pw) pcm
+## 29 Homespinney House, River View Road, Bitterne Park SO18 — £1,050 pcm
 - **Link:** https://www.onthemarket.com/details/18939695/
 - **Type:** retirement property
 - **Beds/Baths:** 1 bed, 0 bath
@@ -2805,7 +3349,7 @@ A one bedroom over 60s RETIREMENT apartment situated on the first floor overlook
 
 ---
 
-## English Road, Southampton SO15 — ££525 pcm (£121 pw) pcm
+## English Road, Southampton SO15 — £525 pcm
 - **Link:** https://www.onthemarket.com/details/18912857/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 0 bath
@@ -2830,7 +3374,66 @@ THE ROOM<br/>- Furnished  double room for a professional individual<br/>- Comfor
 
 ---
 
-## Wilton Road, Southampton, SO15 — ££600 pcm (£138 pw) pcm
+## Romsey Road, SO16 — £1,000 pcm
+- **Link:** https://www.onthemarket.com/details/18824512/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Leaders
+- **Image:** https://media.onthemarket.com/properties/18824512/1611703143/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18824512/1611703143/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18824512/1611703143/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18824512/1611703143/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18824512/1611703143/image-4-81x55.jpg
+
+**Description:**
+Leaders are delighted to present this superb ground floor flat in Compass Point, off Romsey Road, SO16 - available now!<br/><br/>The flat comes with high-standard white goods and is designed to maximize available space. It features open-plan living areas with sleek, stylish kitchens, modern bathrooms with neutral sanitary ware and tiling, and spacious double bedrooms.<br/><br/>Located to the west of the city, Compass Point offers quick access to Southampton General Hospital and easy connections to the M27 and M3. A bus stop for local routes is conveniently located right outside the development, and there is 1:1+ bicycle storage for eco-conscious residents.<br/><br/>Photos are from another flat in the block.<br/><br/>EPC- C<br/>Council Tax -A<br/>Holding deposit-£230.00<br/>5 Week Deposit -£1153.00
+
+---
+
+## Compass Point, 450 Romsey Road, SO16 — £1,000 pcm
+- **Link:** https://www.onthemarket.com/details/18761718/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Leaders
+- **Image:** https://media.onthemarket.com/properties/18761718/1611703145/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18761718/1611703145/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18761718/1611703145/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18761718/1611703145/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18761718/1611703145/image-4-81x55.jpg
+
+**Description:**
+* STANDARD ONE BEDROOM FLAT *<br/>* SECOND FLOOR * UNUFURNISHED *<br/><br/>introducing Compass Point, a remarkable collection of brand new flats offering contemporary living in the thriving city of Southampton. With a range of features and amenities, these one-bedroom apartments are designed to provide comfort, convenience, and a modern lifestyle.<br/><br/>Situated across three floors, this brand-new development offers a communal courtyard, ensuring a harmonious balance between indoor and outdoor living. The developers understand the importance of providing versatile spaces that cater to the needs of residents.<br/><br/>Step inside this fantastic 1 Bedroom flat, and you'll be greeted by a bright and spacious open plan living area. The brand new kitchen is sleek and stylish, equipped with modern appliances and designed to maximize functionality. Whether you enjoy cooking for yourself or entertaining guests, this kitchen offers the perfect setting.<br/><br/>The flat also features a brand-new bathroom, complete with neutral sanitary ware and tiling, adding a touch of elegance to your daily routine. The double bedroom provides a tranquil retreat, allowing for peaceful nights of rest and relaxation.<br/><br/>One parking space is included, ensuring convenience and security for your vehicle. Additionally, this flat offers extra space ideal for someone working from home, allowing you to create your own office-style environment.<br/><br/>Compass Point benefits from its prime location to the west of the city, providing quick access to Southampton General Hospital and excellent transport links to the M27 and M3. For those relying on public transportation, there is a bus stop conveniently located right outside the development. Furthermore bicycle storage available.<br/><br/>Originally the Ordnance Survey Head Quarters, this building holds historical significance since its opening by HM Queen Elizabeth in 1969. It represents a blend of heritage and modernity, offering a unique living experience.<br/><br/>Convenience stores such as Tesco Extra, Nisa, and Domino's Pizza are located nearby, within easy walking distance. In addition, a selection of superstores including Tesco, Sainsbury's, and Lidl are within a short distance of just 3 miles.<br/><br/>This property also offers a no deposit option, providing flexibility and ease when securing your new home.<br/><br/>EPC- C<br/>Council Tax -A<br/>Holding deposit-£242.00<br/>5 Week Deposit -£1211.00
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## Romsey Road, SO16 — £950 pcm
+- **Link:** https://www.onthemarket.com/details/18761503/
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Leaders
+- **Image:** https://media.onthemarket.com/properties/18761503/1595136904/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18761503/1595136904/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18761503/1595136904/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18761503/1595136904/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18761503/1595136904/image-4-81x55.jpg
+
+**Description:**
+Leaders are delighted to present this superb ground floor flat in Compass Point, off Romsey Road, SO16 - available now!<br/><br/>The flat comes with high-standard white goods and is designed to maximize available space. It features open-plan living areas with sleek, stylish kitchens, modern bathrooms with neutral sanitary ware and tiling, and spacious double bedrooms.<br/><br/>Located to the west of the city, Compass Point offers quick access to Southampton General Hospital and easy connections to the M27 and M3. A bus stop for local routes is conveniently located right outside the development, and there is 1:1+ bicycle storage for eco-conscious residents.<br/><br/>Photos are from another flat in the block.<br/><br/>EPC- C<br/>Council Tax -A<br/>Holding deposit-£230.00<br/>5 Week Deposit -£1153.00
+
+---
+
+## Wilton Road, Southampton, SO15 — £600 pcm
 - **Link:** https://www.onthemarket.com/details/18753629/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 3 bath
@@ -2843,7 +3446,7 @@ THE ROOM<br/>- Furnished  double room for a professional individual<br/>- Comfor
 - **Image:** https://media.onthemarket.com/properties/18753629/1595407179/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2795999.<br/><br/><b>Room in a Shared House, Wilton Road, SO15</b><br/><br/>We are proud to offer this delightful room in a 5 bedroom, 3 bathroom shared house in a great location.<br/><br/>Available to move in from 21 May 2026, this property benefits from available parking, a warm fireplace, and garden access. Property is offered furnished.<br/><br/>Viewing highly recommended. Contact OpenRent today for more details or to arrange a viewing! <br/><br/><b>Summary</b><br/><br/>Room 1 - Single room for 1 person - £600.00 per month (£138.46 per week)<br/><br/>Deposit / Bond is from £600.00, depending on room<br/><br/>Maximum number of tenants is 1<br/><br/>Students welcome to enquire<br/>No Pets, sorry<br/>No Smokers<br/>Not Suitable for Families / Children<br/><br/><b>Bills Included</b><br/>EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2795999 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million seven hundred and ninety-five thousand nine hundred and ninety-nine</i>
+Property Reference: 2795999.<br/><br/><b>Room in a Shared House, Wilton Road, SO15</b><br/><br/>We are proud to offer this delightful room in a 5 bedroom, 3 bathroom shared house in a great location.<br/><br/>Available to move in from 22 May 2026, this property benefits from available parking, a warm fireplace, and garden access. Property is offered furnished.<br/><br/>Viewing highly recommended. Contact OpenRent today for more details or to arrange a viewing! <br/><br/><b>Summary</b><br/><br/>Room 1 - Single room for 1 person - £600.00 per month (£138.46 per week)<br/><br/>Deposit / Bond is from £600.00, depending on room<br/><br/>Maximum number of tenants is 1<br/><br/>Students welcome to enquire<br/>No Pets, sorry<br/>No Smokers<br/>Not Suitable for Families / Children<br/><br/><b>Bills Included</b><br/>EPC Rating: EPC Not Required (Shared Accommodation)<br/><br/> <b> If calling, please quote reference: 2795999 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million seven hundred and ninety-five thousand nine hundred and ninety-nine</i>
 
 **Key features:**
 - [object Object]
@@ -2854,7 +3457,7 @@ Property Reference: 2795999.<br/><br/><b>Room in a Shared House, Wilton Road, SO
 
 ---
 
-## Canal Walk, Southampton SO14 — ££975 pcm (£225 pw) pcm
+## Canal Walk, Southampton SO14 — £975 pcm
 - **Link:** https://www.onthemarket.com/details/18690127/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2883,7 +3486,7 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION AVAILABLE. ONE BEDROOM. AVAILABLE FURNISHED
 
 ---
 
-## 15 Park Road, Southampton SO15 — ££950 pcm (£219 pw) pcm
+## 15 Park Road, Southampton SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/18662559/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2900,7 +3503,7 @@ ENFIELDS PRESENT  - ONE BEDROOM APARTMENT. SEPARATE KITCHEN. LIVING/DINING ROOM.
 
 ---
 
-## Canal Walk, Southampton SO14 — ££950 pcm (£219 pw) pcm
+## Canal Walk, Southampton SO14 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/16957903/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2929,7 +3532,32 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION AVAILABLE.AVAILABLE FURNISHED FOR AN ADDITI
 
 ---
 
-## William Bricknell Pavilion, Southampton, SO17 — ££950 pcm (£219 pw) pcm
+## Pansy Road, Hampshire SO16 — £610 pcm
+- **Link:** https://www.onthemarket.com/details/18636550/
+- **Type:** house
+- **Beds/Baths:** 1 bed, 1 bath
+- **Postcode area:** SO16
+- **Agent:** Charters
+- **Image:** https://media.onthemarket.com/properties/18636550/1606038440/image-0-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18636550/1606038440/image-1-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18636550/1606038440/image-2-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18636550/1606038440/image-3-81x55.jpg
+- **Image:** https://media.onthemarket.com/properties/18636550/1606038440/image-4-81x55.jpg
+
+**Description:**
+* Sharers Property - 2026 *<br/>This bright and generously proportioned single room is set within a well-maintained semi-detached residence in the highly sought-after location of Pansy Road and is offered on a fully furnished basis.<br/><br/>The accommodation comprises a comfortable single bed, a dedicated study area with desk and chair, and a useful storage cupboard, providing a practical yet welcoming living space. The property as a whole features five bedrooms and benefits from one to two shared W.C./shower rooms, ensuring convenience for residents.<br/><br/>Further advantages include a well-equipped communal kitchen with laundry facilities, attractive shared gardens ideal for relaxation, and on-street parking.<br/><br/>The rental price is inclusive of all utility bills, offering excellent value and hassle-free living. Available for immediate occupation.<br/><br/>Security Deposit: £703.84 (based on advertised rental price) <br/>Holding Deposit: £140.76 (based on advertised rental price) <br/>Minimum Term: 6 Months <br/>Council Tax Band: B<br/><br/>ADDITIONAL INFORMATION<br/><br/>Materials used in construction: Ask Agent <br/><br/>For further information on broadband and mobile coverage, please refer to the Ofcom Checker online.<br/><br/>Southampton is a vibrant port city on England’s south coast, known for its rich maritime heritage and modern, energetic character. Best known as the departure point of the Titanic, the city has played a key role in British and global maritime history for centuries, reflected in its historic docks, medieval city walls, and landmarks such as the Tudor House and SeaCity Museum. Today, Southampton combines this history with a youthful feel shaped by its two major universities, a diverse population, and a lively arts, music, and dining scene. The city offers plenty of green spaces, including Southampton Common, and benefits from excellent transport links, a busy cruise port, and close proximity to the New Forest, the Solent, and the Isle of Wight, making it both a dynamic urban centre and a gateway to nature.
+
+**Key features:**
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+- [object Object]
+
+---
+
+## William Bricknell Pavilion, Southampton, SO17 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/18599725/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2942,7 +3570,7 @@ ENFIELDS PRESENT - NO DEPOSIT OPTION AVAILABLE.AVAILABLE FURNISHED FOR AN ADDITI
 - **Image:** https://media.onthemarket.com/properties/18599725/1592683639/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2772351.<br/><br/><p> Charming Ground Floor 1-Bedroom Flat - SO17 2AS </p><p> <b> SPECIAL OFFER: £50 OFF THE FIRST 3 MONTHS' RENT </b> <br/></p> <p>We are delighted to present this beautifully located 1 bedroom, 1 bathroom ground floor flat in the popular SO17 area. </p><p>Perfect for professionals or couples, this lovely home offers comfort, convenience, and easy access to local amenities.</p> <p> Spacious double bedroom</p><p> Modern bathroom</p><p> Well-equipped kitchen</p><p> Ground floor access - easy and convenient</p><p> Parking available</p><p> Bright and airy living space</p><p> Unfurnished - make it your own</p><p> Prime Location Benefits:</p> <ul><li> <p> Close to local shops & supermarkets</p> </li><li> <p> Cafes, restaurants & takeaways nearby</p> </li><li> <p> Easy access to local hospitals and university</p> </li><li> <p> Great transport links</p> </li><li> <p> Nearby parks and green spaces for relaxing walks</p> </li></ul> <p> Available to move in immediately. </p> <p>This property offers an excellent blend of comfort and location, making it an ideal place to call home. </p><p>Early viewing is highly recommended as properties in this area are in high demand!</p><p> <b> Summary</b> </p><ul><li> <p>Rent: £950.00 per month (£219.23 per week)</p> </li><li> <p>Deposit / Bond: £1,096.15</p> </li><li> <p>Minimum tenancy: 6 months</p> </li><li> <p>Maximum tenants: 2</p> </li><li> <p>Furnishing: Unfurnished</p> </li><li> <p>Parking: Available on a first come first serve basis </p></li></ul> <ul></ul> <p> Contact OpenRent today to arrange a viewing or for more information - don't miss out on this fantastic opportunity! </p><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £950.00 per month (£219.23 per week)<br/>- Deposit / Bond: £1,096.15<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Family Friendly<br/>- Bills not included<br/>- Property has parking<br/>- No Garden Access<br/>- EPC Rating: C<br/><br/> <b> If calling, please quote reference: 2772351 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million seven hundred and seventy-two thousand three hundred and fifty-one</i>
+Property Reference: 2772351.<br/><br/><p> Charming Ground Floor 1-Bedroom Flat - SO17 2AS </p><p> <b> SPECIAL OFFER: £50 OFF THE FIRST 3 MONTHS' RENT </b> <br/></p> <p>We are delighted to present this beautifully located 1 bedroom, 1 bathroom ground floor flat in the popular SO17 area. </p><p>Perfect for professionals or couples, this lovely home offers comfort, convenience, and easy access to local amenities.</p> <p> Spacious double bedroom</p><p> Modern bathroom</p><p> Well-equipped kitchen</p><p> Ground floor access - easy and convenient</p><p> Parking available</p><p> Bright and airy living space</p><p> Unfurnished - make it your own</p><p> Prime Location Benefits:</p> <ul><li> <p> Close to local shops & supermarkets</p> </li><li> <p> Cafes, restaurants & takeaways nearby</p> </li><li> <p> Easy access to local hospitals and university</p> </li><li> <p> Great transport links</p> </li><li> <p> Nearby parks and green spaces for relaxing walks</p> </li></ul> <p> Available to move in immediately. </p> <p>This property offers an excellent blend of comfort and location, making it an ideal place to call home. </p><p>Early viewing is highly recommended as properties in this area are in high demand!</p><p> <b> Summary</b> </p><ul><li> <p>Rent: £950.00 per month (£219.23 per week)</p> </li><li> <p>Deposit / Bond: £1,096.15</p> </li><li> <p>Minimum tenancy: 6 months</p> </li><li> <p>Maximum tenants: 2</p> </li><li> <p>Furnishing: Unfurnished</p> </li><li> <p>Parking: Available on a first come first serve basis </p></li></ul> <ul></ul> <p> Contact OpenRent today to arrange a viewing or for more information - don't miss out on this fantastic opportunity! </p><br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £950.00 per month (£219.23 per week)<br/>- Deposit / Bond: £1,096.15<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes unfurnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 2<br/>- Students welcome to enquire<br/>- No Pets, sorry<br/>- No Smokers<br/>- Family Friendly<br/>- Bills not included<br/>- Property has parking<br/>- No Garden Access<br/>- EPC Rating: C<br/><br/> <b> If calling, please quote reference: 2772351 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million seven hundred and seventy-two thousand three hundred and fifty-one</i>
 
 **Key features:**
 - [object Object]
@@ -2951,7 +3579,7 @@ Property Reference: 2772351.<br/><br/><p> Charming Ground Floor 1-Bedroom Flat -
 
 ---
 
-## Landguard Road, Southampton, SO15 — ££950 pcm (£219 pw) pcm
+## Landguard Road, Southampton, SO15 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/18324354/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2964,7 +3592,7 @@ Property Reference: 2772351.<br/><br/><p> Charming Ground Floor 1-Bedroom Flat -
 - **Image:** https://media.onthemarket.com/properties/18324354/1611294765/image-4-81x55.jpg
 
 **Description:**
-Property Reference: 2605727.<br/><br/>* 1st floor - 1 bed serviced apartment *double room with shower room. sitting room and kitchenette situated in Shirley Southampton with all bills included, including WIFI comes fully furnished and ready to move into. FREE ONSITE PARKING.<br/> Located on the first floor within a guesthouse, Kitchen and living room combined ideal for one person <br/><br/> * Short term lets rolling agreement terms and conditions <br/> * Rooms cleaned by housekeeper. Fresh towels and linen included if you request<br/><br/> This property boasts a fantastic location for bus routes and close to SOUTHAMPTON CENTRAL train station and West Quay shopping centre and hospital This property also offers OFF ROAD PARKING so message now to arrange your viewing.<br/><br/> Lovely one bed with TV available NOW!<br/> Fully furnished and ALL BILLS INCLUDED<br/> Off road parking<br/> Gas central heating<br/> Would suit professional workers<br/><br/> About the area:<br/> Local shopping is available in Shirley whilst more comprehensive amenities are available in Southampton City Centre including the West Quay complex. Southampton boasts a mainline railway station which provides access to London Waterloo. The M3 can be accessed via The Avenue. Southampton City Centre offers numerous parks along with Southampton Common which is a 10 minute.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £950.00 per month (£219.23 per week)<br/>- Deposit / Bond: £657.69<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 21 May 2026<br/>- Maximum number of tenants is 1<br/>- No Students<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Holiday Let: Less than 4 months usage per year)<br/><br/> <b> If calling, please quote reference: 2605727 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million six hundred and five thousand seven hundred and twenty-seven</i>
+Property Reference: 2605727.<br/><br/>* 1st floor - 1 bed serviced apartment *double room with shower room. sitting room and kitchenette situated in Shirley Southampton with all bills included, including WIFI comes fully furnished and ready to move into. FREE ONSITE PARKING.<br/> Located on the first floor within a guesthouse, Kitchen and living room combined ideal for one person <br/><br/> * Short term lets rolling agreement terms and conditions <br/> * Rooms cleaned by housekeeper. Fresh towels and linen included if you request<br/><br/> This property boasts a fantastic location for bus routes and close to SOUTHAMPTON CENTRAL train station and West Quay shopping centre and hospital This property also offers OFF ROAD PARKING so message now to arrange your viewing.<br/><br/> Lovely one bed with TV available NOW!<br/> Fully furnished and ALL BILLS INCLUDED<br/> Off road parking<br/> Gas central heating<br/> Would suit professional workers<br/><br/> About the area:<br/> Local shopping is available in Shirley whilst more comprehensive amenities are available in Southampton City Centre including the West Quay complex. Southampton boasts a mainline railway station which provides access to London Waterloo. The M3 can be accessed via The Avenue. Southampton City Centre offers numerous parks along with Southampton Common which is a 10 minute.<br/><br/><b>Summary & Exclusions:</b><br/>- Rent Amount: £950.00 per month (£219.23 per week)<br/>- Deposit / Bond: £657.69<br/>- 1 Bedrooms<br/>- 1 Bathrooms<br/>- Property comes furnished<br/>- Available to move in from 22 May 2026<br/>- Maximum number of tenants is 1<br/>- No Students<br/>- No Pets, sorry<br/>- No Smokers<br/>- Not Suitable for Families / Children<br/>- <b>Bills Included</b><br/>- Property has parking<br/>- Property has garden access<br/>- EPC Rating: EPC Not Required (Holiday Let: Less than 4 months usage per year)<br/><br/> <b> If calling, please quote reference: 2605727 </b> <br/><br/><b>Fees:</b><br/>You will <b>not</b> be charged any admin fees.<br/><br/><br/> * Contact today to book a viewing and have the landlord show you round! * <br/>Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.<br/><br/><br/><br/><br/><i>OpenRent endeavours to make all property particulars as accurate and reliable as possible, however if you require any further clarification or information please contact us.  When applying for a tenancy using the Rent Now process, you will be required to pay one month's rent and any deposit before moving in.  This will be paid to OpenRent and released to the landlord once you have moved in. With OpenRent there are no administration fees to pay. </i><br/><br/><i>Property Reference two million six hundred and five thousand seven hundred and twenty-seven</i>
 
 **Key features:**
 - [object Object]
@@ -2973,7 +3601,7 @@ Property Reference: 2605727.<br/><br/>* 1st floor - 1 bed serviced apartment *do
 
 ---
 
-## Gordon Avenue, Hampshire SO14 — ££625 pcm (£144 pw) pcm
+## Gordon Avenue, Hampshire SO14 — £625 pcm
 - **Link:** https://www.onthemarket.com/details/18498636/
 - **Type:** house
 - **Beds/Baths:** 1 bed, 1 bath
@@ -2998,7 +3626,7 @@ This double room within a characterful and substantial semi-detached house is sh
 
 ---
 
-## Wilton Avenue, Southampton, SO15 — ££575 pcm (£133 pw) pcm
+## Wilton Avenue, Southampton, SO15 — £575 pcm
 - **Link:** https://www.onthemarket.com/details/18446074/
 - **Type:** houseshare
 - **Beds/Baths:** 1 bed, 1 bath
@@ -3026,7 +3654,7 @@ This double room within a characterful and substantial semi-detached house is sh
 
 ---
 
-## Landguard Road, Southampton SO15 — ££750 pcm (£173 pw) pcm
+## Landguard Road, Southampton SO15 — £750 pcm
 - **Link:** https://www.onthemarket.com/details/18426213/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -3043,7 +3671,7 @@ This double room within a characterful and substantial semi-detached house is sh
 
 ---
 
-## Landguard Road, Southampton SO15 — ££750 pcm (£173 pw) pcm
+## Landguard Road, Southampton SO15 — £750 pcm
 - **Link:** https://www.onthemarket.com/details/18425204/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -3060,7 +3688,7 @@ This double room within a characterful and substantial semi-detached house is sh
 
 ---
 
-## Canal Walk, Southampton SO14 — ££950 pcm (£219 pw) pcm
+## Canal Walk, Southampton SO14 — £950 pcm
 - **Link:** https://www.onthemarket.com/details/18408354/
 - **Type:** flat
 - **Beds/Baths:** 1 bed, 1 bath
@@ -3085,81 +3713,6 @@ ENFIELDS PRESENT  - NO DEPOSIT OPTION AVAILABLE. NEW BUILD. ONE BEDROOM.  AVAILA
 - [object Object]
 - [object Object]
 - [object Object]
-
----
-
-## Mayfield Road, Southampton, SO17 — ££570 pcm (£132 pw) pcm
-- **Link:** https://www.onthemarket.com/details/18230667/
-- **Type:** houseshare
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO17
-- **Agent:** Edison Green
-- **Image:** https://media.onthemarket.com/properties/18230667/1588099834/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18230667/1588099834/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18230667/1588099834/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18230667/1588099834/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18230667/1588099834/image-4-81x55.jpg
-
-**Description:**
-<p>Double Room in professional shared house. This room is available now and a suitable tenant is required ASAP. The room is fully furnished and the rent price includes the cost of ALL BILLS! There is a shared modern kitchen, living room and rear garden. This room is located on the first floor and shares a bathroom with one other room.</p>
-
-**Key features:**
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-
----
-
-## Canal Walk, Southampton SO14 — ££950 pcm (£219 pw) pcm
-- **Link:** https://www.onthemarket.com/details/18203225/
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO14
-- **Agent:** Enfields Estate Agents
-- **Image:** https://media.onthemarket.com/properties/18203225/1614054502/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18203225/1614054502/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18203225/1614054502/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18203225/1614054502/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18203225/1614054502/image-4-81x55.jpg
-
-**Description:**
-ENFIELDS PRESENT -  NO DEPOSIT OPTION AVAILABLE. AVAILABLE FURNISHED FOR AN ADDITIONAL RENT. NEW BUILD. ONE BEDROOM. THIRD FLOOR. LIFT TO ALL FLOORS. BICYCLE STORAGE. A lovely one bedroom apartment in the city centre. Council Tax TBA & EPC B.<br/><b>INTERNAL</b> <br/>*FIRST MONTHS RENT HALF PRICE!*   The property is accessed via the communal entrance and the property is located on the third floor, accessed via the lift or staircase. The property consists of an entrance hall, open plan kitchen/living room, bedroom and shower room/wc. <br/><b>EXTERNAL</b> <br/>There is a communal bike & bin store to the rear of the building. <br/><b>LOCATION</b> <br/>Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.<br/><br/>The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.<br/><br/>Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city's bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.<br/><br/>Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
-
-**Key features:**
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-- [object Object]
-
----
-
-## Portswood Road, Southampton, Hampshire, SO17 — ££850 pcm (£196 pw) pcm
-- **Link:** https://www.onthemarket.com/details/18183246/
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Postcode area:** SO17
-- **Agent:** Leaders
-- **Image:** https://media.onthemarket.com/properties/18183246/1598121120/image-0-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18183246/1598121120/image-1-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18183246/1598121120/image-2-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18183246/1598121120/image-3-81x55.jpg
-- **Image:** https://media.onthemarket.com/properties/18183246/1598121120/image-4-81x55.jpg
-
-**Description:**
-*WATER INCLUDED IN THE RENT*<br/><br/>New to the market! A one bedroom apartment located on Portswood Road, Southampton.<br/><br/>The property has a double bedroom, kitchen, spacious lounge and bathroom.<br/><br/>Available ASAP.<br/><br/>Further benefits include Water included within the rent, walking distance to Southampton University and within distance to Portswood Highstreet.<br/><br/>Holding deposit: £196.00<br/>5 week deposit: £980.00<br/>EPC rating: C<br/>Council tax: A
 
 ---
 

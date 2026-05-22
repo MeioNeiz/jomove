@@ -28,14 +28,17 @@ const HOST_GAP_MS = 1500;
 
 type OtmImage = { default?: string; webp?: string };
 type OtmSummary = {
-  id:                          number;
+  id:                          number | string;
   "details-url":               string;
   address:                     string;
   "humanised-property-type":   string;
   features:                    string[];
   bedrooms:                    number;
   bathrooms:                   number | null;
-  price:                       number | null;
+  // OTM's payload originally returned this as a number; some time in 2026 they
+  // started returning the human-rendered string ("£925 pcm (£213 pw)"). Treat
+  // both shapes — the actual numeric pcm is parsed by `parseOtmPriceField`.
+  price:                       number | string | null;
   "short-price":               string;
   "price-qualifier":           string | null;
   images:                      OtmImage[];
@@ -45,6 +48,44 @@ type OtmSummary = {
   agent:                       { name?: string; "company-name"?: string } | null;
   "days-since-added-reduced"?: number | null;
 };
+
+/**
+ * OTM sometimes hands us `price: 925` (legacy) and sometimes
+ * `price: "£925 pcm (£213 pw)"` (current). Always return a pcm number.
+ *
+ * "short-price" looks like "£925" so we prefer it if numeric parsing
+ * fails on the main field.
+ */
+function parseOtmPriceField(s: OtmSummary): number | null {
+  const cands: Array<number | string | null | undefined> = [
+    s.price, s["short-price"],
+  ];
+  for (const c of cands) {
+    if (typeof c === "number" && Number.isFinite(c)) return c;
+    if (typeof c !== "string") continue;
+
+    // Prefer an explicit "£NNN pcm/pm" match (cheap parenthetical pw notes
+    // come *after* the pcm figure on OTM: "£925 pcm (£213 pw)"). Fall back
+    // to a "£NNN pw" only if no pcm appears.
+    const pcm = c.match(/£\s*([\d,]+)(?:\.\d{2})?\s*(?:pcm|pm)\b/i);
+    if (pcm) {
+      const n = parseInt(pcm[1]!.replace(/,/g, ""), 10);
+      if (Number.isFinite(n)) return n;
+    }
+    const pw = c.match(/£\s*([\d,]+)(?:\.\d{2})?\s*(?:p\/?w|per\s+week)\b/i);
+    if (pw) {
+      const n = parseInt(pw[1]!.replace(/,/g, ""), 10);
+      if (Number.isFinite(n)) return Math.round(n * 52 / 12);
+    }
+    // Bare "£NNN" (e.g. "short-price": "£925") — assume pcm.
+    const bare = c.match(/£\s*([\d,]+)/);
+    if (bare) {
+      const n = parseInt(bare[1]!.replace(/,/g, ""), 10);
+      if (Number.isFinite(n)) return n;
+    }
+  }
+  return null;
+}
 
 function extractNextData(html: string): any {
   const m = html.match(/<script id=["']__NEXT_DATA__["'][^>]*>([\s\S]*?)<\/script>/);
@@ -82,8 +123,9 @@ function pickFurnishedFromFeatures(features: string[]): string | null {
 }
 
 function summaryPreFilter(s: OtmSummary): FilterResult {
-  if (s.price == null) return { pass: false, reason: "no price" };
-  if (s.price > MAX_PRICE) return { pass: false, reason: `price £${s.price} > £${MAX_PRICE}` };
+  const price = parseOtmPriceField(s);
+  if (price == null) return { pass: false, reason: "no price" };
+  if (price > MAX_PRICE) return { pass: false, reason: `price £${price} > £${MAX_PRICE}` };
   if (s.bedrooms < 1 || s.bedrooms > 2) {
     return { pass: false, reason: `beds ${s.bedrooms} outside 1-2` };
   }
@@ -114,6 +156,8 @@ function buildFromDetail(s: OtmSummary, prop: any): ScrapedListing | null {
   if (prop?.student === true) return null;
   if ((prop?.propertyLabels ?? []).some((l: any) =>
     typeof l === "string" && /let agreed|under offer/i.test(l))) return null;
+  const price = parseOtmPriceField(s);
+  if (price == null) return null;
 
   const outcode = outcodeFromAddress(prop?.displayAddress ?? s.address);
   // OnTheMarket usually only shows outcode publicly. No incode in summary.
@@ -163,7 +207,7 @@ function buildFromDetail(s: OtmSummary, prop: any): ScrapedListing | null {
 
   return {
     address:       prop?.displayAddress ?? s.address,
-    price_pcm:     s.price!,
+    price_pcm:     price,
     source_url:    `https://www.onthemarket.com/details/${s.id}/`,
     listing_type:  normaliseListingType(prop?.humanisedPropertyType ?? s["humanised-property-type"]),
     beds:          prop?.bedrooms ?? s.bedrooms ?? null,

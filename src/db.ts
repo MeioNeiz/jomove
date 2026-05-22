@@ -4,6 +4,7 @@ import { dirname } from "node:path";
 import { DB_PATH } from "./config.ts";
 import { GEOCODE_SCHEMA } from "./geocode.ts";
 import { nowIso } from "./util/now.ts";
+import { reconcileDedupeKeys } from "./reconcile.ts";
 
 export const SCHEMA = `
 CREATE TABLE IF NOT EXISTS listings (
@@ -80,7 +81,7 @@ CREATE TABLE IF NOT EXISTS user_images (
 // Bump this whenever a new entry is added to MIGRATIONS so future `connect()`
 // calls run only the new step. The current version is read from app_state
 // (key `schema_version`); if up to date, migrate() bails after one query.
-export const SCHEMA_VERSION = 1;
+export const SCHEMA_VERSION = 2;
 
 export function connect(): Database {
   const dir = dirname(DB_PATH);
@@ -137,6 +138,18 @@ const MIGRATIONS: Migration[] = [
       db.run(
         "INSERT INTO app_state (key, value, updated_at) VALUES ('rating_scale_v2', '1', ?)",
         [nowIso()],
+      );
+    }
+  },
+  // 1 → 2: dedupe_key normalisation got smarter (strips agent refs, normalises
+  // Road/Rd/St/Ave, drops leading house numbers). Re-key every listing and
+  // merge user_notes that previously sat under stale keys.
+  (db) => {
+    const stats = reconcileDedupeKeys(db);
+    if (stats.rekeyed > 0 || stats.mergedGroups > 0) {
+      console.log(
+        `migration: rekeyed ${stats.rekeyed} listing(s), ` +
+        `merged ${stats.mergedRows} user_notes row(s) into ${stats.mergedGroups} group(s)`,
       );
     }
   },

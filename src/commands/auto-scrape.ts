@@ -15,6 +15,11 @@ import { cmdArchive } from "./archive.ts";
 import { notifyNewListings } from "../notify.ts";
 import { ensurePostcodeGeocodes, runAddressGeocoding } from "../geocode.ts";
 import { connect } from "../db.ts";
+import {
+  startScrapeRun, endScrapeRun, inPortal, withPortalSync,
+  logPortalStart, logPortalEnd, logSkip, logScraperError,
+  categoriseSkip, LOG_PATH,
+} from "../scrapers/log.ts";
 
 export type AutoScrapeOpts = {
   portals?:  string[];
@@ -55,10 +60,18 @@ export async function cmdAutoScrape(opts: AutoScrapeOpts): Promise<AutoScrapeRes
 
   console.log(`auto-scrape: running ${known.join(", ")}`);
   const t0 = Date.now();
+  startScrapeRun();
 
   // Run in parallel — each scraper has its own per-host rate limiter.
+  // Each scrape() runs inside its own portal context so fetchText knows
+  // which portal to attribute requests to in the log.
+  const portalStarts = known.map(() => Date.now());
   const results = await Promise.allSettled(
-    known.map(p => PORTALS_BY_ID[p]!.scrape()),
+    known.map((p, i) => inPortal(p, async () => {
+      portalStarts[i] = Date.now();
+      logPortalStart();
+      return PORTALS_BY_ID[p]!.scrape();
+    })),
   );
 
   let total = 0;
@@ -68,8 +81,14 @@ export async function cmdAutoScrape(opts: AutoScrapeOpts): Promise<AutoScrapeRes
   for (let i = 0; i < results.length; i++) {
     const r = results[i]!;
     const portal = known[i]!;
+    const portalMs = Date.now() - portalStarts[i]!;
     if (r.status === "rejected") {
-      console.error(`  ✗ ${portal}: scraper crashed — ${r.reason?.message ?? r.reason}`);
+      const msg = r.reason?.message ?? String(r.reason);
+      console.error(`  ✗ ${portal}: scraper crashed — ${msg}`);
+      withPortalSync(portal, () => logScraperError(`scraper crashed: ${msg}`));
+      withPortalSync(portal, () => logPortalEnd({
+        written: 0, skipped: 0, errors: 1, durationMs: portalMs,
+      }));
       errors++;
       perPortal.push({ portal, written: 0, skipped: 0, errors: 1 });
       continue;
@@ -83,7 +102,30 @@ export async function cmdAutoScrape(opts: AutoScrapeOpts): Promise<AutoScrapeRes
       skipped: report.skipped.length,
       errors:  report.errors.length,
     });
-    console.log(`  ${report.written > 0 ? "✓" : "·"} ${portal}: ${report.written} written, ${report.skipped.length} skipped, ${report.errors.length} errors`);
+
+    // Replay skips + errors into the persistent log, then summarise by bucket.
+    const buckets: Record<string, number> = {};
+    withPortalSync(portal, () => {
+      for (const s of report.skipped) {
+        logSkip(s.id, s.reason);
+        const b = categoriseSkip(s.reason);
+        buckets[b] = (buckets[b] ?? 0) + 1;
+      }
+      for (const e of report.errors) logScraperError(e);
+      logPortalEnd({
+        written: report.written, skipped: report.skipped.length,
+        errors: report.errors.length, durationMs: portalMs,
+        skipBuckets: buckets,
+      });
+    });
+
+    const bucketSummary = Object.entries(buckets)
+      .sort((a, b) => b[1] - a[1])
+      .map(([k, v]) => `${k}:${v}`)
+      .join(" ");
+
+    console.log(`  ${report.written > 0 ? "✓" : "·"} ${portal}: ${report.written} written, ${report.skipped.length} skipped, ${report.errors.length} errors (${(portalMs/1000).toFixed(1)}s)`);
+    if (bucketSummary) console.log(`      skips: ${bucketSummary}`);
     if (report.errors.length > 0) {
       for (const e of report.errors) console.log(`      ! ${e}`);
     }
@@ -95,7 +137,9 @@ export async function cmdAutoScrape(opts: AutoScrapeOpts): Promise<AutoScrapeRes
       listings: report.listings.map(s => toListing(portal, s)),
     });
   }
+  endScrapeRun({ total, errors, ms: Date.now() - t0 });
   console.log(`auto-scrape: ${total} listings in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  console.log(`log: ${LOG_PATH}`);
 
   if (opts.ingest !== false && total > 0) {
     console.log("--- ingesting ---");

@@ -1,5 +1,226 @@
 # Rightmove — Southampton Rentals
-_Scraped 2026-05-21_
+_Scraped 2026-05-22_
+
+## Howard Road, Southampton, SO15 — £825 pcm
+- **Link:** https://www.rightmove.co.uk/properties/173231141
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £950
+- **Available:** 04/06/2026
+- **Postcode area:** SO15
+- **Postcode:** SO15 5BP
+- **Agent:** Embley Management Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/909466445/173231141/90946644555fef67d4e9efe3a48e119d.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/477d9cb9b/173231141/477d9cb9bab56851538e9077d6490a2d.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/21d2bc34c/173231141/21d2bc34cb36aec28bc13d482b287e9e.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/713ebfce0/173231141/713ebfce04296a7578c73a86da325dd2.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/3247e70ec/173231141/3247e70ec7e7d7e26eaa19875cfec9be.jpeg
+
+**Description:**
+ENFIELDS PRESENT - FIRST FLOOR FLAT. HOWARD ROAD LOCATION. OPEN PLAN KITCHEN/LIVING ROOM. EN-SUITE BATHROOM/WC. RESIDENTS PARKING. A one bedroom flat in Howard Road offering convenient access to Shirley Road and Hill Lane for Central Train Station. Council Tax Band A. EPC Rating E.
+INTERNAL
+The property is accessed via the communal entrance with a security entry system and the property is located on the first floor, accessible via the staircase. The flat consists of an entrance hall with storage cupboard, open plan kitchen/living room with window to the rear aspect, a bedroom with window to the side aspect and an en-suite bathroom/wc.
+EXTERNAL
+There is a residents car park to the rear of the building.
+LOCATION
+Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.
+The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.
+Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city¿s bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.
+Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
+
+**Key features:**
+- FIRST FLOOR FLAT
+- ONE BEDROOM
+- OPEN PLAN KITCHEN/LIVING ROOM
+- EN-SUITE BATHROOM/WC
+- RESIDENTS PARKING
+- CONVENIENT FOR CENTRAL TRAIN STATION
+- COUNCIL TAX BAND A
+- EPC RATING E
+
+---
+
+## Paignton Road, Southampton, Hampshire, SO16 — £895 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88800708
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Deposit:** £1032
+- **Available:** 01/06/2026
+- **Postcode area:** SO16
+- **Postcode:** SO16 4NQ
+- **Agent:** Edward Rose Property Group - LSL Franchise
+- **Image:** https://media.rightmove.co.uk/property-photo/478894834/88800708/478894834685837dacf836eb9d527d0e.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/4ca7e84f3/88800708/4ca7e84f3fe7c1da58dae0efafaf4fd4.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/6d32150a3/88800708/6d32150a357f2915ec9dcdf73816b5ba.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/ab0cc80e6/88800708/ab0cc80e6bf7d1e89c93a8503fd57fab.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/9ba315bc1/88800708/9ba315bc1a1c91987968f91dcc90bd0e.jpeg
+
+**Description:**
+Step into a brand-new luxury HMO designed for modern professional living. Finished to an exceptional standard throughout, this stunning 5-bedroom property offers the perfect blend of comfort, style, and convenience. Every detail has been carefully considered to create a high-end living experience that stands out from the rest.
+Each spacious bedroom comes complete with its own private ensuite bathroom, wall-mounted TV, superfast business broadband, and dedicated RJ45 internet connection points — perfect for professionals working from home or simply enjoying seamless entertainment. The property also benefits from a full mesh WiFi system, ensuring fast and reliable connectivity in every corner of the house.
+At the heart of the home is a beautifully finished communal kitchen and lounge area, providing a stylish social space to relax, cook, and unwind. Outside, the large garden with outdoor furniture offers the ideal setting for summer evenings and social gatherings. With parking for up to 3 vehicles, all bills included (including Council Tax), excellent transport links, and premium finishes including LVT flooring, carpets, double glazing, and continuous hot water via an unvented cylinder system, this property delivers luxury shared living at its finest.
+Properties finished to this specification rarely become available — early viewing is highly recommended
+IMPORTANT NOTE TO POTENTIAL PURCHASERS & TENANTS:
+We endeavour to make our particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. The services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All photographs and measurements have been taken as a guide only and are not precise. Floor plans where included are not to scale and accuracy is not guaranteed. If you require clarification or further information on any points, please contact us, especially if you are traveling some distance to view. POTENTIAL PURCHASERS: Fixtures and fittings other than those mentioned are to be agreed with the seller. POTENTIAL TENANTS: All properties are available for a minimum length of time, with the exception of short term accommodation. Please contact the branch for details. A security deposit of at least one month’s rent is required. Rent is to be paid one month in advance. It is the tenant’s responsibility to insure any personal possessions. Payment of all utilities including water rates or metered supply and Council Tax is the responsibility of the tenant in most cases.
+SOU260402/2
+
+**Key features:**
+- 5 spacious rooms in total
+- Large ensuite bathroom in every room
+- Continuous hot water supply with unvented cylinder
+- Modern kitchen and lounge area
+- Comfortable seating and communal TV area
+- Large garden with garden furniture
+- New double glazing throughout
+- High-spec finish throughout
+- Brand new development, recently completed
+- LVT flooring and carpets throughout
+
+---
+
+## Ranelagh Gardens, Southampton, SO15 — £595 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88799508
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Deposit:** £595
+- **Available:** 25/05/2026
+- **Postcode area:** SO15
+- **Postcode:** SO15 2TH
+- **Agent:** Jackson Bailey Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/a0895365b/88799508/a0895365bd839772ce1ea0183dfaad36.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/8e2e8b3bb/88799508/8e2e8b3bbdf53b8632dd0a1ffd04281f.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/664b7da31/88799508/664b7da31d032769199458a88388b4d4.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/c6f81f4c6/88799508/c6f81f4c6e92d3b03c15b4a77e6fb509.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/b1a775c5d/88799508/b1a775c5dcab315c20b6979809aa585f.jpeg
+
+**Description:**
+AVAILABLE NOW! Tenant required for quick move! Fully furnished, top-floor double room situated in Ranelagh Gardens in the quiet, sought after location of Banister Park. The room benefits from it’s own en-suite shower room, there’s also a modern shared kitchen with tumble dryer and a shared garden. The advertised rent price includes all utility bills, internet, communal cleaning and council tax.The property has 6 bedrooms all of which have private shower rooms and are currently occupied by professional tenants. Income requirement circa £18k per annum. No couples.
+EPC Rating: C
+
+**Key features:**
+- En-suite Room to Rent
+- Fully Furnished
+- ALL BILLS INCLUDED
+- Top Floor
+- No Couples
+- Professional Shared House
+- WIFI &amp; Council Tax Included
+- Communal Cleaning Included
+- Shared Kitchen with Tumble Dryer
+- Available Now! Tenant required ASAP
+
+---
+
+## |Ref: R153042|, Shirley Road, Southampton, SO15 3EY — £1,100 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88799145
+- **Type:** flat
+- **Beds/Baths:** 2 bed, 1 bath
+- **Furnished:** Yes
+- **Deposit:** £1269
+- **Available:** 15/06/2026
+- **Postcode area:** SO15
+- **Postcode:** SO15 3EY
+- **Agent:** Century21(Southampton) Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/f683a1599/88799145/f683a1599dea8b800168c0368e060817.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/fa9e85fd7/88799145/fa9e85fd74a43dd98e9c3721002426a6.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/bd06a9349/88799145/bd06a93498ec1d6ccfec199843f9b24f.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/6afdccd1b/88799145/6afdccd1b7ff4d954834b063accdcb0b.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/69e97a47f/88799145/69e97a47f17d4a9452750edc8c8c63f4.jpeg
+
+**Description:**
+| *** AVAILABLE FROM 15/06/2026 *** | *** FIRST FLOOR *** | *** SHOWER ROOM TO MASTER BEDROOM *** | *** GAS CENTRAL HEATING *** | *** *** | *** OFF ROAD PARKING FOR ONE CAR *** | *** EPC BAND: C *** | *** COUNCIL TAX BAND: A *** |
+This property is close to local shops, amenities, Shirley High Street, General Hospital, Schools with high Ofsted Rating and Transport links. The property comprises of two bedrooms, double glazing, gas central heating, Shower room of master bedroom, main bathroom, Fitted kitchen with washing machine, oven hob and extractor. Please note that the property currently does not come with fridge freezer however if needed it can be provided if needed. Off Road Parking For one car.
+Tenant pays all the bills and Council Tax.
+
+**Key features:**
+- Off road parking for one car
+- Close to City Centre
+- Close proximity to General hospital and Shirley high street
+- Close to public transport
+- EPC Band: C
+- Council tax band: A
+- Gas Centra Heating
+
+---
+
+## Pansy Road, Southampton, Hampshire, SO16 — £650 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88781724
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Deposit:** £750
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 3GR
+- **Agent:** The Lomond Group
+- **Image:** https://media.rightmove.co.uk/property-photo/c5e5302c1/88781724/c5e5302c13a41f067342a2da5f40ff6d.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/fa8fcdbc0/88781724/fa8fcdbc0787ecd3ec28daa8172babeb.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/19a3ba6d5/88781724/19a3ba6d513a3d9f1f452ba288dee7dc.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/bd0116ea1/88781724/bd0116ea1bb2e6d4f710b8a38119b0cd.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/1b837eedc/88781724/1b837eedc96719bf8fcc788341ac15dc.jpeg
+
+**Description:**
+This spacious ground floor double room is situated within a well-presented semi-detached residence in the popular area of Pansy Road and is offered on a furnished basis.
+The room is well laid out and includes a double bed, desk with chair, and storage shelves, making it ideal for comfortable day-to-day living.
+The property comprises a total of five bedrooms and benefits from one to two shared W.C./shower rooms, as well as a shared kitchen fitted with essential appliances and laundry facilities. Residents also have access to well-maintained communal gardens, providing pleasant outdoor space, and on-street parking is available nearby.
+The rental price is inclusive of all bills, offering convenient and hassle-free living. Available immediately.
+Security Deposit: £750.00 (based on advertised rental price)
+Holding Deposit: £150.00 (based on advertised rental price)
+Council Tax Band: B
+ADDITIONAL INFORMATION
+Materials used in construction: Ask Agent
+For further information on broadband and mobile coverage, please refer to the Ofcom Checker online
+Southampton is a vibrant port city on England’s south coast, known for its rich maritime heritage and modern, energetic character. Best known as the departure point of the Titanic, the city has played a key role in British and global maritime history for centuries, reflected in its historic docks, medieval city walls, and landmarks such as the Tudor House and SeaCity Museum. Today, Southampton combines this history with a youthful feel shaped by its two major universities, a diverse population, and a lively arts, music, and dining scene. The city offers plenty of green spaces, including Southampton Common, and benefits from excellent transport links, a busy cruise port, and close proximity to the New Forest, the Solent, and the Isle of Wight, making it both a dynamic urban centre and a gateway to nature.
+
+**Key features:**
+- Shared house
+- Spacious furnished double room
+- Semi-detached property
+- Shared kitchen and communal gardens
+- All bills included
+- Available Now
+
+---
+
+## Southbrook Rise, Southampton, SO15 — £950 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88778808
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £1096
+- **Available:** 26/06/2026
+- **Postcode area:** SO15
+- **Postcode:** SO15 1BX
+- **Agent:** LSL Franchise
+- **Image:** https://media.rightmove.co.uk/property-photo/774d811e9/88778808/774d811e9f7cc8fda152682988eb8840.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/51761e95c/88778808/51761e95cf812603f2a85877f3d95a7d.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/1f833016b/88778808/1f833016b172922ca843e99124a448e0.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/d895da853/88778808/d895da853f2b90b26e6e3897fa96fc8d.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/03592951f/88778808/03592951f310bcc10fb937e767c3a42a.jpeg
+
+**Description:**
+LetCo is pleased to offer this modern one bedroom ground floor apartment situated in the heart of the city, located a few minutes' walk from Southampton central train station, this property offers open plan living with a fitted kitchen with integrated appliances and lounge, double bedroom and modern bathroom with shower over bath.
+The building is situated in an ideal location with just a short walk to Southampton central train station, other transport links, University and Southampton City Centre. In addition, there is allocated parking for one car. Available June 2026.
+IMPORTANT NOTE TO PURCHASERS:
+We endeavour to make our sales particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. Any services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All measurements have been taken as a guide to prospective buyers only, and are not precise. Please be advised that some of the particulars may be awaiting vendor approval. If you require clarification or further information on any points, please contact us, especially if you are travelling some distance to view. Fixtures and fittings other than those mentioned are to be agreed with the seller.
+LET230011/
+
+**Key features:**
+- Double Bedroom
+- Central Location
+- Available June 2024
+- Modern
+- Open Plan
+- Allocated Parking
+- Close to Southampton Centre &amp; Train
+- Integrated Appliances
+- Unfurnished
+- Ground Floor
+
+---
 
 ## King Street, Canute House King Street, SO14 — £900 pcm
 - **Link:** https://www.rightmove.co.uk/properties/88775634
@@ -636,6 +857,42 @@ Excellent public transport links. This is a popular and sought after residential
 
 ---
 
+## Romsey Road, Southampton, SO16 — £900 pcm
+- **Link:** https://www.rightmove.co.uk/properties/174968777
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Deposit:** £1038
+- **Available:** 25/05/2026
+- **Postcode area:** SO16
+- **Postcode:** SO16 9GJ
+- **Agent:** Regal Estates South Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/f8e07f27d/174968777/f8e07f27de75c098d62a54eb09811a80.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/2785e3c9f/174968777/2785e3c9fdbaf72aff72eb54fb10e01f.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/320de8ac2/174968777/320de8ac22e705b8fddd214e82aa8254.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/c93e318fd/174968777/c93e318fd2eb9e16349c6af70a254bb0.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/95bf63bb1/174968777/95bf63bb1a87a381295e6eb10b851d44.jpeg
+
+**Description:**
+RENT INCLUDES WATER BILL!
+Regal Lettings are pleased to present this one bedroom apartment situated on the first floor and is set within close proximity to the Southampton General Hospital. The property consists of a Double Bedroom, an Open plan Living/Kitchen and a Bathroom with Shower over.
+Positioned in the heart of Maybush, Kingston Court offers a prime location with easy access to the vibrant City Centre, Southampton General Hospital, and the scenic Southampton Common.
+Secure entry to the building is provided via a communal entrance with a security system, and stairs lead to the upper floors.
+The property also benefits from communal grounds, allocated parking, and visitor parking, making it both practical and inviting.
+OFFERED UNFURNISHED. RENT INCLUDES WATER BILL. AVAILABLE MAY
+Regal Lettings -
+For the opportunity to see our properties before they go on the market, please like/follow our social media pages which can be found by searching for '@Regalletting' on Instagram.
+
+**Key features:**
+- ONE DOUBLE BEDROOM APARTMENT
+- FIRST FLOOR
+- RENT INCLUDES WATER BILL
+- ALLOCATED AND VISITOR PARKING
+- CLOSE TO SOUTHAMPTON GENERAL HOSPITAL
+- UNFURNISHED
+- AVAILABLE MAY
+
+---
+
 ## Bellevue Road, Southampton, Hampshire, SO15 — £1,100 pcm
 - **Link:** https://www.rightmove.co.uk/properties/88540356
 - **Type:** flat
@@ -670,46 +927,6 @@ Southampton is a vibrant and well-connected coastal city on England’s south co
 - Allocated parking
 - Modern fitted kitchen
 - Three piece bathroom suite
-
----
-
-## Howard Road, Southampton, SO15 — £825 pcm
-- **Link:** https://www.rightmove.co.uk/properties/173231141
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No
-- **Deposit:** £950
-- **Available:** 04/06/2026
-- **Postcode area:** SO15
-- **Postcode:** SO15 5BP
-- **Agent:** Embley Management Ltd
-- **Image:** https://media.rightmove.co.uk/property-photo/909466445/173231141/90946644555fef67d4e9efe3a48e119d.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/477d9cb9b/173231141/477d9cb9bab56851538e9077d6490a2d.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/21d2bc34c/173231141/21d2bc34cb36aec28bc13d482b287e9e.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/713ebfce0/173231141/713ebfce04296a7578c73a86da325dd2.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/3247e70ec/173231141/3247e70ec7e7d7e26eaa19875cfec9be.jpeg
-
-**Description:**
-ENFIELDS PRESENT - FIRST FLOOR FLAT. HOWARD ROAD LOCATION. OPEN PLAN KITCHEN/LIVING ROOM. EN-SUITE BATHROOM/WC. RESIDENTS PARKING. A one bedroom flat in Howard Road offering convenient access to Shirley Road and Hill Lane for Central Train Station. Council Tax Band A. EPC Rating E.
-INTERNAL
-The property is accessed via the communal entrance with a security entry system and the property is located on the first floor, accessible via the staircase. The flat consists of an entrance hall with storage cupboard, open plan kitchen/living room with window to the rear aspect, a bedroom with window to the side aspect and an en-suite bathroom/wc.
-EXTERNAL
-There is a residents car park to the rear of the building.
-LOCATION
-Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.
-The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.
-Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city¿s bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.
-Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
-
-**Key features:**
-- FIRST FLOOR FLAT
-- ONE BEDROOM
-- OPEN PLAN KITCHEN/LIVING ROOM
-- EN-SUITE BATHROOM/WC
-- RESIDENTS PARKING
-- CONVENIENT FOR CENTRAL TRAIN STATION
-- COUNCIL TAX BAND A
-- EPC RATING E
 
 ---
 
@@ -1192,6 +1409,35 @@ Southampton is a vibrant waterfront city on England’s south coast, renowned fo
 - Lift access to all floors
 - Bedroom with fitted sliding wardrobes
 - Bright open-plan living and kitchen area
+
+---
+
+## |Ref: R213719|, Chelveston Crescent, Southampton, SO16 5SA — £995 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88368855
+- **Type:** flat
+- **Beds/Baths:** 2 bed, 1 bath
+- **Furnished:** Part
+- **Deposit:** £1148
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 5SA
+- **Agent:** Century21(Southampton) Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/7c2495fe4/88368855/7c2495fe4cd6d88378fa02cc4f00c12b.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/3924aae02/88368855/3924aae0210dce59e97a1930b60fab3b.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/5860f1b34/88368855/5860f1b34328f626e8c5558c41ca4a1c.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/86b8e7bee/88368855/86b8e7bee16b82dab9d9da85fba9ac07.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/60f35d306/88368855/60f35d3062201cd46e9ecea4cc432f7f.jpeg
+
+**Description:**
+| *** AVAILABLE NOW *** | *** PART FURNISHED *** | *** RESIDENT PARKING AT THE FRONT OF THE PROEPRTY FOR ONE CAR *** | *** EPC BAND: C *** | *** COUNCIL TAX BAND: B *** | *** CLOSE PROXIMITY TO GENERAL HOSPITAL *** | *** SECURED INTERCOME ENTRY SYSTEM *** |
+Century21 Southampton are pleased to bring to the market to let this second floor two bedroom flat located in the popular road of Chelveston Crescent. The property consists of two bedrooms, a spacious living room with dual aspect windows, separate kitchen with white goods and a family bathroom with bath and shower over. Further benefits include upvc double glazing , electric heating and residents parking.
+Tenants pay all bills and council tax.
+
+**Key features:**
+- SECURED INTERCOME ENTRY SYSTEM
+- PART FURNISHED
+- SECOND FLOOR
+- RESIDENT PARKING
 
 ---
 
@@ -1726,6 +1972,85 @@ Pure Estate Agents are delighted to offer this Spacious, First Floor, Two Bedroo
 
 ---
 
+## Burgess Road, Southampton, SO16 — £625 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88167060
+- **Type:** not specified
+- **Beds/Baths:** 1 bed, 1 bath
+- **Deposit:** £721
+- **Available:** 27/05/2026
+- **Postcode area:** SO16
+- **Postcode:** SO16 7PP
+- **Agent:** Edward Rose Property Group - LSL Franchise
+- **Image:** https://media.rightmove.co.uk/property-photo/090471583/88167060/090471583134e2d36c5ca03b70393a55.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/58e5e3321/88167060/58e5e3321328aef3038069f54623bb24.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/bed40eee7/88167060/bed40eee718c6aefe656c8523de1cea6.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/839919417/88167060/839919417b8dde4a86784e70fe37e93f.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/4719795a2/88167060/4719795a24fe4fefba447b1c681309a5.jpeg
+
+**Description:**
+This furnished room in a shared house is available to let and offers a practical option for a single occupant seeking a base in Southampton. The property provides one bedroom within a shared house arrangement, with access to a communal bathroom, a large communal kitchen and a separate dining room. There is also a shared rear garden.
+Located in Southampton, the property is positioned for access to local amenities, including everyday shops, cafés and services along nearby main routes into the city. Southampton Common, with its extensive green space, walking routes and recreational areas, is within easy reach and provides an outdoor setting for leisure and exercise.
+Public transport links in Southampton include bus services connecting residential areas with the city centre, Southampton General Hospital and the University districts. Southampton Central railway station offers regular services to London Waterloo, with typical journey times of around 1 hour 20 minutes, as well as routes to Portsmouth, Bournemouth and other South Coast destinations. From the property, the station can be reached by local bus or a short drive.
+This shared house arrangement, with one bedroom to let, communal facilities and outdoor space, may suit working professionals who require access to transport connections and city amenities.
+Broadband (estimated speeds)
+Standard 23 mbps
+Superfast -
+Ultrafast 1000 mbps
+IMPORTANT NOTE TO POTENTIAL PURCHASERS & TENANTS:
+We endeavour to make our particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. The services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All photographs and measurements have been taken as a guide only and are not precise. Floor plans where included are not to scale and accuracy is not guaranteed. If you require clarification or further information on any points, please contact us, especially if you are traveling some distance to view. POTENTIAL PURCHASERS: Fixtures and fittings other than those mentioned are to be agreed with the seller. POTENTIAL TENANTS: All properties are available for a minimum length of time, with the exception of short term accommodation. Please contact the branch for details. A security deposit of at least one month’s rent is required. Rent is to be paid one month in advance. It is the tenant’s responsibility to insure any personal possessions. Payment of all utilities including water rates or metered supply and Council Tax is the responsibility of the tenant in most cases.
+SOU260362/2
+
+**Key features:**
+- Furnished private bedroom for one
+- Large communal kitchen and dining room
+- Access to rear shared garden
+- Convenient Southampton location
+- Close to shops and local amenities
+- Good public transport and buses
+- Rail links to London and coast
+
+---
+
+## Burgess Road, Southampton, SO16 — £675 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88167054
+- **Type:** not specified
+- **Beds/Baths:** 1 bed, 1 bath
+- **Deposit:** £778
+- **Available:** 27/05/2026
+- **Postcode area:** SO16
+- **Postcode:** SO16 7PP
+- **Agent:** Edward Rose Property Group - LSL Franchise
+- **Image:** https://media.rightmove.co.uk/property-photo/7fb579911/88167054/7fb579911f27001d2ddd3efb4f074000.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/7132593eb/88167054/7132593ebea7fe789564dd090cec02a4.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/530402e11/88167054/530402e11d4049f2ed9125df1d802e46.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/1d02e76e1/88167054/1d02e76e111b5a49fbc0264d02e3d9a2.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/1b34b2c3c/88167054/1b34b2c3c0354d70e3bc857ee956fb9d.jpeg
+
+**Description:**
+This furnished room in a shared house is available to let and offers a practical option for a single occupant seeking a base in Southampton. The property provides one bedroom within a shared house arrangement, with access to a communal bathroom, a large communal kitchen and a separate dining room. The room also benefits from a private balcony overlooking the rear shared garden.
+Located in Southampton, the property is positioned for access to local amenities, including everyday shops, cafés and services along nearby main routes into the city. Southampton Common, with its extensive green space, walking routes and recreational areas, is within easy reach and provides an outdoor setting for leisure and exercise.
+Public transport links in Southampton include bus services connecting residential areas with the city centre, Southampton General Hospital and the University districts. Southampton Central railway station offers regular services to London Waterloo, with typical journey times of around 1 hour 20 minutes, as well as routes to Portsmouth, Bournemouth and other South Coast destinations. From the property, the station can be reached by local bus or a short drive.
+This shared house arrangement, with one bedroom to let, communal facilities and outdoor space, may suit working professionals who require access to transport connections and city amenities.
+Broadband (estimated speeds)
+Standard 23 mbps
+Superfast -
+Ultrafast 1000 mbps
+IMPORTANT NOTE TO POTENTIAL PURCHASERS & TENANTS:
+We endeavour to make our particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. The services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All photographs and measurements have been taken as a guide only and are not precise. Floor plans where included are not to scale and accuracy is not guaranteed. If you require clarification or further information on any points, please contact us, especially if you are traveling some distance to view. POTENTIAL PURCHASERS: Fixtures and fittings other than those mentioned are to be agreed with the seller. POTENTIAL TENANTS: All properties are available for a minimum length of time, with the exception of short term accommodation. Please contact the branch for details. A security deposit of at least one month’s rent is required. Rent is to be paid one month in advance. It is the tenant’s responsibility to insure any personal possessions. Payment of all utilities including water rates or metered supply and Council Tax is the responsibility of the tenant in most cases.
+SOU210418/2
+
+**Key features:**
+- Furnished private bedroom for one
+- Large communal kitchen and dining room
+- Private balcony with garden views
+- Access to rear shared garden
+- Convenient Southampton location
+- Close to shops and local amenities
+- Good public transport and buses
+- Rail links to London and coast
+
+---
+
 ## Homespinney House, River View Road, Bitterne Park, Southampton, SO18 — £1,025 pcm
 - **Link:** https://www.rightmove.co.uk/properties/88161996
 - **Type:** retirement property
@@ -1806,6 +2131,45 @@ This apartment is ideal for professionals, sharers, or anyone wanting to enjoy t
 - Full Double Glazing
 - Gas Central Heating Combi Boiler
 - Double Bedrooms
+
+---
+
+## Kern Close, SO16 — £825 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88154394
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £950
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 9RA
+- **Agent:** Embley Management Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/f2683029f/88154394/f2683029fcd2f8b6446c0d953bd4ea80.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/34a9f8c12/88154394/34a9f8c12fda618ac71843db84cbe5f6.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/0327aa2b4/88154394/0327aa2b48d95d1b1fc178347b25f4b3.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/a7738a133/88154394/a7738a133f2d6ddbf8dbaaaabfbef42e.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/7ac54f28e/88154394/7ac54f28eaeb029a37532adbd3e9259f.jpeg
+
+**Description:**
+ENFIELDS PRESENT - GROUND FLOOR APARTMENT. ONE BEDROOM. PURPOSE BUILT. BATHROOM/WC. RESIDENTS PARKING. A one bedroom, ground floor apartment in Kern Close, Southampton. Council Tax Band A. EPC Rating C.
+INTERNAL
+The property is accessed via the communal entrance with security entrance system, and the apartment is located on the ground floor. The property comprises of an entrance hall with storage cupboard, living/dining room with window to the front aspect and an archway leading to the kitchen area with window to the front aspect. There is a bedroom with fitted wardrobe and window to the side aspect, and there is a bathroom/wc.
+EXTERNAL
+There is residents parking and a communal garden to the rear of the building.
+LOCATION
+Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.
+The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.
+Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city-s bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.
+Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
+
+**Key features:**
+- PURPOSE BUILT APARTMENT
+- ONE BEDROOM
+- GROUND FLOOR
+- KITCHEN AREA
+- BATHROOM/WC
+- COUNCIL TAX BAND A
+- EPC RATING C
 
 ---
 
@@ -1952,11 +2316,11 @@ The property holds an Energy Efficiency Rating of 82, indicating lower running c
 - **Postcode area:** SO15
 - **Postcode:** SO15 1HZ
 - **Agent:** Hunters Property Group Ltd
-- **Image:** https://media.rightmove.co.uk/property-photo/97f2ce405/88098843/97f2ce4059f7e0be89232bb067c87b99.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/7c832f3b7/88098843/7c832f3b78578d18cf47bc1c04b1cc35.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/1245bddc5/88098843/1245bddc5575dfa1463d33bfd2cdf202.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/41183834f/88098843/41183834fd6387de51fb79b97e3664fc.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/a02ff464b/88098843/a02ff464bd94d03a993ceb7abb5ab903.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/0ea54ec30/88098843/0ea54ec30355aef56babab72764a4350.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/b8cfa42de/88098843/b8cfa42de8f5daf87f346b0dd135e259.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/92d455ce7/88098843/92d455ce72937dbc641407bf59a97f95.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/660d87dec/88098843/660d87deccd887207827e80cf32014cf.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/1a9a57907/88098843/1a9a57907b99f3f3bec1b8ab4e8ba548.jpeg
 
 **Description:**
 Located just a short distance from Southampton city centre, the building is a private hidden oasis in almost three acres behind secure electric gates, only minutes from the central railway station giving excellent access to London Waterloo.
@@ -2041,6 +2405,95 @@ A well presented one bedroom unfurnished apartment is available to rent at the h
 
 ---
 
+## Rownhams Road, Southampton, Hampshire, SO16 — £1,100 pcm
+- **Link:** https://www.rightmove.co.uk/properties/174685586
+- **Type:** flat
+- **Beds/Baths:** 2 bed
+- **Furnished:** No
+- **Deposit:** £1269
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 5EB
+- **Agent:** Pococks
+- **Image:** https://media.rightmove.co.uk/property-photo/f23c140c7/174685586/f23c140c704a47d6aa0edd41418ce7e5.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/36e17e9fd/174685586/36e17e9fd8b8f3dec9d6d83a92f1d5ae.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/ff45b80a4/174685586/ff45b80a4a846013b8b0e83673990722.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/c2a65c3c9/174685586/c2a65c3c97209173e6e4624a09c01b46.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/91a51e588/174685586/91a51e58896fad254d27f09d490fa4d9.jpeg
+
+**Description:**
+A fully refurbished two bedroom flat in a convenient location.
+Entrance hall, kitchen/sitting/dining room with oven, hob, washing machine and fridge/freezer, two double bedrooms, bath/shower room, private balcony/terrace, gas central heating, double glazing.
+Available unfurnished.
+Council Tax Band 'A'- £1,587.65 per annum
+An application to rent a property from Pococks is subject to a reference, credit check and Landlord approval.
+Once you have found a suitable property to rent, and the landlord has agreed to rent to you in principle, we will require a holding deposit equating to one weeks rent. Once the holding deposit has been received, we will stop marketing the property. Payment of the holding deposit is to be paid by bank transfer.
+We do not accept cash, debit/credit cards or cheque.
+You must bring any adverse credit or anything else that may affect the reference to our attention prior to paying the holding deposit.
+An application to rent a property through Pococks is subject to a full reference, including a credit check. Reference forms will be sent to the applicant(s) via Let Alliance and these need to be completed and returned to us ASAP.
+Once we have received the completed application(s), we will promptly arrange for Let Alliance to carry out a full reference. Once the applicant(s) has passed referencing, we will prepare the tenancy agreement for signing. The holding deposit is redeemable against the first months rent.
+If you do not pass the referencing checks (for reasons you have not already brought to our attention) and we are therefore unable to rent to you, or you decide you no longer wish to rent the property, the holding deposit will not be refunded to you.
+
+**Key features:**
+- A fully refurbished two bedroom flat
+- Situated in a convenient location
+- Kitchen/sitting/dining room with white goods
+- Bath/shower room
+- Private balcony/terrace
+- Gas central heating
+- Double glazing
+- ** AVAILABLE IMMEDIATELY ***
+- Deposit - £1,269
+
+---
+
+## Bassett Row, Southampton, SO16 — £1,150 pcm
+- **Link:** https://www.rightmove.co.uk/properties/88317507
+- **Type:** house
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Deposit:** £1150
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 7FT
+- **Agent:** Techbeard Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/a2edad5bc/88317507/a2edad5bc15fc49840e930389d1c45f4.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/7d20406f0/88317507/7d20406f0bae4c3a6b2827cc792fab88.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/286550b9d/88317507/286550b9dfa3107e736321118ee29629.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/899e5523e/88317507/899e5523ef8efa9f21da6064b516a5a9.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/164f6099b/88317507/164f6099bf09aeb52fd790aa5d975cd4.jpeg
+
+**Description:**
+Property Reference: 2884853.
+Beautiful light and airy cottage, with high ceilings and a private garden, in an exclusive road in Bassett, Southampton. Shaker style kitchen with built in washing machine and dining area with views to the private garden, shower and new bosch boiler. Double bed at property with John Lewis mattress. Really pretty with well stocked garden and french doors leading onto patio. There is also a private parking space available along with a garden shed for storage. It is furnished apart from the living room as the sofa and chairs have now been sold. A unique property with great road links.
+Summary & Exclusions:
+- Rent Amount: £1,150.00 per month (£265.38 per week)
+- Deposit / Bond: £1,150.00
+- 1 Bedrooms
+- 1 Bathrooms
+- Property comes furnished
+- Available to move in from 13 May 2026
+- Maximum number of tenants is 2
+- No Students
+- No Pets, sorry
+- No Smokers
+- Family Friendly
+- Bills not included
+- Property has parking
+- Property has garden access
+- EPC Rating: D
+If calling, please quote reference: 2884853
+Fees:
+You will not be charged any admin fees.
+** Contact today to book a viewing and have the landlord show you round! **
+Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.
+
+**Key features:**
+- No Agent Fees
+- Property Reference Number: 2884853
+
+---
+
 ## Bullar Road, Bitterne Park, Southampton, SO18 — £1,150 pcm
 - **Link:** https://www.rightmove.co.uk/properties/87954423
 - **Type:** flat
@@ -2068,6 +2521,47 @@ Two well-proportioned double bedrooms Modern white gloss kitchen Contemporary ba
 **Key features:**
 - Parking
 - large communal garden
+
+---
+
+## Kern Close, Maybush, SO16 — £900 pcm
+- **Link:** https://www.rightmove.co.uk/properties/87904737
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £1038
+- **Available:** 22/06/2026
+- **Postcode area:** SO16
+- **Postcode:** SO16 9RD
+- **Agent:** Embley Management Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/c4ca3e160/87904737/c4ca3e160df47891b5f5a4893348b6ff.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/f194dddd2/87904737/f194dddd2072aecd458b2207b5336297.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/53526ca8d/87904737/53526ca8df92539cc9b90bd1086f2ba7.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/12c887766/87904737/12c88776689b986ec25756734a2a7f90.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/812b6836b/87904737/812b6836b8c0de49e777830c8aa517c4.jpeg
+
+**Description:**
+ENFIELDS PRESENT - PURPOSE BUILT APARTMENT. FIRST FLOOR. ONE BEDROOM. SEPARATE KITCHEN. BATHROOM/WC. MAYBUSH LOCATION. An apartment in Kern Close, Maybush. Council Tax Band A. EPC Rating C.
+INTERNAL
+The property is accessed via the communal entrance with security entry system and the property is located on the first floor, accessible via the staircase. The apartment consists of an entrance hall, living/dining room, separate kitchen, bedroom and bathroom/wc.
+EXTERNAL
+There is a communal garden and a residents parking space.
+LOCATION
+Located to the west of the city centre, Shirley is one of Southampton's largest and most bustling suburbs. It is centred around Shirley High Street, which offers a broad selection of independent shops, cafés, supermarkets, and services that give the area a lively and self-sufficient feel. The neighbourhood is known for its diversity, family-friendly atmosphere, and wide variety of housing, ranging from period properties to modern flats. St James' Park provides a welcome green retreat in the heart of the community, and with good schools and transport connections, Shirley is a highly sought-after location for families and commuters alike.
+Southampton is a vibrant and historic city on the south coast of England, renowned for its rich maritime heritage, modern amenities, and excellent transport links. A thriving hub for commerce, culture, and education, the city is home to two universities, a bustling shopping scene including the Westquay Centre, and a wealth of leisure and entertainment options.
+The city benefits from an abundance of green spaces, such as Southampton Common, while the nearby New Forest National Park and stunning south coast beaches offer superb opportunities for outdoor pursuits.
+Southampton is exceptionally well connected, with a mainline railway station offering fast services to London and beyond, an international airport providing both domestic and European travel, and direct access to the M27 and M3 motorways. The city's bustling port remains one of the busiest in the UK, well known for being the departure point for prestigious cruise liners.
+Offering a dynamic blend of history, culture, and modern living, Southampton appeals to professionals, families, and investors alike, making it a highly desirable place to live and work on the south coast.
+
+**Key features:**
+- PURPOSE BUILT APARTMENT
+- ONE BEDROOM
+- SEPARATE KITCHEN
+- FIRST FLOOR
+- RESIDENTS PARKING
+- BATHROOM/WC
+- COUNCIL TAX BAND A
+- EPC RATING C
 
 ---
 
@@ -2106,6 +2600,25 @@ Council Tax: A
 - Modern
 - Walking distance to train station
 - No parking
+
+---
+
+## Romsey Road, SO16 — £435 pcm
+- **Link:** https://www.rightmove.co.uk/properties/170308238
+- **Type:** not specified
+- **Beds/Baths:** 1 bed, 1 bath
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 4DA
+- **Agent:** Embley Management Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/a4e6927e7/170308238/a4e6927e7de3781be50f6d48301aa48a.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/2165763a5/170308238/2165763a513dc53cb6391ddf7cd10e5e.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/e1b2fb40d/170308238/e1b2fb40d36a13d19333e8bea89cac22.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/f988b1275/170308238/f988b1275c2787c67476228b18bcaea5.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/8a60f8626/170308238/8a60f862605cc7b4a97b077b9459be32.jpeg
+
+**Description:**
+ENFIELDS PRESENT - ROOM TO RENT. BILLS INCLUDED. FURNISHED. SHARED KITCHEN, SHOWER ROOM & WC. COMMUNAL REAR GARDEN. CLOSE TO CENTRAL SHIRLEY. A first floor bedroom in a shared house in Romsey Road, Shirley.
 
 ---
 
@@ -2230,6 +2743,48 @@ Offering a dynamic blend of history, culture, and modern living, Southampton app
 
 ---
 
+## Coxford Close, Southampton, Hampshire, SO16 — £1,100 pcm
+- **Link:** https://www.rightmove.co.uk/properties/174894953
+- **Type:** flat
+- **Beds/Baths:** 2 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £1269
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 6DH
+- **Agent:** Edward Rose Property Group - LSL Franchise
+- **Image:** https://media.rightmove.co.uk/property-photo/777b9f439/174894953/777b9f43985ef6e35284f8b2ee76d798.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/ad436ba25/174894953/ad436ba254a4a212e8bdcb8fa66c37ad.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/acce57997/174894953/acce5799748ec5f1dfdf22401f8275aa.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/1ca3618f9/174894953/1ca3618f9c3ea74e563197c5a16d7232.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/2b3813902/174894953/2b3813902f8945ed8446dc3dd011fae7.jpeg
+
+**Description:**
+Introducing a charming first-floor apartment boasting two bedrooms, located in a sought-after area. This unfurnished property offers a spacious and bright living space, perfect for individuals or couples looking for a comfortable place to call home.
+The apartment features kitchen, a stylish bathroom, and ample storage options. With its convenient location, residents can enjoy easy access to local amenities, schools, and transport links. The property benefits from a peaceful neighbourhood, ideal for those seeking a quiet and cosy environment. Don't miss the opportunity to reside in this well-maintained and inviting apartment. Contact us today to arrange a viewing and secure your new home.
+EPC rating TBC
+Council Tax Band B
+Mobile (based on calls indoors)
+O2, EE, Three and Vodafone
+Satellite & Cable TV Availability
+BT, Sky and Virgin
+Broadband (estimated speeds)
+Standard 15 mbps
+Superfast 75 mbps
+Ultrafast 1800 mbps
+IMPORTANT NOTE TO POTENTIAL PURCHASERS & TENANTS:
+We endeavour to make our particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. The services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All photographs and measurements have been taken as a guide only and are not precise. Floor plans where included are not to scale and accuracy is not guaranteed. If you require clarification or further information on any points, please contact us, especially if you are traveling some distance to view. POTENTIAL PURCHASERS: Fixtures and fittings other than those mentioned are to be agreed with the seller. POTENTIAL TENANTS: All properties are available for a minimum length of time, with the exception of short term accommodation. Please contact the branch for details. A security deposit of at least one month’s rent is required. Rent is to be paid one month in advance. It is the tenant’s responsibility to insure any personal possessions. Payment of all utilities including water rates or metered supply and Council Tax is the responsibility of the tenant in most cases.
+SOU260197/2
+
+**Key features:**
+- Two Bedrooms
+- Close to the general Hospital
+- Unfurnished
+- EPC Rating TBC
+- Council Tax band B
+
+---
+
 ## |Ref: R153522|, Portswood Road, Southampton, SO17 2FW — £945 pcm
 - **Link:** https://www.rightmove.co.uk/properties/174842852
 - **Type:** flat
@@ -2251,27 +2806,6 @@ Offering a dynamic blend of history, culture, and modern living, Southampton app
 A lovely spacious one bedroom ground floor flat in great condition and decorated to a high standard throughout. The property comes with one spacious bedroom, fully fitted kitchen with white goods, one family bathroom and a large communal back garden. The property is in close proximity to Solent University and Southampton University.
 Further benefits include: Gas central heating, UPVC double glazed windows, communal back garden, one wardrobe, one chest of drawers and one couch in the living room.
 Tenant to pay all bills and council tax.
-
----
-
-## Rigby Road, Southampton, SO17 — £995 pcm
-- **Link:** https://www.rightmove.co.uk/properties/125804639
-- **Type:** flat
-- **Beds/Baths:** 2 bed, 1 bath
-- **Furnished:** No
-- **Deposit:** £1095
-- **Available:** Now
-- **Postcode area:** SO17
-- **Postcode:** SO17 2EU
-- **Agent:** Advancelets Limited
-- **Image:** https://media.rightmove.co.uk/property-photo/a9d0172f3/125804639/a9d0172f39b5f5a8920e05f170f4a8c3.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/ce0d4518d/125804639/ce0d4518d6c6d21dfa100eb0f5d7626a.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/da35cdeab/125804639/da35cdeab03e866423d566044ef3c6c8.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/8422e7ac4/125804639/8422e7ac46ddacd8b5049fdeef19fca4.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/2a757092d/125804639/2a757092dff70a2a49c5844bb3c1c34c.jpeg
-
-**Description:**
-Advance Lettings are pleased to offer to the market this first floor two bedroom apartment, situated in a great location and within easy reach of local amenities, comprising: security entrance, stairs leading to first floor, very spacious lounge with front aspect bay window, modern fitted bathroom with shower over bath, modern fitted kitchen offering cooker and hob, space and plumbing for washing machine and space for fridge/freezer, two double bedrooms, in addition the property benefits from double glazing, gas central heating, newly redecorated throughout with new carpets. Offered unfurnished, available Now, early viewing highly recommended. Please email in for a video tour.
 
 ---
 
@@ -2417,59 +2951,6 @@ Please note: The gas central heating will be on between October till April on a 
 
 ---
 
-## Queens Terrace, Southampton, SO14 — £595 pcm
-- **Link:** https://www.rightmove.co.uk/properties/174671066
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** Yes
-- **Deposit:** £595
-- **Available:** Now
-- **Postcode area:** SO14
-- **Postcode:** SO14 3BP
-- **Agent:** Techbeard Ltd
-- **Image:** https://media.rightmove.co.uk/property-photo/2039a4687/174671066/2039a468754519d3510d3a0f3e3baea2.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/0886fd526/174671066/0886fd5269c81f1f06cffa7c66983465.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/c421b27cb/174671066/c421b27cb5a6dfa5b860961db707b870.jpeg
-
-**Description:**
-Property Reference: 2835286.
-Single room available.
-This room comes with an ensuite bathroom, wardrobe, desk, chairs etc.
-You will be sharing the kitchen with another tenant.
-In a great location situated near ocean village and a short walk into Southampton city centre and Southampton Solent university.
-This is available to students or professionals.
-Summary & Exclusions:
-- Rent Amount: £595.00 per month (£137.31 per week)
-- Deposit / Bond: £595.00
-- 1 Bedroom Property (1 room currently available for rent)
-- 1 Bathrooms
-- Property comes furnished
-- Available to move in from 20 April 2026
-- Minimum tenancy term is 6 months
-- Maximum number of tenants is 1
-- Students welcome to enquire
-- No Pets, sorry
-- Smokers considered
-- Not Suitable for Families / Children
-- Bills Included
-- No Parking Available
-- No Garden Access
-- EPC Rating: EPC Not Required (Shared Accommodation)
-If calling, please quote reference: 2835286
-Fees:
-You will not be charged any admin fees.
-** Contact today to book a viewing and have the landlord show you round! **
-Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7 days a week.
-
-**Key features:**
-- No Agent Fees
-- Room Only (Shared Flat)
-- Students Can Enquire
-- Bills Included
-- Property Reference Number: 2835286
-
----
-
 ## Bitterne Road West, Southampton, Hampshire, SO18 — £575 pcm
 - **Link:** https://www.rightmove.co.uk/properties/171380360
 - **Type:** house
@@ -2547,6 +3028,102 @@ Tenants to pay all bills and council tax.
 
 ---
 
+## Burgess Road, 41 Burgess Road, Bassett, Southampton, Hampshire, SO16 — £900 pcm
+- **Link:** https://www.rightmove.co.uk/properties/172543379
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Deposit:** £900
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 7AP
+- **Agent:** MYA Property Ltd
+- **Image:** https://media.rightmove.co.uk/property-photo/d08908e2e/172543379/d08908e2e10beb69a8bc858b44526803.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/7262b02d8/172543379/7262b02d8d12bd364b7cf8c3ee75cfd8.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/bc36624fb/172543379/bc36624fb3ea72795abddc88fd596532.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/9105dd82f/172543379/9105dd82fdeb71183199fd37686fab07.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/8ff9b5e3a/172543379/8ff9b5e3a852ddb730baf29424271fd7.jpeg
+
+**Description:**
+Introducing a beautifully finished one bedroom apartment located on the first floor of a newly redeveloped building on Burgess Road. Modern, bright, and thoughtfully designed, this home offers the rare benefit of two bathrooms, a spacious living area, and high quality contemporary finishes throughout.
+One double Bedroom, freshly decorated with new flooring and neutral décor. A peaceful, private space ideal for professionals or couples. Stylish bathroom with smart tiling and modern fittings. Modern Open Plan Living & Kitchen Area. Sleek fitted kitchen with integrated oven, hob, extractor and ample storage. Open plan layout offering space for both living and dining zones. Plenty of natural light and clean, modern finishes.Newly Redeveloped Building with high quality internal finish, efficient layout, fresh, modern décor throughout.
+Location on Burgess Road perfectly positioned for: Southampton General Hospital, University links, Local shops, takeaways, supermarkets and bus routes. Quick access into the city centre.
+Ideal for a single professional, couple, or someone seeking a comfortable and contemporary home in a convenient location.
+This property is available from mid April (17th) enquire today to avoid missing out on the opportunity to be the first resident at this wonderful property.
+
+---
+
+## Compass Point, 450 Romsey Road, SO16 — £995 pcm
+- **Link:** https://www.rightmove.co.uk/properties/174419921
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £1148
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 4JD
+- **Agent:** Leaders and Romans Group
+- **Image:** https://media.rightmove.co.uk/property-photo/afb46c480/174419921/afb46c480d84ca51ce0a28d1c3852062.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/8150a3560/174419921/8150a3560dc3070ad26f1055d0a4d89b.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/dcd984e25/174419921/dcd984e2544c5b26624b4b2d71ee6b06.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/db69a235a/174419921/db69a235a7a39908ebf94d9f4adf7df4.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/321e904f3/174419921/321e904f3ab9bca2ab25e0471748c132.jpeg
+
+**Description:**
+** MULTIPLE MODERN ONE BEDROOM APARTMENTS AVAILABLE – COMPASS POINT **
+** AVAILABLE NOW, NEXT MONTH OR EARLY MARCH **
+** VIRTUAL VIEWINGS AVAILABLE **
+Leaders are delighted to present a selection of contemporary one bedroom apartments at Compass Point, Southampton.
+We currently have multiple units available, all offering the same spacious layout and internal size, with rental prices ranging from £995 – £1000 PCM, depending on floor level and position within the building.
+Apartments are available on:
+- Ground Floor
+- First Floor
+- Second Floor
+- Third Floor (Top Floor)
+Both long-term and short-term tenancies are available.
+The Apartments:
+- Each apartment offers modern, well-designed living and comprises:
+- Bright and spacious open-plan living area
+- Fully integrated contemporary kitchen including:
+- Large fridge freezer
+- Washer dryer
+- Dishwasher
+- Electric oven and hob
+- Generous double bedroom
+- Contemporary shower room with stand-in shower or bath/shower combination
+- Integrated blinds built into the windows
+Neutral and stylish décor throughout
+- Full fibre broadband pre-installed and ready for use (at an additional cost)
+Building & Development Features:
+Compass Point has been designed to provide secure, convenient and accessible living, benefiting from:
+- Allocated off-road parking monitored via ANPR
+- CCTV coverage internally and externally
+- Video intercom system with live entrance monitoring
+- Secure entry system
+- Dedicated post room
+- Communal landscaped courtyard
+- Wheelchair accessible building
+- Four lifts servicing all floors
+Additional Information:
+- EPC ratings range from C to D
+- Pets considered (subject to terms)
+- 5-week deposit ranging from £1,096 – £1,125
+- No Deposit Option available
+This development is ideal for professionals seeking modern, secure and low-maintenance living in a well-managed building within Southampton.
+Viewings are highly recommended.
+We are able to show multiple available units during one appointment, allowing you to compare floor levels and positions on the same visit.
+Contact us today to arrange your viewing!
+
+**Key features:**
+- Ground floor
+- Fully integrated kitchen with fridge freezer, washer dryer, dishwasher, oven &amp; hob
+- Contemporary  bathroom with stand-in shower
+- Allocated off-road parking (ANPR) &amp; CCTV/video intercom
+- Full fibre broadband ready (additional cost)
+- 4 lifts &amp; communal courtyard
+- Flexible deposit options: 5-week or no deposit
+
+---
+
 ## Hanover Buildings, SO14 — £995 pcm
 - **Link:** https://www.rightmove.co.uk/properties/174405581
 - **Type:** flat
@@ -2592,7 +3169,7 @@ Please note that there is no parking provided for this property.
 - **Beds/Baths:** 1 bed, 1 bath
 - **Furnished:** Yes
 - **Deposit:** £1153
-- **Available:** 22/05/2026
+- **Available:** Now
 - **Postcode area:** SO15
 - **Postcode:** SO15 1HY
 - **Agent:** The Property Franchise Group
@@ -2946,6 +3523,43 @@ Offering a dynamic blend of history, culture, and modern living, Southampton app
 
 ---
 
+## Bassett Avenue, Southampton, Hampshire, SO16 — £1,050 pcm
+- **Link:** https://www.rightmove.co.uk/properties/171879815
+- **Type:** flat
+- **Beds/Baths:** 2 bed
+- **Furnished:** No
+- **Available:** Ask agent
+- **Postcode area:** SO16
+- **Postcode:** SO16 7FB
+- **Agent:** Clear Residential Lettings
+- **Image:** https://media.rightmove.co.uk/property-photo/453f0ff22/171879815/453f0ff224947e7ddf786438236878fd.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/b06a8c7e7/171879815/b06a8c7e792768bf98b4759de84dd193.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/18fcfaff2/171879815/18fcfaff2fa4ecc880018ca4de671170.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/c9f2fa29b/171879815/c9f2fa29b89ee484fa1d9104a13866bb.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/7e92b56af/171879815/7e92b56af5b3d0564b09ec4935972f62.jpeg
+
+**Description:**
+A ground floor flat within the prestigious Brampton Tower block on Bassett Avenue.
+The property briefly comprises; entrance hallway with storage, 2 x bedrooms (a double and a smaller double/large single), good size lounge, fitted kitchen (oven/hob supplied, space for washing machine and fridge freezer), bathroom with shower over the bath and a separate cloak room.
+The flat benefits from double glazing, electric heating and communal parking to the site.
+The location of the block offers easy access to the nearest junctions of both the M3 and M27 (each within a short drive), Southampton centre and Shirley. There are also numerous local bus stops.
+Council tax band; B
+Ideal for an individual, or a couple.
+Available NOW.
+
+**Key features:**
+- Ground floor flat within the prestigious Brampton Tower block
+- 2 x bedrooms (a double and a smaller double/large single)
+- Good size lounge
+- Fitted kitchen
+- Bathroom with shower over the bath
+- Separate cloak room
+- Double glazing and electric heating
+- Communal parking
+- Available NOW
+
+---
+
 ## Park Road, Freemantle, Southampton,  SO15 — £950 pcm
 - **Link:** https://www.rightmove.co.uk/properties/171940316
 - **Type:** flat
@@ -3127,7 +3741,7 @@ Offering a dynamic blend of history, culture, and modern living, Southampton app
 - **Beds/Baths:** 1 bed, 1 bath
 - **Furnished:** No
 - **Deposit:** £975
-- **Available:** Ask agent
+- **Available:** Now
 - **Postcode area:** SO18
 - **Postcode:** SO18 1UD
 - **Agent:** Resi Property Management Ltd
@@ -3200,6 +3814,54 @@ Offering a dynamic blend of history, culture, and modern living, Southampton app
 - BATHROOM/WC
 - COUNCIL TAX BAND A
 - EPC RATING D
+
+---
+
+## Winchester Road, Southampton, Hampshire, SO16 — £900 pcm
+- **Link:** https://www.rightmove.co.uk/properties/158524679
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Deposit:** £900
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 6TW
+- **Agent:** Stanford Estate Agents
+- **Image:** https://media.rightmove.co.uk/property-photo/a0806a4f3/158524679/a0806a4f37e713544920e370bea1bf21.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/ba0cd6847/158524679/ba0cd6847fc55d291ee396b8a49d7b88.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/f7484e15c/158524679/f7484e15c793daacf1268bc0276338bb.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/a7582b933/158524679/a7582b933e71fb52ce3eaa0e7b55cc56.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/20ad755e4/158524679/20ad755e44b7faf845612719714de229.jpeg
+
+**Description:**
+**ALL BILLS & WiFi INCLUDED**
+Stanford Estate Agents are proudly offering this spacious studio apartment with it's private kitchenette & en-suite in a completely re-furbished block with high quality finish, communal gardens and off road parking. Available Now.
+The property benefits from a shared communal kitchen with multiple washing machines and a communal living Room.
+Other Information:
+Local Council: Southampton City Council
+Council Tax Band: N/A (Included Within Rent)
+Bills: Included Within Rent
+Date Available: Now
+Furnishing: Furnished
+Communal Areas: Kitchen, Living Room & Laundry Cupboard
+Heating: Gas Central Heating
+Glazing: Double Glazing
+EPC: D
+Pets: No
+Smokers: No
+Parking: Off Road To The Rear
+
+**Key features:**
+- **All Bills &amp; WiFi Included**
+- Spacious En-Suite &amp; Kitchenette Room
+- Council Tax Included
+- Communal Kitchen
+- Communal Garden
+- Parking On First Come First Served Basis
+- Convenient Location
+- Good Transport Links
+- Available Now
+- No Pets &amp; No Smokers
 
 ---
 
@@ -3473,6 +4135,144 @@ Please note: Rent includes all bills, council tax, tv licence and wifi.
 
 ---
 
+## Romsey Road, SO16 — £950 pcm
+- **Link:** https://www.rightmove.co.uk/properties/172296110
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £1096
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 4JD
+- **Agent:** Leaders and Romans Group
+- **Image:** https://media.rightmove.co.uk/property-photo/2c8dc71a6/172296110/2c8dc71a6601805c08a21dc5e07f92b7.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/7d869a42f/172296110/7d869a42f6e68f028542a9680e747da7.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/07f962d3d/172296110/07f962d3dd0dc04e736cb25fd375f9fd.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/f5e92a245/172296110/f5e92a245a0ba2e35ed8a1ee30a312d9.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/05eaf748d/172296110/05eaf748d6544fc68980bbe0a034d490.jpeg
+
+**Description:**
+Leaders are delighted to present this superb ground floor flat in Compass Point, off Romsey Road, SO16 - available now!
+The flat comes with high-standard white goods and is designed to maximize available space. It features open-plan living areas with sleek, stylish kitchens, modern bathrooms with neutral sanitary ware and tiling, and spacious double bedrooms.
+Located to the west of the city, Compass Point offers quick access to Southampton General Hospital and easy connections to the M27 and M3. A bus stop for local routes is conveniently located right outside the development, and there is 1:1+ bicycle storage for eco-conscious residents.
+Photos are from another flat in the block.
+EPC- C
+Council Tax -A
+Holding deposit-£230.00
+5 Week Deposit -£1153.00
+
+---
+
+## Burgess Road,Southampton, SO16 7AH — £650 pcm
+- **Link:** https://www.rightmove.co.uk/properties/173398454
+- **Type:** houseshare
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Deposit:** £650
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 7AH
+- **Agent:** SDM PROPERTY LTD
+- **Image:** https://media.rightmove.co.uk/property-photo/672d11a5a/173398454/672d11a5a1d0715ac781d5b9dc776f6f.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/6bceb5bad/173398454/6bceb5badcef22c728797029dc01f5b7.jpeg
+
+**Description:**
+SDM porperty are delighted to offer a large double room situated in Southampton, Just 10 minutes from the city centre. Situated behind the common and universities are just 10 minutes walking distance away! The room in the HMO has a supermarket 5 minutes away and great local transport links which are walking distance from the property. This modern and well furnished property has all bills included per room with wifi. The room is offered as a 6 month tenancy with an option to renewal after the first 6 months. Early viewings recommended.
+
+**Key features:**
+- Double room available in shared house
+- Shared kitchen
+- Shared bathroom
+- Available now
+- Furnished
+- All bills included but TV license
+
+---
+
+## Compass Point, 450 Romsey Road, SO16 — £1,000 pcm
+- **Link:** https://www.rightmove.co.uk/properties/172529999
+- **Type:** flat
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** No
+- **Deposit:** £1153
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 4JD
+- **Agent:** Leaders and Romans Group
+- **Image:** https://media.rightmove.co.uk/property-photo/9f6a8fc86/172529999/9f6a8fc86d74b2ec118cb0657fbd8bb1.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/be72d71ba/172529999/be72d71ba4203f087f7907a84660cd98.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/a7b1f55f4/172529999/a7b1f55f4f8e7cb76a7a2712689cf283.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/05eaf748d/172529999/05eaf748d6544fc68980bbe0a034d490.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/2780c1f86/172529999/2780c1f8649623e3b36e3735e32e4bcf.jpeg
+
+**Description:**
+** STANDARD ONE BEDROOM FLAT **
+** SECOND FLOOR ** UNUFURNISHED **
+introducing Compass Point, a remarkable collection of brand new flats offering contemporary living in the thriving city of Southampton. With a range of features and amenities, these one-bedroom apartments are designed to provide comfort, convenience, and a modern lifestyle.
+Situated across three floors, this brand-new development offers a communal courtyard, ensuring a harmonious balance between indoor and outdoor living. The developers understand the importance of providing versatile spaces that cater to the needs of residents.
+Step inside this fantastic 1 Bedroom flat, and you'll be greeted by a bright and spacious open plan living area. The brand new kitchen is sleek and stylish, equipped with modern appliances and designed to maximize functionality. Whether you enjoy cooking for yourself or entertaining guests, this kitchen offers the perfect setting.
+The flat also features a brand-new bathroom, complete with neutral sanitary ware and tiling, adding a touch of elegance to your daily routine. The double bedroom provides a tranquil retreat, allowing for peaceful nights of rest and relaxation.
+One parking space is included, ensuring convenience and security for your vehicle. Additionally, this flat offers extra space ideal for someone working from home, allowing you to create your own office-style environment.
+Compass Point benefits from its prime location to the west of the city, providing quick access to Southampton General Hospital and excellent transport links to the M27 and M3. For those relying on public transportation, there is a bus stop conveniently located right outside the development. Furthermore bicycle storage available.
+Originally the Ordnance Survey Head Quarters, this building holds historical significance since its opening by HM Queen Elizabeth in 1969. It represents a blend of heritage and modernity, offering a unique living experience.
+Convenience stores such as Tesco Extra, Nisa, and Domino's Pizza are located nearby, within easy walking distance. In addition, a selection of superstores including Tesco, Sainsbury's, and Lidl are within a short distance of just 3 miles.
+This property also offers a no deposit option, providing flexibility and ease when securing your new home.
+EPC- C
+Council Tax -A
+Holding deposit-£242.00
+5 Week Deposit -£1211.00
+
+**Key features:**
+- ONE BEDROOM APARTMENT
+- AVAILABLE FEBRUARY 2026
+- CALL TODAY TO ARRANGE A VIEWING
+- NO DEPOSIT OPTION AVAILABLE
+- WHITE GOODS INCLUDED
+- NO PARKING
+
+---
+
+## Pansy Road, Southampton, Hampshire, SO16 — £610 pcm
+- **Link:** https://www.rightmove.co.uk/properties/171792962
+- **Type:** house
+- **Beds/Baths:** 1 bed, 1 bath
+- **Furnished:** Yes
+- **Deposit:** £703
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 3GR
+- **Agent:** The Lomond Group
+- **Image:** https://media.rightmove.co.uk/property-photo/a89c775bd/171792962/a89c775bd94b21a12ab9d60fa35c9bb3.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/1b837eedc/171792962/1b837eedc96719bf8fcc788341ac15dc.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/bd0116ea1/171792962/bd0116ea1bb2e6d4f710b8a38119b0cd.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/7aeb23c90/171792962/7aeb23c904eb45aa7e23e6833d8891d6.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/22e2230e7/171792962/22e2230e76b58c1c88392d1361355216.jpeg
+
+**Description:**
+** Sharers Property - 2026 **
+This bright and generously proportioned single room is set within a well-maintained semi-detached residence in the highly sought-after location of Pansy Road and is offered on a fully furnished basis.
+The accommodation comprises a comfortable single bed, a dedicated study area with desk and chair, and a useful storage cupboard, providing a practical yet welcoming living space. The property as a whole features five bedrooms and benefits from one to two shared W.C./shower rooms, ensuring convenience for residents.
+Further advantages include a well-equipped communal kitchen with laundry facilities, attractive shared gardens ideal for relaxation, and on-street parking.
+The rental price is inclusive of all utility bills, offering excellent value and hassle-free living. Available for immediate occupation.
+Security Deposit: £703.84 (based on advertised rental price)
+Holding Deposit: £140.76 (based on advertised rental price)
+Minimum Term: 6 Months
+Council Tax Band: B
+ADDITIONAL INFORMATION
+Materials used in construction: Ask Agent
+For further information on broadband and mobile coverage, please refer to the Ofcom Checker online.
+Southampton is a vibrant port city on England’s south coast, known for its rich maritime heritage and modern, energetic character. Best known as the departure point of the Titanic, the city has played a key role in British and global maritime history for centuries, reflected in its historic docks, medieval city walls, and landmarks such as the Tudor House and SeaCity Museum. Today, Southampton combines this history with a youthful feel shaped by its two major universities, a diverse population, and a lively arts, music, and dining scene. The city offers plenty of green spaces, including Southampton Common, and benefits from excellent transport links, a busy cruise port, and close proximity to the New Forest, the Solent, and the Isle of Wight, making it both a dynamic urban centre and a gateway to nature.
+
+**Key features:**
+- Shared accommodation
+- Spacious furnished single room
+- Semi-detached property
+- Shared kitchen and communal garden
+- All bills included
+- Available immediately
+
+---
+
 ## Landguard Road, Southampton, SO15 — £950 pcm
 - **Link:** https://www.rightmove.co.uk/properties/171195737
 - **Type:** flat
@@ -3533,6 +4333,55 @@ Request Details form responded to 24/7, with phone bookings available 9am-9pm, 7
 
 ---
 
+## Shirley Park Road, Southampton, Hampshire, SO16 — £595 pcm
+- **Link:** https://www.rightmove.co.uk/properties/171374690
+- **Type:** house
+- **Beds/Baths:** 1 bed
+- **Furnished:** Yes
+- **Deposit:** £595
+- **Available:** Now
+- **Postcode area:** SO16
+- **Postcode:** SO16 4FW
+- **Agent:** Stanford Estate Agents
+- **Image:** https://media.rightmove.co.uk/property-photo/7bba1ec66/171374690/7bba1ec66422c1e31e9271cdfa6be178.png
+- **Image:** https://media.rightmove.co.uk/property-photo/f675718b0/171374690/f675718b07cdfd27d2234af8b414712c.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/f136f6af0/171374690/f136f6af00a2ff55e50651c2979bba16.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/41371b98a/171374690/41371b98a15ab94ffe7bb91aee1ae47f.jpeg
+- **Image:** https://media.rightmove.co.uk/property-photo/db00cf8be/171374690/db00cf8be784126adaaf7a0c6cb2a5d3.jpeg
+
+**Description:**
+Stanford Estate Agents are delighted to present this double room in a well-maintained HMO. The room comes furnished with all bills included, including Wi-Fi & council tax.
+The property is conveniently located close to local amenities and transport links. Available Now.
+Location
+Shirley and Shirley Warren are well-established, sought-after residential areas in Southampton, known for their strong sense of community, excellent local amenities, and convenient access to the city centre and surrounding areas.
+Shirley offers a vibrant high street with a wide range of shops, supermarkets, cafés, restaurants, and essential services, making daily life easy and accessible. The area is particularly popular with families and professionals thanks to its proximity to reputable schools, healthcare facilities-including Southampton General Hospital-and a variety of parks and green spaces for recreation.
+Shirley Warren, a quieter residential pocket just west of central Shirley, offers a more suburban feel while still benefiting from all the amenities nearby. It's ideal for those looking for a peaceful setting with good transport links-frequent bus routes, easy access to the M27 and M3, and close proximity to the University of Southampton and Solent University. The neighbourhood features a mix of spacious houses and well-kept streets, with many properties offering large gardens and off-road parking. With its blend of convenience, community, and green space, Shirley Warren is a great place to call home.
+Other Information
+Local Council: Southampton City Council
+Council Tax Band: N/A - Council Tax Included
+Bills: Included
+Date Available: Now
+Furnishing: Furnished
+Heating: Gas Central Heating
+Glazing: Double Glazing
+EPC: E
+Pets: No
+Smokers: No
+
+**Key features:**
+- Available Now
+- Bills Included
+- Double Bedroom
+- Shared House
+- Close To Local Amenities
+- Communal Areas
+- Double Glazing &amp; Gas Central Heating
+- Furnished
+- Single Person Occupancy
+- No Pets &amp; No Smokers
+
+---
+
 ## Bullar Road, Southampton, Hampshire, SO18 — £1,100 pcm
 - **Link:** https://www.rightmove.co.uk/properties/170172371
 - **Type:** flat
@@ -3565,43 +4414,6 @@ Please note that some images used in this advertisement have been digitally enha
 - Well-maintained communal gardens
 - Garage in a nearby block
 - Nicely presented throughout in a desirable location
-
----
-
-## Southbrook Rise, Southampton, SO15 — £950 pcm
-- **Link:** https://www.rightmove.co.uk/properties/88778808
-- **Type:** flat
-- **Beds/Baths:** 1 bed, 1 bath
-- **Furnished:** No
-- **Deposit:** £1096
-- **Available:** 26/06/2026
-- **Postcode area:** SO15
-- **Postcode:** SO15 1BX
-- **Agent:** LSL Franchise
-- **Image:** https://media.rightmove.co.uk/property-photo/774d811e9/88778808/774d811e9f7cc8fda152682988eb8840.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/51761e95c/88778808/51761e95cf812603f2a85877f3d95a7d.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/1f833016b/88778808/1f833016b172922ca843e99124a448e0.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/d895da853/88778808/d895da853f2b90b26e6e3897fa96fc8d.jpeg
-- **Image:** https://media.rightmove.co.uk/property-photo/03592951f/88778808/03592951f310bcc10fb937e767c3a42a.jpeg
-
-**Description:**
-LetCo is pleased to offer this modern one bedroom ground floor apartment situated in the heart of the city, located a few minutes' walk from Southampton central train station, this property offers open plan living with a fitted kitchen with integrated appliances and lounge, double bedroom and modern bathroom with shower over bath.
-The building is situated in an ideal location with just a short walk to Southampton central train station, other transport links, University and Southampton City Centre. In addition, there is allocated parking for one car. Available June 2026.
-IMPORTANT NOTE TO PURCHASERS:
-We endeavour to make our sales particulars accurate and reliable, however, they do not constitute or form part of an offer or any contract and none is to be relied upon as statements of representation or fact. Any services, systems and appliances listed in this specification have not been tested by us and no guarantee as to their operating ability or efficiency is given. All measurements have been taken as a guide to prospective buyers only, and are not precise. Please be advised that some of the particulars may be awaiting vendor approval. If you require clarification or further information on any points, please contact us, especially if you are travelling some distance to view. Fixtures and fittings other than those mentioned are to be agreed with the seller.
-LET230011/
-
-**Key features:**
-- Double Bedroom
-- Central Location
-- Available June 2024
-- Modern
-- Open Plan
-- Allocated Parking
-- Close to Southampton Centre &amp; Train
-- Integrated Appliances
-- Unfurnished
-- Ground Floor
 
 ---
 
