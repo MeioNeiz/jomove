@@ -4,7 +4,7 @@ import { dirname } from "node:path";
 import { DB_PATH } from "./config.ts";
 import { GEOCODE_SCHEMA } from "./geocode.ts";
 import { nowIso } from "./util/now.ts";
-import { reconcileDedupeKeys } from "./reconcile.ts";
+import { reconcileDedupeKeys, fixStringPrices } from "./reconcile.ts";
 
 export const SCHEMA = `
 CREATE TABLE IF NOT EXISTS listings (
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS user_images (
 // Bump this whenever a new entry is added to MIGRATIONS so future `connect()`
 // calls run only the new step. The current version is read from app_state
 // (key `schema_version`); if up to date, migrate() bails after one query.
-export const SCHEMA_VERSION = 2;
+export const SCHEMA_VERSION = 3;
 
 export function connect(): Database {
   const dir = dirname(DB_PATH);
@@ -145,6 +145,22 @@ const MIGRATIONS: Migration[] = [
   // Road/Rd/St/Ave, drops leading house numbers). Re-key every listing and
   // merge user_notes that previously sat under stale keys.
   (db) => {
+    const stats = reconcileDedupeKeys(db);
+    if (stats.rekeyed > 0 || stats.mergedGroups > 0) {
+      console.log(
+        `migration: rekeyed ${stats.rekeyed} listing(s), ` +
+        `merged ${stats.mergedRows} user_notes row(s) into ${stats.mergedGroups} group(s)`,
+      );
+    }
+  },
+  // 2 → 3: OnTheMarket regressed to returning `price` as a human-formatted
+  // string ("£925 pcm (£213 pw)"). SQLite's INTEGER column happily stored
+  // it. Parse the numeric pcm out of every text-typed price_pcm, then
+  // re-reconcile so dedupe keys (which had the bad string embedded) match
+  // up across portals again.
+  (db) => {
+    const fixed = fixStringPrices(db);
+    if (fixed > 0) console.log(`migration: fixed ${fixed} bad price_pcm string(s)`);
     const stats = reconcileDedupeKeys(db);
     if (stats.rekeyed > 0 || stats.mergedGroups > 0) {
       console.log(

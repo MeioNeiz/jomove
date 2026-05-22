@@ -28,6 +28,54 @@ export type ReconcileStats = {
   mergedRows: number;    // total user_notes rows removed by merging
 };
 
+/**
+ * Pre-fix for the OnTheMarket price-as-string regression: any row whose
+ * `price_pcm` was stored as a text blob ("£925 pcm (£213 pw)") gets
+ * parsed into the numeric pcm value. SQLite has type affinity, not
+ * strict typing, so the bad data is real — INTEGER columns happily
+ * accepted strings while the bug was live.
+ *
+ * Returns the number of rows actually rewritten.
+ */
+export function fixStringPrices(db: Database): number {
+  const rows = db.query(
+    "SELECT id, price_pcm FROM listings WHERE typeof(price_pcm) = 'text'"
+  ).all() as Array<{ id: number; price_pcm: string }>;
+  if (rows.length === 0) return 0;
+
+  const update = db.query("UPDATE listings SET price_pcm = ? WHERE id = ?");
+  let fixed = 0;
+  for (const r of rows) {
+    const n = parsePriceString(r.price_pcm);
+    if (n != null) {
+      update.run(n, r.id);
+      fixed++;
+    }
+  }
+  return fixed;
+}
+
+function parsePriceString(s: string): number | null {
+  // Mirrors parseOtmPriceField in scrapers/onthemarket.ts: prefer an
+  // explicit "£NNN pcm" match, then "£NNN pw" (×52/12), then bare £NNN.
+  const pcm = s.match(/£\s*([\d,]+)(?:\.\d{2})?\s*(?:pcm|pm)\b/i);
+  if (pcm) {
+    const n = parseInt(pcm[1]!.replace(/,/g, ""), 10);
+    if (Number.isFinite(n)) return n;
+  }
+  const pw = s.match(/£\s*([\d,]+)(?:\.\d{2})?\s*(?:p\/?w|per\s+week)\b/i);
+  if (pw) {
+    const n = parseInt(pw[1]!.replace(/,/g, ""), 10);
+    if (Number.isFinite(n)) return Math.round(n * 52 / 12);
+  }
+  const bare = s.match(/£\s*([\d,]+)/);
+  if (bare) {
+    const n = parseInt(bare[1]!.replace(/,/g, ""), 10);
+    if (Number.isFinite(n)) return n;
+  }
+  return null;
+}
+
 type NoteRow = {
   dedupe_key:     string;
   viewed:         number;
