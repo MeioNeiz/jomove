@@ -12,6 +12,7 @@ import {
 } from "../user-images.ts";
 import { nowIso } from "../util/now.ts";
 import { cmdAutoScrape, type AutoScrapeResult } from "./auto-scrape.ts";
+import { handleTileRequest } from "../web/tile-proxy.ts";
 
 export type ServeArgs = { port: number };
 
@@ -96,6 +97,9 @@ export function cmdServe(args: ServeArgs): void {
         }
         if (path === "/api/scrape/status" && req.method === "GET") {
           return handlers.handleScrapeStatus();
+        }
+        if (path.startsWith("/api/tile/") && req.method === "GET") {
+          return await handleTileRequest(path);
         }
 
         const noteMatch = path.match(/^\/api\/notes\/(.+)$/);

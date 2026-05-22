@@ -11,6 +11,9 @@ data/user-images/
 data/logs/
 data/scrape.log
 
+# OSM tile cache populated by the tile proxy
+data/tiles/
+
 # Node / Bun
 node_modules/
 .bun/

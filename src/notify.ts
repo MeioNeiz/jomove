@@ -90,17 +90,27 @@ function coordFor(r: ListingRow, geo: GeoMap): { lat: number; lon: number } | nu
  * 2×2 OSM tile grid centred on (lat, lon) at the same zoom as the
  * dashboard map (13). Rendered as a borderless email-safe HTML table —
  * Gmail / Outlook / Apple Mail all collapse the cells cleanly. The
- * listing sits roughly at the inner cross of the four tiles (good
- * enough; for pin-precise location we add a Google Maps link).
+ * listing sits at the inner cross of the four tiles (good enough; for
+ * pin-precise location the whole grid is wrapped in a Google Maps
+ * link).
+ *
+ * Tiles are fetched via our own server's `/api/tile/:z/:x/:y` proxy —
+ * Gmail's image proxy hits jomove.jomify.lol, our server fetches the
+ * upstream tile with a proper jomove User-Agent (so the upstream isn't
+ * blocking us as anonymous hotlinking traffic), and caches the PNG to
+ * disk for the next email. PUBLIC_BASE_URL in .env decides which host
+ * Gmail loads from — must be a public HTTPS hostname for Gmail's proxy
+ * to fetch (localhost won't work).
  */
 function tileGridHtml(lat: number, lon: number, mapsLink: string, zoom = 13): string {
+  const base = process.env.PUBLIC_BASE_URL?.replace(/\/+$/, "") ?? "https://jomove.jomify.lol";
   const n = Math.pow(2, zoom);
   const xFloat = ((lon + 180) / 360) * n;
   const yFloat = ((1 - Math.log(Math.tan((lat * Math.PI) / 180) + 1 / Math.cos((lat * Math.PI) / 180)) / Math.PI) / 2) * n;
   const xL = Math.round(xFloat) - 1, xR = Math.round(xFloat);
   const yT = Math.round(yFloat) - 1, yB = Math.round(yFloat);
   const tile = (x: number, y: number) =>
-    `https://tile.openstreetmap.org/${zoom}/${x}/${y}.png`;
+    `${base}/api/tile/${zoom}/${x}/${y}.png`;
   const cell = (x: number, y: number) =>
     `<td style="padding:0;line-height:0"><img src="${tile(x, y)}" width="200" height="200" alt="" style="display:block;border:0"></td>`;
   return `
