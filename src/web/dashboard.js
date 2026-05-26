@@ -6,6 +6,21 @@ const APP_STATE  = (window.__JOMOVE_APP_STATE__  || null);
 const GENERATED_AT = (window.__JOMOVE_GENERATED_AT__ || "1970-01-01T00:00:00");
 const IS_LIVE    = location.protocol.startsWith("http");
 
+// Render a UTC ISO timestamp as "YYYY-MM-DD HH:mm" in Europe/London — server
+// stores everything in UTC but the dashboard is a UK-only app.
+function formatLondonStamp(iso) {
+  const d = new Date(/Z$/.test(iso) ? iso : iso + "Z");
+  if (Number.isNaN(d.getTime())) return iso.slice(0, 16).replace("T", " ");
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/London",
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hour12: false,
+  }).formatToParts(d).reduce((acc, p) => {
+    if (p.type !== "literal") acc[p.type] = p.value; return acc;
+  }, {});
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`;
+}
+
 const STATE_KEY = "jomove:state:v1";  // localStorage fallback (file:// only)
 const META_KEY  = "jomove:meta:v1";
 
@@ -1438,7 +1453,7 @@ async function pollOnce() {
     }
 
     document.getElementById("last-updated").textContent =
-      fresh.generatedAt.slice(0, 16).replace("T", " ");
+      formatLondonStamp(fresh.generatedAt);
     flashStatus("updated");
 
     // Drop cached nodes whose listing-level data actually moved. Keep

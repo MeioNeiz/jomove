@@ -87,8 +87,23 @@ export type DashboardData = {
   appState: AppState;
 };
 
+/** Format a UTC ISO timestamp as "YYYY-MM-DD HH:mm" in Europe/London. */
+function formatLondon(iso: string): string {
+  const d = new Date(iso.endsWith("Z") ? iso : iso + "Z");
+  if (Number.isNaN(d.getTime())) return iso.slice(0, 16).replace("T", " ");
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/London",
+    year: "numeric", month: "2-digit", day: "2-digit",
+    hour: "2-digit", minute: "2-digit", hour12: false,
+  }).formatToParts(d).reduce<Record<string, string>>((acc, p) => {
+    if (p.type !== "literal") acc[p.type] = p.value;
+    return acc;
+  }, {});
+  return `${parts.year}-${parts.month}-${parts.day} ${parts.hour}:${parts.minute}`;
+}
+
 export function renderDashboard(d: DashboardData): string {
-  const lastUpdated = d.generatedAt.slice(0, 16).replace("T", " ");
+  const lastUpdated = formatLondon(d.generatedAt);
   const sourceChips = Object.entries(d.sourceLabels)
     .map(([k, v]) =>
       `<div class="stat"><div class="num">${d.bySource[k] ?? 0}</div>` +
