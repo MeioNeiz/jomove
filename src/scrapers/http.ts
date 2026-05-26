@@ -28,6 +28,8 @@ export type FetchOpts = {
   referer?:   string;
   timeoutMs?: number;
   retries?:   number;
+  /** Route through an HTTP(S) proxy, e.g. "http://1.2.3.4:8080". */
+  proxy?:     string;
 };
 
 type HostState = { lastAt: number; cookies: Map<string, string> };
@@ -106,6 +108,7 @@ export async function fetchText(
         headers,
         redirect: "follow",
         signal:   AbortSignal.timeout(opts.timeoutMs ?? 20_000),
+        ...(opts.proxy ? { proxy: opts.proxy } : {}),
       });
 
       // Persist Set-Cookie. Bun's Response exposes headers iterable.

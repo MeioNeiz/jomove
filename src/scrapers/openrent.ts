@@ -10,6 +10,7 @@
  */
 
 import { fetchText } from "./http.ts";
+import { pickWorkingProxy } from "./proxies.ts";
 import { writeResults, type ScrapedListing } from "./output.ts";
 import { filterListing, type FilterResult } from "./filters.ts";
 import { filterImages } from "./images.ts";
@@ -260,11 +261,24 @@ export async function scrapeOpenRent(): Promise<ScrapeReport> {
   };
 
   let search;
+  let proxy: string | undefined;
   try {
-    search = await fetchText(SEARCH_URL, { minGapMs: 1500 });
+    search = await fetchText(SEARCH_URL, { minGapMs: 1500, retries: 0 });
   } catch (err) {
     report.errors.push(`search fetch failed: ${(err as Error).message}`);
     return report;
+  }
+  // OpenRent fronts the search page with AWS WAF, which serves a captcha
+  // page as HTTP 405 to flagged IPs (e.g. Oracle Cloud). Fall back to a
+  // free proxy for the run if that happens.
+  if (search.status === 405) {
+    const pick = await pickWorkingProxy(SEARCH_URL, b => ID_RE.test(b));
+    if (!pick) {
+      report.errors.push("search HTTP 405 (no working free proxy found)");
+      return report;
+    }
+    proxy  = pick.proxy;
+    search = { status: pick.status, url: pick.finalUrl, body: pick.body };
   }
   if (search.status !== 200) {
     report.errors.push(`search HTTP ${search.status}`);
@@ -277,15 +291,48 @@ export async function scrapeOpenRent(): Promise<ScrapeReport> {
   }
   const ids = idMatch[1]!.split(",").map(s => s.trim()).filter(Boolean);
 
+  // When on proxy: rotate to a fresh one after a streak of failures,
+  // and cap total runtime — free proxies regularly die mid-run and we
+  // don't want OpenRent to drag the whole auto-scrape past the budget.
+  const PROXY_RUN_BUDGET_MS = 5 * 60_000;
+  const PROXY_FAIL_STREAK    = 3;
+  const badProxies = new Set<string>();
+  let failStreak = 0;
+  const runStart = Date.now();
+
   const listings: ScrapedListing[] = [];
   for (const id of ids) {
+    if (proxy && Date.now() - runStart > PROXY_RUN_BUDGET_MS) {
+      report.errors.push(`proxy budget exceeded — stopped at ${listings.length}/${ids.length}`);
+      break;
+    }
     let res;
     try {
       res = await fetchText(`https://www.openrent.co.uk/${id}`, {
-        minGapMs: 1500,
+        // Via proxy the bottleneck is the proxy's own latency and the
+        // proxy IP fronting us to OpenRent — tighter gap is fine.
+        minGapMs: proxy ? 600 : 1500,
         referer: SEARCH_URL,
+        proxy,
+        // Free proxies are flaky; skip retries and rotate on failures
+        // instead. Shorter per-try timeout keeps the run bounded.
+        ...(proxy ? { retries: 0, timeoutMs: 10_000 } : {}),
       });
+      failStreak = 0;
     } catch (err) {
+      if (proxy) {
+        failStreak++;
+        if (failStreak >= PROXY_FAIL_STREAK) {
+          badProxies.add(proxy);
+          const next = await pickWorkingProxy(SEARCH_URL, b => ID_RE.test(b), { skip: badProxies });
+          if (!next) {
+            report.errors.push(`proxy pool exhausted — stopped at ${listings.length}/${ids.length}`);
+            break;
+          }
+          proxy = next.proxy;
+          failStreak = 0;
+        }
+      }
       report.errors.push(`detail ${id} fetch failed: ${(err as Error).message}`);
       continue;
     }
