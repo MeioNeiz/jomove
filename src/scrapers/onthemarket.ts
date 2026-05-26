@@ -26,7 +26,36 @@ const SEARCH_BASE =
 const PAGE_SIZE = 30;
 const HOST_GAP_MS = 1500;
 
-type OtmImage = { default?: string; webp?: string };
+type OtmImage = {
+  // Summary-page shape (search list).
+  default?:   string;
+  webp?:      string;
+  // Detail-page shape — much richer. `url` is the same 81x55 thumb as
+  // `default`; `largeUrl` is the 1024-wide variant we actually want.
+  url?:       string;
+  largeUrl?:  string;
+  prefix?:    string;
+  ext?:       string;
+  geometries?: Record<string, { w: number; h: number; suffix: string }>;
+};
+
+/** Pick the largest sensible URL out of OTM's image record. */
+function pickOtmImageUrl(img: any): string | null {
+  if (!img) return null;
+  if (typeof img === "string") return img;
+  if (typeof img.largeUrl === "string") return img.largeUrl;
+  if (typeof img.prefix === "string" && img.geometries) {
+    // Largest first; OTM names them `hd` (1024) > `dc` (570) > `ls`/`mc` > `th`.
+    for (const k of ["hd", "dc", "ls", "mc", "th"] as const) {
+      const g = img.geometries[k];
+      if (g?.suffix) {
+        const ext = typeof img.ext === "string" ? img.ext : "jpg";
+        return `${img.prefix}-${g.suffix}.${ext}`;
+      }
+    }
+  }
+  return img.default ?? img.url ?? null;
+}
 type OtmSummary = {
   id:                          number | string;
   "details-url":               string;
@@ -173,7 +202,7 @@ function buildFromDetail(s: OtmSummary, prop: any): ScrapedListing | null {
 
   const imageObjs = Array.isArray(prop?.images) ? prop.images : s.images;
   const imageUrls = imageObjs
-    .map((img: any) => img?.default ?? img?.url ?? null)
+    .map(pickOtmImageUrl)
     .filter((u: string | null): u is string => !!u);
   const images = filterImages(imageUrls);
 

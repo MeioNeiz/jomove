@@ -207,7 +207,10 @@ function buildFromDetail(id: number, summary: RmSummary, pm: any): ScrapedListin
   const imageUrls = (p.images ?? [])
     .map((img: any) => img?.url ?? img?.srcUrl ?? null)
     .filter((u: string | null): u is string => !!u)
-    .map((u: string) => u.startsWith("http") ? u : `https://media.rightmove.co.uk/${u}`);
+    .map((u: string) => u.startsWith("http") ? u : `https://media.rightmove.co.uk/${u}`)
+    // Strip Rightmove's thumbnail variant suffix (e.g. `_max_656x437`) so
+    // we serve the full-resolution original. The bare URL is the source.
+    .map((u: string) => u.replace(/_max_\d+x\d+(?=\.[a-z]+(?:\?|$))/i, ""));
 
   const images = filterImages(imageUrls);
 
