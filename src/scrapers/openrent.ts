@@ -10,7 +10,7 @@
  */
 
 import { fetchText } from "./http.ts";
-import { pickWorkingProxy } from "./proxies.ts";
+import { findWorkingProxies } from "./proxies.ts";
 import { writeResults, type ScrapedListing } from "./output.ts";
 import { filterListing, type FilterResult } from "./filters.ts";
 import { filterImages } from "./images.ts";
@@ -21,6 +21,13 @@ export type { ScrapeReport } from "./registry.ts";
 const SEARCH_URL =
   "https://www.openrent.co.uk/properties-to-rent/southampton" +
   "?term=Southampton&prices_max=1150&bedrooms_min=1&bedrooms_max=2";
+
+// Second WAF-fronted URL used purely to filter out one-shot free proxies
+// during proxy selection. Different query params so it doesn't hit the
+// proxy's response cache.
+const SUSTAIN_URL =
+  "https://www.openrent.co.uk/properties-to-rent/southampton" +
+  "?term=Southampton&prices_max=2500&bedrooms_min=1&bedrooms_max=3";
 
 const TITLE_RE = /^Southampton\s+-\s+(.+?)\s+-\s+To Rent Now/i;
 const ID_RE    = /var\s+PROPERTYIDS\s*=\s*\[([0-9,\s]+)\]/;
@@ -261,24 +268,31 @@ export async function scrapeOpenRent(): Promise<ScrapeReport> {
   };
 
   let search;
-  let proxy: string | undefined;
+  let proxyPool: string[] = [];
+  const badProxies = new Set<string>();
   try {
     search = await fetchText(SEARCH_URL, { minGapMs: 1500, retries: 0 });
   } catch (err) {
     report.errors.push(`search fetch failed: ${(err as Error).message}`);
     return report;
   }
-  // OpenRent fronts the search page with AWS WAF, which serves a captcha
-  // page as HTTP 405 to flagged IPs (e.g. Oracle Cloud). Fall back to a
-  // free proxy for the run if that happens.
+  // OpenRent fronts the search + detail pages with AWS WAF, which
+  // serves a captcha page as HTTP 405 to flagged IPs (e.g. Oracle
+  // Cloud). Fall back to a pool of free proxies — sustain-tested so
+  // we drop the worst single-shot ones — and rotate through them.
   if (search.status === 405) {
-    const pick = await pickWorkingProxy(SEARCH_URL, b => ID_RE.test(b));
-    if (!pick) {
+    const picks = await findWorkingProxies(
+      SEARCH_URL,
+      b => ID_RE.test(b),
+      3,
+      { sustainUrl: SUSTAIN_URL, skip: badProxies },
+    );
+    if (picks.length === 0) {
       report.errors.push("search HTTP 405 (no working free proxy found)");
       return report;
     }
-    proxy  = pick.proxy;
-    search = { status: pick.status, url: pick.finalUrl, body: pick.body };
+    proxyPool = picks.map(p => p.proxy);
+    search    = { status: 200, url: picks[0]!.finalUrl, body: picks[0]!.body };
   }
   if (search.status !== 200) {
     report.errors.push(`search HTTP ${search.status}`);
@@ -291,18 +305,19 @@ export async function scrapeOpenRent(): Promise<ScrapeReport> {
   }
   const ids = idMatch[1]!.split(",").map(s => s.trim()).filter(Boolean);
 
-  // When on proxy: rotate to a fresh one after a streak of failures,
-  // and cap total runtime — free proxies regularly die mid-run and we
-  // don't want OpenRent to drag the whole auto-scrape past the budget.
+  // When on proxy: rotate to the next proxy in the pool after a streak
+  // of failures, refill the pool if it empties, hard-cap total runtime
+  // so a bad luck run can't drag the whole auto-scrape past budget.
+  const onProxy             = proxyPool.length > 0;
   const PROXY_RUN_BUDGET_MS = 5 * 60_000;
-  const PROXY_FAIL_STREAK    = 3;
-  const badProxies = new Set<string>();
+  const PROXY_FAIL_STREAK    = 2;
+  let proxy      = proxyPool[0];
   let failStreak = 0;
   const runStart = Date.now();
 
   const listings: ScrapedListing[] = [];
   for (const id of ids) {
-    if (proxy && Date.now() - runStart > PROXY_RUN_BUDGET_MS) {
+    if (onProxy && Date.now() - runStart > PROXY_RUN_BUDGET_MS) {
       report.errors.push(`proxy budget exceeded — stopped at ${listings.length}/${ids.length}`);
       break;
     }
@@ -311,25 +326,34 @@ export async function scrapeOpenRent(): Promise<ScrapeReport> {
       res = await fetchText(`https://www.openrent.co.uk/${id}`, {
         // Via proxy the bottleneck is the proxy's own latency and the
         // proxy IP fronting us to OpenRent — tighter gap is fine.
-        minGapMs: proxy ? 600 : 1500,
+        minGapMs: onProxy ? 600 : 1500,
         referer: SEARCH_URL,
         proxy,
         // Free proxies are flaky; skip retries and rotate on failures
         // instead. Shorter per-try timeout keeps the run bounded.
-        ...(proxy ? { retries: 0, timeoutMs: 10_000 } : {}),
+        ...(onProxy ? { retries: 0, timeoutMs: 10_000 } : {}),
       });
       failStreak = 0;
     } catch (err) {
-      if (proxy) {
+      if (onProxy && proxy) {
         failStreak++;
         if (failStreak >= PROXY_FAIL_STREAK) {
           badProxies.add(proxy);
-          const next = await pickWorkingProxy(SEARCH_URL, b => ID_RE.test(b), { skip: badProxies });
-          if (!next) {
-            report.errors.push(`proxy pool exhausted — stopped at ${listings.length}/${ids.length}`);
-            break;
+          proxyPool = proxyPool.filter(p => p !== proxy);
+          if (proxyPool.length === 0) {
+            const more = await findWorkingProxies(
+              SEARCH_URL,
+              b => ID_RE.test(b),
+              3,
+              { sustainUrl: SUSTAIN_URL, skip: badProxies },
+            );
+            if (more.length === 0) {
+              report.errors.push(`proxy pool exhausted — stopped at ${listings.length}/${ids.length}`);
+              break;
+            }
+            proxyPool = more.map(p => p.proxy);
           }
-          proxy = next.proxy;
+          proxy      = proxyPool[0];
           failStreak = 0;
         }
       }
