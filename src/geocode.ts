@@ -104,14 +104,19 @@ type LatLon = { lat: number; lon: number };
  * (fire-and-forget, latched, used by the dev server).
  */
 export async function runAddressGeocoding(db: Database): Promise<void> {
-  const candidates = db.query(`
-    SELECT DISTINCT address || ', Southampton, UK' AS q
+  const rows = db.query(`
+    SELECT DISTINCT address, postcode_area
     FROM listings
     WHERE (postcode_full IS NULL OR postcode_full = '')
       AND address IS NOT NULL AND address != ''
-      AND (address || ', Southampton, UK')
-          NOT IN (SELECT query FROM geocode)
-  `).all() as Array<{ q: string }>;
+  `).all() as Array<{ address: string; postcode_area: string | null }>;
+  const cached = new Set(
+    (db.query("SELECT query FROM geocode").all() as Array<{ query: string }>)
+      .map(r => r.query),
+  );
+  const candidates = Array.from(
+    new Set(rows.map(r => addressQuery(r.address, r.postcode_area)))
+  ).filter(q => !cached.has(q)).map(q => ({ q }));
   if (candidates.length === 0) return;
 
   const upsert = upsertStmt(db);
@@ -278,9 +283,18 @@ export function loadGeocodes(db: Database): Map<string, { lat: number; lon: numb
   return new Map(rows.map(r => [r.query, { lat: r.lat, lon: r.lon }]));
 }
 
-/** Build the same query string the background job uses, for cache lookup. */
-export function addressQuery(address: string, _pcArea: string | null): string {
-  return `${address}, Southampton, UK`;
+/**
+ * Build the geocoder query string for an address. Used both to populate the
+ * cache and to look it up. Pins results to Southampton by appending the
+ * postcode area (and only one "Southampton") so we don't accidentally match
+ * "Alma Road, Southampton" to the namesake street in Dundee.
+ */
+export function addressQuery(address: string, pcArea: string | null): string {
+  const cleaned = address.trim().replace(/,\s*Southampton\s*$/i, "").trim();
+  const parts = [cleaned];
+  if (pcArea) parts.push(pcArea);
+  parts.push("Southampton", "UK");
+  return parts.join(", ");
 }
 
 function upsertStmt(db: Database) {
