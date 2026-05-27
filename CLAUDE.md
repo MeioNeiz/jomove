@@ -58,6 +58,31 @@ SMTP isn't configured on prod; `auto-scrape` runs without notifications.
 Drop `SMTP_HOST/PORT/USER/PASS/NOTIFY_TO` into `/home/opc/jomove/.env` to
 enable email digests of new listings.
 
+## OpenRent proxy
+
+OpenRent fronts everything with AWS WAF and blocks the Oracle Cloud IP.
+The scraper has two-stage fallback:
+
+1. **Paid rotating endpoint** (preferred): set `OPENRENT_PROXY` in
+   `/home/opc/jomove/.env`. Webshare free tier suffices — sign up at
+   <https://www.webshare.io/>, then use the **rotating backbone**, not
+   an individual proxy IP:
+   ```
+   OPENRENT_PROXY=http://<user>-rotate:<pass>@p.webshare.io:80
+   ```
+   (Append `-rotate` to your username; the bare username pins to one IP
+   which gets WAF-blocked.) The scraper retries 405 responses up to 12x
+   through the same endpoint — each retry hits a freshly rotated IP, so
+   ~30% per-IP pass rate becomes ~97% overall. Runs in ~5–6 min for the
+   full ~230 listings via Promise.all concurrency of 3.
+2. **Free-proxy pool** (fallback): scrapes public lists and sustain-
+   tests candidates. Healthy proxies are remembered in
+   `data/proxy-health.json` — the next run starts from a warm pool of
+   recently-good IPs instead of probing the full list again.
+
+Without `OPENRENT_PROXY`, you'll see slow degradation as free proxies
+get burned (currently ~0–50 listings/run). With it, expect ~230/run.
+
 ## Misc
 
 - Bun + TS, no build step.

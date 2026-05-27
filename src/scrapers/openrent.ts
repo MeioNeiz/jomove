@@ -10,7 +10,12 @@
  */
 
 import { fetchText } from "./http.ts";
-import { findWorkingProxies } from "./proxies.ts";
+import {
+  findWorkingProxies,
+  flushProxyHealth,
+  recordProxyFail,
+  recordProxyOk,
+} from "./proxies.ts";
 import { writeResults, type ScrapedListing } from "./output.ts";
 import { filterListing, type FilterResult } from "./filters.ts";
 import { filterImages } from "./images.ts";
@@ -262,33 +267,111 @@ function buildListing(id: string, finalUrl: string, body: string): ScrapedListin
   };
 }
 
+type ListingResult =
+  | { kind: "listing"; listing: ScrapedListing }
+  | { kind: "skip";    reason: string }
+  | { kind: "error";   error: Error };
+
+async function fetchAndProcess(
+  id:       string,
+  proxy:    string | undefined,
+  opts:     { onPaid: boolean; onProxy: boolean },
+): Promise<ListingResult> {
+  let res;
+  try {
+    res = await fetchText(`https://www.openrent.co.uk/${id}`, {
+      minGapMs: opts.onProxy ? 600 : 1500,
+      referer:  SEARCH_URL,
+      proxy,
+      ...(opts.onProxy && !opts.onPaid ? { retries: 0, timeoutMs: 10_000 } : {}),
+      ...(opts.onPaid ? {
+        retries:         12,
+        retryOnStatuses: [405],
+        retryBackoffMs:  300,
+        timeoutMs:       12_000,
+      } : {}),
+    });
+  } catch (err) {
+    return { kind: "error", error: err as Error };
+  }
+  if (res.status !== 200) return { kind: "skip", reason: `HTTP ${res.status}` };
+
+  const built = buildListing(id, res.url, res.body);
+  if (!built) return { kind: "skip", reason: "unparseable" };
+
+  const rows: Array<[string, string]> = [];
+  for (const m of res.body.matchAll(/<table[^>]*>([\s\S]*?)<\/table>/gi)) {
+    rows.push(...tableRows(m[1]!));
+  }
+  if (isStudentsOnly(rows)) return { kind: "skip", reason: "students only" };
+
+  const avail = parseAvailable(built.available ?? "");
+  const f: FilterResult = filterListing({
+    price_pcm:      built.price_pcm,
+    beds:           built.beds ?? null,
+    postcode_area:  built.postcode_area ?? null,
+    available_date: avail.iso,
+    listing_type:   built.listing_type ?? null,
+    description:    built.description ?? null,
+    address:        built.address,
+  });
+  if (!f.pass) return { kind: "skip", reason: f.reason };
+  return { kind: "listing", listing: built };
+}
+
 export async function scrapeOpenRent(): Promise<ScrapeReport> {
   const report: ScrapeReport = {
     portal: "openrent", written: 0, skipped: [], errors: [], listings: [],
   };
 
+  // Paid rotating endpoint (e.g. Webshare): one URL that rotates IPs
+  // server-side. When present, we trust it for the whole run and don't
+  // touch the free-proxy fallback unless even it gets WAF-blocked.
+  const PAID_PROXY = (process.env.OPENRENT_PROXY ?? "").trim() || null;
+
   let search;
-  let proxyPool: string[] = [];
+  let proxyPool: string[] = PAID_PROXY ? [PAID_PROXY] : [];
+  let onPaid = PAID_PROXY != null;
   const badProxies = new Set<string>();
   try {
-    search = await fetchText(SEARCH_URL, { minGapMs: 1500, retries: 0 });
+    search = await fetchText(SEARCH_URL, {
+      minGapMs: 1500,
+      // Paid backbone rotates IPs server-side per request; ~30% of
+      // rotated IPs are WAF-clean. Retry on 405 so we walk through
+      // the rotation until one passes. Linear backoff keeps the
+      // search overhead bounded to a few seconds.
+      retries: PAID_PROXY ? 12 : 0,
+      ...(PAID_PROXY ? {
+        proxy: PAID_PROXY,
+        retryOnStatuses: [405],
+        retryBackoffMs:  300,
+        timeoutMs:       15_000,
+      } : {}),
+    });
   } catch (err) {
     report.errors.push(`search fetch failed: ${(err as Error).message}`);
     return report;
   }
   // OpenRent fronts the search + detail pages with AWS WAF, which
   // serves a captcha page as HTTP 405 to flagged IPs (e.g. Oracle
-  // Cloud). Fall back to a pool of free proxies — sustain-tested so
-  // we drop the worst single-shot ones — and rotate through them.
+  // Cloud). Fall back to a free-proxy pool — warm-pool first (recently
+  // healthy from a past run), then sustain-tested fresh candidates.
   if (search.status === 405) {
+    if (onPaid) {
+      report.errors.push("paid proxy WAF-blocked — falling back to free pool");
+      onPaid = false;
+      proxyPool = [];
+    }
     const picks = await findWorkingProxies(
       SEARCH_URL,
       b => ID_RE.test(b),
-      3,
+      // Larger initial pool: dies slower as the run drains it.
+      8,
       { sustainUrl: SUSTAIN_URL, skip: badProxies },
     );
     if (picks.length === 0) {
       report.errors.push("search HTTP 405 (no working free proxy found)");
+      flushProxyHealth();
       return report;
     }
     proxyPool = picks.map(p => p.proxy);
@@ -296,108 +379,113 @@ export async function scrapeOpenRent(): Promise<ScrapeReport> {
   }
   if (search.status !== 200) {
     report.errors.push(`search HTTP ${search.status}`);
+    flushProxyHealth();
     return report;
   }
   const idMatch = search.body.match(ID_RE);
   if (!idMatch) {
     report.errors.push("PROPERTYIDS array not found on search page");
+    flushProxyHealth();
     return report;
   }
   const ids = idMatch[1]!.split(",").map(s => s.trim()).filter(Boolean);
 
-  // When on proxy: rotate to the next proxy in the pool after a streak
-  // of failures, refill the pool if it empties, hard-cap total runtime
-  // so a bad luck run can't drag the whole auto-scrape past budget.
-  const onProxy             = proxyPool.length > 0;
-  const PROXY_RUN_BUDGET_MS = 5 * 60_000;
-  const PROXY_FAIL_STREAK    = 2;
-  let proxy      = proxyPool[0];
-  let failStreak = 0;
-  const runStart = Date.now();
-
+  const onProxy = proxyPool.length > 0;
   const listings: ScrapedListing[] = [];
-  for (const id of ids) {
-    if (onProxy && Date.now() - runStart > PROXY_RUN_BUDGET_MS) {
-      report.errors.push(`proxy budget exceeded — stopped at ${listings.length}/${ids.length}`);
-      break;
-    }
-    let res;
-    try {
-      res = await fetchText(`https://www.openrent.co.uk/${id}`, {
-        // Via proxy the bottleneck is the proxy's own latency and the
-        // proxy IP fronting us to OpenRent — tighter gap is fine.
-        minGapMs: onProxy ? 600 : 1500,
-        referer: SEARCH_URL,
-        proxy,
-        // Free proxies are flaky; skip retries and rotate on failures
-        // instead. Shorter per-try timeout keeps the run bounded.
-        ...(onProxy ? { retries: 0, timeoutMs: 10_000 } : {}),
-      });
-      failStreak = 0;
-    } catch (err) {
-      if (onProxy && proxy) {
-        failStreak++;
-        if (failStreak >= PROXY_FAIL_STREAK) {
-          badProxies.add(proxy);
-          proxyPool = proxyPool.filter(p => p !== proxy);
-          if (proxyPool.length === 0) {
-            const more = await findWorkingProxies(
-              SEARCH_URL,
-              b => ID_RE.test(b),
-              3,
-              { sustainUrl: SUSTAIN_URL, skip: badProxies },
-            );
-            if (more.length === 0) {
-              report.errors.push(`proxy pool exhausted — stopped at ${listings.length}/${ids.length}`);
-              break;
-            }
-            proxyPool = more.map(p => p.proxy);
+
+  if (onPaid) {
+    // Paid backbone: parallel worker pool. Each in-flight request hits
+    // a freshly rotated IP, so concurrency multiplies our effective
+    // throughput without correlating failures. Concurrency of 3 keeps
+    // run time inside the 15-min systemd timeout even at ~5s/listing.
+    const CONCURRENCY = 3;
+    let cursor = 0;
+    let consecutiveFails = 0;
+    let bail = false;
+
+    const worker = async () => {
+      while (!bail) {
+        const i = cursor++;
+        if (i >= ids.length) return;
+        const id = ids[i]!;
+        const r = await fetchAndProcess(id, PAID_PROXY!, { onPaid: true, onProxy: true });
+        if (r.kind === "listing") {
+          listings.push(r.listing);
+          consecutiveFails = 0;
+        } else if (r.kind === "skip") {
+          report.skipped.push({ id, reason: r.reason });
+          consecutiveFails = 0;
+        } else {
+          report.errors.push(`detail ${id} fetch failed: ${r.error.message}`);
+          consecutiveFails++;
+          // Paid endpoint completely broken (auth, quota, network):
+          // bail out instead of grinding through all 230 listings.
+          if (consecutiveFails >= 12) {
+            report.errors.push(`paid proxy failing repeatedly — stopped at ${cursor}/${ids.length}`);
+            bail = true;
           }
-          proxy      = proxyPool[0];
-          failStreak = 0;
         }
       }
-      report.errors.push(`detail ${id} fetch failed: ${(err as Error).message}`);
-      continue;
-    }
-    if (res.status !== 200) {
-      report.skipped.push({ id, reason: `HTTP ${res.status}` });
-      continue;
-    }
-    const built = buildListing(id, res.url, res.body);
-    if (!built) {
-      report.skipped.push({ id, reason: "unparseable" });
-      continue;
-    }
+    };
 
-    const rows: Array<[string, string]> = [];
-    for (const m of res.body.matchAll(/<table[^>]*>([\s\S]*?)<\/table>/gi)) {
-      rows.push(...tableRows(m[1]!));
-    }
-    if (isStudentsOnly(rows)) {
-      report.skipped.push({ id, reason: "students only" });
-      continue;
-    }
+    await Promise.all(Array.from({ length: CONCURRENCY }, () => worker()));
+  } else {
+    // Free pool (or direct): rotate proxies on consecutive failures,
+    // refill from the public list if the pool empties, hard-cap total
+    // runtime so a bad-luck run can't drag the whole auto-scrape past
+    // its budget.
+    const PROXY_RUN_BUDGET_MS = 5 * 60_000;
+    const PROXY_FAIL_STREAK    = 2;
+    let proxy      = proxyPool[0];
+    let failStreak = 0;
+    const runStart = Date.now();
 
-    const avail = parseAvailable(built.available ?? "");
-    const f: FilterResult = filterListing({
-      price_pcm:     built.price_pcm,
-      beds:          built.beds ?? null,
-      postcode_area: built.postcode_area ?? null,
-      available_date: avail.iso,
-      listing_type:  built.listing_type ?? null,
-      description:   built.description ?? null,
-      address:       built.address,
-    });
-    if (!f.pass) {
-      report.skipped.push({ id, reason: f.reason });
-      continue;
+    for (const id of ids) {
+      if (onProxy && Date.now() - runStart > PROXY_RUN_BUDGET_MS) {
+        report.errors.push(`proxy budget exceeded — stopped at ${listings.length}/${ids.length}`);
+        break;
+      }
+      const r = await fetchAndProcess(id, proxy, { onPaid: false, onProxy });
+      if (r.kind === "listing") {
+        listings.push(r.listing);
+        if (onProxy && proxy) recordProxyOk(proxy);
+        failStreak = 0;
+      } else if (r.kind === "skip") {
+        report.skipped.push({ id, reason: r.reason });
+        if (onProxy && proxy) recordProxyOk(proxy);
+        failStreak = 0;
+      } else {
+        report.errors.push(`detail ${id} fetch failed: ${r.error.message}`);
+        if (onProxy && proxy) {
+          recordProxyFail(proxy);
+          failStreak++;
+          if (failStreak >= PROXY_FAIL_STREAK) {
+            badProxies.add(proxy);
+            proxyPool = proxyPool.filter(p => p !== proxy);
+            if (proxyPool.length === 0) {
+              const more = await findWorkingProxies(
+                SEARCH_URL,
+                b => ID_RE.test(b),
+                5,
+                { sustainUrl: SUSTAIN_URL, skip: badProxies },
+              );
+              if (more.length === 0) {
+                report.errors.push(`proxy pool exhausted — stopped at ${listings.length}/${ids.length}`);
+                break;
+              }
+              proxyPool = more.map(p => p.proxy);
+            }
+            proxy      = proxyPool[0];
+            failStreak = 0;
+          }
+        }
+      }
     }
-    listings.push(built);
   }
 
   writeResults("openrent", listings);
   report.written = listings.length;
   report.listings = listings;
+  flushProxyHealth();
   return report;
 }

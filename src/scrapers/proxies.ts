@@ -13,11 +13,29 @@
  * A second `sustainUrl` filters out the worst flakes: any candidate
  * that passes the first request but fails a second one is dropped.
  * Doesn't catch every flake but cuts the worst single-shot proxies.
+ *
+ * Health is persisted to `data/proxy-health.json` so the next run
+ * starts from a warm pool of recently-good proxies instead of
+ * re-probing public lists from scratch every time. The warm pool is
+ * tried before any fresh candidates — a 24h-old "OK" is much more
+ * likely to still work than a random row from a public list.
  */
+
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+// Resolve project root locally instead of importing config.ts — config.ts
+// re-exports the scrapers registry, which would create a circular import
+// (config → registry → openrent → proxies → config). This file lives at
+// src/scrapers/proxies.ts, so root is three dirnames up.
+const ROOT = dirname(dirname(dirname(fileURLToPath(import.meta.url))));
 
 const PROXY_LIST_URLS = [
   "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
   "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
+  "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt",
+  "https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=5000",
 ];
 
 const UA =
@@ -29,6 +47,11 @@ const HEADERS = {
   "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
   "Accept-Language": "en-GB,en;q=0.9",
 };
+
+const HEALTH_PATH    = join(ROOT, "data", "proxy-health.json");
+const WARM_MAX_AGE   = 24 * 60 * 60 * 1000;   // 24h since last_ok_at → still warm
+const PRUNE_MAX_AGE  =  7 * 24 * 60 * 60 * 1000; // 7d of nothing → drop entry
+const WARM_MIN_RATIO = 0;                     // ok_count - fail_count >= 0
 
 let listCache: string[] | null = null;
 
@@ -55,6 +78,90 @@ async function loadProxyList(): Promise<string[]> {
   listCache = out;
   return out;
 }
+
+// --- Persistent proxy health -------------------------------------------------
+
+type Health = {
+  last_ok_at?:   string;
+  last_fail_at?: string;
+  ok_count:      number;
+  fail_count:    number;
+};
+
+let healthCache: Record<string, Health> | null = null;
+let healthDirty = false;
+
+function loadHealth(): Record<string, Health> {
+  if (healthCache) return healthCache;
+  if (!existsSync(HEALTH_PATH)) { healthCache = {}; return healthCache; }
+  try {
+    healthCache = JSON.parse(readFileSync(HEALTH_PATH, "utf-8")) as Record<string, Health>;
+  } catch { healthCache = {}; }
+  return healthCache;
+}
+
+export function recordProxyOk(proxy: string): void {
+  const h = loadHealth();
+  const e = h[proxy] ?? { ok_count: 0, fail_count: 0 };
+  e.ok_count++;
+  e.last_ok_at = new Date().toISOString();
+  h[proxy] = e;
+  healthDirty = true;
+}
+
+export function recordProxyFail(proxy: string): void {
+  const h = loadHealth();
+  const e = h[proxy] ?? { ok_count: 0, fail_count: 0 };
+  e.fail_count++;
+  e.last_fail_at = new Date().toISOString();
+  h[proxy] = e;
+  healthDirty = true;
+}
+
+/** Drop entries with no activity in PRUNE_MAX_AGE so the file doesn't grow forever. */
+function prune(): void {
+  const h = loadHealth();
+  const cutoff = Date.now() - PRUNE_MAX_AGE;
+  for (const [p, e] of Object.entries(h)) {
+    const last = Math.max(
+      e.last_ok_at   ? Date.parse(e.last_ok_at)   : 0,
+      e.last_fail_at ? Date.parse(e.last_fail_at) : 0,
+    );
+    if (last < cutoff) { delete h[p]; healthDirty = true; }
+  }
+}
+
+/** Persist any changes to disk. Safe to call multiple times. */
+export function flushProxyHealth(): void {
+  if (!healthDirty || !healthCache) return;
+  prune();
+  mkdirSync(dirname(HEALTH_PATH), { recursive: true });
+  writeFileSync(HEALTH_PATH, JSON.stringify(healthCache, null, 2));
+  healthDirty = false;
+}
+
+/**
+ * Warm pool: proxies that succeeded recently. Sorted by most-recently-OK
+ * first so the freshest survivors are tried before anything else.
+ * Returned shape matches public-list rows (no `http://` prefix) so the
+ * existing candidate loop can consume them transparently.
+ */
+function warmCandidates(): string[] {
+  const h = loadHealth();
+  const cutoff = Date.now() - WARM_MAX_AGE;
+  return Object.entries(h)
+    .filter(([_, e]) => {
+      if (!e.last_ok_at) return false;
+      if (Date.parse(e.last_ok_at) < cutoff) return false;
+      return e.ok_count - e.fail_count >= WARM_MIN_RATIO;
+    })
+    .sort(([, a], [, b]) =>
+      Date.parse(b.last_ok_at!) - Date.parse(a.last_ok_at!),
+    )
+    .map(([p]) => p.replace(/^http:\/\//, ""));
+}
+
+// --- Probing ----------------------------------------------------------------
 
 export type ProxyPick = {
   proxy:    string;       // "http://1.2.3.4:8080"
@@ -99,28 +206,36 @@ export async function findWorkingProxies(
   count:   number,
   opts:    FindOpts = {},
 ): Promise<ProxyPick[]> {
-  const list = await loadProxyList();
-  if (list.length === 0) return [];
-
-  const candidates  = list.slice(0, opts.maxCandidates ?? 600);
+  const skip        = opts.skip ?? new Set<string>();
   const concurrency = opts.concurrency ?? 40;
   const perTryMs    = opts.perTryMs    ?? 8000;
-  const skip        = opts.skip ?? new Set<string>();
   const sustainUrl  = opts.sustainUrl;
+
+  // Warm pool first (already validated in a past run), then a shuffled
+  // slice of fresh public-list candidates. De-dup so warm entries
+  // aren't re-probed from the public list.
+  const warm  = warmCandidates();
+  const fresh = (await loadProxyList()).slice(0, opts.maxCandidates ?? 600);
+  const seen  = new Set(warm);
+  const ordered: string[] = [...warm];
+  for (const c of fresh) if (!seen.has(c)) { seen.add(c); ordered.push(c); }
+  if (ordered.length === 0) return [];
 
   let cursor = 0;
   const results: ProxyPick[] = [];
 
   const worker = async () => {
-    while (results.length < count && cursor < candidates.length) {
-      const proxy = `http://${candidates[cursor++]!}`;
+    while (results.length < count && cursor < ordered.length) {
+      const proxy = `http://${ordered[cursor++]!}`;
       if (skip.has(proxy)) continue;
       const first = await probeOnce(proxy, testUrl, validator, perTryMs);
-      if (!first) continue;
+      if (!first) { recordProxyFail(proxy); continue; }
       if (sustainUrl) {
         const second = await probeOnce(proxy, sustainUrl, validator, perTryMs);
-        if (!second) continue;
+        if (!second) { recordProxyFail(proxy); continue; }
       }
+      // Probe success — credit it now, even if we don't keep the body.
+      recordProxyOk(proxy);
       if (results.length < count) {
         results.push({ proxy, body: first.body, status: 200, finalUrl: first.finalUrl });
       }

@@ -30,6 +30,19 @@ export type FetchOpts = {
   retries?:   number;
   /** Route through an HTTP(S) proxy, e.g. "http://1.2.3.4:8080". */
   proxy?:     string;
+  /**
+   * Extra status codes that should trigger a retry. Defaults to the
+   * built-in 429 + 5xx set; useful for proxy-rotation scenarios where
+   * a soft block (e.g. WAF 405) on one rotated IP may succeed on the
+   * next attempt's freshly-rotated IP.
+   */
+  retryOnStatuses?: number[];
+  /**
+   * Base backoff for retries in ms. Default 800 (exponential). When
+   * set, uses linear backoff at this value — appropriate for fast
+   * proxy-rotation retries where exp backoff would balloon the run.
+   */
+  retryBackoffMs?: number;
 };
 
 type HostState = { lastAt: number; cookies: Map<string, string> };
@@ -94,12 +107,19 @@ export async function fetchText(
   const cookies = cookieHeader(host);
   if (cookies) headers["Cookie"] = cookies;
 
-  const retries = opts.retries ?? 2;
+  const retries     = opts.retries ?? 2;
+  const extraStatuses = new Set(opts.retryOnStatuses ?? []);
+  const baseBackoff = opts.retryBackoffMs;
   let lastErr: unknown = null;
 
   for (let attempt = 0; attempt <= retries; attempt++) {
     if (attempt > 0) {
-      await new Promise(r => setTimeout(r, jitter(800 * Math.pow(2, attempt - 1))));
+      // Linear backoff when caller specified retryBackoffMs (fast
+      // proxy-rotation case), exponential otherwise.
+      const wait = baseBackoff != null
+        ? jitter(baseBackoff)
+        : jitter(800 * Math.pow(2, attempt - 1));
+      await new Promise(r => setTimeout(r, wait));
     }
     state.lastAt = Date.now();
     const t0 = Date.now();
@@ -108,7 +128,12 @@ export async function fetchText(
         headers,
         redirect: "follow",
         signal:   AbortSignal.timeout(opts.timeoutMs ?? 20_000),
-        ...(opts.proxy ? { proxy: opts.proxy } : {}),
+        // Disable Bun's connection keep-alive when using a proxy so the
+        // proxy's per-request IP rotation actually kicks in (otherwise
+        // the pooled TCP connection pins us to the same backend IP for
+        // every fetch, which defeats the whole point of a rotating
+        // endpoint like Webshare's backbone).
+        ...(opts.proxy ? { proxy: opts.proxy, keepalive: false } : {}),
       });
 
       // Persist Set-Cookie. Bun's Response exposes headers iterable.
@@ -120,7 +145,7 @@ export async function fetchText(
         }
       }
 
-      if (res.status === 429 || res.status >= 500) {
+      if (res.status === 429 || res.status >= 500 || extraStatuses.has(res.status)) {
         logFetch({ url, status: res.status, ms: Date.now() - t0, bytes: 0, attempt: attempt + 1 });
         lastErr = new Error(`HTTP ${res.status}`);
         continue;
