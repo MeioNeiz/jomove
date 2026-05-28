@@ -29,7 +29,7 @@ Production runs on an Oracle Cloud VM (`opc@132.145.34.57`) at
   `/etc/systemd/system/`:
   - `jomove.service` — web on `127.0.0.1:3000`, nginx fronts 443.
   - `jomove-scrape.service` + `.timer` — auto-scrape twice daily
-    (08:00 + 18:00 Europe/London, ±10 min jitter — auto-handles BST/GMT).
+    (09:00 + 18:00 Europe/London, ±10 min jitter — auto-handles BST/GMT).
 - **nginx**: `ops/nginx-jomove.conf` → `/etc/nginx/conf.d/jomove.conf`.
   Let's Encrypt cert under `/etc/letsencrypt/live/jomove.jomify.lol/`,
   renewed by the same certbot timer that handles `admin.jomify.lol`.
