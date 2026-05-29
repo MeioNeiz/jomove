@@ -77,14 +77,15 @@ function parsePriceString(s: string): number | null {
 }
 
 type NoteRow = {
-  dedupe_key:     string;
-  viewed:         number;
-  favourite:      number;
-  rating:         number | null;
-  comment:        string | null;
-  media_index:    number | null;
-  cost_overrides: string | null;
-  updated_at:     string;
+  dedupe_key:         string;
+  viewed:             number;
+  favourite:          number;
+  rating:             number | null;
+  comment:            string | null;
+  media_index:        number | null;
+  cost_overrides:     string | null;
+  furnished_override: string | null;
+  updated_at:         string;
 };
 
 function mergeNotes(rows: NoteRow[]): Omit<NoteRow, "dedupe_key"> {
@@ -109,10 +110,14 @@ function mergeNotes(rows: NoteRow[]): Omit<NoteRow, "dedupe_key"> {
   const viewed     = ordered.some(r => Boolean(r.viewed))    ? 1 : 0;
   const favourite  = ordered.some(r => Boolean(r.favourite)) ? 1 : 0;
   const media_index = ordered.find(r => (r.media_index ?? 0) > 0)?.media_index ?? 0;
+  // Newest non-null wins (uses a fresh reversed copy so it doesn't depend on
+  // the in-place reverse below).
+  const furnished_override =
+    [...ordered].reverse().find(r => r.furnished_override)?.furnished_override ?? null;
   const cost_overrides = ordered.reverse().find(r => r.cost_overrides)?.cost_overrides ?? null;
   const updated_at = ordered.length > 0 ? ordered[ordered.length - 1]!.updated_at : nowIso();
 
-  return { viewed, favourite, rating, comment, media_index, cost_overrides, updated_at };
+  return { viewed, favourite, rating, comment, media_index, cost_overrides, furnished_override, updated_at };
 }
 
 /**
@@ -157,7 +162,7 @@ export function reconcileDedupeKeys(db: Database): ReconcileStats {
     // the new target keys (so they merge cleanly).
     const placeholders = oldKeys.map(() => "?").join(",");
     const affectedRows = db.query(
-      `SELECT dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, updated_at
+      `SELECT dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, furnished_override, updated_at
          FROM user_notes
         WHERE dedupe_key IN (${placeholders})
            OR dedupe_key IN (SELECT value FROM json_each(?))`
@@ -174,12 +179,13 @@ export function reconcileDedupeKeys(db: Database): ReconcileStats {
     }
 
     const upsert = db.query(`
-      INSERT INTO user_notes (dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, updated_at)
-      VALUES ($k, $v, $f, $r, $c, $m, $o, $u)
+      INSERT INTO user_notes (dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, furnished_override, updated_at)
+      VALUES ($k, $v, $f, $r, $c, $m, $o, $fo, $u)
       ON CONFLICT(dedupe_key) DO UPDATE SET
         viewed = excluded.viewed, favourite = excluded.favourite,
         rating = excluded.rating, comment = excluded.comment,
         media_index = excluded.media_index, cost_overrides = excluded.cost_overrides,
+        furnished_override = excluded.furnished_override,
         updated_at = excluded.updated_at
     `);
     const del = db.query("DELETE FROM user_notes WHERE dedupe_key = ?");
@@ -193,7 +199,8 @@ export function reconcileDedupeKeys(db: Database): ReconcileStats {
       upsert.run({
         $k: newKey, $v: merged.viewed, $f: merged.favourite,
         $r: merged.rating, $c: merged.comment, $m: merged.media_index,
-        $o: merged.cost_overrides, $u: merged.updated_at,
+        $o: merged.cost_overrides, $fo: merged.furnished_override,
+        $u: merged.updated_at,
       });
       if (rows.length > 1) {
         stats.mergedGroups++;

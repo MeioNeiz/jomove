@@ -278,6 +278,32 @@ h1 .by{color:var(--muted);font-weight:400;font-size:14px;margin-left:8px}
 .cost-editor .ce-total{font-variant-numeric:tabular-nums;font-weight:600}
 .cost-editor .ce-total.cost-down{color:var(--good)}
 .cost-editor .ce-total.cost-up{color:var(--warn)}
+
+/* ---------- furnishing badge + picker ---------- */
+.furn-badge{cursor:pointer;border:1px solid transparent}
+.furn-badge:hover{border-color:var(--border-2)}
+.furn-badge.furn-set{text-decoration:underline dotted;text-underline-offset:2px}
+.furn-picker{
+  margin:2px 0 0;padding:8px 10px;
+  background:var(--surface);border:1px solid var(--border-2);
+  border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.10);font-size:12px;
+}
+.furn-picker .fp-title{font-weight:600;font-size:11px;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.furn-picker .fp-opts{display:flex;flex-wrap:wrap;gap:4px}
+.furn-picker .furn-opt{
+  font:inherit;font-size:11px;padding:3px 9px;
+  background:var(--surface);border:1px solid var(--border-2);
+  border-radius:11px;cursor:pointer;color:var(--fg);
+}
+.furn-picker .furn-opt:hover{background:var(--sweet-bg);border-color:var(--accent);color:var(--accent)}
+.furn-picker .furn-opt.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.furn-picker .furn-reset{
+  margin-top:8px;font:inherit;font-size:11px;padding:3px 8px;
+  background:transparent;border:1px solid var(--border-2);
+  border-radius:4px;cursor:pointer;color:var(--muted);
+}
+.furn-picker .furn-reset:hover{color:var(--fg);background:var(--surface-2)}
 .card-top .spacer{flex:1}
 .card-top .score{font-size:13px;font-variant-numeric:tabular-nums;font-weight:600;color:var(--accent);padding:1px 7px;background:var(--sweet-bg);border-radius:11px}
 

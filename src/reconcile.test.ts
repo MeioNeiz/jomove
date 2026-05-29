@@ -19,7 +19,7 @@ function seed(): Database {
       favourite INTEGER NOT NULL DEFAULT 0,
       rating INTEGER, comment TEXT,
       media_index INTEGER NOT NULL DEFAULT 0,
-      cost_overrides TEXT, updated_at TEXT NOT NULL
+      cost_overrides TEXT, furnished_override TEXT, updated_at TEXT NOT NULL
     );
     CREATE TABLE user_images (
       dedupe_key TEXT PRIMARY KEY, ext TEXT NOT NULL, updated_at TEXT NOT NULL
@@ -40,11 +40,11 @@ describe("reconcileDedupeKeys", () => {
     db.run(`INSERT INTO listings (source, source_url, address, price_pcm, postcode_area, dedupe_key, first_seen, last_seen)
             VALUES ('onthemarket', 'https://otm/1', 'Shirley Road, Southampton SO15', 925, 'SO15', 'stale-otm-key', 't', 't')`);
 
-    // User annotated both separately.
-    db.run(`INSERT INTO user_notes (dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, updated_at)
-            VALUES ('stale-rm-key', 1, 0, 6, 'Big rooms', 0, NULL, '2026-05-20T10:00:00Z')`);
-    db.run(`INSERT INTO user_notes (dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, updated_at)
-            VALUES ('stale-otm-key', 0, 1, 8, 'Bathroom looks new', 2, NULL, '2026-05-21T10:00:00Z')`);
+    // User annotated both separately, including a furnishing override on each.
+    db.run(`INSERT INTO user_notes (dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, furnished_override, updated_at)
+            VALUES ('stale-rm-key', 1, 0, 6, 'Big rooms', 0, NULL, 'no', '2026-05-20T10:00:00Z')`);
+    db.run(`INSERT INTO user_notes (dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, furnished_override, updated_at)
+            VALUES ('stale-otm-key', 0, 1, 8, 'Bathroom looks new', 2, NULL, 'yes', '2026-05-21T10:00:00Z')`);
 
     const stats = reconcileDedupeKeys(db);
     expect(stats.rekeyed).toBe(2);
@@ -70,6 +70,8 @@ describe("reconcileDedupeKeys", () => {
     expect(notes[0]!.comment).toContain("Bathroom looks new");
     // media_index from the row that had a non-zero value.
     expect(notes[0]!.media_index).toBe(2);
+    // furnished_override: newest non-null wins (otm @ 05-21 set 'yes').
+    expect(notes[0]!.furnished_override).toBe("yes");
   });
 
   test("idempotent — second call is a no-op", () => {

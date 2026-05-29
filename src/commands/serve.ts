@@ -253,20 +253,21 @@ function makeHandlers(db: Database) {
 
     async handleNoteUpsert(key: string, req: Request): Promise<Response> {
       const patch = await req.json() as Partial<{
-        viewed:         boolean;
-        favourite:      boolean;
-        rating:         number | null;
-        comment:        string;
-        media_index:    number;
-        cost_overrides: CostOverridesPatch;
+        viewed:             boolean;
+        favourite:          boolean;
+        rating:             number | null;
+        comment:            string;
+        media_index:        number;
+        cost_overrides:     CostOverridesPatch;
+        furnished_override: string | null;
       }>;
 
       const cur = db.query(
-        "SELECT viewed, favourite, rating, comment, media_index, cost_overrides FROM user_notes WHERE dedupe_key = ?"
+        "SELECT viewed, favourite, rating, comment, media_index, cost_overrides, furnished_override FROM user_notes WHERE dedupe_key = ?"
       ).get(key) as {
         viewed: number; favourite: number; rating: number | null;
         comment: string | null; media_index: number;
-        cost_overrides: string | null;
+        cost_overrides: string | null; furnished_override: string | null;
       } | null;
 
       const next = {
@@ -278,29 +279,34 @@ function makeHandlers(db: Database) {
         cost_overrides: "cost_overrides" in patch
           ? sanitiseCostOverrides(patch.cost_overrides)
           : (cur?.cost_overrides ?? null),
+        furnished_override: "furnished_override" in patch
+          ? sanitiseFurnished(patch.furnished_override)
+          : (cur?.furnished_override ?? null),
       };
 
       const now = nowIso();
       db.query(`
-        INSERT INTO user_notes (dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, updated_at)
-        VALUES ($dedupe_key, $viewed, $favourite, $rating, $comment, $media_index, $cost_overrides, $updated_at)
+        INSERT INTO user_notes (dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides, furnished_override, updated_at)
+        VALUES ($dedupe_key, $viewed, $favourite, $rating, $comment, $media_index, $cost_overrides, $furnished_override, $updated_at)
         ON CONFLICT(dedupe_key) DO UPDATE SET
-          viewed         = excluded.viewed,
-          favourite      = excluded.favourite,
-          rating         = excluded.rating,
-          comment        = excluded.comment,
-          media_index    = excluded.media_index,
-          cost_overrides = excluded.cost_overrides,
-          updated_at     = excluded.updated_at
+          viewed             = excluded.viewed,
+          favourite          = excluded.favourite,
+          rating             = excluded.rating,
+          comment            = excluded.comment,
+          media_index        = excluded.media_index,
+          cost_overrides     = excluded.cost_overrides,
+          furnished_override = excluded.furnished_override,
+          updated_at         = excluded.updated_at
       `).run({
-        $dedupe_key:     key,
-        $viewed:         next.viewed ? 1 : 0,
-        $favourite:      next.favourite ? 1 : 0,
-        $rating:         next.rating,
-        $comment:        next.comment,
-        $media_index:    next.media_index,
-        $cost_overrides: next.cost_overrides,
-        $updated_at:     now,
+        $dedupe_key:         key,
+        $viewed:             next.viewed ? 1 : 0,
+        $favourite:          next.favourite ? 1 : 0,
+        $rating:             next.rating,
+        $comment:            next.comment,
+        $media_index:        next.media_index,
+        $cost_overrides:     next.cost_overrides,
+        $furnished_override: next.furnished_override,
+        $updated_at:         now,
       });
       bumpDataVersion(db, now);
 
@@ -373,6 +379,13 @@ function makeHandlers(db: Database) {
       });
     },
   };
+}
+
+// Valid furnishing levels a user can pin via the badge picker. Anything else
+// (including null) clears the override so the scraped value resolves through.
+const FURNISHED_VALUES = new Set(["yes", "optional", "part", "no", "unclear"]);
+function sanitiseFurnished(raw: unknown): string | null {
+  return typeof raw === "string" && FURNISHED_VALUES.has(raw) ? raw : null;
 }
 
 type CostOverridesPatch = {

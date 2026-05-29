@@ -38,8 +38,13 @@ export function bumpDataVersion(db: Database, when: string): void {
 
 const EMPTY_STATE: ListingUserState = {
   viewed: false, favourite: false, rating: null, comment: "",
-  media_index: 0, cost_overrides: null,
+  media_index: 0, cost_overrides: null, furnished_override: null,
 };
+
+const FURNISHED_VALUES = new Set(["yes", "optional", "part", "no", "unclear"]);
+function parseFurnishedOverride(raw: string | null): string | null {
+  return raw != null && FURNISHED_VALUES.has(raw) ? raw : null;
+}
 
 function parseCostOverrides(raw: string | null): CostOverrides | null {
   if (!raw) return null;
@@ -89,31 +94,41 @@ function loadAppState(db: Database): AppState {
 /** Build the full payload the dashboard needs. */
 export function buildPayload(db: Database): DashboardData {
   const rawRows = db.query("SELECT * FROM listings").all() as ListingRow[];
-  // Score in TS so the scoring rules can be unit-tested. Sort by score desc,
-  // tie-break by price asc — same as the old SQL ORDER BY.
-  for (const r of rawRows) r.score = scoreListing(r);
-  rawRows.sort((a, b) => (b.score! - a.score!) || (a.price_pcm - b.price_pcm));
-  const rows = rawRows;
 
-  // Fetch all user_notes in one go and key by dedupe_key for O(1) lookup
+  // Fetch all user_notes in one go and key by dedupe_key for O(1) lookup.
+  // Loaded before scoring because furnished_override feeds the score — a
+  // manual furnishing correction re-weights the listing, not just its badge.
   const noteRows = db.query(
-    `SELECT dedupe_key, viewed, favourite, rating, comment, media_index, cost_overrides
+    `SELECT dedupe_key, viewed, favourite, rating, comment, media_index,
+            cost_overrides, furnished_override
        FROM user_notes`
   ).all() as Array<{
     dedupe_key: string; viewed: number; favourite: number;
     rating: number | null; comment: string | null; media_index: number;
-    cost_overrides: string | null;
+    cost_overrides: string | null; furnished_override: string | null;
   }>;
   const noteByKey = new Map<string, ListingUserState>(
     noteRows.map(n => [n.dedupe_key, {
-      viewed:         Boolean(n.viewed),
-      favourite:      Boolean(n.favourite),
-      rating:         n.rating,
-      comment:        n.comment ?? "",
-      media_index:    n.media_index ?? 0,
-      cost_overrides: parseCostOverrides(n.cost_overrides),
+      viewed:             Boolean(n.viewed),
+      favourite:          Boolean(n.favourite),
+      rating:             n.rating,
+      comment:            n.comment ?? "",
+      media_index:        n.media_index ?? 0,
+      cost_overrides:     parseCostOverrides(n.cost_overrides),
+      furnished_override: parseFurnishedOverride(n.furnished_override),
     }])
   );
+  const furnOverrideOf = (key: string): string | null =>
+    noteByKey.get(key)?.furnished_override ?? null;
+
+  // Score in TS so the scoring rules can be unit-tested. Sort by score desc,
+  // tie-break by price asc — same as the old SQL ORDER BY.
+  for (const r of rawRows) {
+    const eff = furnOverrideOf(r.dedupe_key) ?? r.furnished_status;
+    r.score = scoreListing({ ...r, furnished_status: eff });
+  }
+  rawRows.sort((a, b) => (b.score! - a.score!) || (a.price_pcm - b.price_pcm));
+  const rows = rawRows;
 
   const groups = new Map<string, ListingRow[]>();
   for (const r of rows) {
@@ -185,8 +200,9 @@ export function buildPayload(db: Database): DashboardData {
       price:         primary.price_pcm,
       beds:          primary.beds,
       baths:         primary.baths,
-      furnished:     primary.furnished_status ?? "unclear",
-      furnished_raw: primary.furnished_raw ?? "",
+      furnished:         furnOverrideOf(primary.dedupe_key) ?? primary.furnished_status ?? "unclear",
+      furnished_scraped: primary.furnished_status ?? "unclear",
+      furnished_raw:     primary.furnished_raw ?? "",
       parking:       primary.parking_status ?? "unclear",
       parking_raw:   primary.parking_raw ?? "",
       epc:           primary.epc ?? "",

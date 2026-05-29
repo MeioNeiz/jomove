@@ -377,6 +377,74 @@ function refreshCostUI(key) {
   }
 }
 
+// ---------- furnishing badge + picker ----------
+// The furn badge is click-to-edit: it opens a small picker so a mis-scraped
+// or "furn ?" listing can be pinned to the right level. The override lives in
+// user state (furnished_override), survives re-scrapes, and re-weights the
+// server-side score on the next poll.
+const FURN_LEVELS = [
+  { value: "yes",      label: "Furnished" },
+  { value: "part",     label: "Part furnished" },
+  { value: "optional", label: "Optional" },
+  { value: "no",       label: "Unfurnished" },
+  { value: "unclear",  label: "Unclear" },
+];
+
+function furnBadgeHtml(r) {
+  const f = r.furnished;
+  const cls  = f === "no" ? "bad" : f === "unclear" ? "muted" : "good";
+  const text = f === "no" ? "unfurn" : f === "unclear" ? "furn ?" : f;
+  const overridden = stateOf(r.dedupe_key).furnished_override != null;
+  const title = overridden
+    ? "Furnishing (manually set) — click to change"
+    : "Click to set furnishing level";
+  return `<span class="badge ${cls} furn-badge${overridden ? " furn-set" : ""}" title="${esc(title)}">${esc(text)}</span>`;
+}
+
+function buildFurnPicker(r) {
+  const cur = r.furnished;
+  const overridden = stateOf(r.dedupe_key).furnished_override != null;
+  const opts = FURN_LEVELS.map(l =>
+    `<button class="furn-opt${cur === l.value ? " active" : ""}" data-furn-set="${l.value}">${esc(l.label)}</button>`
+  ).join("");
+  const scraped = FURN_LEVELS.find(l => l.value === r.furnished_scraped);
+  const scrapedLabel = scraped ? scraped.label : (r.furnished_scraped || "unclear");
+  const reset = overridden
+    ? `<button class="furn-reset" data-furn-reset>↺ Reset to scraped (${esc(scrapedLabel)})</button>`
+    : "";
+  return `
+    <div class="furn-picker" data-key="${esc(r.dedupe_key)}">
+      <div class="fp-title">Furnishing</div>
+      <div class="fp-opts">${opts}</div>
+      ${reset}
+    </div>`;
+}
+
+function closeAllFurnPickers(except) {
+  document.querySelectorAll(".furn-picker").forEach(el => {
+    if (el !== except) el.remove();
+  });
+}
+
+function openFurnPicker(card, r) {
+  closeAllFurnPickers();
+  const facets = card.querySelector(".facets");
+  if (!facets) return;
+  facets.insertAdjacentHTML("afterend", buildFurnPicker(r));
+}
+
+// Swap just the furn badge in place — keeps the card's Leaflet map mounted
+// (a full re-render would tear it down). Score re-weighting lands on the
+// next poll, which rebuilds the card from the server-resolved payload.
+function refreshFurnBadge(card, r) {
+  const el = card.querySelector(".furn-badge");
+  if (!el) return;
+  const tmp = document.createElement("div");
+  tmp.innerHTML = furnBadgeHtml(r);
+  const fresh = tmp.firstElementChild;
+  if (fresh) el.replaceWith(fresh);
+}
+
 function postcodeBand(pcFull, pcArea) {
   const pc = pcFull || "";
   if (/^SO17 /.test(pc) || (!pc && pcArea === "SO17")) return "sweet";
@@ -688,7 +756,7 @@ function openCompare() {
       <dl>
         <dt>Score</dt><dd><strong>${r.score}</strong></dd>
         <dt>Postcode</dt><dd>${esc(r.pc_full || r.pc || "?")}</dd>
-        <dt>Furnished</dt><dd>${esc(r.furnished_raw || r.furnished || "?")}</dd>
+        <dt>Furnished</dt><dd>${esc(stateOf(r.dedupe_key).furnished_override != null ? r.furnished : (r.furnished_raw || r.furnished || "?"))}</dd>
         <dt>Parking</dt><dd>${esc(r.parking_raw || r.parking || "?")}</dd>
         <dt>EPC</dt><dd>${r.epc ? `<span class="epc epc-${r.epc}">EPC ${r.epc}</span>` : "?"}</dd>
         <dt>Rail</dt><dd>${esc(r.rail || "?")}</dd>
@@ -715,9 +783,7 @@ function cardHtml(r) {
   const parkingBadge = r.parking === "none" ? `<span class="badge bad">no parking</span>` :
                        r.parking === "unclear" ? `<span class="badge muted">parking ?</span>` :
                        `<span class="badge good">${esc(r.parking)}</span>`;
-  const furnBadge = r.furnished === "no" ? `<span class="badge bad">unfurn</span>` :
-                    r.furnished === "unclear" ? `<span class="badge muted">furn ?</span>` :
-                    `<span class="badge good">${esc(r.furnished)}</span>`;
+  const furnBadge = furnBadgeHtml(r);
   const epcBadge = r.epc ? `<span class="epc epc-${r.epc}">EPC ${r.epc}</span>` :
                            `<span class="epc epc-unknown">EPC ?</span>`;
   const railBadge = r.direct ? `<span class="badge good">direct</span>` : `<span class="badge muted">change</span>`;
@@ -1194,6 +1260,36 @@ function bindGrid() {
       return;
     }
 
+    // ---------- furnishing picker ----------
+    if (t.closest(".furn-badge")) {
+      e.stopPropagation();
+      const r = DATA.find(x => x.dedupe_key === key);
+      if (!r) return;
+      const existing = card.querySelector(".furn-picker");
+      if (existing) existing.remove();
+      else openFurnPicker(card, r);
+      return;
+    }
+    const furnPicker = t.closest(".furn-picker");
+    if (furnPicker) {
+      e.stopPropagation();
+      const r = DATA.find(x => x.dedupe_key === key);
+      if (!r) return;
+      if (t.matches("[data-furn-set]")) {
+        const val = t.dataset.furnSet;
+        r.furnished = val;                       // local echo for instant badge
+        patchState(key, { furnished_override: val });
+        refreshFurnBadge(card, r);
+        furnPicker.remove();
+      } else if (t.matches("[data-furn-reset]")) {
+        r.furnished = r.furnished_scraped;
+        patchState(key, { furnished_override: null });
+        refreshFurnBadge(card, r);
+        furnPicker.remove();
+      }
+      return;
+    }
+
     if (t.matches(".btn-fav")) {
       const s = stateOf(key);
       patchState(key, { favourite: !s.favourite });
@@ -1391,11 +1487,14 @@ bindDialog();
 bindScrapeButton();
 render();
 
-// Close any open cost-editor when clicking outside it.
+// Close any open cost-editor / furn-picker when clicking outside it.
 document.addEventListener("click", (e) => {
-  if (e.target.closest(".cost-editor")) return;
-  if (e.target.closest(".cost-adj")) return;
-  closeAllCostEditors();
+  if (!e.target.closest(".cost-editor") && !e.target.closest(".cost-adj")) {
+    closeAllCostEditors();
+  }
+  if (!e.target.closest(".furn-picker") && !e.target.closest(".furn-badge")) {
+    closeAllFurnPickers();
+  }
 });
 
 //---------- live polling (dev server only) ----------

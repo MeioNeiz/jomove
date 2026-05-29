@@ -13,12 +13,13 @@ const TEMPLATE = readFileSync(TEMPLATE_PATH, "utf-8");
 export type DashboardSource = { src: string; url: string };
 
 export type ListingUserState = {
-  viewed:         boolean;
-  favourite:      boolean;
-  rating:         number | null;
-  comment:        string;
-  media_index:    number;
-  cost_overrides: CostOverrides | null;
+  viewed:             boolean;
+  favourite:          boolean;
+  rating:             number | null;
+  comment:            string;
+  media_index:        number;
+  cost_overrides:     CostOverrides | null;
+  furnished_override: string | null;  // user-set furnishing level, null = use scraped
 };
 
 export type CostOverrides = {
@@ -48,7 +49,8 @@ export type DashboardPayload = {
   price: number;
   beds: number | null;
   baths: number | null;
-  furnished: string;
+  furnished: string;          // resolved: user override if set, else scraped
+  furnished_scraped: string;  // scraped value, for the "reset to scraped" option
   furnished_raw: string;
   parking: string;
   parking_raw: string;

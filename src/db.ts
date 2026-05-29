@@ -50,13 +50,14 @@ CREATE INDEX IF NOT EXISTS idx_price    ON listings(price_pcm);
 -- Per-listing user annotations. Keyed on dedupe_key so a property's notes
 -- survive being re-found across portals or in later scrapes.
 CREATE TABLE IF NOT EXISTS user_notes (
-  dedupe_key     TEXT PRIMARY KEY,
-  viewed         INTEGER NOT NULL DEFAULT 0,
-  favourite      INTEGER NOT NULL DEFAULT 0,
-  rating         INTEGER,
-  comment        TEXT,
-  cost_overrides TEXT,
-  updated_at     TEXT NOT NULL
+  dedupe_key         TEXT PRIMARY KEY,
+  viewed             INTEGER NOT NULL DEFAULT 0,
+  favourite          INTEGER NOT NULL DEFAULT 0,
+  rating             INTEGER,
+  comment            TEXT,
+  cost_overrides     TEXT,
+  furnished_override TEXT,
+  updated_at         TEXT NOT NULL
 );
 
 -- Generic singleton-style key/value store for app-level state:
@@ -81,7 +82,7 @@ CREATE TABLE IF NOT EXISTS user_images (
 // Bump this whenever a new entry is added to MIGRATIONS so future `connect()`
 // calls run only the new step. The current version is read from app_state
 // (key `schema_version`); if up to date, migrate() bails after one query.
-export const SCHEMA_VERSION = 3;
+export const SCHEMA_VERSION = 4;
 
 export function connect(): Database {
   const dir = dirname(DB_PATH);
@@ -168,6 +169,14 @@ const MIGRATIONS: Migration[] = [
         `merged ${stats.mergedRows} user_notes row(s) into ${stats.mergedGroups} group(s)`,
       );
     }
+  },
+  // 3 → 4: manual furnishing override (user clicks the furn badge to correct
+  // a mis-scraped / "furn ?" listing). Lives in user_notes so it survives
+  // re-scrapes and re-finding the property across portals, keyed on dedupe_key.
+  (db) => {
+    const noteCols = colNames(db, "user_notes");
+    if (!noteCols.has("furnished_override"))
+      db.exec("ALTER TABLE user_notes ADD COLUMN furnished_override TEXT");
   },
 ];
 
