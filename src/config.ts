@@ -7,7 +7,7 @@ export const ROOT = dirname(HERE);
 export const DB_PATH = join(ROOT, "data", "jomove.db");
 export const USER_IMAGES_DIR = join(ROOT, "data", "user-images");
 
-export const DEADLINE = "2026-06-29";
+export const DEADLINE = "2026-08-11";
 
 // SOURCES and SOURCE_LABELS used to live here as hand-edited maps. They are
 // now derived from src/scrapers/registry.ts so adding a portal touches one

@@ -25,7 +25,7 @@ Spawn ONE agent to scrape Zoopla into `results_zoopla.md`. Use
 > - Price ≤ £1,150 pcm
 > - 1 or 2 beds (studios count as 1 bed)
 > - Postcode area is SO14, SO15, SO17, or SO18 (NOT SO16, SO19, etc.)
-> - Available by 6 July 2026 (or sooner / immediately)
+> - Available by 11 August 2026 (or sooner / immediately)
 > - Self-contained: flat, studio, maisonette, garden flat, OR a
 >   house-share/room-only (which gets tagged — see Type field below)
 > - Not under offer, not let-agreed, listing still active
