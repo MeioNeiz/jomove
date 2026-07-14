@@ -277,9 +277,15 @@ export async function scrapeOnTheMarket(): Promise<ScrapeReport> {
     }
   }
 
-  // De-dup by id (sponsored slots can repeat).
-  const byId = new Map<number, OtmSummary>();
-  for (const s of all) if (!byId.has(s.id)) byId.set(s.id, s);
+  // De-dup by id (sponsored slots can repeat). `id` is number|string
+  // depending on which part of the API response it came from — key on
+  // the string form so a numeric and string id for the same listing
+  // collide instead of silently duplicating.
+  const byId = new Map<string, OtmSummary>();
+  for (const s of all) {
+    const key = String(s.id);
+    if (!byId.has(key)) byId.set(key, s);
+  }
 
   const survivors: OtmSummary[] = [];
   for (const s of byId.values()) {
