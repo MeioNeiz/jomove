@@ -1,0 +1,12 @@
+[Unit]
+Description=Gate for scheduled jomove auto-scrape (skips if one ran within 2h)
+After=network-online.target jomove.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/home/ubuntu/jomove
+ExecStart=/home/ubuntu/jomove/deploy/scrape-if-due.sh
+StandardOutput=journal
+StandardError=journal
