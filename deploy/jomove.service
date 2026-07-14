@@ -6,8 +6,8 @@ StartLimitIntervalSec=60
 
 [Service]
 Type=simple
-User=opc
-WorkingDirectory=/home/opc/jomove
+User=ubuntu
+WorkingDirectory=/home/ubuntu/jomove
 ExecStart=/usr/local/bin/bun jomove.ts serve --port 3000
 Restart=always
 RestartSec=5
