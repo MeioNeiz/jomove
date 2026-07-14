@@ -29,10 +29,13 @@ export type LinkCheck = {
 };
 
 import { PORTALS_BY_ID } from "../scrapers/registry.ts";
+import { fetchText } from "../scrapers/http.ts";
 
+// Full 4-part version, not "126.0.0.0" — see src/scrapers/http.ts for why
+// that bare placeholder gets WAF-blocked.
 const UA =
   "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 " +
-  "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36";
+  "(KHTML, like Gecko) Chrome/126.0.6478.63 Safari/537.36";
 
 // Final-URL paths that mean the listing redirected to a portal index —
 // usually a sign the listing was removed.
@@ -84,16 +87,29 @@ export async function checkLink(url: string, source: string): Promise<LinkCheck>
     };
   }
 
-  let res: Response;
+  // OpenRent's AWS WAF soft-blocks a chunk of plain fetches with 405
+  // (~30% per-IP pass rate — see CLAUDE.md). A single unretried fetch
+  // has a real chance of reading a block page instead of the listing,
+  // which used to surface as "error" (leave active) even for listings
+  // that were genuinely let-agreed. Retry through the same paid-proxy
+  // fallback the scraper uses, same as `openrent.ts`.
+  const isOpenRent = source.toLowerCase() === "openrent";
+  const proxy = isOpenRent ? (process.env.OPENRENT_PROXY ?? "").trim() || undefined : undefined;
+
+  let res: { status: number; url: string; body: string };
   try {
-    res = await fetch(url, {
+    res = await fetchText(url, {
       headers: {
         "User-Agent":      UA,
         "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "en-GB,en;q=0.9",
       },
-      redirect: "follow",
-      signal:   AbortSignal.timeout(15_000),
+      timeoutMs:       15_000,
+      minGapMs:        0,
+      retries:         isOpenRent ? (proxy ? 12 : 4) : 0,
+      retryOnStatuses: isOpenRent ? [405] : undefined,
+      retryBackoffMs:  isOpenRent && proxy ? 400 : undefined,
+      proxy,
     });
   } catch (err) {
     return {
@@ -132,16 +148,7 @@ export async function checkLink(url: string, source: string): Promise<LinkCheck>
     } catch { /* malformed final URL — fall through to body check */ }
   }
 
-  let body: string;
-  try {
-    body = await res.text();
-  } catch (err) {
-    return {
-      url, source, status: "error",
-      reason: `read body failed: ${(err as Error).message || String(err)}`,
-      http_status: http,
-    };
-  }
+  const body = res.body;
 
   // Match kill phrases ONLY in high-signal regions to avoid being fooled
   // by "related properties" sections or status-filter dropdowns where

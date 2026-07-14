@@ -13,9 +13,12 @@
 
 import { logFetch, logFetchError } from "./log.ts";
 
+// Full 4-part Chrome version, not the bare "131.0.0.0" placeholder every
+// scraping tutorial copies verbatim — Rightmove's Akamai WAF blocklists
+// that exact literal UA string regardless of TLS/HTTP client.
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
-  "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
+  "(KHTML, like Gecko) Chrome/131.0.6778.85 Safari/537.36";
 
 const DEFAULT_HEADERS: Record<string, string> = {
   "User-Agent":      UA,
