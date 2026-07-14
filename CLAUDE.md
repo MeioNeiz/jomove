@@ -19,8 +19,12 @@ for an existing process before launching one yourself.
 
 ## Deploy
 
-Production runs on an Oracle Cloud VM (`opc@132.145.34.57`) at
-`/home/opc/jomove`, fronted by nginx at <https://jomove.jomify.lol>.
+Production runs on an Oracle Cloud VM (`ubuntu@193.123.180.81`) at
+`/home/ubuntu/jomove`, fronted by nginx at <https://jomove.jomify.lol>.
+
+The previous VM (`opc@132.145.34.57`) was reclaimed by Oracle after
+months of inactivity — its DB (favourites/ratings/comments/images) is
+gone. This VM started fresh from the `old_search/` archive in July 2026.
 
 - **Push to deploy.** `.github/workflows/deploy.yml` fires on push to
   `main`: SSH in → `git pull` → `bun install --frozen-lockfile` →
@@ -36,7 +40,7 @@ Production runs on an Oracle Cloud VM (`opc@132.145.34.57`) at
 - **GH Actions does NOT install changed unit files.** If `deploy/*` or
   `ops/*` change, run manually:
   ```
-  ssh opc@132.145.34.57 'cd ~/jomove && \
+  ssh ubuntu@193.123.180.81 'cd ~/jomove && \
     sudo cp deploy/*.service deploy/*.timer /etc/systemd/system/ && \
     sudo systemctl daemon-reload'
   ```
@@ -44,18 +48,18 @@ Production runs on an Oracle Cloud VM (`opc@132.145.34.57`) at
 ## Ops helpers
 
 ```
-ssh opc@132.145.34.57 'sudo journalctl -u jomove -f'                # web logs
-ssh opc@132.145.34.57 'sudo journalctl -u jomove-scrape -n 50'      # scrape logs
-ssh opc@132.145.34.57 'sudo systemctl start jomove-scrape.service'  # one-off scrape
-ssh opc@132.145.34.57 'sudo systemctl restart jomove'               # restart web
+ssh ubuntu@193.123.180.81 'sudo journalctl -u jomove -f'                # web logs
+ssh ubuntu@193.123.180.81 'sudo journalctl -u jomove-scrape -n 50'      # scrape logs
+ssh ubuntu@193.123.180.81 'sudo systemctl start jomove-scrape.service'  # one-off scrape
+ssh ubuntu@193.123.180.81 'sudo systemctl restart jomove'               # restart web
 ```
 
-The prod DB at `/home/opc/jomove/data/jomove.db` holds **live user state**
+The prod DB at `/home/ubuntu/jomove/data/jomove.db` holds **live user state**
 (favourites, comments, ratings, custom images). Never blindly overwrite —
 back up first (`cp ... /tmp/jomove-vm-backup-$(date +%s).db`).
 
 SMTP isn't configured on prod; `auto-scrape` runs without notifications.
-Drop `SMTP_HOST/PORT/USER/PASS/NOTIFY_TO` into `/home/opc/jomove/.env` to
+Drop `SMTP_HOST/PORT/USER/PASS/NOTIFY_TO` into `/home/ubuntu/jomove/.env` to
 enable email digests of new listings.
 
 ## OpenRent proxy
@@ -64,7 +68,7 @@ OpenRent fronts everything with AWS WAF and blocks the Oracle Cloud IP.
 The scraper has two-stage fallback:
 
 1. **Paid rotating endpoint** (preferred): set `OPENRENT_PROXY` in
-   `/home/opc/jomove/.env`. Webshare free tier suffices — sign up at
+   `/home/ubuntu/jomove/.env`. Webshare free tier suffices — sign up at
    <https://www.webshare.io/>, then use the **rotating backbone**, not
    an individual proxy IP:
    ```
