@@ -8,6 +8,7 @@ Type=oneshot
 User=ubuntu
 WorkingDirectory=/home/ubuntu/jomove
 ExecStart=/usr/local/bin/bun jomove.ts auto-scrape --no-archive
+ExecStartPost=/usr/bin/touch /home/ubuntu/jomove/data/.last-auto-scrape
 StandardOutput=journal
 StandardError=journal
 TimeoutStartSec=15min

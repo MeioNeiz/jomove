@@ -32,8 +32,14 @@ gone. This VM started fresh from the `old_search/` archive in July 2026.
 - **systemd units** live in `deploy/` and are installed to
   `/etc/systemd/system/`:
   - `jomove.service` — web on `127.0.0.1:3000`, nginx fronts 443.
-  - `jomove-scrape.service` + `.timer` — auto-scrape four times daily
-    (09:00, 12:00, 15:00, 18:00 Europe/London, ±10 min jitter — auto-handles BST/GMT).
+  - `jomove-scrape.service` + `.timer` — auto-scrape twice daily
+    (10:00, 17:15 Europe/London — named timezone auto-handles BST/GMT).
+    The timer actually targets `jomove-scrape-gate.service`
+    (`scrape-if-due.sh`), which skips the run if a scrape — scheduled
+    or manual — already happened within the last 2 hours (checks the
+    mtime of `data/.last-auto-scrape`, touched by every successful run).
+    Manual triggers via `jomove-scrape.service` directly always run,
+    gate-free — see Ops helpers below.
 - **nginx**: `ops/nginx-jomove.conf` → `/etc/nginx/conf.d/jomove.conf`.
   Let's Encrypt cert under `/etc/letsencrypt/live/jomove.jomify.lol/`,
   renewed by the same certbot timer that handles `admin.jomify.lol`.
@@ -50,7 +56,7 @@ gone. This VM started fresh from the `old_search/` archive in July 2026.
 ```
 ssh ubuntu@193.123.180.81 'sudo journalctl -u jomove -f'                # web logs
 ssh ubuntu@193.123.180.81 'sudo journalctl -u jomove-scrape -n 50'      # scrape logs
-ssh ubuntu@193.123.180.81 'sudo systemctl start jomove-scrape.service'  # one-off scrape
+ssh ubuntu@193.123.180.81 'sudo systemctl start jomove-scrape.service'  # one-off scrape (gate-free, always runs)
 ssh ubuntu@193.123.180.81 'sudo systemctl restart jomove'               # restart web
 ```
 
