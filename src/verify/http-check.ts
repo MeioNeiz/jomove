@@ -47,7 +47,7 @@ const INDEX_PATH_HINTS = [
   /^\/$/,
 ];
 
-/** Extract high-signal status text from the page (title + og + h1 only). */
+/** Extract high-signal status text from the page (title + og + h1 + h3 only). */
 function extractStatusText(body: string): string {
   const parts: string[] = [];
   const title = body.match(/<title[^>]*>([\s\S]{0,300}?)<\/title>/i);
@@ -72,6 +72,19 @@ function extractStatusText(body: string): string {
   while ((h1Match = h1Re.exec(body)) && h1Count < 2) {
     parts.push(h1Match[1]!);
     h1Count++;
+  }
+
+  // First two <h3> elements only — OpenRent renders its own-listing
+  // "Let Agreed" status as an <h3> inside an alert banner (confirmed:
+  // zero <h3> elements anywhere on an active listing's page, so this
+  // doesn't pick up "related properties" noise the way a broader scan
+  // would).
+  const h3Re = /<h3[^>]*>([\s\S]{0,200}?)<\/h3>/gi;
+  let h3Match: RegExpExecArray | null;
+  let h3Count = 0;
+  while ((h3Match = h3Re.exec(body)) && h3Count < 2) {
+    parts.push(h3Match[1]!);
+    h3Count++;
   }
 
   // Strip HTML tags inside the captured snippets so phrase matching is clean.
@@ -159,7 +172,7 @@ export async function checkLink(url: string, source: string): Promise<LinkCheck>
     if (re.test(statusText)) {
       return {
         url, source, status: "removed",
-        reason: `title/og/h1 matched /${re.source}/${re.flags}`,
+        reason: `title/og/h1/h3 matched /${re.source}/${re.flags}`,
         http_status: http,
       };
     }
