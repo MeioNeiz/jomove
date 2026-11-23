@@ -46,14 +46,15 @@ describe("parseParking", () => {
 });
 
 describe("parsePostcodeArea", () => {
-  test("matches SO14-18 + SO50", () => {
+  test("matches SO14-19 + SO50", () => {
     expect(parsePostcodeArea("SO17 1BJ")).toBe("SO17");
     expect(parsePostcodeArea("SO50 9NU")).toBe("SO50");
     expect(parsePostcodeArea("SO16 5AB")).toBe("SO16");
+    expect(parsePostcodeArea("SO19 1XX")).toBe("SO19");
   });
   test("returns null for unknown outcodes", () => {
     expect(parsePostcodeArea("PO1 1AB")).toBeNull();
-    expect(parsePostcodeArea("SO19 1XX")).toBeNull();
+    expect(parsePostcodeArea("SO20 1XX")).toBeNull();
     expect(parsePostcodeArea("")).toBeNull();
   });
 });

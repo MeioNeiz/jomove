@@ -45,8 +45,8 @@ export function parseParking(s: string): string {
 }
 
 // Recognised Southampton / Eastleigh outcodes. Keep aligned with
-// ALLOWED_POSTCODES in scrapers/filters.ts and SCORE_SQL in db.ts.
-const RECOGNISED_OUTCODES = /\bSO(1[4-8]|50)\b/;
+// ALLOWED_POSTCODES in scrapers/filters.ts and the postcode rule in score.ts.
+const RECOGNISED_OUTCODES = /\bSO(1[4-9]|50)\b/;
 
 export function parsePostcodeArea(s: string): string | null {
   if (!s) return null;

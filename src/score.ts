@@ -56,6 +56,9 @@ const postcodeRule: Rule = (r) => {
   // Portswood / Bevois — walking to Common
   if (pc.startsWith("SO17 2") || pc.startsWith("SO17 3")) return 20;
   if (!pc && area === "SO17") return 18;
+  // Bitterne / St Denys — same rail line into Central, level with Portswood
+  if (pc.startsWith("SO18") || pc.startsWith("SO19")) return 20;
+  if (!pc && (area === "SO18" || area === "SO19")) return 20;
   // Bassett — between Common and work
   if (pc.startsWith("SO16 5") || pc.startsWith("SO16 7")) return 15;
   // Eastleigh — closest to N. Stoneham work
@@ -65,13 +68,11 @@ const postcodeRule: Rule = (r) => {
   // Central — penalised
   if (pc.startsWith("SO14 0") || pc.startsWith("SO14 6") ||
       pc.startsWith("SO14 7") || pc.startsWith("SO15 1")) return -5;
-  // Shirley / Millbrook / Ocean Village / SO18 — too far
+  // Shirley / Millbrook / Ocean Village — too far
   if (pc.startsWith("SO15 3") || pc.startsWith("SO15 5") ||
       pc.startsWith("SO15 7") || pc.startsWith("SO15 8") ||
       pc.startsWith("SO14 1") || pc.startsWith("SO14 2") ||
-      pc.startsWith("SO14 3") || pc.startsWith("SO14 5") ||
-      pc.startsWith("SO18")) return -5;
-  if (!pc && area === "SO18") return -5;
+      pc.startsWith("SO14 3") || pc.startsWith("SO14 5")) return -5;
   return 0;
 };
 

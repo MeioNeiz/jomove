@@ -98,14 +98,15 @@ is a small nudge, not a vote-decider).
 | Parking unclear | 5 |
 | Direct rail line | 10 |
 | Postcode **sweet spot** (SO17 1/2/3 — Portswood/Highfield) | 20 |
+| Postcode **Bitterne / St Denys** (SO18, SO19 — rail line into Central) | 20 |
 | Postcode **central but OK** (SO15 1/2, SO14 0/6/7) | 10 |
 | Postcode SO15/SO14 (area only, no sector) | 5 |
-| Postcode SO15 3/5/7/8, SO14 1/2/3/5, SO18 | 0 (penalised) |
+| Postcode SO15 3/5/7/8, SO14 1/2/3/5 | 0 (penalised) |
 | Near Southampton Common specifically | 10 |
 | EPC A or B | 8 |
 | EPC C | 4 |
 
-Edit `src/db.ts` (`SCORE_SQL`) to retune.
+Edit `src/score.ts` (the `RULES`) to retune.
 
 ## Adding new listings
 

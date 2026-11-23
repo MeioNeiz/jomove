@@ -25,11 +25,16 @@ describe("scoreListing", () => {
     expect(scoreListing({ ...base, listing_type: "studio" })).toBe(84 - 5);
   });
 
-  test("SO18 penalises", () => {
+  test("SO18/SO19 (Bitterne) score +20", () => {
+    // lose SO17 1 (+25), gain SO18 (+20)
     expect(scoreListing({
       ...base,
       postcode_full: "SO18 2QQ", postcode_area: "SO18",
-    })).toBe(84 - 25 - 5); // lose SO17 1 (+25), gain SO18 (-5)
+    })).toBe(84 - 25 + 20);
+    expect(scoreListing({
+      ...base,
+      postcode_full: "SO19 1XX", postcode_area: "SO19",
+    })).toBe(84 - 25 + 20);
   });
 
   test("available after deadline subtracts 10", () => {
